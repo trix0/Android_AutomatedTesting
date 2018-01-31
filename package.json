@@ -1,0 +1,17 @@
+{
+  "name": "javarewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^1.7.2",
+    "opencv4nodejs": "^2.37.1",
+    "swagger-client": "2.1.9",
+    "webdriverio": "^4.10.1"
+  }
+}
