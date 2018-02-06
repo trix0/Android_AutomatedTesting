@@ -7,33 +7,34 @@ const { performance } = require('perf_hooks');
 const fs =require("fs");
 const cv = require('opencv4nodejs');
 
-
+const jArguments=JSON.parse(process.argv[2]);
+console.log(jArguments.serial);
 
 ///////////// images for img recognition////////////////////
-const img2 = cv.imread('./autoTest/CreateAccount.png');
-const img3 = cv.imread('./autoTest/LoginButton.png');
-const imgAllowButton = cv.imread('./autoTest/allowButton.png');
-const imgDenyButton = cv.imread('./autoTest/denyButton.png');
-const imgLoginEmail = cv.imread('./autoTest/loginEmail.png');
-const imgBigOkButton = cv.imread('./autoTest/bigOkButton.png');
-const imgloginPassed = cv.imread('./autoTest/loginPassed.png');
-const imgHideKeyboard = cv.imread('./autoTest/hideKeyBoard.png');
-const imgLogOutButton = cv.imread('./autoTest/logOutYellow.png');
-const imgloginPassed2 = cv.imread('./autoTest/login2finished.png');
-const imgLoginPassword = cv.imread('./autoTest/loginPassword.png');
-const imgSettingsButton = cv.imread('./autoTest/settingsButton.png');
-const imgFriendsForEverX = cv.imread('./autoTest/friendsForEverX.png');
-const imgloginPassLogout = cv.imread('./autoTest/loginTest1Finish.png');
-const imgloginEnterEmail = cv.imread('./autoTest/loginEnterEmail.png');
-const imgloginAgeConfirmYes = cv.imread('./autoTest/loginAgeConfirmYes.png');
-const imgloginAcceptConditions = cv.imread('./autoTest/loginAcceptConditions.png');
-const imgloginYellowNextButton = cv.imread('./autoTest/loginYellowNextButton.png');
+const img2 = cv.imread(__dirname+'/autoTest/CreateAccount.png');
+const img3 = cv.imread(__dirname+'/autoTest/LoginButton.png');
+const imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
+const imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
+const imgLoginEmail = cv.imread(__dirname+'/autoTest/loginEmail.png');
+const imgBigOkButton = cv.imread(__dirname+'/autoTest/bigOkButton.png');
+const imgloginPassed = cv.imread(__dirname+'/autoTest/loginPassed.png');
+const imgHideKeyboard = cv.imread(__dirname+'/autoTest/hideKeyBoard.png');
+const imgLogOutButton = cv.imread(__dirname+'/autoTest/logOutYellow.png');
+const imgloginPassed2 = cv.imread(__dirname+'/autoTest/login2finished.png');
+const imgLoginPassword = cv.imread(__dirname+'/autoTest/loginPassword.png');
+const imgSettingsButton = cv.imread(__dirname+'/autoTest/settingsButton.png');
+const imgFriendsForEverX = cv.imread(__dirname+'/autoTest/friendsForEverX.png');
+const imgloginPassLogout = cv.imread(__dirname+'/autoTest/loginTest1Finish.png');
+const imgloginEnterEmail = cv.imread(__dirname+'/autoTest/loginEnterEmail.png');
+const imgloginAgeConfirmYes = cv.imread(__dirname+'/autoTest/loginAgeConfirmYes.png');
+const imgloginAcceptConditions = cv.imread(__dirname+'/autoTest/loginAcceptConditions.png');
+const imgloginYellowNextButton = cv.imread(__dirname+'/autoTest/loginYellowNextButton.png');
 
 
 
 //////////// capabilities options for appium//////////
 const opts = {
-      port: 4755,
+      port: jArguments.port,
       desiredCapabilities: {
         platformName: "Android",
         deviceName: "Android",
@@ -42,15 +43,15 @@ const opts = {
         appPackage:"com.pointvoucher.playlondonpv",
         appActivity:"com.unity3d.player.UnityPlayerActivity",
         fullReset:false,
-        noReset:false,/////////// false adds around 3Sec
+        noReset:jArguments.noReset,/////////// false adds around 3Sec
         //noPermsCheck:true,
         //launch:true,
-        //autoGrantPermissions:true,
+        autoGrantPermissions:false,
         //disableAndroidWatchers:true,
         skipUnlock:true,
         noSign:true,
         //gpsEnabled:false,
-        //ignoreUnimportantViews:true
+        ignoreUnimportantViews:true
       }
 };
 
@@ -66,7 +67,7 @@ const clientSwag = new Swagger({
 
 
 ///////////////////////////Init call///////////////
-const serial = "cd21ccc5"            /////////// serial number of phone
+const serial = jArguments.serial;          /////////// serial number of phone
 
 fnInit();
 
@@ -87,7 +88,7 @@ async function fnInit(){
     performance.measure('A to B', 'A', 'B');
     let measure = performance.getEntriesByName('A to B')[0];
     console.log("Loading Time "+measure.duration/1000+" s"); 
-    await fnPermission(5,true,client);
+    await fnPermission(5,null,client);
     const loading=await fnLoading(40,client); // loading time 40 screenshots request afterwards error
     if(loading==1){
       console.log("running test1");
@@ -206,7 +207,7 @@ function fnDisconnect(UDID){
 function fnCreateServer(port){
   return new Promise((resolve,reject)=>{
     let appiumPort=port
-    let appiumServer=exec('appium -p '+port+' --session-override --log-timestamp --log /home/trixo/Code/javaRewrite/log.txt');
+    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' --session-override --log-timestamp --log /home/trixo/Code/javaRewrite/log.txt');
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
 
@@ -460,7 +461,7 @@ function fnSaveScreenShot(client){
   console.log("Saving screenshot of passed test");
   return new Promise((resolve,reject)=>{
     client.screenshot().then((data)=>{
-          SaveImage(data.value,"passedTest/Screenshot.png")
+          SaveImage(data.value,__dirname+"/passedTest/Screenshot.png")
           .then((data)=>{
              resolve(true)   
           })
@@ -514,7 +515,7 @@ async function fnLoginTest(client){
     await fnClick(imgSettingsButton,client,5,"settings Button",500);
     await fnClick(imgLogOutButton,client,5,"Logout Button",500);
     await fnClick(imgBigOkButton,client,5,"big ok Button",500);
-    await fnIsOnScreen(img3,client,20,"if on scree then test passed",2000);
+    await fnIsOnScreen(img3,client,20,"if on scree then test passed",4000);
     await fnSaveScreenShot(client);
     client.end();
   }
@@ -545,7 +546,7 @@ async function fnLoginTest2(client){
     await fnClick(imgSettingsButton,client,5,"settings Button",500);
     await fnClick(imgLogOutButton,client,5,"Logout Button",500);
     await fnClick(imgBigOkButton,client,5,"big ok Button",500);
-    await fnIsOnScreen(imgloginPassed2,client,20,"if on scree then test passed",2000);
+    await fnIsOnScreen(img3,client,20,"if on scree then test passed",2000);
     await fnSaveScreenShot(client);
     client.end();
   }
