@@ -6,9 +6,39 @@ const AUTH_TOKEN  = '26cd01ab067140ec8f6934253c41eceba51ec96c0b1440f1a4fe1c6aa42
 const { performance } = require('perf_hooks');
 const fs =require("fs");
 const cv = require('opencv4nodejs');
+const winston = require('winston');
+
+const logger = new winston.Logger({
+    level: 'info',
+    transports: [
+      new winston.transports.Console({
+        timestamp: true
+      }),
+      new winston.transports.File({
+        filename: __dirname+'/logs/app.log',
+        timestamp: true,
+        prettyPrint : true,
+        json:false,
+      })
+    ]
+  });
+
+
+logger.info('Test execution started');
+
+
+
+
+
+
+
+
+
+
 
 const jArguments=JSON.parse(process.argv[2]);
-console.log(jArguments.serial);
+console.log(jArguments);
+logger.info("Get following options to run"+ JSON.stringify(jArguments))
 
 ///////////// images for img recognition////////////////////
 const img2 = cv.imread(__dirname+'/autoTest/CreateAccount.png');
@@ -38,20 +68,18 @@ const opts = {
       desiredCapabilities: {
         platformName: "Android",
         deviceName: "Android",
+        systemPort:jArguments.systemPort,
         //automationName: "uiautomator2",
         udid:"", //cd21ccc5 emulator-5554
-        appPackage:"com.pointvoucher.playlondonpv",
-        appActivity:"com.unity3d.player.UnityPlayerActivity",
-        fullReset:false,
+        //app: __dirname+"/apk/pl.apk",
+        appPackage:"com.gorro.nothing",
+        appActivity:"com.gorro.nothing.NothingActivity",
+        // appPackage:"com.pointvoucher.playlondonpv",
+        // appActivity:"com.unity3d.player.UnityPlayerActivity",
         noReset:jArguments.noReset,/////////// false adds around 3Sec
-        //noPermsCheck:true,
-        //launch:true,
-        autoGrantPermissions:false,
-        //disableAndroidWatchers:true,
+        fullReset:false,
+        newCommandTimeout:120000,
         skipUnlock:true,
-        noSign:true,
-        //gpsEnabled:false,
-        ignoreUnimportantViews:true
       }
 };
 
@@ -82,29 +110,20 @@ async function fnInit(){
       client.end();
       fnDisconnect(UDID);  // disconnects from open stf
     });
-    await performance.mark('A'); 
     const init=await client.init();    // appium init (lunch app)
-    await performance.mark('B'); 
-    performance.measure('A to B', 'A', 'B');
-    let measure = performance.getEntriesByName('A to B')[0];
-    console.log("Loading Time "+measure.duration/1000+" s"); 
-    await fnPermission(5,null,client);
-    const loading=await fnLoading(40,client); // loading time 40 screenshots request afterwards error
-    if(loading==1){
-      console.log("running test1");
-      const fnTest=await fnLoginTest(client);
-    }
-    else{
-      console.log("running test 2");
-      const fnTest=await fnLoginTest2(client);
-    }
+    await fnCleanInstall(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl");
+    //await fnPermission(5,null,client);
+    // const loading=await fnLoading(40,client); // loading time 40 screenshots request afterwards error
+    // if(loading==1){
+    //   console.log("running test1");
+    //   const fnTest=await fnLoginTest(client);
+    // }
+    // else{
+    //   console.log("running test 2");
+    //   const fnTest=await fnLoginTest2(client);
+    // }
 
-    
-    await performance.mark('C'); 
-    await fnDisconnect(UDID);
-    performance.measure('A to C', 'A', 'C');
-    measure = performance.getEntriesByName('A to C')[0];
-    console.log("Test Finished in "+measure.duration/1000+" s"); 
+    //await fnDisconnect(UDID);
   }
   catch(err){
     fnDisconnect(UDID);
@@ -120,6 +139,7 @@ async function fnInit(){
 
 // conect to stf///
 async function fnConnectStf(serial){
+  logger.info("Trying to connect to openSTF with serial number "+serial)
   try{
     const getDevices=await clientSwag.then((api)=>{
       return api.devices.getDeviceBySerial({
@@ -130,6 +150,7 @@ async function fnConnectStf(serial){
     let device = getDevices.obj.device;
     const avaiDevices= await clientSwag.then((api)=>{
       if (!device.present || !device.ready || device.using || device.owner) {
+        logger.info("Device is not available => open STF ")
         throw new Error('Device is not available')
       }
       return api.user.addUserDevice({
@@ -141,13 +162,16 @@ async function fnConnectStf(serial){
     });
     const remoteConnect= await clientSwag.then((api)=>{
       if (!avaiDevices.obj.success) {
+        logger.info("Could not connect to device => open STF ")
         throw new Error('Could not connect to device')
+
       }
       return api.user.remoteConnectUserDeviceBySerial({
         serial: device.serial
       })
     })
     const remoteConnectUDID= await (()=>{
+      logger.info("executing command adb connect  " + remoteConnect.obj.remoteConnectUrl)
       exec('adb connect '+remoteConnect.obj.remoteConnectUrl+'','',(err, stdout, stderr)=>{
       });
       return remoteConnect.obj.remoteConnectUrl
@@ -185,6 +209,7 @@ function fnDisconnect(UDID){
       })
 
       if (!hasDevice) {
+        logger.info("You are not owner "+ UDID+" => open STF ")
         throw new Error('You are not owner')
       }
 
@@ -193,9 +218,11 @@ function fnDisconnect(UDID){
       })
       .then(function(res) {
         if (!res.obj.success) {
+          logger.info("Could not disconnect "+UDID+" => open STF ")
           throw new Error('Could not disconnect to device')
 
         }
+        logger.info("Disconnected "+UDID+"=> open STF ")
         console.log("Disconnected!")
       })
     })
@@ -206,20 +233,23 @@ function fnDisconnect(UDID){
 /// creates appium server on port from opts 
 function fnCreateServer(port){
   return new Promise((resolve,reject)=>{
+    logger.info("Trying to create appium Server on port: "+ port)
     let appiumPort=port
     let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' --session-override --log-timestamp --log /home/trixo/Code/javaRewrite/log.txt');
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
-
+        logger.info("Appium server created on port: "+port )
         console.log("Server Created");
         resolve(true);
         
       }
     });
     appiumServer.stderr.on('data', function(data) {
+      logger.info("Appium err "+ data)
       reject(data)
     });
     appiumServer.on('close', function(code) {
+            logger.info("Appium on close  "+ code)
       reject(code);
     });
 // ...
@@ -248,6 +278,7 @@ function fnConnect(UDID){
 
 /// nice timeout function
 function timeout(delay){
+  logger.info("Running delay for : "+delay )
   return new Promise((resolve)=>{
     setTimeout(resolve,delay)
   })
@@ -256,6 +287,7 @@ function timeout(delay){
 
 
 function fnPermission(repeat,bValue,client){
+  logger.info("Running fnPermission with number of repeats: "+ repeat+" and value: "+bValue)
   if(bValue===null){
     return true;
   }
@@ -265,6 +297,7 @@ function fnPermission(repeat,bValue,client){
       iCounter++;
       if (iCounter === repeat) {
           // Failed, out of retries
+          logger.info("Couldnt find permission screen: "+bValue+" in "+ repeat +" repeats" )
           return Promise.reject( new Error("Couldnt find permission screen"));
       }
       // Retry 
@@ -298,10 +331,12 @@ function fnPermssionOnce(iCounter,bValue,client){
               
           }
           else{
+            logger.info("WAiting for permission pop up#"+iCounter)
             const msg = "WAiting for permission pop up#"+iCounter;
             throw new Error(msg);
           }
           // All good
+          logger.info("Found permission button going to click #"+iCounter)
           fnClick(img,client,repeats=5,"Click on permission button",0).then(()=>{
             resolve();
           });
@@ -323,6 +358,7 @@ function fnLoading(repeat,client){
       iCounter++;
       if (iCounter === repeat) {
           // Failed, out of retries
+          logger.info("Could not find loading screen")
           return Promise.reject( new Error("Couldnt find loading screen"));
       }
       // Retry 
@@ -352,10 +388,12 @@ function fnIsLoadingOnce(iCounter,client){
             testId=2;
         }
         else{
+          logger.info("Still Loading #"+iCounter);
           const msg = "Still Loading #"+iCounter;
           throw new Error(msg);
         }
         // All good
+        logger.info("Loading finished on  #"+iCounter +"repets");
         return testId;
       }
 
@@ -371,6 +409,7 @@ function fnIsLoadingOnce(iCounter,client){
 
 /// clears keyboard 
 function fnClearKeyBoard(client){
+  logger.info("Running clear keyboard (click on x0y0");
   return new Promise((resolve,reject)=>{
     client.touchPerform([{
       action: 'tap',
@@ -381,6 +420,7 @@ function fnClearKeyBoard(client){
       }
       }])
     .then(()=>{
+      logger.info("Keyboard cleared");
       resolve(true);
     }).catch((err)=>{
       reject(err);
@@ -391,6 +431,7 @@ function fnClearKeyBoard(client){
 
 //// main function to dettect if image is on screen
 function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000) {
+    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
       const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client).catch(err => {
@@ -398,6 +439,7 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000) {
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
+                  logger.info("Looking for image on screen #"+iCounter);
                   return Promise.reject("Object not found : " + desc);
                   throw new Error("Object not found : " + desc);
               }
@@ -424,6 +466,7 @@ function fnIsOnScreenOnce(img, desc,iCounter,client) {
             throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
         }
         // All good
+        logger.info("Found image on screen: "+desc);
         return result;
     });
 }
@@ -433,6 +476,7 @@ function fnIsOnScreenOnce(img, desc,iCounter,client) {
 
 async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
+    logger.info("Running click event : "+desc+" with "+ repeats + "repets");
     let coordinates= await fnIsOnScreen(img,client,repeats,desc,wait);
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
     let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
@@ -444,6 +488,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
             count: 1 // number of touches
         }
       }])
+    logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
     console.log("Click Performed: "+desc);
     return(true);
   }
@@ -458,6 +503,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
 ///// function that saves screenshots
 
 function fnSaveScreenShot(client){
+
   console.log("Saving screenshot of passed test");
   return new Promise((resolve,reject)=>{
     client.screenshot().then((data)=>{
@@ -494,6 +540,48 @@ function SaveImage (imageData,imageName){
 
 ////////////////////////////////////TESTS/////////////////////////////////////////////
 
+
+async function fnCleanInstall(client,appPackage,activityName,apkFileName){
+  try{
+    let logcat=await client.log('logcat')
+    logger.info(logcat);
+    logger.info("Running clean Install test with following paramters, appPackage: "+appPackage+" activityName: "+activityName+" apkFile: " + __dirname+'/apk/'+apkFileName+'.apk');
+    // is apk installed ?
+    let appExists= await client.isAppInstalled(appPackage);
+    if(appExists.value){                                        //if apk installed -> remove
+      logger.info("App exists in device => trying to remove");
+      await client.removeApp(appPackage).then(()=>{
+        logger.info("App removed")
+      })
+    } 
+    else{
+      logger.info("App does not exist in device ");
+    }                             
+    logger.info("Installing app to device "+ __dirname+'/apk/'+apkFileName+'.apk');
+    await client.installApp(__dirname+'/apk/'+apkFileName+'.apk')
+    let appExistsAfter= await client.isAppInstalled(appPackage);
+    if(!appExistsAfter.value){                                        //if apk not installed error
+      logger.info("apk was not installed:"+ appExistsAfter);
+      throw new Error(appExistsAfter+"Apk is not installed");
+    } 
+     logger.info("starting package : " + appPackage+" with activity name: "+activityName);
+    await client.startActivity(appPackage,activityName,"com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
+
+    await fnPermission(5,true,client);
+
+    loading=await fnLoading(40,client);
+    logcat=await client.log('logcat')
+    logger.info(logcat);
+    client.end();
+  }
+  catch(err){
+    client.end();
+    throw err;
+  }
+}
+
+
+
 async function fnLoginTest(client){
   console.log("Login test running");
   try{
@@ -517,7 +605,7 @@ async function fnLoginTest(client){
     await fnClick(imgBigOkButton,client,5,"big ok Button",500);
     await fnIsOnScreen(img3,client,20,"if on scree then test passed",4000);
     await fnSaveScreenShot(client);
-    client.end();
+    await client.end();
   }
   catch(err){
     client.end();
