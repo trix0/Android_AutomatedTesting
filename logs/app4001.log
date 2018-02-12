@@ -1,0 +1,1151 @@
+2018-02-09T10:24:36.722Z - info: Test execution started
+2018-02-09T10:24:36.722Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:24:36.751Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:24:36.804Z - info: executing command adb connect  localhost:7421
+2018-02-09T10:24:36.812Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:24:36.812Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:24:38.830Z - info: Appium server created on port: 4001
+2018-02-09T10:25:39.828Z - info: Appium err 2018-02-09 10:25:39:827 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T10:25:54.004Z - info: Appium err 2018-02-09 10:25:54:004 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:25:54.032Z - info: Disconnected localhost:7421=> open STF 
+2018-02-09T10:26:27.180Z - info: Appium on close  null
+2018-02-09T10:26:27.183Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:26:27.184Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:26:31.368Z - info: Test execution started
+2018-02-09T10:26:31.368Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:26:31.397Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:26:31.454Z - info: executing command adb connect  localhost:7421
+2018-02-09T10:26:31.464Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:26:31.464Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:26:33.475Z - info: Appium server created on port: 4001
+2018-02-09T10:26:44.760Z - info: Appium err 2018-02-09 10:26:44:760 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:26:44.789Z - info: Disconnected localhost:7421=> open STF 
+2018-02-09T10:27:05.702Z - info: Appium on close  null
+2018-02-09T10:27:05.706Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:27:05.707Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:27:10.374Z - info: Test execution started
+2018-02-09T10:27:10.375Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:27:10.404Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:27:10.456Z - info: executing command adb connect  localhost:7421
+2018-02-09T10:27:10.463Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:27:10.463Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:27:12.364Z - info: Appium server created on port: 4001
+2018-02-09T10:27:38.378Z - info: Appium err 2018-02-09 10:27:38:377 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:27:38.402Z - info: Disconnected localhost:7421=> open STF 
+2018-02-09T10:29:32.845Z - info: Appium on close  null
+2018-02-09T10:29:32.850Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:29:32.850Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:29:37.116Z - info: Test execution started
+2018-02-09T10:29:37.116Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:29:37.145Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:29:37.201Z - info: executing command adb connect  localhost:7421
+2018-02-09T10:29:37.209Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:29:37.209Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:29:39.139Z - info: Appium server created on port: 4001
+2018-02-09T10:29:49.911Z - info: Appium err 2018-02-09 10:29:49:910 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:29:49.949Z - info: Disconnected localhost:7421=> open STF 
+2018-02-09T10:30:04.341Z - info: Appium on close  null
+2018-02-09T10:30:04.345Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:30:04.348Z - info: You are not owner localhost:7421 => open STF 
+2018-02-09T10:30:08.965Z - info: Test execution started
+2018-02-09T10:30:08.966Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:30:08.996Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:30:36.707Z - info: Test execution started
+2018-02-09T10:30:36.708Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:30:36.736Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:30:36.979Z - info: executing command adb connect  localhost:7405
+2018-02-09T10:30:36.986Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:30:36.986Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:30:39.290Z - info: Appium server created on port: 4001
+2018-02-09T10:31:06.012Z - info: Appium err 2018-02-09 10:31:06:011 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:31:06.042Z - info: Disconnected localhost:7405=> open STF 
+2018-02-09T10:31:34.154Z - info: Appium on close  null
+2018-02-09T10:31:34.163Z - info: You are not owner localhost:7405 => open STF 
+2018-02-09T10:31:34.164Z - info: You are not owner localhost:7405 => open STF 
+2018-02-09T10:31:39.504Z - info: Test execution started
+2018-02-09T10:31:39.505Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:31:39.535Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:31:39.591Z - info: executing command adb connect  localhost:7405
+2018-02-09T10:31:39.598Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:31:39.598Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:31:41.538Z - info: Appium server created on port: 4001
+2018-02-09T10:31:52.043Z - info: Appium err 2018-02-09 10:31:52:043 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:31:52.072Z - info: Disconnected localhost:7405=> open STF 
+2018-02-09T10:32:35.713Z - info: You are not owner localhost:7405 => open STF 
+2018-02-09T10:32:35.718Z - info: You are not owner localhost:7405 => open STF 
+2018-02-09T10:32:36.818Z - info: Appium on close  null
+2018-02-09T10:33:02.290Z - info: Test execution started
+2018-02-09T10:33:02.291Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:33:02.573Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:33:02.655Z - info: executing command adb connect  localhost:7405
+2018-02-09T10:33:02.662Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:33:02.662Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:33:29.378Z - info: You are not owner localhost:7405 => open STF 
+2018-02-09T10:33:34.803Z - info: Test execution started
+2018-02-09T10:33:34.804Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:33:34.833Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:33:34.871Z - info: Device is not available => open STF 
+2018-02-09T10:33:45.838Z - info: Test execution started
+2018-02-09T10:33:45.839Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:33:45.868Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:33:45.904Z - info: Device is not available => open STF 
+2018-02-09T10:33:45.924Z - info: Disconnected undefined=> open STF 
+2018-02-09T10:34:14.956Z - info: Test execution started
+2018-02-09T10:34:14.957Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:34:14.985Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:34:15.048Z - info: executing command adb connect  localhost:7413
+2018-02-09T10:34:15.054Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:34:15.054Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:34:25.447Z - info: Appium server created on port: 4001
+2018-02-09T10:34:33.361Z - info: Appium err 2018-02-09 10:34:33:361 - [ADB] Error: Error finding if app is installed. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7413 shell pm list packages io.appium.uiautomator2.server' exited with code 1'; Stderr: 'error: device 'localhost:7413' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error finding if app is installed. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7413 shell pm list packages io.appium.uiautomator2.server' exited with code 1'; Stderr: 'error: device 'localhost:7413' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:34:33.403Z - info: Appium err 2018-02-09 10:34:33:403 - [MJSONWP] Encountered internal error running command: Error: Error finding if app is installed. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7413 shell pm list packages io.appium.uiautomator2.server' exited with code 1'; Stderr: 'error: device 'localhost:7413' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:35:09.780Z - info: Appium on close  null
+2018-02-09T10:35:09.786Z - info: You are not owner localhost:7413 => open STF 
+2018-02-09T10:35:09.786Z - info: You are not owner localhost:7413 => open STF 
+2018-02-09T10:35:15.207Z - info: Test execution started
+2018-02-09T10:35:15.208Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:35:15.237Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:35:15.297Z - info: executing command adb connect  localhost:7417
+2018-02-09T10:35:15.305Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:35:15.305Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:35:17.183Z - info: Appium server created on port: 4001
+2018-02-09T10:35:43.414Z - info: Appium err 2018-02-09 10:35:43:413 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:35:43.445Z - info: Disconnected localhost:7417=> open STF 
+2018-02-09T10:36:37.137Z - info: Appium on close  null
+2018-02-09T10:36:37.143Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:36:37.144Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:36:41.915Z - info: Test execution started
+2018-02-09T10:36:41.916Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:36:41.944Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:36:42.008Z - info: executing command adb connect  localhost:7417
+2018-02-09T10:36:42.016Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:36:42.016Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:36:43.898Z - info: Appium server created on port: 4001
+2018-02-09T10:36:56.484Z - info: Appium err 2018-02-09 10:36:56:484 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T10:36:56.541Z - info: Appium err 2018-02-09 10:36:56:540 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:36:56.567Z - info: Disconnected localhost:7417=> open STF 
+2018-02-09T10:37:23.494Z - info: Appium on close  null
+2018-02-09T10:37:23.501Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:37:23.501Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:37:27.633Z - info: Test execution started
+2018-02-09T10:37:27.634Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:37:27.662Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:37:27.724Z - info: executing command adb connect  localhost:7417
+2018-02-09T10:37:27.733Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:37:27.733Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:37:29.679Z - info: Appium server created on port: 4001
+2018-02-09T10:38:00.965Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T10:38:02.613Z - info: App exists in device => trying to remove
+2018-02-09T10:38:08.841Z - info: App removed
+2018-02-09T10:38:08.841Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T10:39:10.475Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T10:39:15.067Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T10:39:16.485Z - info: Found permission button going to click #0
+2018-02-09T10:39:16.486Z - info: Running click event : Click on permission button with 5repets
+2018-02-09T10:39:16.486Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-09T10:39:16.486Z - info: Running delay for : 0
+2018-02-09T10:39:17.392Z - info: Found image on screen: Click on permission button
+2018-02-09T10:39:17.544Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-09T10:39:18.553Z - info: Still Loading #0
+2018-02-09T10:39:19.736Z - info: Still Loading #1
+2018-02-09T10:39:20.882Z - info: Still Loading #2
+2018-02-09T10:39:22.039Z - info: Still Loading #3
+2018-02-09T10:39:23.144Z - info: Still Loading #4
+2018-02-09T10:39:24.561Z - info: Still Loading #5
+2018-02-09T10:39:25.010Z - info: Still Loading #6
+2018-02-09T10:39:25.445Z - info: Still Loading #7
+2018-02-09T10:39:25.881Z - info: Still Loading #8
+2018-02-09T10:39:26.306Z - info: Still Loading #9
+2018-02-09T10:39:26.694Z - info: Still Loading #10
+2018-02-09T10:39:27.093Z - info: Still Loading #11
+2018-02-09T10:39:27.493Z - info: Still Loading #12
+2018-02-09T10:39:27.860Z - info: Still Loading #13
+2018-02-09T10:39:28.268Z - info: Still Loading #14
+2018-02-09T10:39:28.658Z - info: Still Loading #15
+2018-02-09T10:39:29.042Z - info: Still Loading #16
+2018-02-09T10:39:29.466Z - info: Still Loading #17
+2018-02-09T10:39:29.844Z - info: Still Loading #18
+2018-02-09T10:39:30.308Z - info: Still Loading #19
+2018-02-09T10:39:30.711Z - info: Still Loading #20
+2018-02-09T10:39:31.167Z - info: Still Loading #21
+2018-02-09T10:39:31.618Z - info: Still Loading #22
+2018-02-09T10:39:32.054Z - info: Still Loading #23
+2018-02-09T10:39:32.453Z - info: Still Loading #24
+2018-02-09T10:39:32.873Z - info: Still Loading #25
+2018-02-09T10:39:33.245Z - info: Still Loading #26
+2018-02-09T10:39:33.651Z - info: Still Loading #27
+2018-02-09T10:39:34.095Z - info: Still Loading #28
+2018-02-09T10:39:34.559Z - info: Still Loading #29
+2018-02-09T10:39:35.004Z - info: Still Loading #30
+2018-02-09T10:39:35.453Z - info: Still Loading #31
+2018-02-09T10:39:35.908Z - info: Still Loading #32
+2018-02-09T10:39:36.303Z - info: Still Loading #33
+2018-02-09T10:39:36.685Z - info: Still Loading #34
+2018-02-09T10:39:37.056Z - info: Still Loading #35
+2018-02-09T10:39:37.412Z - info: Still Loading #36
+2018-02-09T10:39:37.735Z - info: Still Loading #37
+2018-02-09T10:39:38.169Z - info: Still Loading #38
+2018-02-09T10:39:38.593Z - info: Still Loading #39
+2018-02-09T10:39:38.594Z - info: Could not find loading screen
+2018-02-09T10:39:38.663Z - info: Disconnected localhost:7417=> open STF 
+2018-02-09T10:39:38.700Z - info: Appium err 2018-02-09 10:39:38:700 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T10:45:55.958Z - info: Appium on close  null
+2018-02-09T10:45:55.964Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:45:55.965Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:46:07.897Z - info: Test execution started
+2018-02-09T10:46:07.898Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:46:08.111Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:46:08.164Z - info: executing command adb connect  localhost:7417
+2018-02-09T10:46:08.172Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T10:46:08.172Z - info: Trying to create appium Server on port: 4001
+2018-02-09T10:46:13.404Z - info: Appium server created on port: 4001
+2018-02-09T10:46:39.994Z - info: Appium err 2018-02-09 10:46:39:993 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T10:46:40.021Z - info: Disconnected localhost:7417=> open STF 
+2018-02-09T10:49:57.001Z - info: Appium on close  null
+2018-02-09T10:49:57.003Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:49:57.004Z - info: You are not owner localhost:7417 => open STF 
+2018-02-09T10:54:18.773Z - info: Test execution started
+2018-02-09T10:54:18.774Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:54:18.803Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:54:18.853Z - info: executing command adb connect  localhost:7437
+2018-02-09T10:54:18.895Z - info: Disconnected localhost:7437=> open STF 
+2018-02-09T10:54:33.338Z - info: Test execution started
+2018-02-09T10:54:33.339Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:54:33.367Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:54:33.417Z - info: executing command adb connect  localhost:7437
+2018-02-09T10:54:33.469Z - info: Disconnected localhost:7437=> open STF 
+2018-02-09T10:54:56.538Z - info: Test execution started
+2018-02-09T10:54:56.539Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:54:56.567Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:54:56.619Z - info: executing command adb connect  localhost:7437
+2018-02-09T10:54:56.666Z - info: Disconnected localhost:7437=> open STF 
+2018-02-09T10:55:09.336Z - info: Test execution started
+2018-02-09T10:55:09.337Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T10:55:09.366Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T10:55:09.417Z - info: executing command adb connect  localhost:7429
+2018-02-09T10:55:09.472Z - info: Disconnected localhost:7429=> open STF 
+2018-02-09T11:11:50.598Z - info: Test execution started
+2018-02-09T11:11:50.599Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:11:51.072Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T11:11:51.238Z - info: executing command adb connect  localhost:7437
+2018-02-09T11:11:51.292Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:11:51.292Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:12:37.076Z - info: Appium server created on port: 4001
+2018-02-09T11:14:16.061Z - info: Appium err 2018-02-09 11:14:16:030 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:35:03.780Z - info: Test execution started
+2018-02-09T11:35:03.781Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:35:04.124Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:35:04.344Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:35:04.349Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:35:04.349Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:35:29.364Z - info: Appium server created on port: 4001
+2018-02-09T11:35:52.085Z - info: Appium err 2018-02-09 11:35:52:085 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:36:09.620Z - info: Appium err 2018-02-09 11:36:09:620 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:36:09.652Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:36:27.330Z - info: Appium on close  null
+2018-02-09T11:36:27.336Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:36:27.338Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:36:32.418Z - info: Test execution started
+2018-02-09T11:36:32.419Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:36:32.448Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:36:32.500Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:36:32.507Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:36:32.507Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:36:34.249Z - info: Appium server created on port: 4001
+2018-02-09T11:36:45.376Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:36:45.543Z - info: App exists in device => trying to remove
+2018-02-09T11:36:46.475Z - info: App removed
+2018-02-09T11:36:46.475Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:36:54.850Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T11:36:55.833Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T11:36:56.414Z - info: WAiting for permission pop up#0
+2018-02-09T11:36:58.919Z - info: Appium err 2018-02-09 11:36:58:916 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T11:36:58.943Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:36:58.944Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:37:21.690Z - info: Test execution started
+2018-02-09T11:37:21.691Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:37:21.720Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:37:21.778Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:37:21.785Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:37:21.785Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:37:21.896Z - info: Appium on close  null
+2018-02-09T11:37:23.638Z - info: Appium server created on port: 4001
+2018-02-09T11:37:34.079Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:37:34.258Z - info: App exists in device => trying to remove
+2018-02-09T11:37:35.059Z - info: App removed
+2018-02-09T11:37:35.059Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:37:41.572Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T11:37:42.366Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T11:37:42.613Z - info: WAiting for permission pop up#0
+2018-02-09T11:39:57.993Z - info: Appium err 2018-02-09 11:39:57:992 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T11:39:58.018Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:39:58.019Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:40:02.516Z - info: Test execution started
+2018-02-09T11:40:02.517Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:40:02.545Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:40:02.617Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:40:02.625Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:40:02.625Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:40:04.599Z - info: Appium server created on port: 4001
+2018-02-09T11:40:25.297Z - info: Appium err 2018-02-09 11:40:25:297 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:40:42.816Z - info: Appium err 2018-02-09 11:40:42:816 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:40:42.842Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:40:55.943Z - info: Appium on close  null
+2018-02-09T11:40:55.944Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:40:55.946Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:41:00.743Z - info: Test execution started
+2018-02-09T11:41:00.743Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:41:00.772Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:41:00.827Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:41:00.837Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:41:00.837Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:41:02.789Z - info: Appium server created on port: 4001
+2018-02-09T11:41:29.423Z - info: Appium err 2018-02-09 11:41:29:423 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:41:29.451Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:43:25.057Z - info: Appium on close  null
+2018-02-09T11:43:25.057Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:43:25.058Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:43:29.936Z - info: Test execution started
+2018-02-09T11:43:29.937Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:43:29.965Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:43:30.021Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:43:30.028Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:43:30.028Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:43:31.968Z - info: Appium server created on port: 4001
+2018-02-09T11:44:25.690Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:44:27.310Z - info: App exists in device => trying to remove
+2018-02-09T11:44:33.571Z - info: App removed
+2018-02-09T11:44:33.571Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:45:24.638Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T11:45:29.227Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T11:45:30.298Z - info: Found permission button going to click #0
+2018-02-09T11:45:30.298Z - info: Running click event : Click on permission button with 5repets
+2018-02-09T11:45:30.298Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-09T11:45:30.298Z - info: Running delay for : 0
+2018-02-09T11:45:31.226Z - info: Found image on screen: Click on permission button
+2018-02-09T11:45:31.368Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-09T11:45:32.430Z - info: Still Loading #0
+2018-02-09T11:45:33.570Z - info: Still Loading #1
+2018-02-09T11:45:34.728Z - info: Still Loading #2
+2018-02-09T11:45:35.860Z - info: Still Loading #3
+2018-02-09T11:45:36.994Z - info: Still Loading #4
+2018-02-09T11:45:38.493Z - info: Still Loading #5
+2018-02-09T11:45:38.906Z - info: Still Loading #6
+2018-02-09T11:45:39.327Z - info: Still Loading #7
+2018-02-09T11:45:39.739Z - info: Still Loading #8
+2018-02-09T11:45:40.152Z - info: Still Loading #9
+2018-02-09T11:45:40.584Z - info: Still Loading #10
+2018-02-09T11:45:40.945Z - info: Still Loading #11
+2018-02-09T11:45:41.385Z - info: Still Loading #12
+2018-02-09T11:45:41.739Z - info: Still Loading #13
+2018-02-09T11:45:41.914Z - info: Appium err 2018-02-09 11:45:41:911 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T11:45:41.941Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:45:41.941Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:45:42.151Z - info: Still Loading #14
+2018-02-09T11:45:42.594Z - info: Still Loading #15
+2018-02-09T11:45:42.996Z - info: Still Loading #16
+2018-02-09T11:45:43.388Z - info: Still Loading #17
+2018-02-09T11:45:43.926Z - info: Still Loading #18
+2018-02-09T11:45:44.405Z - info: Still Loading #19
+2018-02-09T11:45:44.867Z - info: Still Loading #20
+2018-02-09T11:45:45.237Z - info: Still Loading #21
+2018-02-09T11:45:45.632Z - info: Still Loading #22
+2018-02-09T11:45:46.034Z - info: Still Loading #23
+2018-02-09T11:45:46.429Z - info: Still Loading #24
+2018-02-09T11:45:46.841Z - info: Still Loading #25
+2018-02-09T11:45:47.257Z - info: Still Loading #26
+2018-02-09T11:45:47.324Z - info: Test execution started
+2018-02-09T11:45:47.324Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:45:47.352Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:45:47.415Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:45:47.423Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:45:47.424Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:45:47.698Z - info: Still Loading #27
+2018-02-09T11:45:48.155Z - info: Still Loading #28
+2018-02-09T11:45:48.661Z - info: Still Loading #29
+2018-02-09T11:45:49.107Z - info: Still Loading #30
+2018-02-09T11:45:49.395Z - info: Appium server created on port: 4001
+2018-02-09T11:45:49.395Z - info: localhost:7401 assigned udid
+2018-02-09T11:45:49.577Z - info: Still Loading #31
+2018-02-09T11:45:50.075Z - info: Still Loading #32
+2018-02-09T11:45:50.547Z - info: Still Loading #33
+2018-02-09T11:45:51.006Z - info: Still Loading #34
+2018-02-09T11:45:51.449Z - info: Still Loading #35
+2018-02-09T11:45:51.881Z - info: Still Loading #36
+2018-02-09T11:45:52.308Z - info: Still Loading #37
+2018-02-09T11:45:52.785Z - info: Still Loading #38
+2018-02-09T11:45:53.191Z - info: Still Loading #39
+2018-02-09T11:45:53.620Z - info: Still Loading #40
+2018-02-09T11:45:54.048Z - info: Still Loading #41
+2018-02-09T11:45:54.467Z - info: Still Loading #42
+2018-02-09T11:45:54.836Z - info: Still Loading #43
+2018-02-09T11:45:55.268Z - info: Still Loading #44
+2018-02-09T11:45:55.633Z - info: Appium on close  null
+2018-02-09T11:45:55.738Z - info: Still Loading #45
+2018-02-09T11:45:55.802Z - info: Could not find loading screen
+2018-02-09T11:45:55.823Z - info: Disconnected localhost:7401=> open STF 
+2018-02-09T11:45:55.825Z - info: Appium err 2018-02-09 11:45:55:824 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:45:55.848Z - info: Appium err 2018-02-09 11:45:55:848 - [UiAutomator2] [UIAutomator2 Error] Failure: 'device 'localhost:7401' not found'
+
+2018-02-09T11:46:07.389Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:46:07.391Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:46:15.007Z - info: Appium err 2018-02-09 11:46:15:007 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:46:15.018Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:46:22.755Z - info: Test execution started
+2018-02-09T11:46:22.756Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:46:22.784Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:46:22.836Z - info: executing command adb connect  localhost:7401
+2018-02-09T11:46:22.844Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:46:22.844Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:46:24.919Z - info: Appium server created on port: 4001
+2018-02-09T11:46:24.919Z - info: localhost:7401 assigned udidlocalhost:7401
+2018-02-09T11:46:34.523Z - info: Appium err 2018-02-09 11:46:34:523 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:46:34.554Z - info: Appium err 2018-02-09 11:46:34:554 - [MJSONWP] Encountered internal error running command:  {"w3cStatus":400,"jsonwp":{"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}} ProxyRequestError: Could not proxy command to remote server. Original error: 500 - {"sessionId":null,"status":13,"value":"java.lang.IllegalThreadStateException: Thread already started\n\tat java.lang.Thread.checkNotStarted(Thread.java:849)\n\tat java.lang.Thread.start(Thread.java:1059)\n\tat io.appium.uiautomator2.model.NotificationListener.start(NotificationListener.java:32)\n\tat io.appium.uiautomator2.model.Session.<init>(Session.java:23)\n\tat io.appium.uiautomator2.model.AppiumUiAutomatorDriver.initializeSession(AppiumUiAutomatorDriver.java:19)\n\tat io.appium.uiautomator2.handler.NewSession.safeHandle(NewSession.java:31)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:56)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:217)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:208)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:44)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:514)\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:468)\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n\tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n\tat java.lang.Thread.run(Thread.java:818)\n"}
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:48:30.491Z - info: Appium on close  null
+2018-02-09T11:48:30.500Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:48:30.501Z - info: You are not owner localhost:7401 => open STF 
+2018-02-09T11:48:34.515Z - info: Test execution started
+2018-02-09T11:48:34.516Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:48:34.546Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:48:34.600Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:48:34.608Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:48:34.608Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:48:36.590Z - info: Appium server created on port: 4001
+2018-02-09T11:48:36.591Z - info: localhost:7441 assigned udidlocalhost:7441
+2018-02-09T11:48:36.617Z - info: Disconnected localhost:7441=> open STF 
+2018-02-09T11:49:39.208Z - info: Test execution started
+2018-02-09T11:49:39.209Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:49:39.237Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:49:39.297Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:49:39.305Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:49:39.305Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:49:41.221Z - info: Appium server created on port: 4001
+2018-02-09T11:49:41.222Z - info: localhost:7441 assigned udidlocalhost:7441
+2018-02-09T11:50:07.195Z - info: Appium err 2018-02-09 11:50:07:195 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:50:24.219Z - info: Appium err 2018-02-09 11:50:24:219 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:50:24.246Z - info: Disconnected localhost:7441=> open STF 
+2018-02-09T11:50:31.497Z - info: Appium on close  null
+2018-02-09T11:50:31.505Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:50:31.506Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:50:35.107Z - info: Test execution started
+2018-02-09T11:50:35.108Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:50:35.137Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:50:35.186Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:50:35.196Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:50:35.196Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:50:37.271Z - info: Appium server created on port: 4001
+2018-02-09T11:50:37.272Z - info:  
+{ port: 4001,
+  desiredCapabilities: 
+   { platformName: 'Android',
+     deviceName: 'Android',
+     systemPort: 8201,
+     automationName: 'uiautomator2',
+     udid: '',
+     appPackage: 'com.gorro.nothing',
+     appActivity: 'com.gorro.nothing.NothingActivity',
+     noReset: true,
+     fullReset: false,
+     newCommandTimeout: 120000,
+     skipUnlock: true },
+  udid: 'localhost:7441' }
+2018-02-09T11:51:04.678Z - info: Appium err 2018-02-09 11:51:04:677 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:51:21.135Z - info: Appium err 2018-02-09 11:51:21:135 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:51:21.164Z - info: Disconnected localhost:7441=> open STF 
+2018-02-09T11:51:46.057Z - info: Appium on close  null
+2018-02-09T11:51:46.066Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:51:46.067Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:51:49.879Z - info: Test execution started
+2018-02-09T11:51:49.880Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:51:49.909Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:51:49.960Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:51:49.967Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:51:49.967Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:51:51.951Z - info: Appium server created on port: 4001
+2018-02-09T11:51:51.952Z - info:  
+{ port: 4001,
+  desiredCapabilities: 
+   { platformName: 'Android',
+     deviceName: 'Android',
+     systemPort: 8201,
+     automationName: 'uiautomator2',
+     udid: '',
+     appPackage: 'com.gorro.nothing',
+     appActivity: 'com.gorro.nothing.NothingActivity',
+     noReset: true,
+     fullReset: false,
+     newCommandTimeout: 120000,
+     skipUnlock: true },
+  udid: undefined }
+2018-02-09T11:52:16.119Z - info: Appium err 2018-02-09 11:52:16:118 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:52:33.265Z - info: Appium err 2018-02-09 11:52:33:265 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:52:33.292Z - info: Disconnected undefined=> open STF 
+2018-02-09T11:52:53.763Z - info: Appium on close  null
+2018-02-09T11:52:53.769Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:52:53.769Z - info: You are not owner undefined => open STF 
+2018-02-09T11:52:57.556Z - info: Test execution started
+2018-02-09T11:52:57.557Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:52:57.586Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:52:57.636Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:52:57.646Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:52:57.646Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:52:59.619Z - info: Appium server created on port: 4001
+2018-02-09T11:52:59.622Z - info:  
+{ port: 4001,
+  desiredCapabilities: 
+   { platformName: 'Android',
+     deviceName: 'Android',
+     systemPort: 8201,
+     automationName: 'uiautomator2',
+     udid: '',
+     appPackage: 'com.gorro.nothing',
+     appActivity: 'com.gorro.nothing.NothingActivity',
+     noReset: true,
+     fullReset: false,
+     newCommandTimeout: 120000,
+     skipUnlock: true } }
+2018-02-09T11:53:14.490Z - info: Disconnected localhost:7441=> open STF 
+2018-02-09T11:53:14.491Z - info: Disconnected localhost:7441=> open STF 
+2018-02-09T11:53:14.551Z - info: Appium err 2018-02-09 11:53:14:550 - [ADB] Error: Error finding if app is installed. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7453 shell pm list packages io.appium.unlock' exited with code 1'; Stderr: 'error: device 'localhost:7453' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error finding if app is installed. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7453 shell pm list packages io.appium.unlock' exited with code 1'; Stderr: 'error: device 'localhost:7453' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:53:14.641Z - info: Appium err 2018-02-09 11:53:14:641 - [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7453 forward tcp\:8201 tcp\:6790' exited with code 1'; Stderr: 'error: device 'localhost:7453' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:53:14.658Z - info: You are not owner localhost:7441 => open STF 
+2018-02-09T11:53:24.613Z - info: Appium on close  null
+2018-02-09T11:53:53.479Z - info: Test execution started
+2018-02-09T11:53:53.480Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:53:53.509Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:53:53.564Z - info: executing command adb connect  localhost:7441
+2018-02-09T11:53:53.572Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:53:53.572Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:53:55.694Z - info: Appium server created on port: 4001
+2018-02-09T11:54:20.358Z - info: Test execution started
+2018-02-09T11:54:20.359Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:54:20.403Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:54:20.468Z - info: executing command adb connect  localhost:7457
+2018-02-09T11:54:20.476Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:54:20.476Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:54:22.835Z - info: Appium server created on port: 4001
+2018-02-09T11:54:23.005Z - info: Appium err 2018-02-09 11:54:23:004 - [AndroidDriver] Error: Device localhost:7457 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7457 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:54:23.007Z - info: Appium err 2018-02-09 11:54:23:007 - [MJSONWP] Encountered internal error running command: Error: Device localhost:7457 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:55:03.591Z - info: Appium on close  null
+2018-02-09T11:55:03.598Z - info: You are not owner localhost:7457 => open STF 
+2018-02-09T11:55:03.601Z - info: You are not owner localhost:7457 => open STF 
+2018-02-09T11:55:08.182Z - info: Test execution started
+2018-02-09T11:55:08.182Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:55:08.213Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:55:08.279Z - info: executing command adb connect  localhost:7461
+2018-02-09T11:55:08.288Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:55:08.288Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:55:10.464Z - info: Appium server created on port: 4001
+2018-02-09T11:55:10.618Z - info: Appium err 2018-02-09 11:55:10:617 - [AndroidDriver] Error: Device localhost:7461 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7461 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:55:10.621Z - info: Appium err 2018-02-09 11:55:10:621 - [MJSONWP] Encountered internal error running command: Error: Device localhost:7461 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:56:03.675Z - info: Appium on close  null
+2018-02-09T11:56:03.679Z - info: You are not owner localhost:7461 => open STF 
+2018-02-09T11:56:03.683Z - info: You are not owner localhost:7461 => open STF 
+2018-02-09T11:56:11.834Z - info: Test execution started
+2018-02-09T11:56:11.835Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:56:11.864Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:56:11.919Z - info: executing command adb connect  localhost:7469
+2018-02-09T11:56:11.927Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:56:11.927Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:56:13.958Z - info: Appium server created on port: 4001
+2018-02-09T11:56:19.917Z - info: Appium err 2018-02-09 11:56:19:916 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-09T11:56:19.975Z - info: Appium err 2018-02-09 11:56:19:975 - [MJSONWP] Encountered internal error running command: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8201
+    at JWProxy.proxy$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:152:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T11:56:26.460Z - info: Appium on close  null
+2018-02-09T11:57:59.836Z - info: Test execution started
+2018-02-09T11:57:59.836Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T11:57:59.867Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T11:57:59.926Z - info: executing command adb connect  localhost:7473
+2018-02-09T11:57:59.934Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T11:57:59.934Z - info: Trying to create appium Server on port: 4001
+2018-02-09T11:58:01.931Z - info: Appium server created on port: 4001
+2018-02-09T11:58:08.213Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:58:08.399Z - info: App exists in device => trying to remove
+2018-02-09T11:58:09.195Z - info: App removed
+2018-02-09T11:58:09.196Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T11:58:15.398Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T11:58:16.282Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T11:58:16.550Z - info: WAiting for permission pop up#0
+2018-02-09T12:00:54.913Z - info: Appium err 2018-02-09 12:00:54:909 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:00:54.942Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:00:54.944Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:01:06.167Z - info: Test execution started
+2018-02-09T12:01:06.168Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:01:06.197Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:01:06.260Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:01:06.269Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:01:06.269Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:01:08.347Z - info: Appium server created on port: 4001
+2018-02-09T12:01:15.872Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:01:16.051Z - info: App exists in device => trying to remove
+2018-02-09T12:01:16.988Z - info: App removed
+2018-02-09T12:01:16.988Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:01:24.194Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:01:25.044Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:01:25.298Z - info: WAiting for permission pop up#0
+2018-02-09T12:05:45.993Z - info: Appium err 2018-02-09 12:05:45:991 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:05:46.019Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:05:46.020Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:05:51.285Z - info: Test execution started
+2018-02-09T12:05:51.286Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:05:51.316Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:05:51.384Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:05:51.390Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:05:51.390Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:05:53.407Z - info: Appium server created on port: 4001
+2018-02-09T12:05:59.713Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:05:59.903Z - info: App exists in device => trying to remove
+2018-02-09T12:06:00.736Z - info: App removed
+2018-02-09T12:06:00.736Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:06:08.146Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:06:08.927Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:06:09.193Z - info: WAiting for permission pop up#0
+2018-02-09T12:11:04.062Z - info: Appium err 2018-02-09 12:11:04:060 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:11:04.084Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:11:04.085Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:11:09.750Z - info: Test execution started
+2018-02-09T12:11:09.750Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:11:09.779Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:11:09.833Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:11:09.843Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:11:09.844Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:11:12.316Z - info: Appium server created on port: 4001
+2018-02-09T12:11:21.263Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:11:21.436Z - info: App exists in device => trying to remove
+2018-02-09T12:11:22.257Z - info: App removed
+2018-02-09T12:11:22.257Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:11:31.220Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:11:32.173Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:11:32.582Z - info: WAiting for permission pop up#0
+2018-02-09T12:14:28.213Z - info: Appium err 2018-02-09 12:14:28:210 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:14:28.239Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:14:28.241Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:14:36.189Z - info: Test execution started
+2018-02-09T12:14:36.190Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:14:36.218Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:14:36.265Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:14:36.272Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:14:36.272Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:14:40.338Z - info: Appium server created on port: 4001
+2018-02-09T12:14:46.906Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:14:47.088Z - info: App exists in device => trying to remove
+2018-02-09T12:14:47.895Z - info: App removed
+2018-02-09T12:14:47.895Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:14:56.808Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:14:57.946Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:14:58.304Z - info: WAiting for permission pop up#0
+2018-02-09T12:19:07.072Z - info: Appium err 2018-02-09 12:19:07:069 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:19:07.110Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:19:07.111Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:19:16.343Z - info: Test execution started
+2018-02-09T12:19:16.344Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:19:16.465Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:19:16.511Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:19:16.519Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:19:16.519Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:19:26.861Z - info: Appium server created on port: 4001
+2018-02-09T12:19:34.052Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:19:34.245Z - info: App exists in device => trying to remove
+2018-02-09T12:19:35.108Z - info: App removed
+2018-02-09T12:19:35.108Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:19:44.291Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:19:45.200Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:19:45.491Z - info: WAiting for permission pop up#0
+2018-02-09T12:21:51.825Z - info: Appium err 2018-02-09 12:21:51:821 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:21:51.849Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:21:51.849Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:39:02.761Z - info: Test execution started
+2018-02-09T12:39:02.762Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:39:02.791Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:39:02.845Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:39:02.853Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:39:02.854Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:39:04.770Z - info: Appium server created on port: 4001
+2018-02-09T12:39:11.124Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:39:11.320Z - info: App exists in device => trying to remove
+2018-02-09T12:39:12.118Z - info: App removed
+2018-02-09T12:39:12.118Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:39:21.134Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:39:22.086Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:39:22.336Z - info: WAiting for permission pop up#0
+2018-02-09T12:47:03.250Z - info: Appium err 2018-02-09 12:47:03:248 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:47:03.277Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:47:03.279Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:47:17.447Z - info: Test execution started
+2018-02-09T12:47:17.448Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:47:17.852Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:47:17.956Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:47:17.964Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:47:17.964Z - info: Trying to create appium Server on port: 4001
+2018-02-09T12:47:51.783Z - info: Appium server created on port: 4001
+2018-02-09T12:48:33.509Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:48:35.342Z - info: App exists in device => trying to remove
+2018-02-09T12:48:37.576Z - info: App removed
+2018-02-09T12:48:37.576Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T12:48:59.279Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T12:49:01.001Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T12:49:04.559Z - info: WAiting for permission pop up#0
+2018-02-09T12:51:04.636Z - info: Appium err 2018-02-09 12:51:04:028 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T12:51:05.772Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:51:05.773Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:51:05.774Z - info: Disconnected localhost:7473=> open STF 
+2018-02-09T12:51:55.849Z - info: Test execution started
+2018-02-09T12:51:55.950Z - info: Get following options to run{"serial":"emulator-5554","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T12:51:56.507Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-09T12:51:58.398Z - info: executing command adb connect  localhost:7473
+2018-02-09T12:51:59.212Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T12:51:59.212Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:04:42.652Z - info: Test execution started
+2018-02-09T14:04:42.653Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:04:42.682Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:04:42.714Z - info: Device is not available => open STF 
+2018-02-09T14:04:42.735Z - info: Disconnected undefined=> open STF 
+2018-02-09T14:10:43.606Z - info: Test execution started
+2018-02-09T14:10:43.607Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:10:43.637Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:10:43.668Z - info: Device is not available => open STF 
+2018-02-09T14:10:43.684Z - info: Disconnected undefined=> open STF 
+2018-02-09T14:19:25.947Z - info: Test execution started
+2018-02-09T14:19:25.947Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:19:25.975Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:19:26.019Z - info: executing command adb connect  localhost:7401
+2018-02-09T14:19:26.026Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T14:19:26.027Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:19:28.479Z - info: Appium server created on port: 4001
+2018-02-09T14:19:28.707Z - info: Appium err 2018-02-09 14:19:28:706 - [AndroidDriver] Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T14:19:28.709Z - info: Appium err 2018-02-09 14:19:28:709 - [MJSONWP] Encountered internal error running command: Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T14:19:36.797Z - info: Appium on close  null
+2018-02-09T14:19:42.569Z - info: Test execution started
+2018-02-09T14:19:42.570Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:19:42.603Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:19:42.640Z - info: Device is not available => open STF 
+2018-02-09T14:20:01.536Z - info: Test execution started
+2018-02-09T14:20:01.537Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:20:01.566Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:20:01.619Z - info: executing command adb connect  localhost:7409
+2018-02-09T14:20:01.628Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T14:20:01.628Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:20:04.168Z - info: Appium server created on port: 4001
+2018-02-09T14:20:38.429Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:20:40.110Z - info: App does not exist in device 
+2018-02-09T14:20:40.110Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:21:34.334Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T14:21:39.028Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T14:21:40.179Z - info: Found permission button going to click #0
+2018-02-09T14:21:40.179Z - info: Running click event : Click on permission button with 5repets
+2018-02-09T14:21:40.179Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-09T14:21:40.179Z - info: Running delay for : 0
+2018-02-09T14:21:40.180Z - info: Running delay for : 0
+2018-02-09T14:21:41.278Z - info: Found image on screen: Click on permission button
+2018-02-09T14:21:41.465Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-09T14:21:41.465Z - info: Looking for image on screen:if on scree then test passed with 20 repeats 
+2018-02-09T14:21:41.465Z - info: Running delay for : 6000
+2018-02-09T14:21:47.467Z - info: Running delay for : 2000
+2018-02-09T14:21:50.166Z - info: Running delay for : 2000
+2018-02-09T14:21:52.744Z - info: Running delay for : 2000
+2018-02-09T14:21:55.288Z - info: Running delay for : 2000
+2018-02-09T14:21:57.769Z - info: Running delay for : 2000
+2018-02-09T14:22:00.337Z - info: Running delay for : 2000
+2018-02-09T14:22:02.929Z - info: Running delay for : 2000
+2018-02-09T14:22:05.369Z - info: Running delay for : 2000
+2018-02-09T14:22:07.950Z - info: Running delay for : 2000
+2018-02-09T14:22:10.396Z - info: Running delay for : 2000
+2018-02-09T14:22:12.923Z - info: Running delay for : 2000
+2018-02-09T14:22:15.315Z - info: Running delay for : 2000
+2018-02-09T14:22:18.795Z - info: Found image on screen: if on scree then test passed
+2018-02-09T14:23:09.860Z - info: Appium on close  null
+2018-02-09T14:23:09.877Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:23:09.878Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:23:38.459Z - info: Test execution started
+2018-02-09T14:23:38.460Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:23:38.488Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:23:38.548Z - info: executing command adb connect  localhost:7409
+2018-02-09T14:23:38.559Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T14:23:38.559Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:23:41.237Z - info: Appium server created on port: 4001
+2018-02-09T14:23:51.484Z - info: Appium err 2018-02-09 14:23:51:483 - [Logcat] Logcat terminated with code null, signal SIGINT
+
+2018-02-09T14:23:51.512Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:23:51.513Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:23:51.568Z - info: Appium err 2018-02-09 14:23:51:568 - [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell getprop ro.product.model' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T14:23:51.582Z - info: You are not owner localhost:7409 => open STF 
+2018-02-09T14:23:55.467Z - info: Test execution started
+2018-02-09T14:23:55.468Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:23:55.496Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:23:55.550Z - info: executing command adb connect  localhost:7409
+2018-02-09T14:23:55.557Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T14:23:55.557Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:23:57.699Z - info: Appium on close  null
+2018-02-09T14:23:57.907Z - info: Appium server created on port: 4001
+2018-02-09T14:24:14.778Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:24:16.482Z - info: App does not exist in device 
+2018-02-09T14:24:16.482Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:25:15.835Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T14:25:20.374Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T14:25:21.812Z - info: Found permission button going to click #0
+2018-02-09T14:25:21.813Z - info: Running click event : Click on permission button with 5repets
+2018-02-09T14:25:21.813Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-09T14:25:21.814Z - info: Running delay for : 0
+2018-02-09T14:25:21.817Z - info: Running delay for : 0
+2018-02-09T14:25:23.198Z - info: Found image on screen: Click on permission button
+2018-02-09T14:25:23.574Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-09T14:25:23.574Z - info: Looking for image on screen:if on scree then test passed with 20 repeats 
+2018-02-09T14:25:23.574Z - info: Running delay for : 6000
+2018-02-09T14:25:29.577Z - info: Running delay for : 2000
+2018-02-09T14:25:33.450Z - info: Running delay for : 2000
+2018-02-09T14:25:36.955Z - info: Running delay for : 2000
+2018-02-09T14:25:40.345Z - info: Running delay for : 2000
+2018-02-09T14:25:44.232Z - info: Running delay for : 2000
+2018-02-09T14:25:47.468Z - info: Running delay for : 2000
+2018-02-09T14:25:50.683Z - info: Running delay for : 2000
+2018-02-09T14:25:53.710Z - info: Running delay for : 2000
+2018-02-09T14:25:56.913Z - info: Running delay for : 2000
+2018-02-09T14:26:00.217Z - info: Running delay for : 2000
+2018-02-09T14:26:04.166Z - info: Running delay for : 2000
+2018-02-09T14:26:06.947Z - info: Running delay for : 2000
+2018-02-09T14:26:10.964Z - info: Found image on screen: if on scree then test passed
+2018-02-09T14:26:20.799Z - info: Appium err 2018-02-09 14:26:20:793 - [Logcat] Logcat terminated with code null, signal SIGINT
+2018-02-09 14:26:20:793 - [UiAutomator] UiAutomator exited unexpectedly with code null, signal SIGINT
+
+2018-02-09T14:26:20.865Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:26:20.866Z - info: Disconnected localhost:7409=> open STF 
+2018-02-09T14:26:20.937Z - info: Appium err Unhandled rejection Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T14:26:20.951Z - info: Appium err 2018-02-09 14:26:20:951 - [Appium] Had trouble ending session a7e04968-d9cc-455e-9ac2-7692a3837ea2: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell am force-stop io.appium.unlock' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+
+2018-02-09T14:26:20.952Z - info: Appium err 2018-02-09 14:26:20:952 - [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell am force-stop io.appium.unlock' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-09T14:26:25.970Z - info: Appium on close  null
+2018-02-09T14:26:27.162Z - info: Test execution started
+2018-02-09T14:26:27.163Z - info: Get following options to run{"serial":"cd21ccc5","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-09T14:26:27.205Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T14:26:27.267Z - info: executing command adb connect  localhost:7409
+2018-02-09T14:26:27.276Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4001 -bp6001  --log-timestamp --log /home/trixo/Code/javaRewrite/log4001.txt
+2018-02-09T14:26:27.276Z - info: Trying to create appium Server on port: 4001
+2018-02-09T14:26:29.646Z - info: Appium server created on port: 4001
+2018-02-09T14:26:55.331Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:26:57.043Z - info: App does not exist in device 
+2018-02-09T14:26:57.043Z - info: Installing app to device /home/trixo/Code/javaRewrite/apk/pl.apk
+2018-02-09T14:27:59.723Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-09T14:28:05.878Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-09T14:28:07.181Z - info: Found permission button going to click #0
+2018-02-09T14:28:07.182Z - info: Running click event : Click on permission button with 5repets
+2018-02-09T14:28:07.182Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-09T14:28:07.182Z - info: Running delay for : 0
+2018-02-09T14:28:07.184Z - info: Running delay for : 0
+2018-02-09T14:28:08.445Z - info: Found image on screen: Click on permission button
+2018-02-09T14:28:08.786Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-09T14:28:08.788Z - info: Looking for image on screen:if on scree then test passed with 20 repeats 
+2018-02-09T14:28:08.788Z - info: Running delay for : 6000
+2018-02-09T14:28:14.790Z - info: Running delay for : 2000
+2018-02-09T14:28:18.444Z - info: Running delay for : 2000
+2018-02-09T14:28:21.653Z - info: Running delay for : 2000
+2018-02-09T14:28:25.027Z - info: Running delay for : 2000
+2018-02-09T14:28:28.732Z - info: Running delay for : 2000
+2018-02-09T14:28:32.667Z - info: Running delay for : 2000
+2018-02-09T14:28:36.176Z - info: Running delay for : 2000
+2018-02-09T14:28:39.440Z - info: Running delay for : 2000
+2018-02-09T14:28:43.071Z - info: Running delay for : 2000
+2018-02-09T14:28:46.008Z - info: Running delay for : 2000
+2018-02-09T14:28:49.622Z - info: Running delay for : 2000
+2018-02-09T14:28:52.703Z - info: Running delay for : 2000
+2018-02-09T14:28:57.128Z - info: Found image on screen: if on scree then test passed
+2018-02-09T14:59:05.073Z - info: You are not owner localhost:7409 => open STF 
+2018-02-09T14:59:05.075Z - info: Appium on close  null
+2018-02-09T14:59:05.075Z - info: You are not owner localhost:7409 => open STF 
+2018-02-12T08:27:18.154Z - info: Test execution started
+2018-02-12T08:27:18.155Z - info: Get following options to run{"serial":"test","port":4001,"noReset":true,"systemPort":8201,"bpPort":6001}
+2018-02-12T08:27:18.183Z - info: Trying to connect to openSTF with serial number test
+2018-02-12T08:27:18.221Z - info: You are not owner undefined => open STF 

@@ -8,6 +8,19 @@ const fs =require("fs");
 const cv = require('opencv4nodejs');
 const winston = require('winston');
 
+
+
+
+
+
+
+
+
+
+//test
+
+
+const jArguments=JSON.parse(process.argv[2]);
 const logger = new winston.Logger({
     level: 'info',
     transports: [
@@ -15,7 +28,7 @@ const logger = new winston.Logger({
         timestamp: true
       }),
       new winston.transports.File({
-        filename: __dirname+'/logs/app.log',
+        filename: __dirname+'/logs/app'+ jArguments.port+'.log',
         timestamp: true,
         prettyPrint : true,
         json:false,
@@ -25,19 +38,6 @@ const logger = new winston.Logger({
 
 
 logger.info('Test execution started');
-
-
-
-
-
-
-
-
-
-
-
-const jArguments=JSON.parse(process.argv[2]);
-console.log(jArguments);
 logger.info("Get following options to run"+ JSON.stringify(jArguments))
 
 ///////////// images for img recognition////////////////////
@@ -63,7 +63,7 @@ const imgloginYellowNextButton = cv.imread(__dirname+'/autoTest/loginYellowNextB
 
 
 //////////// capabilities options for appium//////////
-const opts = {
+let opts = {
       port: jArguments.port,
       desiredCapabilities: {
         platformName: "Android",
@@ -103,9 +103,9 @@ async function fnInit(){
   let UDID;
   try{
     UDID=await fnConnectStf(serial); /////////////connect to stf -> returns UDID 
-    opts.udid=UDID;                       //////////assign udid
+    opts.desiredCapabilities.udid=UDID                    //////////assign udid
 
-    const client = wdio.remote(opts);       //getting appium client connection
+    const client =wdio.remote(opts);       //getting appium client connection
     process.on('SIGINT', ()=>{
       client.end();
       fnDisconnect(UDID);  // disconnects from open stf
@@ -179,7 +179,7 @@ async function fnConnectStf(serial){
     process.on('SIGINT', ()=>{
       fnDisconnect(remoteConnectUDID);
     });
-    const createServer=await fnCreateServer(opts.port);
+    const createServer=await fnCreateServer(opts.port,jArguments.bpPort);
     return(remoteConnectUDID);
   }
   catch(err){
@@ -231,11 +231,12 @@ function fnDisconnect(UDID){
 
 }
 /// creates appium server on port from opts 
-function fnCreateServer(port){
+function fnCreateServer(port,bpPort){
   return new Promise((resolve,reject)=>{
+    logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp' + bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
     logger.info("Trying to create appium Server on port: "+ port)
     let appiumPort=port
-    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' --session-override --log-timestamp --log /home/trixo/Code/javaRewrite/log.txt');
+    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
         logger.info("Appium server created on port: "+port )
@@ -372,7 +373,7 @@ function fnLoading(repeat,client){
 function fnIsLoadingOnce(iCounter,client){
   let testId=0;
   return client.screenshot()
-    .then((data) => {            
+    .then(async (data) => {            
       let buf = new Buffer(data.value, 'base64');
       let img1 = cv.imdecode(buf)
       for(var t=0; t<2; t++){
@@ -390,11 +391,16 @@ function fnIsLoadingOnce(iCounter,client){
         else{
           logger.info("Still Loading #"+iCounter);
           const msg = "Still Loading #"+iCounter;
-          throw new Error(msg);
+
+            throw new Error(msg);            
+          
+
         }
         // All good
         logger.info("Loading finished on  #"+iCounter +"repets");
-        return testId;
+
+        return testId
+
       }
 
   });
@@ -430,11 +436,11 @@ function fnClearKeyBoard(client){
 
 
 //// main function to dettect if image is on screen
-function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000) {
+function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
-      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client).catch(err => {
+      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).catch(err => {
               console.log(err.message);
               iCounter++;
               if (iCounter === repeats) {
@@ -453,22 +459,21 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000) {
    
 }
 /////// function used in fnIsOnScreen() to repeat 
-function fnIsOnScreenOnce(img, desc,iCounter,client) {
-  return client.screenshot()
-    .then((data) => {
+async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
+  await timeout(repeatDelay);
+  let screenshot= await client.screenshot()
         
-        let buf = new Buffer(data.value, 'base64');
-        let img1 = cv.imdecode(buf)
-        let result = img1.matchTemplate(img, 5).minMaxLoc(); 
-        if (result.maxVal <= 0.65) {
-            // Fail
-            const msg = "Can't see object yet";
-            throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
-        }
+  let buf = new Buffer(screenshot.value, 'base64');
+  let img1 = cv.imdecode(buf)
+  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  if (result.maxVal <= 0.65) {
+      // Fail
+      const msg = "Can't see object yet";
+      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+  }
         // All good
         logger.info("Found image on screen: "+desc);
         return result;
-    });
 }
 
 
@@ -543,8 +548,6 @@ function SaveImage (imageData,imageName){
 
 async function fnCleanInstall(client,appPackage,activityName,apkFileName){
   try{
-    let logcat=await client.log('logcat')
-    logger.info(logcat);
     logger.info("Running clean Install test with following paramters, appPackage: "+appPackage+" activityName: "+activityName+" apkFile: " + __dirname+'/apk/'+apkFileName+'.apk');
     // is apk installed ?
     let appExists= await client.isAppInstalled(appPackage);
@@ -569,9 +572,7 @@ async function fnCleanInstall(client,appPackage,activityName,apkFileName){
 
     await fnPermission(5,true,client);
 
-    loading=await fnLoading(40,client);
-    logcat=await client.log('logcat')
-    logger.info(logcat);
+    loading= await fnIsOnScreen(img2,client,20,"if on scree then test passed",6000,2000);
     client.end();
   }
   catch(err){

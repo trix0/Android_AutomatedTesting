@@ -1,0 +1,11 @@
+2018-02-09T10:33:45.838Z - info: Test execution started
+2018-02-09T10:33:45.839Z - info: Get following options to run{"serial":"cd21ccc5","port":4002,"noReset":true,"systemPort":8202,"bpPort":6002}
+2018-02-09T10:33:45.870Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-09T10:33:45.929Z - info: executing command adb connect  localhost:7413
+2018-02-09T10:33:45.938Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-09T10:33:45.938Z - info: Trying to create appium Server on port: 4002
+2018-02-09T10:33:48.617Z - info: Appium on close  null
+2018-02-12T08:27:27.220Z - info: Test execution started
+2018-02-12T08:27:27.221Z - info: Get following options to run{"serial":"test,test","port":4002,"noReset":true,"systemPort":8202,"bpPort":6002}
+2018-02-12T08:27:27.248Z - info: Trying to connect to openSTF with serial number test,test
+2018-02-12T08:27:27.287Z - info: You are not owner undefined => open STF 
