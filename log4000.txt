@@ -1,164 +1,190 @@
-2018-02-09 14:26:29:578 - info: [Appium] Welcome to Appium v1.8.0-beta3
-2018-02-09 14:26:29:579 - info: [Appium] Non-default server args:
-2018-02-09 14:26:29:579 - info: [Appium]   port: 4000
-2018-02-09 14:26:29:580 - info: [Appium]   bootstrapPort: 6000
-2018-02-09 14:26:29:580 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
-2018-02-09 14:26:29:580 - info: [Appium]   logTimestamp: true
-2018-02-09 14:26:29:596 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4000
-2018-02-09 14:26:29:626 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","systemPort":8200,"udid":"localhost:7417","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","noReset":true,"fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
-2018-02-09 14:26:29:628 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","systemPort":8200,"udid":"localhost:7417","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","noReset":true,"fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
-2018-02-09 14:26:29:629 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518186389629 (15:26:29 GMT+0100 (CET))
-2018-02-09 14:26:29:631 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
-2018-02-09 14:26:29:631 - info: [Appium] Capabilities:
-2018-02-09 14:26:29:631 - info: [Appium]   javascriptEnabled: true
-2018-02-09 14:26:29:631 - info: [Appium]   locationContextEnabled: true
-2018-02-09 14:26:29:632 - info: [Appium]   handlesAlerts: true
-2018-02-09 14:26:29:632 - info: [Appium]   rotatable: true
-2018-02-09 14:26:29:632 - info: [Appium]   platformName: Android
-2018-02-09 14:26:29:632 - info: [Appium]   deviceName: Android
-2018-02-09 14:26:29:632 - info: [Appium]   systemPort: 8200
-2018-02-09 14:26:29:632 - info: [Appium]   udid: localhost:7417
-2018-02-09 14:26:29:632 - info: [Appium]   appPackage: com.gorro.nothing
-2018-02-09 14:26:29:633 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
-2018-02-09 14:26:29:633 - info: [Appium]   noReset: true
-2018-02-09 14:26:29:633 - info: [Appium]   fullReset: false
-2018-02-09 14:26:29:633 - info: [Appium]   newCommandTimeout: 120000
-2018-02-09 14:26:29:633 - info: [Appium]   skipUnlock: true
-2018-02-09 14:26:29:633 - info: [Appium]   requestOrigins: {
-2018-02-09 14:26:29:633 - info: [Appium]     url: http://webdriver.io
-2018-02-09 14:26:29:634 - info: [Appium]     version: 4.10.1
-2018-02-09 14:26:29:634 - info: [Appium]     name: webdriverio
-2018-02-09 14:26:29:634 - info: [Appium]   }
-2018-02-09 14:26:29:638 - info: [debug] [BaseDriver] 
-2018-02-09 14:26:29:638 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
-2018-02-09 14:26:29:643 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, systemPort, requestOrigins.
-2018-02-09 14:26:29:644 - info: [BaseDriver] Session created with session id: 68494b8f-4119-48d1-9ff5-cda57294fdcc
-2018-02-09 14:26:29:644 - info: [debug] [AndroidDriver] Getting Java version
-2018-02-09 14:26:29:691 - info: [AndroidDriver] Java version is: 1.8.0_151
-2018-02-09 14:26:29:693 - info: [ADB] Checking whether adb is present
-2018-02-09 14:26:29:700 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
-2018-02-09 14:26:29:700 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
-2018-02-09 14:26:29:701 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
-2018-02-09 14:26:29:701 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
-2018-02-09 14:26:29:702 - info: [AndroidDriver] Retrieving device list
-2018-02-09 14:26:29:702 - info: [debug] [ADB] Trying to find a connected android device
-2018-02-09 14:26:29:703 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:29:713 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:29:714 - info: [AndroidDriver] Using device: localhost:7417
-2018-02-09 14:26:29:714 - info: [ADB] Checking whether adb is present
-2018-02-09 14:26:29:715 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
-2018-02-09 14:26:29:715 - info: [debug] [ADB] Setting device id to localhost:7417
-2018-02-09 14:26:29:716 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
-2018-02-09 14:26:29:716 - info: [debug] [AndroidDriver] Checking whether package is present on the device
-2018-02-09 14:26:29:716 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:29:725 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:29:726 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","pm","list","packages","com.gorro.nothing"]
-2018-02-09 14:26:29:883 - info: [AndroidDriver] Starting Android session
-2018-02-09 14:26:29:884 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","wait-for-device"]
-2018-02-09 14:26:29:891 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:29:898 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:29:899 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","echo","ping"]
-2018-02-09 14:26:29:911 - info: [debug] [AndroidDriver] Pushing settings apk to device...
-2018-02-09 14:26:29:912 - info: [debug] [ADB] Getting install status for io.appium.settings
-2018-02-09 14:26:29:912 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:29:919 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:29:919 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","pm","list","packages","io.appium.settings"]
-2018-02-09 14:26:30:093 - info: [debug] [ADB] App is installed
-2018-02-09 14:26:30:093 - info: [debug] [ADB] Getting package info for io.appium.settings
-2018-02-09 14:26:30:093 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:100 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:100 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","dumpsys","package","io.appium.settings"]
-2018-02-09 14:26:30:118 - info: [ADB] Checking whether aapt is present
-2018-02-09 14:26:30:119 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
-2018-02-09 14:26:30:133 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
-2018-02-09 14:26:30:134 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:142 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:142 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","ps"]
-2018-02-09 14:26:30:162 - info: [debug] [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
-2018-02-09 14:26:30:163 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:169 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:170 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","getprop","ro.build.version.sdk"]
-2018-02-09 14:26:30:181 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
-2018-02-09 14:26:30:182 - info: [debug] [ADB] Device API level: 23
-2018-02-09 14:26:30:182 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:190 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:190 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","appops","set","io.appium.settings","android:mock_location","allow"]
-2018-02-09 14:26:30:543 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
-2018-02-09 14:26:30:544 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
-2018-02-09 14:26:30:545 - info: [debug] [Logcat] Starting logcat capture
-2018-02-09 14:26:30:569 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
-2018-02-09 14:26:30:569 - info: [debug] [ADB] Getting install status for io.appium.unlock
-2018-02-09 14:26:30:570 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:579 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:579 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","pm","list","packages","io.appium.unlock"]
-2018-02-09 14:26:30:734 - info: [debug] [ADB] App is installed
-2018-02-09 14:26:30:735 - info: [debug] [ADB] Getting package info for io.appium.unlock
-2018-02-09 14:26:30:735 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:742 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:742 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","dumpsys","package","io.appium.unlock"]
-2018-02-09 14:26:30:757 - info: [ADB] Checking whether aapt is present
-2018-02-09 14:26:30:758 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
-2018-02-09 14:26:30:768 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
-2018-02-09 14:26:30:768 - info: [ADB] Getting device platform version
-2018-02-09 14:26:30:769 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:776 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:777 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","getprop","ro.build.version.release"]
-2018-02-09 14:26:30:791 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0
-2018-02-09 14:26:30:792 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:30:800 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:30:801 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","wm","size"]
-2018-02-09 14:26:31:156 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:31:163 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:31:164 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","getprop","ro.product.model"]
-2018-02-09 14:26:31:175 - info: [debug] [ADB] Current device property 'ro.product.model': Android SDK built for x86
-2018-02-09 14:26:31:175 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:31:182 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:31:182 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","getprop","ro.product.manufacturer"]
-2018-02-09 14:26:31:195 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': unknown
-2018-02-09 14:26:31:195 - warn: [AndroidDriver] No app sent in, not parsing package/activity
-2018-02-09 14:26:31:196 - info: [debug] [AndroidDriver] No app capability. Assuming it is already on the device
-2018-02-09 14:26:31:196 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
-2018-02-09 14:26:31:197 - info: [debug] [ADB] Forwarding system: 6000 to device: 4724
-2018-02-09 14:26:31:197 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","forward","tcp:6000","tcp:4724"]
-2018-02-09 14:26:31:203 - info: [debug] [UiAutomator] Starting UiAutomator
-2018-02-09 14:26:31:203 - info: [debug] [UiAutomator] Moving to state 'starting'
-2018-02-09 14:26:31:204 - info: [debug] [UiAutomator] Parsing uiautomator jar
-2018-02-09 14:26:31:204 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
-2018-02-09 14:26:31:204 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","push","/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
-2018-02-09 14:26:31:215 - info: [debug] [ADB] Attempting to kill all uiautomator processes
-2018-02-09 14:26:31:216 - info: [debug] [ADB] Getting all processes with uiautomator
-2018-02-09 14:26:31:216 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:31:222 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:31:222 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","ps"]
-2018-02-09 14:26:31:238 - info: [ADB] No uiautomator process found to kill, continuing...
-2018-02-09 14:26:31:238 - info: [debug] [UiAutomator] Starting UIAutomator
-2018-02-09 14:26:31:238 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","localhost:7417","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.gorro.nothing","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
-2018-02-09 14:26:31:410 - info: [debug] [UiAutomator] Moving to state 'online'
-2018-02-09 14:26:31:412 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
-2018-02-09 14:26:31:412 - info: [AndroidBootstrap] Android bootstrap socket is now connected
-2018-02-09 14:26:31:414 - info: [debug] [ADB] Device API level: 23
-2018-02-09 14:26:31:414 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:31:421 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
-2018-02-09 14:26:31:422 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:31:422 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","am","start","-W","-n","com.gorro.nothing/com.gorro.nothing.NothingActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
-2018-02-09 14:26:32:367 - info: [Appium] New AndroidDriver session created successfully, session 68494b8f-4119-48d1-9ff5-cda57294fdcc added to master session list
-2018-02-09 14:26:32:368 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1518186392368 (15:26:32 GMT+0100 (CET))
-2018-02-09 14:26:32:369 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":true,"warnings":{},"desired":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","systemPort":8200,"udid":"localhost:7417","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","noReset":true,"fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"localhost:7417","systemPort":8200,"udid":"localhost:7417","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","noReset":true,"fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"},"...
-2018-02-09 14:26:32:375 - info: [HTTP] <-- POST /wd/hub/session 200 2746 ms - 1248 
-2018-02-09 14:26:32:382 - info: [HTTP] --> POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
-2018-02-09 14:26:32:385 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","68494b8f-4119-48d1-9ff5-cda57294fdcc"]
-2018-02-09 14:26:32:386 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
-2018-02-09 14:26:32:386 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:32:396 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:32:396 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
-2018-02-09 14:26:32:562 - info: [debug] [ADB] App is not installed
-2018-02-09 14:26:32:563 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: false
-2018-02-09 14:26:32:564 - info: [HTTP] <-- POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/app_installed 200 181 ms - 77 
-2018-02-09 14:26:32:566 - info: [HTTP] --> POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/install_app {"appPath":"/home/trixo/Code/javaRewrite/apk/pl.apk"}
-2018-02-09 14:26:32:567 - info: [debug] [MJSONWP] Calling AppiumDriver.installApp() with args: ["/home/trixo/Code/javaRewrite/apk/pl.apk",null,null,null,"68494b8f-4119-48d1-9ff5-cda57294fdcc"]
-2018-02-09 14:26:32:568 - info: [BaseDriver] Using local app '/home/trixo/Code/javaRewrite/apk/pl.apk'
-2018-02-09 14:26:32:571 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","install","-r","/home/trixo/Code/javaRewrite/apk/pl.apk"]
-2018-02-09 14:26:38:812 - info: [debug] [ADB] Install command stdout: [  0%] /data/local/tmp/pl.apk
+2018-02-13 15:56:02:948 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-02-13 15:56:02:949 - info: [Appium] Non-default server args:
+2018-02-13 15:56:02:949 - info: [Appium]   port: 4000
+2018-02-13 15:56:02:949 - info: [Appium]   bootstrapPort: 6000
+2018-02-13 15:56:02:950 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
+2018-02-13 15:56:02:950 - info: [Appium]   logTimestamp: true
+2018-02-13 15:56:02:966 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4000
+2018-02-13 15:56:02:997 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-13 15:56:03:000 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-13 15:56:03:001 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518537363000 (16:56:03 GMT+0100 (CET))
+2018-02-13 15:56:03:002 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-13 15:56:03:002 - info: [Appium] Capabilities:
+2018-02-13 15:56:03:002 - info: [Appium]   javascriptEnabled: true
+2018-02-13 15:56:03:003 - info: [Appium]   locationContextEnabled: true
+2018-02-13 15:56:03:003 - info: [Appium]   handlesAlerts: true
+2018-02-13 15:56:03:003 - info: [Appium]   rotatable: true
+2018-02-13 15:56:03:003 - info: [Appium]   platformName: Android
+2018-02-13 15:56:03:003 - info: [Appium]   deviceName: Android
+2018-02-13 15:56:03:003 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-13 15:56:03:003 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-13 15:56:03:003 - info: [Appium]   fullReset: false
+2018-02-13 15:56:03:004 - info: [Appium]   newCommandTimeout: 120000
+2018-02-13 15:56:03:004 - info: [Appium]   skipUnlock: true
+2018-02-13 15:56:03:004 - info: [Appium]   udid: localhost:7401
+2018-02-13 15:56:03:004 - info: [Appium]   requestOrigins: {
+2018-02-13 15:56:03:004 - info: [Appium]     url: http://webdriver.io
+2018-02-13 15:56:03:004 - info: [Appium]     version: 4.10.1
+2018-02-13 15:56:03:004 - info: [Appium]     name: webdriverio
+2018-02-13 15:56:03:004 - info: [Appium]   }
+2018-02-13 15:56:03:008 - info: [debug] [BaseDriver] 
+2018-02-13 15:56:03:009 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-13 15:56:03:013 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-13 15:56:03:014 - info: [BaseDriver] Session created with session id: 9b022be0-0d2d-48f2-851d-7e7645ebd4f9
+2018-02-13 15:56:03:014 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-13 15:56:03:056 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-13 15:56:03:059 - info: [ADB] Checking whether adb is present
+2018-02-13 15:56:03:065 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-02-13 15:56:03:065 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-02-13 15:56:03:066 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-02-13 15:56:03:066 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-13 15:56:03:066 - info: [AndroidDriver] Retrieving device list
+2018-02-13 15:56:03:067 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-13 15:56:03:068 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:03:079 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:03:080 - info: [AndroidDriver] Using device: localhost:7401
+2018-02-13 15:56:03:081 - info: [ADB] Checking whether adb is present
+2018-02-13 15:56:03:081 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-13 15:56:03:081 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-02-13 15:56:03:082 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-13 15:56:03:082 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-13 15:56:03:083 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:03:089 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:03:090 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-13 15:56:04:759 - info: [AndroidDriver] Starting Android session
+2018-02-13 15:56:04:761 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","wait-for-device"]
+2018-02-13 15:56:04:770 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:04:777 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:04:778 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","echo","ping"]
+2018-02-13 15:56:04:805 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-02-13 15:56:04:807 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-02-13 15:56:04:808 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:04:817 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:04:817 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.settings"]
+2018-02-13 15:56:06:506 - info: [debug] [ADB] App is installed
+2018-02-13 15:56:06:507 - info: [debug] [ADB] Getting package info for io.appium.settings
+2018-02-13 15:56:06:508 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:06:516 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:06:517 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.settings"]
+2018-02-13 15:56:06:606 - info: [ADB] Checking whether aapt is present
+2018-02-13 15:56:06:608 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-02-13 15:56:06:622 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+2018-02-13 15:56:06:623 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:06:630 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:06:631 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-02-13 15:56:06:847 - info: [debug] [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2018-02-13 15:56:06:848 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:06:858 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:06:858 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.sdk"]
+2018-02-13 15:56:06:903 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
+2018-02-13 15:56:06:904 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:56:06:905 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:06:914 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:06:914 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","appops","set","io.appium.settings","android:mock_location","allow"]
+2018-02-13 15:56:08:720 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-02-13 15:56:08:720 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-02-13 15:56:08:723 - info: [debug] [Logcat] Starting logcat capture
+2018-02-13 15:56:08:784 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-02-13 15:56:08:785 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-02-13 15:56:08:786 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:08:796 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:08:796 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.unlock"]
+2018-02-13 15:56:10:913 - info: [debug] [ADB] App is installed
+2018-02-13 15:56:10:913 - info: [debug] [ADB] Getting package info for io.appium.unlock
+2018-02-13 15:56:10:913 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:10:921 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:10:921 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.unlock"]
+2018-02-13 15:56:11:002 - info: [ADB] Checking whether aapt is present
+2018-02-13 15:56:11:004 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-02-13 15:56:11:015 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+2018-02-13 15:56:11:015 - info: [ADB] Getting device platform version
+2018-02-13 15:56:11:016 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:11:024 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:11:024 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.release"]
+2018-02-13 15:56:11:086 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-02-13 15:56:11:087 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:11:094 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:11:094 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","wm","size"]
+2018-02-13 15:56:12:879 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:12:892 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:12:892 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.model"]
+2018-02-13 15:56:12:950 - info: [debug] [ADB] Current device property 'ro.product.model': SM-A300FU
+2018-02-13 15:56:12:951 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:12:960 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:12:961 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.manufacturer"]
+2018-02-13 15:56:13:015 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': samsung
+2018-02-13 15:56:13:016 - warn: [AndroidDriver] No app sent in, not parsing package/activity
+2018-02-13 15:56:13:017 - info: [debug] [AndroidDriver] No app capability. Assuming it is already on the device
+2018-02-13 15:56:13:018 - info: [debug] [ADB] Getting install status for com.gorro.nothing
+2018-02-13 15:56:13:018 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:13:027 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:13:027 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-13 15:56:14:654 - info: [debug] [ADB] App is installed
+2018-02-13 15:56:14:654 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:14:663 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:14:663 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:56:16:442 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:16:449 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:16:450 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","clear","com.gorro.nothing"]
+2018-02-13 15:56:18:194 - info: [debug] [AndroidDriver] Performed fast reset on the installed 'com.gorro.nothing' application (stop and clear)
+2018-02-13 15:56:18:195 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2018-02-13 15:56:18:198 - info: [debug] [ADB] Forwarding system: 6000 to device: 4724
+2018-02-13 15:56:18:198 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","forward","tcp:6000","tcp:4724"]
+2018-02-13 15:56:18:205 - info: [debug] [UiAutomator] Starting UiAutomator
+2018-02-13 15:56:18:206 - info: [debug] [UiAutomator] Moving to state 'starting'
+2018-02-13 15:56:18:206 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2018-02-13 15:56:18:206 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2018-02-13 15:56:18:207 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","push","/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+2018-02-13 15:56:18:230 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2018-02-13 15:56:18:231 - info: [debug] [ADB] Getting all processes with uiautomator
+2018-02-13 15:56:18:231 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:18:240 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:18:240 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-02-13 15:56:18:451 - info: [ADB] No uiautomator process found to kill, continuing...
+2018-02-13 15:56:18:451 - info: [debug] [UiAutomator] Starting UIAutomator
+2018-02-13 15:56:18:451 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","localhost:7401","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.gorro.nothing","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2018-02-13 15:56:20:602 - info: [debug] [UiAutomator] Moving to state 'online'
+2018-02-13 15:56:20:607 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2018-02-13 15:56:20:608 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:56:20:608 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:20:616 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2018-02-13 15:56:20:617 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2018-02-13 15:56:20:617 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:20:618 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","start","-W","-n","com.gorro.nothing/com.gorro.nothing.NothingActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-02-13 15:56:23:727 - info: [Appium] New AndroidDriver session created successfully, session 9b022be0-0d2d-48f2-851d-7e7645ebd4f9 added to master session list
+2018-02-13 15:56:23:728 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1518537383727 (16:56:23 GMT+0100 (CET))
+2018-02-13 15:56:23:729 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":true,"warnings":{},"desired":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"localhost:7401","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"},"deviceUDID":"localhost:7401","platformVersion":"6.0.1","deviceScre...
+2018-02-13 15:56:23:734 - info: [HTTP] <-- POST /wd/hub/session 200 20735 ms - 1168 
+2018-02-13 15:56:23:739 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
+2018-02-13 15:56:23:743 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:56:23:744 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
+2018-02-13 15:56:23:744 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:23:756 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:23:757 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-02-13 15:56:25:420 - info: [debug] [ADB] App is installed
+2018-02-13 15:56:25:421 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: true
+2018-02-13 15:56:25:423 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/app_installed 200 1683 ms - 76 
+2018-02-13 15:56:25:427 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/remove_app {"bundleId":"com.pointvoucher.playlondonpv"}
+2018-02-13 15:56:25:428 - info: [debug] [MJSONWP] Calling AppiumDriver.removeApp() with args: ["com.pointvoucher.playlondonpv",null,null,null,"9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:56:25:429 - info: [debug] [ADB] Uninstalling com.pointvoucher.playlondonpv
+2018-02-13 15:56:25:430 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
+2018-02-13 15:56:25:432 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:25:441 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:25:441 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-02-13 15:56:27:006 - info: [debug] [ADB] App is installed
+2018-02-13 15:56:27:007 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:56:27:012 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:56:27:013 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.pointvoucher.playlondonpv"]
+2018-02-13 15:56:28:768 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","uninstall","com.pointvoucher.playlondonpv"]
+2018-02-13 15:56:30:981 - info: [debug] [ADB] 'adb uninstall com.pointvoucher.playlondonpv' command output: Success
+2018-02-13 15:56:30:982 - info: [ADB] com.pointvoucher.playlondonpv was successfully uninstalled
+2018-02-13 15:56:30:983 - info: [debug] [MJSONWP] Responding to client with driver.removeApp() result: true
+2018-02-13 15:56:30:984 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/remove_app 200 5557 ms - 76 
+2018-02-13 15:56:30:986 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/install_app {"appPath":"/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk"}
+2018-02-13 15:56:30:987 - info: [debug] [MJSONWP] Calling AppiumDriver.installApp() with args: ["/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk",null,null,null,"9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:56:30:988 - info: [BaseDriver] Using local app '/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk'
+2018-02-13 15:56:30:989 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","install","-r","/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk"]
+2018-02-13 15:57:21:052 - info: [debug] [ADB] Install command stdout: [  0%] /data/local/tmp/pl.apk
 [  0%] /data/local/tmp/pl.apk
 [  0%] /data/local/tmp/pl.apk
 [  0%] /data/local/tmp/pl.apk
@@ -1580,51 +1606,113 @@
 [ 99%] /data/local/tmp/pl.apk
 [ 99%] /data/local/tmp/pl.apk
 [100%] /data/local/tmp/pl.apk
-/home/trixo/Code/javaRewrite/apk/pl.apk: 1 file pushed. 187.1 MB/s (93175623 bytes in 0.475s)
+/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk: 1 file pushed. 4.8 MB/s (93175623 bytes in 18.533s)
 	pkg: /data/local/tmp/pl.apk
 Success
-2018-02-09 14:26:38:813 - info: [debug] [MJSONWP] Responding to client with driver.installApp() result: null
-2018-02-09 14:26:38:813 - info: [HTTP] <-- POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/install_app 200 6247 ms - 76 
-2018-02-09 14:26:38:816 - info: [HTTP] --> POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
-2018-02-09 14:26:38:818 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","68494b8f-4119-48d1-9ff5-cda57294fdcc"]
-2018-02-09 14:26:38:818 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
-2018-02-09 14:26:38:819 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:38:829 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:38:829 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
-2018-02-09 14:26:39:014 - info: [debug] [ADB] App is installed
-2018-02-09 14:26:39:015 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: true
-2018-02-09 14:26:39:015 - info: [HTTP] <-- POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/app_installed 200 199 ms - 76 
-2018-02-09 14:26:39:018 - info: [HTTP] --> POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/start_activity {"appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","appWaitPackage":"com.android.packageinstaller","appWaitActivity":"com.android.packageinstaller.permission.ui.GrantPermissionsActivity"}
-2018-02-09 14:26:39:018 - info: [debug] [MJSONWP] Calling AppiumDriver.startActivity() with args: ["com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity",null,null,null,null,null,null,null,"68494b8f-4119-48d1-9ff5-cda57294fdcc"]
-2018-02-09 14:26:39:019 - info: [debug] [AndroidDriver] Starting package 'com.pointvoucher.playlondonpv' and activity 'com.unity3d.player.UnityPlayerActivity'
-2018-02-09 14:26:39:019 - info: [debug] [ADB] Device API level: 23
-2018-02-09 14:26:39:020 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:39:027 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:39:028 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","am","start","-W","-n","com.pointvoucher.playlondonpv/com.unity3d.player.UnityPlayerActivity","-S"]
-2018-02-09 14:26:39:857 - info: [debug] [ADB] Waiting up to 20000ms for activity matching pkg: 'com.android.packageinstaller' and activity: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity' to be focused
-2018-02-09 14:26:39:857 - info: [debug] [ADB] Possible activities, to be checked: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
-2018-02-09 14:26:39:859 - info: [debug] [ADB] Getting focused package and activity
-2018-02-09 14:26:39:859 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:26:39:869 - info: [debug] [ADB] 4 device(s) connected
-2018-02-09 14:26:39:870 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","dumpsys","window","windows"]
-2018-02-09 14:26:39:887 - info: [debug] [ADB] Found package: 'com.android.packageinstaller' and fully qualified activity name : 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
-2018-02-09 14:26:39:888 - info: [debug] [MJSONWP] Responding to client with driver.startActivity() result: null
-2018-02-09 14:26:39:889 - info: [HTTP] <-- POST /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/appium/device/start_activity 200 871 ms - 76 
-2018-02-09 14:26:39:893 - info: [HTTP] --> GET /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/screenshot {}
-2018-02-09 14:26:39:894 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["68494b8f-4119-48d1-9ff5-cda57294fdcc"]
-2018-02-09 14:26:39:895 - info: [debug] [ADB] Device API level: 23
-2018-02-09 14:26:40:417 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBja4uaWIW1vW8Vbv/Zjw/ZrANBluxE0GEHCXKnXAzXAP3FkVREgmSIJASbGwUe348nu4+X9X75Kuqs/s7+/iYnmkxQ6Tea+Wf/4t/Wa9e/ZrMDIfFw3c/m36Q6aMxLMvwWaaRWBNfTL4oe9k7bXv9uHzxxW7Oj/zOd/ijT3wrbVi9NDGxevWb8hcb/+6nFNPDwH/39/jpxv/9U3Z1GK1Xr16xZt81Q1odQzo1kVkNmSWYFTRxSlDNkFbHkE5NZFZDZglmBU2cElQzpNUxpFMTmSWYJZgVNHFKUM2QVseQTk1kVkNmCWYFTZwSVDOk1TGkUxOZ1ZBZgllBE6cE1QxpdQzp1ERmNWSWYFbQxClBNUNaHUM6NZFZDZklmBU0cUpQzZBWx5BOTWRWQ2YJZgVNnBJUM6TVMaRTE5nVkFmCWUETpwTVDGl1DOnURGY1ZJZgVtDEKdEw9ml+9JHDxx/xu5/xnYWnyZz8zPCLL3c/6XQrv7UMv/fp4mcb286+DD96mn40oh/Hl4P/+AWf41PfPouXJnY8efWb9Lsrvs+//am/5f/4Gf/t9/gPT8w3dci+a4a0OoZ0aiKzGjJLMCto4pSgmiGtjiGdmsishswSzAqaOCWoZkirY0inJjKrIbMEs4ImTgmqGdLqGNKpicxqyCzBrKCJU4JqhrQ6hnRqIrMaMkswK2jilKCaIa2OIZ2ayCzBLMGsoIlTgmqGtDqGdGoiswSzBLOCJk4JqhnS6hjSqYnMasgswaygiVOCaoa0OoZ0aiKzGjJLMCto4pSgmiGtjiGdmsishswSzAqaOCWoZkirY0inJjKrIbMEs4ImTgmqGdLqGNKpicxqyCzBrKCJU4JqhrQ6hnRqIrMaMkswK2jilFi7LA4Vh2Y4dIlDh8tCfVjFoRkOXeLQ4bJQH1ZxaIZDlzgNl4X6sIpDMxy6xKHDZaE+rOLQDIcucehw...
-2018-02-09 14:26:40:423 - info: [HTTP] <-- GET /wd/hub/session/68494b8f-4119-48d1-9ff5-cda57294fdcc/screenshot 200 529 ms - 546246 
-2018-02-09 14:58:58:118 - info: [debug] [AndroidBootstrap] Emitting alert message...
-2018-02-09 14:58:58:118 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Emitting system alert message
-2018-02-09 14:59:05:059 - info: [Appium] Received SIGINT - shutting down
-2018-02-09 14:59:05:062 - error: [Logcat] Logcat terminated with code null, signal SIGINT
-2018-02-09 14:59:05:064 - error: [UiAutomator] UiAutomator exited unexpectedly with code null, signal SIGINT
-2018-02-09 14:59:05:064 - info: [debug] [UiAutomator] Moving to state 'stopped'
-2018-02-09 14:59:05:078 - info: [debug] [AndroidDriver] Shutting down Android driver
-2018-02-09 14:59:05:079 - info: [debug] [ADB] Getting connected devices...
-2018-02-09 14:59:05:093 - warn: [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
-2018-02-09 14:59:05:093 - info: [Appium] Removing session 68494b8f-4119-48d1-9ff5-cda57294fdcc from our master session list
-2018-02-09 14:59:05:096 - info: [debug] [ADB] 2 device(s) connected
-2018-02-09 14:59:05:097 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","am","force-stop","com.gorro.nothing"]
-2018-02-09 14:59:05:116 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7417","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:57:21:054 - info: [debug] [MJSONWP] Responding to client with driver.installApp() result: null
+2018-02-13 15:57:21:056 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/install_app 200 50068 ms - 76 
+2018-02-13 15:57:21:059 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
+2018-02-13 15:57:21:061 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:21:062 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
+2018-02-13 15:57:21:062 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:57:21:068 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:57:21:068 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-02-13 15:57:23:059 - info: [debug] [ADB] App is installed
+2018-02-13 15:57:23:060 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: true
+2018-02-13 15:57:23:061 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/app_installed 200 2002 ms - 76 
+2018-02-13 15:57:23:067 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/start_activity {"appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","appWaitPackage":"com.android.packageinstaller","appWaitActivity":"com.android.packageinstaller.permission.ui.GrantPermissionsActivity"}
+2018-02-13 15:57:23:068 - info: [debug] [MJSONWP] Calling AppiumDriver.startActivity() with args: ["com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity",null,null,null,null,null,null,null,"9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:23:070 - info: [debug] [AndroidDriver] Starting package 'com.pointvoucher.playlondonpv' and activity 'com.unity3d.player.UnityPlayerActivity'
+2018-02-13 15:57:23:070 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:23:071 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:57:23:078 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:57:23:078 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","start","-W","-n","com.pointvoucher.playlondonpv/com.unity3d.player.UnityPlayerActivity","-S"]
+2018-02-13 15:57:26:773 - info: [debug] [ADB] Waiting up to 20000ms for activity matching pkg: 'com.android.packageinstaller' and activity: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity' to be focused
+2018-02-13 15:57:26:774 - info: [debug] [ADB] Possible activities, to be checked: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
+2018-02-13 15:57:26:777 - info: [debug] [ADB] Getting focused package and activity
+2018-02-13 15:57:26:778 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:57:26:786 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:57:26:786 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","window","windows"]
+2018-02-13 15:57:26:889 - info: [debug] [ADB] Found package: 'com.android.packageinstaller' and fully qualified activity name : 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
+2018-02-13 15:57:26:891 - info: [debug] [MJSONWP] Responding to client with driver.startActivity() result: null
+2018-02-13 15:57:26:892 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/appium/device/start_activity 200 3825 ms - 76 
+2018-02-13 15:57:26:902 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:26:903 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:26:903 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:28:105 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezB3a5l6Xke1vG831qrms1uUiLV0Y8VWRZsy4AUHwgGDAtBgFyO78iX4SsIAiRIThQbMYzkwD+KfpCYISlRUnezaq05vzd7ztm7Vu0i20UW3FSA3mPkn/+Lf9mePfuKrFU2Z3ff+nj6JIsXNZzPw8dWVeWc+Gzy42ZZWXq6rdP/23z+2WLOD/zmt/i9D30t3XD21IqJs2e/KH964//8IROru4E//DV+eOXf/QWLtqnZnj17xinLoqukp64hc+oqmasWNScJPR1i0xWarpKeuobMqatkrlrUnCT0dIhNV2i6SnrqGjKnrpK5IjInCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0haarpKeuIXPqKpmrFjUnCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0RYuaq/XFBzbf+ID/+mO+Nbisba78MMNnny++P6er1S+P8lsfnfzljetkVvn1F+03qsxvlB8Xf/45n+IjXz8nT00seOHZL9Jvncl3+bc/9BP+9V/yT36ZP3nB+nLaZFl1lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcxVi5qThJ4OsekKTVdJT11D5tRVMlctak4SejrEpis0XSU9dQ2ZU1fJXLWoOUno6RCbrtB0lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcwVkTlJ6OkQm67QdJX01DVkTl0lc0VkThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV9NQ1ZE5dJXPVouYkoadDbLpC01XSU9eQOXWVzFWLmpOEng6x6QpNV0lPXUPm1FUyVy1qThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV...
+2018-02-13 15:57:28:110 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 1209 ms - 627306 
+2018-02-13 15:57:28:176 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:28:176 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:28:177 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:29:227 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezB3a5l6Xke1vG831qrms1uUiLV0Y8VWRZsy4AUHwgGDAtBgFyO78iX4SsIAiRIThQbMYzkwD+KfpCYISlRUnezaq05vzd7ztm7Vu0i20UW3FSA3mPkn/+Lf9mePfuKrFU2Z3ff+nj6JIsXNZzPw8dWVeWc+Gzy42ZZWXq6rdP/23z+2WLOD/zmt/i9D30t3XD21IqJs2e/KH964//8IROru4E//DV+eOXf/QWLtqnZnj17xinLoqukp64hc+oqmasWNScJPR1i0xWarpKeuobMqatkrlrUnCT0dIhNV2i6SnrqGjKnrpK5IjInCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0haarpKeuIXPqKpmrFjUnCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0RYuaq/XFBzbf+ID/+mO+Nbisba78MMNnny++P6er1S+P8lsfnfzljetkVvn1F+03qsxvlB8Xf/45n+IjXz8nT00seOHZL9Jvncl3+bc/9BP+9V/yT36ZP3nB+nLaZFl1lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcxVi5qThJ4OsekKTVdJT11D5tRVMlctak4SejrEpis0XSU9dQ2ZU1fJXLWoOUno6RCbrtB0lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcwVkTlJ6OkQm67QdJX01DVkTl0lc0VkThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV9NQ1ZE5dJXPVouYkoadDbLpC01XSU9eQOXWVzFWLmpOEng6x6QpNV0lPXUPm1FUyVy1qThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV...
+2018-02-13 15:57:29:232 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 1055 ms - 627306 
+2018-02-13 15:57:29:295 - info: [HTTP] --> POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/touch/perform {"actions":[{"action":"tap","options":{"x":438,"y":556.5,"count":1}}]}
+2018-02-13 15:57:29:295 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":438,"y":556.5,"count":1}}],"9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:29:299 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":438,"y":556.5}}
+2018-02-13 15:57:29:305 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":438,"y":556.5}}
+2018-02-13 15:57:29:336 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-02-13 15:57:29:337 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-02-13 15:57:29:377 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-02-13 15:57:29:577 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-02-13 15:57:29:578 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-02-13 15:57:29:581 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-02-13 15:57:29:583 - info: [HTTP] <-- POST /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/touch/perform 200 287 ms - 76 
+2018-02-13 15:57:37:592 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:37:592 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:37:592 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:38:247 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAp90lEQVR4AezBCbSm913Y9+//9zzv+95tFi3WYiHLkmXLC4vBBmxqwASzBkqAUuykCSTQU0poQpv0HJpQYgrpoSVpWgKnECCEwMEGkwRogrHxDgWvGO+WLUuWtY6kmdHM3Hvf+77P8/z/5Xo6aJu5y+j+Z3w1388n/d7BKwqSJEkVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmV...
+2018-02-13 15:57:38:248 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 656 ms - 22094 
+2018-02-13 15:57:40:296 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:40:296 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:40:298 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:40:888 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApeklEQVR4AezBCbymaV2Y6fv5v++3nHNq7W66eoVu6IZmUxBlUTHgElFxX9G4jSYxmYlxJpmJkzhGE8bBiRlHDT9NHHUcMwFFx+CGSwOCGwgItAiNNL23vdFUdZ0659ve93nGsmx6qzrnO1X11NLc15V+bc+FBUmSpIoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJ...
+2018-02-13 15:57:40:889 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 594 ms - 22594 
+2018-02-13 15:57:42:938 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:42:938 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:42:940 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:43:477 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApeklEQVR4AezBCbymaV2Y6fv5v++3nHNq7W66eoVu6IZmUxBlUTHgElFxX9G4jSYxmYlxJpmJkzhGE8bBiRlHDT9NHHUcMwFFx+CGSwOCGwgItAiNNL23vdFUdZ0659ve93nGsmx6qzrnO1X11NLc15V+bc+FBUmSpIoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJ...
+2018-02-13 15:57:43:478 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 541 ms - 22594 
+2018-02-13 15:57:45:527 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:45:527 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:45:528 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:46:304 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApmElEQVR4AezBCbimaV3Y6d/zf99vOefUXr0CvbFDqwiCQKIG1LjFJWaMsU2MiTCjyUyMWS+TkAwmxotrYowxMTHjQpwYMSNZMKioLAKitKBAI80iSzdN02t1dS3nnO/73vd9nrnKunropc6p71TXU3Wq/d13+qV9hwuSJEkVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIkSZUFkiRJlQWSJEmVBZIk...
+2018-02-13 15:57:46:304 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 777 ms - 22782 
+2018-02-13 15:57:48:352 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:48:353 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:48:354 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:48:941 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAAAklEQVR4AewaftIAAA4nSURBVO3BQQHAQAwEoWn8e76q2B/wVS8AgKELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4A...
+2018-02-13 15:57:48:941 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 589 ms - 5002 
+2018-02-13 15:57:50:988 - info: [HTTP] --> GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot {}
+2018-02-13 15:57:50:989 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:50:990 - info: [debug] [ADB] Device API level: 23
+2018-02-13 15:57:51:863 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB5hU1d3A4d85596Z7X2BhV0WpfciYEURFbG32LuJGnuMYomJkXwm0Yg9thQTW4wKatRYsKEGxQKiICgdpJeF7WXuved7hn3WjBvK7O6Msvh/XwVYhBBCCCGSSCOEEEIIkWQaIYQQQogk0wghhBBCJJlGCCGEECLJNEIIIYQQSaYRQgghhEgyjRBCCCFEkmmEEEIIIZJMI4QQQgiRZBohhBBCiCTTCCGEEEIkmUYIIYQQIsk0QgghhBBJphFCCCGESDKNEEIIIUSSaYQQQgghkkwjhBBCCJFkGiGEEEKIJNMIIYQQQiSZRiSdUooopRSNFEIIIcQPiYNIKmUMBxxxOvW2Gq8uhfVLZhI0BKzfuIra6kqU0lgboJTCWosQQgixK3IQSZVbXMyE+x5BB2B8qKysxHVdli1ahFdbyZsvPcLcWe9TE3FZPH8W1lpsECCEEELsShxEErmMPeg0PM+SahXWWlLT0qivV3Tt3hetNb2HjiAzrFmx/GuWL1/N+289y78n/YmGhgi1tTVYaxFCCCHaOwPchEgCRYcOXbn4N3eRlpFDJOLjBxZQBIHCWghsgGctNRGLm5ZJUeciRozcn2NPuYihI0ZTXbmZVSuXYAMLWIQQQoj2ykEkTVHnYjqVdEP5lqjAQmAtGIsKFFZbmlig3iowLm5WNnvsM5oBQ0aycuUKnvvnn3jhqQfwIg0IIYQQ7ZEBbkIkXGpqKmdecQPd+gxBBZb/odimAIhYCByXLp0LOeDAMQweOYa6zV+zevUaPM9DCCGEaE8McBMi4UpLS7lowp9QKJSl1eo9S62v6dC5K/sdfTYl3Xszd8Z71NXWYK1FCCGEaA8McBMi4cYceQ7DDhiLDkiMAHRg2X33vuw3egy5GQ5LFi2irr4OIYQQYmdngJsQCZWf34VLfnMP2Tn5KEvbWbZQCqxVZOR0Zsi+R7J7z4EsmDuL8s0b...
+2018-02-13 15:57:51:866 - info: [HTTP] <-- GET /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9/screenshot 200 878 ms - 332510 
+2018-02-13 15:57:51:916 - info: [HTTP] --> DELETE /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9 {}
+2018-02-13 15:57:51:917 - info: [debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["9b022be0-0d2d-48f2-851d-7e7645ebd4f9"]
+2018-02-13 15:57:51:917 - info: [debug] [BaseDriver] Event 'quitSessionRequested' logged at 1518537471917 (16:57:51 GMT+0100 (CET))
+2018-02-13 15:57:51:917 - info: [Appium] Removing session 9b022be0-0d2d-48f2-851d-7e7645ebd4f9 from our master session list
+2018-02-13 15:57:51:918 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-13 15:57:51:919 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:57:51:929 - info: [debug] [ADB] 2 device(s) connected
+2018-02-13 15:57:51:929 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:57:51:944 - error: [Logcat] Logcat terminated with code 0, signal null
+2018-02-13 15:57:51:945 - error: [UiAutomator] UiAutomator exited unexpectedly with code 0, signal null
+2018-02-13 15:57:51:945 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2018-02-13 15:57:51:953 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-13 15:57:51:953 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 15:57:51:960 - warn: [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
+2018-02-13 15:57:51:961 - info: [Appium] Removing session 9b022be0-0d2d-48f2-851d-7e7645ebd4f9 from our master session list
+2018-02-13 15:57:51:961 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:57:51:968 - info: [debug] [ADB] 1 device(s) connected
+2018-02-13 15:57:51:969 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:57:51:976 - error: [Appium] Had trouble ending session 9b022be0-0d2d-48f2-851d-7e7645ebd4f9: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7401' not found'; Code: '1'
+2018-02-13 15:57:51:994 - error: [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7401' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-13 15:57:51:995 - info: [HTTP] <-- DELETE /wd/hub/session/9b022be0-0d2d-48f2-851d-7e7645ebd4f9 500 78 ms - 414 
+2018-02-13 15:57:51:995 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-13 15:58:56:298 - info: [Appium] Received SIGINT - shutting down

@@ -1,0 +1,14 @@
+{
+"testName":"Clean Install",
+"groupTest":false,
+"desiredCapabilities": {
+        "platformName": "Android",
+        "deviceName": "Android",
+        "appPackage":"com.gorro.nothing",
+        "appActivity":"com.gorro.nothing.NothingActivity",
+        "fullReset":false,
+        "newCommandTimeout":120000,
+        "skipUnlock":true
+      }
+
+}

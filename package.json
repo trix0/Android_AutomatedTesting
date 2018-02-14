@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "appium": "^1.7.2",
+    "death": "^1.1.0",
     "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
     "opencv4nodejs": "^2.37.1",
     "swagger-client": "2.1.9",
     "webdriverio": "^4.10.1",

@@ -8,19 +8,9 @@ const fs =require("fs");
 const cv = require('opencv4nodejs');
 const winston = require('winston');
 
-
-
-
-
-
-
-
-
-
-//test
-
-
 const jArguments=JSON.parse(process.argv[2]);
+
+let testName=JSON.parse(jArguments.desCaps).testName;
 const logger = new winston.Logger({
     level: 'info',
     transports: [
@@ -35,52 +25,26 @@ const logger = new winston.Logger({
       })
     ]
   });
+imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
+imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
+
+
+let test = require('./Tests/CleanInstall/CleanInstall')(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
 
 logger.info('Test execution started');
-logger.info("Get following options to run"+ JSON.stringify(jArguments))
+logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
-///////////// images for img recognition////////////////////
-const img2 = cv.imread(__dirname+'/autoTest/CreateAccount.png');
-const img3 = cv.imread(__dirname+'/autoTest/LoginButton.png');
-const imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
-const imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
-const imgLoginEmail = cv.imread(__dirname+'/autoTest/loginEmail.png');
-const imgBigOkButton = cv.imread(__dirname+'/autoTest/bigOkButton.png');
-const imgloginPassed = cv.imread(__dirname+'/autoTest/loginPassed.png');
-const imgHideKeyboard = cv.imread(__dirname+'/autoTest/hideKeyBoard.png');
-const imgLogOutButton = cv.imread(__dirname+'/autoTest/logOutYellow.png');
-const imgloginPassed2 = cv.imread(__dirname+'/autoTest/login2finished.png');
-const imgLoginPassword = cv.imread(__dirname+'/autoTest/loginPassword.png');
-const imgSettingsButton = cv.imread(__dirname+'/autoTest/settingsButton.png');
-const imgFriendsForEverX = cv.imread(__dirname+'/autoTest/friendsForEverX.png');
-const imgloginPassLogout = cv.imread(__dirname+'/autoTest/loginTest1Finish.png');
-const imgloginEnterEmail = cv.imread(__dirname+'/autoTest/loginEnterEmail.png');
-const imgloginAgeConfirmYes = cv.imread(__dirname+'/autoTest/loginAgeConfirmYes.png');
-const imgloginAcceptConditions = cv.imread(__dirname+'/autoTest/loginAcceptConditions.png');
-const imgloginYellowNextButton = cv.imread(__dirname+'/autoTest/loginYellowNextButton.png');
+
+
+let desCaps=JSON.parse(jArguments.desCaps)
 
 
 
 //////////// capabilities options for appium//////////
 let opts = {
       port: jArguments.port,
-      desiredCapabilities: {
-        platformName: "Android",
-        deviceName: "Android",
-        systemPort:jArguments.systemPort,
-        //automationName: "uiautomator2",
-        udid:"", //cd21ccc5 emulator-5554
-        //app: __dirname+"/apk/pl.apk",
-        appPackage:"com.gorro.nothing",
-        appActivity:"com.gorro.nothing.NothingActivity",
-        // appPackage:"com.pointvoucher.playlondonpv",
-        // appActivity:"com.unity3d.player.UnityPlayerActivity",
-        noReset:jArguments.noReset,/////////// false adds around 3Sec
-        fullReset:false,
-        newCommandTimeout:120000,
-        skipUnlock:true,
-      }
+      desiredCapabilities:desCaps.desiredCapabilities
 };
 
 
@@ -95,23 +59,58 @@ const clientSwag = new Swagger({
 
 
 ///////////////////////////Init call///////////////
-const serial = jArguments.serial;          /////////// serial number of phone
+const serial = jArguments.UDID;          /////////// serial number of phone
 
-fnInit();
+
+
+
+
+
+
+
+
+
+
+fnInit(); // entry point
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function fnInit(){
   let UDID;
   try{
-    UDID=await fnConnectStf(serial); /////////////connect to stf -> returns UDID 
+    UDID=await fnConnectStf(serial); /////////////connect to stf -> returns UDID 7
     opts.desiredCapabilities.udid=UDID                    //////////assign udid
+
+
+
+
 
     const client =wdio.remote(opts);       //getting appium client connection
     process.on('SIGINT', ()=>{
       client.end();
       fnDisconnect(UDID);  // disconnects from open stf
     });
-    const init=await client.init();    // appium init (lunch app)
-    await fnCleanInstall(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl");
+    //await fnLoginTest(client);
+
+    await test.run(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl"); // runs test
+    await fnDisconnect(UDID);
+
+    //await fnCleanInstall(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl");
     //await fnPermission(5,null,client);
     // const loading=await fnLoading(40,client); // loading time 40 screenshots request afterwards error
     // if(loading==1){
@@ -458,6 +457,7 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
     
    
 }
+
 /////// function used in fnIsOnScreen() to repeat 
 async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
   await timeout(repeatDelay);
@@ -475,6 +475,65 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
         logger.info("Found image on screen: "+desc);
         return result;
 }
+
+
+
+
+
+
+
+
+
+
+
+//// main function to dettect if test finished
+function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeatDelay) {
+    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    let iCounter = 0;
+    let init = ()=> timeout(wait).then((asd)=>{
+      const attempt = () => fnTestFinishOnce(img, desc, iCounter,client,testName,repeatDelay).catch(err => {
+              console.log(err.message);
+              iCounter++;
+              if (iCounter === repeats) {
+                  // Failed, out of retries
+                  logger.info("Looking for image on screen #"+iCounter);
+                  return Promise.reject("Object not found : " + desc);
+                  throw new Error("Object not found : " + desc);
+              }
+              // Retry after waiting
+              return attempt();
+          });
+          return attempt();      
+    })
+    return init();
+    
+   
+}
+
+/////// function used in fnIsOnScreen() to repeat 
+async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0) {
+  await timeout(repeatDelay);
+  let screenshot= await client.screenshot()
+        
+  let buf = new Buffer(screenshot.value, 'base64');
+  let img1 = cv.imdecode(buf)
+  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  if (result.maxVal <= 0.65) {
+      // Fail
+      const msg = "Can't see object yet";
+      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+  }
+        // All good
+        logger.info("Found image on screen: "+desc);
+        logger.info("Test:"+testName+"[FINISHED]");
+        return result;
+}
+
+
+
+
+
+
 
 
 ////// functions used to click on elements -> find based on image -> template matching 
@@ -548,6 +607,7 @@ function SaveImage (imageData,imageName){
 
 async function fnCleanInstall(client,appPackage,activityName,apkFileName){
   try{
+    const init=await client.init();    // appium init (lunch app)
     logger.info("Running clean Install test with following paramters, appPackage: "+appPackage+" activityName: "+activityName+" apkFile: " + __dirname+'/apk/'+apkFileName+'.apk');
     // is apk installed ?
     let appExists= await client.isAppInstalled(appPackage);
@@ -586,6 +646,8 @@ async function fnCleanInstall(client,appPackage,activityName,apkFileName){
 async function fnLoginTest(client){
   console.log("Login test running");
   try{
+    const init=await client.init();    // appium init (lunch app)
+    loading= await fnIsOnScreen(img2,client,20,"loading",6000,2000);
     await fnClick(imgLoginEmail,client,5,"Email button",500);
     await fnClick(imgloginAgeConfirmYes,client,5,"Confirm Age button",2000);
     await fnClick(imgloginEnterEmail,client,5,"Enter Email",1200);
@@ -620,6 +682,8 @@ async function fnLoginTest(client){
 async function fnLoginTest2(client){
   console.log("Login test running");
   try{
+    const init=await client.init();    // appium init (lunch app)
+    loading= await fnIsOnScreen(img3,client,20,"loading",6000,2000);
     await fnClick(img3,client,5,"login button",500);
     await fnClick(imgLoginEmail,client,5,"Email button",500);
     await fnClick(imgloginAgeConfirmYes,client,5,"Confirm Age button",2000);

@@ -1,0 +1,126 @@
+2018-02-13T10:18:30.691Z - info: Test execution started
+2018-02-13T10:18:30.692Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4003,"systemPort":8203,"bpPort":6003,"desCaps":"{\n\"testName\":\"Clean Install\",\n\"groupTest\":false,\n\"desiredCapabilities\": {\n        \"platformName\": \"Android\",\n        \"deviceName\": \"Android\",\n        \"appPackage\":\"com.gorro.nothing\",\n        \"appActivity\":\"com.gorro.nothing.NothingActivity\",\n        \"fullReset\":false,\n        \"newCommandTimeout\":120000,\n        \"skipUnlock\":true\n      }\n\n}\n"}
+2018-02-13T10:18:30.720Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-13T10:18:30.768Z - info: executing command adb connect  localhost:7405
+2018-02-13T10:18:30.775Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4003 -bp6003  --log-timestamp --log /home/trixo/Code/javaRewrite/log4003.txt
+2018-02-13T10:18:30.775Z - info: Trying to create appium Server on port: 4003
+2018-02-13T10:18:32.961Z - info: Appium server created on port: 4003
+2018-02-13T10:19:03.715Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-13T10:19:06.192Z - info: App exists in device => trying to remove
+2018-02-13T10:19:14.248Z - info: App removed
+2018-02-13T10:19:14.248Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-13T10:22:11.467Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-13T10:22:15.953Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-13T10:22:17.392Z - info: Found permission button going to click #0
+2018-02-13T10:22:17.392Z - info: Running click event : Click on permission button with 5repets
+2018-02-13T10:22:17.392Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-13T10:22:17.392Z - info: Running delay for : 0
+2018-02-13T10:22:17.393Z - info: Running delay for : 0
+2018-02-13T10:22:18.693Z - info: Found image on screen: Click on permission button
+2018-02-13T10:22:19.009Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-13T10:22:19.010Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-13T10:22:19.010Z - info: Running delay for : 6000
+2018-02-13T10:22:25.012Z - info: Running delay for : 2000
+2018-02-13T10:22:28.216Z - info: Running delay for : 2000
+2018-02-13T10:22:31.102Z - info: Running delay for : 2000
+2018-02-13T10:22:33.978Z - info: Running delay for : 2000
+2018-02-13T10:22:36.929Z - info: Running delay for : 2000
+2018-02-13T10:22:39.932Z - info: Running delay for : 2000
+2018-02-13T10:22:43.029Z - info: Running delay for : 2000
+2018-02-13T10:22:45.825Z - info: Running delay for : 2000
+2018-02-13T10:22:48.574Z - info: Running delay for : 2000
+2018-02-13T10:22:51.910Z - info: Found image on screen: Loading screen
+2018-02-13T10:22:51.911Z - info: Test:Clean Install[FINISHED]
+2018-02-13T10:38:57.003Z - info: Appium on close  null
+2018-02-13T10:38:57.009Z - info: You are not owner localhost:7405 => open STF 
+2018-02-13T10:38:57.011Z - info: You are not owner localhost:7405 => open STF 
+2018-02-13T10:44:11.056Z - info: Test execution started
+2018-02-13T10:44:11.056Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4003,"systemPort":8203,"bpPort":6003,"desCaps":"{\n\"testName\":\"Clean Install\",\n\"groupTest\":false,\n\"desiredCapabilities\": {\n        \"platformName\": \"Android\",\n        \"deviceName\": \"Android\",\n        \"appPackage\":\"com.gorro.nothing\",\n        \"appActivity\":\"com.gorro.nothing.NothingActivity\",\n        \"fullReset\":false,\n        \"newCommandTimeout\":120000,\n        \"skipUnlock\":true\n      }\n\n}\n"}
+2018-02-13T10:44:11.085Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-13T10:44:11.134Z - info: executing command adb connect  localhost:7405
+2018-02-13T10:44:11.141Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4003 -bp6003  --log-timestamp --log /home/trixo/Code/javaRewrite/log4003.txt
+2018-02-13T10:44:11.141Z - info: Trying to create appium Server on port: 4003
+2018-02-13T10:44:13.443Z - info: Appium server created on port: 4003
+2018-02-13T10:44:18.799Z - info: Appium err 2018-02-13 10:44:18:798 - [ADB] Error: Error finding if app is installed. Original error: No device connected, cannot run adb shell command 'pm list packages io.appium.unlock'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error finding if app is installed. Original error: No device connected, cannot run adb shell command 'pm list packages io.appium.unlock'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/apk-utils.js:28:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-13T10:44:18.816Z - info: Appium err 2018-02-13 10:44:18:815 - [ADB] Error: Error getting device platform version. Original error: No device connected, cannot run adb shell command 'getprop ro.build.version.release'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:89:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error getting device platform version. Original error: No device connected, cannot run adb shell command 'getprop ro.build.version.release'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:89:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-13T10:44:18.828Z - info: Appium err 2018-02-13 10:44:18:827 - [MJSONWP] Encountered internal error running command: Error: Error getting device platform version. Original error: No device connected, cannot run adb shell command 'getprop ro.build.version.release'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:89:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-13T10:50:44.318Z - info: Appium on close  null
+2018-02-13T10:50:44.322Z - info: You are not owner localhost:7405 => open STF 
+2018-02-13T10:50:44.324Z - info: You are not owner localhost:7405 => open STF 
+2018-02-13T12:50:49.619Z - info: Test execution started
+2018-02-13T12:50:49.620Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4003,"systemPort":8203,"bpPort":6003,"desCaps":"{\n\"testName\":\"Clean Install\",\n\"groupTest\":false,\n\"desiredCapabilities\": {\n        \"platformName\": \"Android\",\n        \"deviceName\": \"Android\",\n        \"appPackage\":\"com.gorro.nothing\",\n        \"appActivity\":\"com.gorro.nothing.NothingActivity\",\n        \"fullReset\":false,\n        \"newCommandTimeout\":120000,\n        \"skipUnlock\":true\n      }\n\n}\n"}
+2018-02-13T12:50:49.626Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-13T12:50:49.680Z - info: executing command adb connect  localhost:7409
+2018-02-13T12:50:49.688Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4003 -bp6003  --log-timestamp --log /home/trixo/Code/javaRewrite/log4003.txt
+2018-02-13T12:50:49.688Z - info: Trying to create appium Server on port: 4003
+2018-02-13T12:50:51.785Z - info: Appium server created on port: 4003
+2018-02-13T12:50:51.894Z - info: Appium err 2018-02-13 12:50:51:893 - [AndroidDriver] Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-13T12:50:51.895Z - info: Appium err 2018-02-13 12:50:51:895 - [MJSONWP] Encountered internal error running command: Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-13T12:50:51.910Z - info: You are not owner localhost:7409 => open STF 
+2018-02-13T13:02:14.784Z - info: Appium on close  null
+2018-02-13T13:02:14.808Z - info: You are not owner localhost:7409 => open STF 
+2018-02-13T13:02:14.808Z - info: You are not owner localhost:7409 => open STF 

@@ -1,0 +1,72 @@
+2018-02-13 12:50:51:768 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-02-13 12:50:51:769 - info: [Appium] Non-default server args:
+2018-02-13 12:50:51:769 - info: [Appium]   port: 4003
+2018-02-13 12:50:51:770 - info: [Appium]   bootstrapPort: 6003
+2018-02-13 12:50:51:770 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4003.txt
+2018-02-13 12:50:51:770 - info: [Appium]   logTimestamp: true
+2018-02-13 12:50:51:785 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4003
+2018-02-13 12:50:51:809 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7409","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-13 12:50:51:812 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7409","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-13 12:50:51:813 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518526251813 (13:50:51 GMT+0100 (CET))
+2018-02-13 12:50:51:814 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-13 12:50:51:815 - info: [Appium] Capabilities:
+2018-02-13 12:50:51:815 - info: [Appium]   javascriptEnabled: true
+2018-02-13 12:50:51:815 - info: [Appium]   locationContextEnabled: true
+2018-02-13 12:50:51:815 - info: [Appium]   handlesAlerts: true
+2018-02-13 12:50:51:815 - info: [Appium]   rotatable: true
+2018-02-13 12:50:51:815 - info: [Appium]   platformName: Android
+2018-02-13 12:50:51:816 - info: [Appium]   deviceName: Android
+2018-02-13 12:50:51:816 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-13 12:50:51:816 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-13 12:50:51:816 - info: [Appium]   fullReset: false
+2018-02-13 12:50:51:816 - info: [Appium]   newCommandTimeout: 120000
+2018-02-13 12:50:51:816 - info: [Appium]   skipUnlock: true
+2018-02-13 12:50:51:816 - info: [Appium]   udid: localhost:7409
+2018-02-13 12:50:51:817 - info: [Appium]   requestOrigins: {
+2018-02-13 12:50:51:817 - info: [Appium]     url: http://webdriver.io
+2018-02-13 12:50:51:817 - info: [Appium]     version: 4.10.1
+2018-02-13 12:50:51:817 - info: [Appium]     name: webdriverio
+2018-02-13 12:50:51:817 - info: [Appium]   }
+2018-02-13 12:50:51:821 - info: [debug] [BaseDriver] 
+2018-02-13 12:50:51:821 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-13 12:50:51:825 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-13 12:50:51:826 - info: [BaseDriver] Session created with session id: 5fd97324-4bb6-43c8-ae8b-4e513436717e
+2018-02-13 12:50:51:827 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-13 12:50:51:867 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-13 12:50:51:869 - info: [ADB] Checking whether adb is present
+2018-02-13 12:50:51:875 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-02-13 12:50:51:875 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-02-13 12:50:51:876 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-02-13 12:50:51:876 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-13 12:50:51:876 - info: [AndroidDriver] Retrieving device list
+2018-02-13 12:50:51:877 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-13 12:50:51:877 - info: [debug] [ADB] Getting connected devices...
+2018-02-13 12:50:51:888 - info: [debug] [ADB] 1 device(s) connected
+2018-02-13 12:50:51:894 - error: [AndroidDriver] Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-13 12:50:51:894 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-13 12:50:51:895 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-02-13 12:50:51:896 - error: [MJSONWP] Encountered internal error running command: Error: Device localhost:7409 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-13 12:50:51:900 - info: [HTTP] <-- POST /wd/hub/session 500 89 ms - 199 
+2018-02-13 13:02:14:770 - info: [Appium] Received SIGINT - shutting down

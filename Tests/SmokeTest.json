@@ -1,0 +1,16 @@
+{
+	"testName":"Smoke Test",
+	"groupTest":true,
+	"tests":[
+		{
+		"testName":"Clean Install",
+		"testFolder":"CleanInstall",
+		"conitnueOnFail":false
+		},
+				{
+		"testName":"Clean Install",
+		"testFolder":"CleanInstall",
+		"conitnueOnFail":false
+		}
+	]
+}
