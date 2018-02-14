@@ -9,8 +9,9 @@ const cv = require('opencv4nodejs');
 const winston = require('winston');
 
 const jArguments=JSON.parse(process.argv[2]);
-
-let testName=JSON.parse(jArguments.desCaps).testName;
+console.log(jArguments);
+console.log("passin data____________")
+let testName=jArguments.desCaps.testName;
 const logger = new winston.Logger({
     level: 'info',
     transports: [
@@ -27,6 +28,8 @@ const logger = new winston.Logger({
   });
 imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
 imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
+imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
+imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 
 
 let test = require('./Tests/CleanInstall/CleanInstall')(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
@@ -37,7 +40,7 @@ logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
 
 
-let desCaps=JSON.parse(jArguments.desCaps)
+let desCaps=jArguments.desCaps;
 
 
 
@@ -65,7 +68,7 @@ const serial = jArguments.UDID;          /////////// serial number of phone
 
 
 
-
+console.log("serial:"+serial)
 
 
 
@@ -309,13 +312,14 @@ function fnPermission(repeat,bValue,client){
 
 function fnPermssionOnce(iCounter,bValue,client){
   return new Promise(resolve=>{
+    let passedPerm=false;
     let testId=0;
     let img;
     if(bValue===true){
-      img=imgAllowButton;
+      img=[imgAllowButton,imgAllowButton_1];
     }
     else if(bValue===false){
-      img=imgDenyButton; 
+      img=[imgDenyButton,imgDenyButton_1]; 
     }
     else{
       return true;
@@ -324,23 +328,31 @@ function fnPermssionOnce(iCounter,bValue,client){
       .then((data) => {            
         let buf = new Buffer(data.value, 'base64');
         let img1 = cv.imdecode(buf)
-          let result = img1.matchTemplate(img, 5).minMaxLoc(); 
-
+        for(var x=0; x<img.length; x++){
+          let result = img1.matchTemplate(img[x], 5).minMaxLoc(); 
+          console.log(result);
           if (result.maxVal >= 0.65) {
-              // Fail
+            // All good
+
+            logger.info("Found permission button going to click #"+iCounter)
+            fnClick(img[x],client,repeats=5,"Click on permission button",0).then(()=>{
+              resolve();
+            });
+            break;
+              //ok
               
           }
           else{
-            logger.info("WAiting for permission pop up#"+iCounter)
-            const msg = "WAiting for permission pop up#"+iCounter;
-            throw new Error(msg);
+            if(x==img.length-1){
+              logger.info("WAiting for permission pop up#"+iCounter)
+              const msg = "WAiting for permission pop up#"+iCounter;
+              throw new Error(msg);
+            }
           }
-          // All good
-          logger.info("Found permission button going to click #"+iCounter)
-          fnClick(img,client,repeats=5,"Click on permission button",0).then(()=>{
-            resolve();
-          });
-          
+
+
+        }
+
         
 
     });    

@@ -1,0 +1,5 @@
+2018-02-14T14:45:45.618Z - info: Test execution started
+2018-02-14T14:45:45.619Z - info: Got following options to run{"testName":"Clean Install","UDID":"emulator-5554","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true}}}
+2018-02-14T14:45:45.628Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-14T14:45:45.658Z - info: Device is not available => open STF 
+2018-02-14T14:45:45.741Z - info: Disconnected undefined=> open STF 

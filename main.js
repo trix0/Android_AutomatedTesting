@@ -6,13 +6,13 @@ const fs =require("fs");
 const moment = require('moment');
 const app = express();
 const iExpressPort=3211;
-let iTestId=parseInt(require('./idCounter.json'));
-var ON_DEATH = require('death')({uncaughtException: true}) 
-let systemPort=8200;
-let port=4000;
-let bpPort=6000;
-let runningTests=[];
-let runningTestTemplate={
+ iTestId=parseInt(require('./idCounter.json'));
+ON_DEATH = require('death')({uncaughtException: true}) 
+systemPort=8200;
+port=4000;
+bpPort=6000;
+runningTests=[];
+runningTestTemplate={
 	"testId":1,
 	"systemPort":1,
 	"port":1,
@@ -77,9 +77,14 @@ try{
 				// if there is more udids separated by comma
 				serials=serials.split(",");
 				for(var s=0; s<serials.length; s++){
-					let UDID=devices[s];
+					let UDID=serials[s];
 					testName=JSON.parse(desCaps).testName;
+
 					fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
+					iTestId++;
+					systemPort++;
+					port++;
+					bpPort++	
 
 				}
 			}
@@ -88,6 +93,10 @@ try{
 				let UDID=serials;
 				testName=JSON.parse(desCaps).testName;
 				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
+				iTestId++;
+				systemPort++;
+				port++;
+				bpPort++	
 
 			}
 
@@ -120,11 +129,14 @@ try{
 			console.log("0 devices found")
 		}
 		else{
-			console.log("play test");
 			for(var r=0; r<devices.length; r++){
 				let UDID=devices[r];
 				testName=JSON.parse(desCaps).testName;
 				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
+				iTestId++;
+				systemPort++;
+				port++;
+				bpPort++	
 			}
 		}
 	
@@ -141,7 +153,7 @@ try{
 		console.log("Running Group Test on all devices")
 	}
 	else if(data.indexOf("help")===0){
-		console.log(runningTests)
+		console.log(JSON.stringify(runningTests))
 		return true;
 	}
 	else{
@@ -189,7 +201,6 @@ function fnGetAllDevices(){ // needs fix
 					}
 
 				}
-				console.log(availableDevices);
 				resolve(availableDevices);
 			});			
 	})
@@ -245,28 +256,35 @@ let jGroupTestFormat={
 	"tests":[]
 }
 	desCaps=JSON.parse(desCaps);
-
+	let testId=iTestId;
+	let testIndex=0;
+	jGroupTestFormat.id=testId;
+	jGroupTestFormat.testName=testName;
+	runningTests.push(jGroupTestFormat);
 	if(desCaps.groupTest){
-		console.log(typeof desCaps.tests)
-		console.log( desCaps.tests[0].testFolder)
-    fnBlockLoop(desCaps.tests,desCaps, async function(desCaps){ 
+    fnBlockLoop(desCaps.tests,desCaps, async function(desCaps,cb){ 
+
     	let testJsonExists= await fnDoesTestExists(desCaps.tests[iIndex].testFolder,"json").catch(err=>{});
     	if(testJsonExists){
     		testName=desCaps.tests[iIndex].testFolder;
     		var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
-    		jStatusFormat.id=iTestId;
+    		jStatusFormat.id=testIndex;
 			jStatusFormat.UDID=UDID;
 			jStatusFormat.testName=testName;
 			jStatusFormat.timeStamp=await moment().format();
 			jStatusFormat.port=port;
-			runningTests.push(jStatusFormat);
-			console.log(UDID);
-			jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
-			iTestId++;
+			jStatusFormat.status="Test not completed";
+			desCaps=JSON.parse(desCaps);
+			console.log(desCaps);
 			systemPort++;
 			port++;
 			bpPort++
 			iIndex++	
+			
+			runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
+			jStatusFormat.status=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
+
+		console.log("finished looping group")
     	}
     	else{
     		throw new Error("Test does not exists")
@@ -283,12 +301,13 @@ let jGroupTestFormat={
 		jStatusFormat.testName=testName;
 		jStatusFormat.timeStamp=moment().format();
 		jStatusFormat.port=port;
-		jStatusFormat.status=fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
-		runningTests.push(jStatusFormat);
 		iTestId++;
 		systemPort++;
 		port++;
 		bpPort++
+		jStatusFormat.status=fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
+		runningTests.push(jStatusFormat);
+
 
 	}
 	else{
@@ -304,8 +323,19 @@ let jGroupTestFormat={
 
 }
 
-function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 
+function fnPushTestToGroupTest(groupID,testId){
+	for(var x=runningTests.length-1; x>=0; x--){
+		if(groupID===runningTests[x].id){
+			return x
+			break;
+		}
+	}
+
+}
+
+
+function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 
 	return new Promise((resolve,reject)=>{
 		let jCustomOpt=
@@ -322,7 +352,7 @@ function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 		let aOptions=['./connect.js',jCustomOpt]
 		let ls = child_process.spawn('node', aOptions,)
 		ls.stdout.on('data', function (data) {
-			console.log(data.toString());
+			console.log(data.toString('utf8'));
 			if(data.indexOf("Test:"+testName+"[FINISHED]")>-1){
 				console.log("Promise Resolved after test")
 				resolve("Finished");
