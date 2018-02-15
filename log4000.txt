@@ -1,7 +1,8 @@
-2018-02-14 12:00:49:480 - info: [Appium] Welcome to Appium v1.8.0-beta3
-2018-02-14 12:00:49:481 - info: [Appium] Non-default server args:
-2018-02-14 12:00:49:481 - info: [Appium]   port: 4000
-2018-02-14 12:00:49:481 - info: [Appium]   bootstrapPort: 6000
-2018-02-14 12:00:49:481 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
-2018-02-14 12:00:49:482 - info: [Appium]   logTimestamp: true
-2018-02-14 12:00:49:497 - error: [HTTP] Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+2018-02-15 09:56:26:188 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-02-15 09:56:26:189 - info: [Appium] Non-default server args:
+2018-02-15 09:56:26:190 - info: [Appium]   port: 4000
+2018-02-15 09:56:26:190 - info: [Appium]   bootstrapPort: 6000
+2018-02-15 09:56:26:190 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
+2018-02-15 09:56:26:190 - info: [Appium]   logTimestamp: true
+2018-02-15 09:56:26:207 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4000
+2018-02-15 09:57:20:229 - info: [Appium] Received SIGINT - shutting down

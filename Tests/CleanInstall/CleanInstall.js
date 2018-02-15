@@ -26,7 +26,6 @@ module.exports = function(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoa
         } 
          logger.info("starting package : " + appPackage+" with activity name: "+activityName);
         await client.startActivity(appPackage,activityName,"com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
-
         await fnPermission(5,true,client);
 
         loading= await fnTestFinish(images.img2,client,20,"Loading screen",testName,6000,2000);

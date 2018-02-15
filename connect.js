@@ -181,7 +181,7 @@ async function fnConnectStf(serial){
     process.on('SIGINT', ()=>{
       fnDisconnect(remoteConnectUDID);
     });
-    const createServer=await fnCreateServer(opts.port,jArguments.bpPort);
+    //const createServer=await fnCreateServer(opts.port,jArguments.bpPort);
     return(remoteConnectUDID);
   }
   catch(err){
@@ -291,12 +291,12 @@ function timeout(delay){
 
 function fnPermission(repeat,bValue,client){
   logger.info("Running fnPermission with number of repeats: "+ repeat+" and value: "+bValue)
+  let iCounter = 0;
   if(bValue===null){
     return true;
   }
-  let iCounter = 0;
   const attempt = () => fnPermssionOnce(iCounter,bValue,client).catch(err => {
-      console.log(err.message);
+      console.log(err.message+"Iam here");
       iCounter++;
       if (iCounter === repeat) {
           // Failed, out of retries
@@ -306,12 +306,12 @@ function fnPermission(repeat,bValue,client){
       // Retry 
       return attempt();
   });
-  return attempt();    
+  return attempt();      
 }
 
 
+
 function fnPermssionOnce(iCounter,bValue,client){
-  return new Promise(resolve=>{
     let passedPerm=false;
     let testId=0;
     let img;
@@ -336,27 +336,28 @@ function fnPermssionOnce(iCounter,bValue,client){
 
             logger.info("Found permission button going to click #"+iCounter)
             fnClick(img[x],client,repeats=5,"Click on permission button",0).then(()=>{
-              resolve();
+            return true;
             });
             break;
               //ok
               
           }
+          else if(x==img.length-1){
+            logger.info("WAiting for permission pop up#"+iCounter)
+            const msg = "WAiting for permission pop up#"+iCounter;
+            throw new Error(msg);            
+          }
           else{
-            if(x==img.length-1){
-              logger.info("WAiting for permission pop up#"+iCounter)
-              const msg = "WAiting for permission pop up#"+iCounter;
-              throw new Error(msg);
-            }
+
           }
 
 
         }
 
+
         
 
     });    
-  })
 
 }
 

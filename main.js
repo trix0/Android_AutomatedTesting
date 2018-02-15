@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
 
 })
 
+fnCreateServer(port,bpPort)
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -403,6 +405,32 @@ async function fnBlockLoop(input,param,func){
 
 
 
+function fnCreateServer(port,bpPort){
+  return new Promise((resolve,reject)=>{
+    // logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp' + bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
+    // logger.info("Trying to create appium Server on port: "+ port)
+    let appiumPort=port
+    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
+    appiumServer.stdout.on('data', function(data) {
+      if(data.indexOf("listener started ")!=-1){
+        // logger.info("Appium server created on port: "+port )
+        console.log("Server Created");
+        resolve(true);
+        
+      }
+    });
+    appiumServer.stderr.on('data', function(data) {
+      // logger.info("Appium err "+ data)
+      reject(data)
+    });
+    appiumServer.on('close', function(code) {
+            // logger.info("Appium on close  "+ code)
+      reject(code);
+    });
+// ...
+
+  })
+}
 
 
 
