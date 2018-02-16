@@ -1,12 +1,17 @@
 const express = require('express');
 const readline = require('readline');
+const Swagger = require('swagger-client');
+const SWAGGER_URL = 'http://localhost:7100/api/v1/swagger.json';
+const AUTH_TOKEN  = '26cd01ab067140ec8f6934253c41eceba51ec96c0b1440f1a4fe1c6aa42c7507';
 const child_process = require('child_process');
 const { exec } = require('child_process');
 const fs =require("fs");
 const moment = require('moment');
 const app = express();
-const iExpressPort=3211;
- iTestId=parseInt(require('./idCounter.json'));
+const portfinder = require('portfinder');
+const iExpressPort=3212;
+stfChecker=false;
+iTestId=fnLoadTestNumber();
 ON_DEATH = require('death')({uncaughtException: true}) 
 systemPort=8200;
 port=4000;
@@ -21,13 +26,37 @@ runningTestTemplate={
 	"deviceUDID":"cd21ccc5",
 	"passed":false,
 }
+
+ON_DEATH(
+	function(signal, err) {
+		console.log(err);
+	fs.writeFile("idCounter", iTestId, (err) => {
+	  if (err) throw err;
+	  console.log('The file has been saved!');
+	  process.exit()
+	})
+})
+
+
+
 app.get('/', (req, res) => {
 
 
 
 })
 
-fnCreateServer(port,bpPort)
+
+//fnStartStf("local");
+
+///// swagger client to authoriize openSTF/////////////
+const clientSwag = new Swagger({
+  url: SWAGGER_URL
+, usePromise: true
+, authorizations: {
+    accessTokenAuth: new Swagger.ApiKeyAuthorization('Authorization', 'Bearer ' + AUTH_TOKEN, 'header')
+  }
+})
+
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -42,14 +71,7 @@ rl.on('line', function(line){
 app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
 
 
-ON_DEATH(
-	function(signal, err) {
-	fs.writeFile("idCounter.json", iTestId, (err) => {
-	  if (err) throw err;
-	  console.log('The file has been saved!');
-	  process.exit()
-	})
-})
+
 
 async function fnExecuteCommand(data){
 
@@ -81,12 +103,9 @@ try{
 				for(var s=0; s<serials.length; s++){
 					let UDID=serials[s];
 					testName=JSON.parse(desCaps).testName;
-
+					iTestId++
 					fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
-					iTestId++;
-					systemPort++;
-					port++;
-					bpPort++	
+
 
 				}
 			}
@@ -95,10 +114,7 @@ try{
 				let UDID=serials;
 				testName=JSON.parse(desCaps).testName;
 				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
-				iTestId++;
-				systemPort++;
-				port++;
-				bpPort++	
+
 
 			}
 
@@ -134,11 +150,8 @@ try{
 			for(var r=0; r<devices.length; r++){
 				let UDID=devices[r];
 				testName=JSON.parse(desCaps).testName;
+				iTestId++
 				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
-				iTestId++;
-				systemPort++;
-				port++;
-				bpPort++	
 			}
 		}
 	
@@ -216,7 +229,6 @@ function fnDoesTestExists(testName,fileType){
 	return new Promise((resolve,reject)=>{
 		fs.readFile('Tests/'+testName+"/"+testName+"."+fileType,"utf-8",(err, data) => {  
 		    if (err){
-		    	console.log(err);
 		    	reject(new Error("File does not exists"));
 		    }
 		    else{
@@ -242,73 +254,108 @@ function fnDoesGroupTestExists(testName,fileType){
 
 
 
-function fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort){
-var iIndex=0;
-let jStatusFormat={
-	"id":null,
-	"UDID":"",
-	"testName":"",
-	"status":null,
-	"timeStamp":"",
-	"port":0
-}
-let jGroupTestFormat={
-	"id":null,
-	"testName":"",
-	"tests":[]
-}
-	desCaps=JSON.parse(desCaps);
-	let testId=iTestId;
-	let testIndex=0;
+async function fnRunBundle(testName,UDID,desCaps){
+try{
+
+	let previousTestSkipValue;
+	var iIndex=0;
+	let jStatusFormat={
+		"id":null,
+		"UDID":"",
+		"testName":"",
+		"status":null,
+		"timeStamp":"",
+		"port":0
+	}
+	let jGroupTestFormat={
+		"id":null,
+		"testName":"",
+		"tests":[]
+	}
+		desCaps=JSON.parse(desCaps);
+		let testId=iTestId;
+		let testIndex=0;
+
+
+	if(desCaps.groupTest){
+
 	jGroupTestFormat.id=testId;
 	jGroupTestFormat.testName=testName;
 	runningTests.push(jGroupTestFormat);
-	if(desCaps.groupTest){
     fnBlockLoop(desCaps.tests,desCaps, async function(desCaps,cb){ 
-
+	jStatusFormat={
+		"id":null,
+		"UDID":"",
+		"testName":"",
+		"status":null,
+		"timeStamp":"",
+		"port":0
+	}
     	let testJsonExists= await fnDoesTestExists(desCaps.tests[iIndex].testFolder,"json").catch(err=>{});
     	if(testJsonExists){
     		testName=desCaps.tests[iIndex].testFolder;
+    		let groupTestCaps=desCaps;
     		var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
+			systemPort++;
+			port++;
+			bpPort++
+			iIndex++	
+
     		jStatusFormat.id=testIndex;
+			testIndex++
 			jStatusFormat.UDID=UDID;
 			jStatusFormat.testName=testName;
 			jStatusFormat.timeStamp=await moment().format();
 			jStatusFormat.port=port;
 			jStatusFormat.status="Test not completed";
 			desCaps=JSON.parse(desCaps);
-			console.log(desCaps);
-			systemPort++;
-			port++;
-			bpPort++
-			iIndex++	
-			
+			let stfCheck=await fnStfCheck(UDID,20,2000);
+			if(stfCheck===false){
+				jStatusFormat.status="Could not reach device."
+				runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
+				throw new Error("Could not reach device: "+UDID)
+			}
 			runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
-			jStatusFormat.status=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
 
-		console.log("finished looping group")
+			let runStatus;
+			jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
+			previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
+			if(previousTestSkipValue===false&&runStatus.indexOf("ERROR[MyERr]")>-1){
+				console.log("We should stop group test Here")
+				return("Test Failed, Can not Continue")
+			}
     	}
     	else{
     		throw new Error("Test does not exists")
     	}
 
-    } );
+    } ).catch(err=>{
+    	console.log(err);
+    	console.log("throwing errors here");
+    });
 			
 	}
 	else if(!desCaps.groupTest){
 		console.log("Single Test")
-
+		systemPort++;
+		port++;
+		bpPort++
+		iTestId++;
 		jStatusFormat.id=iTestId;
 		jStatusFormat.UDID=UDID;
 		jStatusFormat.testName=testName;
 		jStatusFormat.timeStamp=moment().format();
 		jStatusFormat.port=port;
-		iTestId++;
-		systemPort++;
-		port++;
-		bpPort++
-		jStatusFormat.status=fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
+		jStatusFormat.status="Test not completed"
+		let stfCheck=await fnStfCheck(UDID,20,2000);
+
+		if(stfCheck===false){
+			jStatusFormat.status="Could not reach device."
+			runningTests.push(jStatusFormat);
+			throw new Error("Could not reach device: "+UDID)
+		}
 		runningTests.push(jStatusFormat);
+		jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
 
 
 	}
@@ -316,12 +363,10 @@ let jGroupTestFormat={
 		return new Error("Failed to run  Test");
 	}
 
-
-
-
-
-
-
+}
+catch(err){
+	console.log(err)
+}
 
 }
 
@@ -360,6 +405,10 @@ function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 				resolve("Finished");
 					
 			}
+			else if(data.indexOf("ERROR[MyERr]")>-1){
+				console.log("detected err")
+				resolve(data.toString('utf8'))
+			}
 			
 
 		});
@@ -374,9 +423,6 @@ function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 
 
 
-function fnGroupTest(){
-
-}
 
 
 function timeout(delay){
@@ -405,33 +451,188 @@ async function fnBlockLoop(input,param,func){
 
 
 
-function fnCreateServer(port,bpPort){
-  return new Promise((resolve,reject)=>{
-    // logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp' + bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
-    // logger.info("Trying to create appium Server on port: "+ port)
-    let appiumPort=port
-    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
-    appiumServer.stdout.on('data', function(data) {
-      if(data.indexOf("listener started ")!=-1){
-        // logger.info("Appium server created on port: "+port )
-        console.log("Server Created");
-        resolve(true);
-        
-      }
-    });
-    appiumServer.stderr.on('data', function(data) {
-      // logger.info("Appium err "+ data)
-      reject(data)
-    });
-    appiumServer.on('close', function(code) {
-            // logger.info("Appium on close  "+ code)
-      reject(code);
-    });
-// ...
 
-  })
+function fnIsDeviceAccesable(serial,repeats,repeatDelay) {
+
+    let iCounter = 0;
+
+      const attempt = () => fnIsDeviceAccesableOnce(serial,repeatDelay).catch(err => {
+              iCounter++;
+              if (iCounter === repeats) {
+                  // Failed, out of retries
+                  return(false);
+              }
+              // Retry after waiting
+              return attempt();
+          });
+          return attempt();  
+     
+    
+   return attempt();
+}
+
+
+async function fnIsDeviceAccesableOnce(serial,repeatDelay){
+await timeout(repeatDelay);
+    const getDevices=await clientSwag.then((api)=>{
+      return api.devices.getDeviceBySerial({
+      serial: serial
+      , fields: 'serial,present,ready,using,owner'
+      })
+    }).catch(err=>{
+    	throw(err);
+    })
+    let device = getDevices.obj.device;
+
+    const avaiDevices= await clientSwag.then(async (api)=>{
+      if (!device.present || !device.ready ) {
+        throw new Error('Device is not available')
+      }
+      else if(device.using){
+      	// disconnect device here
+      	await fnDisconnect(serial)
+      	throw new Error('Trying disconect device')
+      }
+
+      
+    });
+    return (true);;
+}
+
+async function fnIsStfUp(){
+	return new Promise(async (resolve)=>{
+		let CheckBool= await fnIsPortFree(7100);
+		if(CheckBool){
+			resolve(false);
+		}
+		else if(!CheckBool){
+			resolve(true);
+		}
+		else{
+			throw new Error("Stf Error");
+		}
+	})
+}
+
+async function fnStfCheck(serial,repeats,repeatDelay){
+ let isUp=await fnIsStfUp();
+ console.log(isUp+"isup")
+ let deviceAcces=await fnIsDeviceAccesable(serial,repeats,repeatDelay);
+ if(!isUp&&!stfChecker){
+ 	let status=await fnStartStf("local")
+ 	if(!status){
+ 		return false;
+ 	}
+ }
+ else if(!deviceAcces){
+ 	console.log("Couldnt access device "+serial+" after "+ (repeatDelay*repeats)/1000 +"seconds ")
+ 	return false
+ }
+ return true
+}
+
+
+
+function fnStartStf(url){
+	return new Promise(resolve=>{
+		let stf=exec("stf " + url);
+		    stf.stdout.on('data', function(data) {
+
+		    });
+		    stf.stderr.on('data', function(data) {
+		    	console.log(data+ " there")
+		    	console.log(data.indexOf("Providing all"))
+		    	if(data.indexOf("Providing all")!== -1){
+		    		console.log("stf started")
+		    		resolve(true);
+		    	}
+		    	return data;
+		    });
+		    stf.on('close', function(code) {
+		    	    	console.log(code)
+		    	return code
+		    });		
+	})
+	
+}
+
+
+
+function fnLoadTestNumber(){
+
+	let testNumber=fs.readFileSync('./idCounter','utf-8');
+	if(!parseInt(testNumber)){
+		return 0;
+	}
+	else{
+		return parseInt(testNumber);
+	}
 }
 
 
 
 
+async function fnIsPortFree(port){
+	return new Promise(resolve=>{
+		portfinder.basePort=port
+			try{	
+			 portfinder.getPort(function (err, freePort) {
+		    //
+			    if(port===freePort){
+			    	resolve(true);
+			    }
+			    else{
+			    	resolve(false);
+			    }
+
+		  	});
+			}
+			catch(err){
+				console.log(err);
+			}		
+	})
+	
+
+}
+
+
+
+function fnDisconnect(UDID){
+  clientSwag.then(function(api) {
+    return api.user.getUserDevices({
+      serial: serial
+    , fields: 'serial,present,ready,using,owner'
+    })
+    .then(function(res) {
+        // check if device can be added or not
+      var devices = res.obj.devices
+
+      var hasDevice = false
+      devices.forEach(function(device) {
+        if(device.serial === serial) {
+          hasDevice = true;
+        }
+      })
+
+      if (!hasDevice) {
+        //logger.info("Device Des not exists"+ UDID+" => open STF ")
+        throw new Error('Device Des not exists')
+      }
+
+      return api.user.deleteUserDeviceBySerial({
+        serial: serial
+      })
+      .then(function(res) {
+        if (!res.obj.success) {
+         // logger.info("Could not disconnect "+UDID+" => open STF ")
+          throw new Error('Could not disconnect to device: '+ res)
+
+        }
+        //logger.info("Disconnected "+UDID+"=> open STF ")
+        console.log("Disconnected!")
+      })
+    })
+  })
+
+
+}

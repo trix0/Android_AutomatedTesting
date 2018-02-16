@@ -7,8 +7,16 @@
         "appPackage":"com.gorro.nothing",
         "appActivity":"com.gorro.nothing.NothingActivity",
         "fullReset":false,
+	"noReset":true,
         "newCommandTimeout":120000,
         "skipUnlock":true
-      }
+      },
+"parameters":{
+	"appPackage":"com.pointvoucher.playlondonpv",
+	"activityName":"com.unity3d.player.UnityPlayerActivity",
+	"apkFileName":"pl"
+
+
+}
 
 }

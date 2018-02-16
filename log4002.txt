@@ -1,7 +1,124 @@
-2018-02-15 09:53:43:290 - info: [Appium] Welcome to Appium v1.8.0-beta3
-2018-02-15 09:53:43:291 - info: [Appium] Non-default server args:
-2018-02-15 09:53:43:291 - info: [Appium]   port: 4002
-2018-02-15 09:53:43:291 - info: [Appium]   bootstrapPort: 6002
-2018-02-15 09:53:43:292 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4002.txt
-2018-02-15 09:53:43:292 - info: [Appium]   logTimestamp: true
-2018-02-15 09:53:43:325 - error: [HTTP] Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+2018-02-16 15:55:33:232 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-02-16 15:55:33:233 - info: [Appium] Non-default server args:
+2018-02-16 15:55:33:233 - info: [Appium]   port: 4002
+2018-02-16 15:55:33:234 - info: [Appium]   bootstrapPort: 6002
+2018-02-16 15:55:33:234 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-16 15:55:33:234 - info: [Appium]   logTimestamp: true
+2018-02-16 15:55:33:250 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4002
+2018-02-16 15:55:33:275 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7437","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-16 15:55:33:277 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7437","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-16 15:55:33:278 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518796533278 (16:55:33 GMT+0100 (CET))
+2018-02-16 15:55:33:280 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-16 15:55:33:280 - info: [Appium] Capabilities:
+2018-02-16 15:55:33:280 - info: [Appium]   javascriptEnabled: true
+2018-02-16 15:55:33:280 - info: [Appium]   locationContextEnabled: true
+2018-02-16 15:55:33:281 - info: [Appium]   handlesAlerts: true
+2018-02-16 15:55:33:281 - info: [Appium]   rotatable: true
+2018-02-16 15:55:33:281 - info: [Appium]   platformName: Android
+2018-02-16 15:55:33:281 - info: [Appium]   deviceName: Android
+2018-02-16 15:55:33:281 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-16 15:55:33:281 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-16 15:55:33:281 - info: [Appium]   fullReset: false
+2018-02-16 15:55:33:281 - info: [Appium]   noReset: true
+2018-02-16 15:55:33:282 - info: [Appium]   newCommandTimeout: 120000
+2018-02-16 15:55:33:282 - info: [Appium]   skipUnlock: true
+2018-02-16 15:55:33:282 - info: [Appium]   udid: localhost:7437
+2018-02-16 15:55:33:282 - info: [Appium]   requestOrigins: {
+2018-02-16 15:55:33:282 - info: [Appium]     url: http://webdriver.io
+2018-02-16 15:55:33:282 - info: [Appium]     version: 4.10.1
+2018-02-16 15:55:33:283 - info: [Appium]     name: webdriverio
+2018-02-16 15:55:33:283 - info: [Appium]   }
+2018-02-16 15:55:33:287 - info: [debug] [BaseDriver] 
+2018-02-16 15:55:33:287 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-16 15:55:33:291 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-16 15:55:33:292 - info: [BaseDriver] Session created with session id: ef42e387-5ed9-41fa-9f80-d49924a00bb9
+2018-02-16 15:55:33:293 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-16 15:55:33:336 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-16 15:55:33:338 - info: [ADB] Checking whether adb is present
+2018-02-16 15:55:33:344 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-02-16 15:55:33:345 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-02-16 15:55:33:345 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-02-16 15:55:33:346 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-16 15:55:33:346 - info: [AndroidDriver] Retrieving device list
+2018-02-16 15:55:33:346 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-16 15:55:33:347 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:33:354 - info: [debug] [ADB] 2 device(s) connected
+2018-02-16 15:55:33:355 - info: [AndroidDriver] Using device: localhost:7437
+2018-02-16 15:55:33:355 - info: [ADB] Checking whether adb is present
+2018-02-16 15:55:33:356 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-16 15:55:33:356 - info: [debug] [ADB] Setting device id to localhost:7437
+2018-02-16 15:55:33:357 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-16 15:55:33:357 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-16 15:55:33:357 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:33:364 - info: [debug] [ADB] 2 device(s) connected
+2018-02-16 15:55:33:365 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-16 15:55:36:102 - info: [AndroidDriver] Starting Android session
+2018-02-16 15:55:36:103 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","wait-for-device"]
+2018-02-16 15:55:36:112 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:36:119 - info: [debug] [ADB] 2 device(s) connected
+2018-02-16 15:55:36:119 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","echo","ping"]
+2018-02-16 15:55:36:150 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-02-16 15:55:36:156 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-02-16 15:55:36:156 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:36:164 - info: [debug] [ADB] 2 device(s) connected
+2018-02-16 15:55:36:164 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","pm","list","packages","io.appium.settings"]
+2018-02-16 15:55:36:378 - info: [Appium] Received SIGINT - shutting down
+2018-02-16 15:55:36:380 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","pm","list","packages","io.appium.settings"]
+2018-02-16 15:55:36:403 - info: [debug] [ADB] App is not installed
+2018-02-16 15:55:36:404 - info: [debug] [ADB] App '/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/io.appium.settings/app/build/outputs/apk/settings_apk-debug.apk' not installed. Installing
+2018-02-16 15:55:36:405 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:36:416 - info: [debug] [ADB] 1 device(s) connected
+2018-02-16 15:55:36:416 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","getprop","ro.build.version.sdk"]
+2018-02-16 15:55:36:425 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","getprop","ro.build.version.sdk"]
+2018-02-16 15:55:36:448 - error: [ADB] Error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell getprop ro.build.version.sdk' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:71:11)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell getprop ro.build.version.sdk' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:71:11)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-16 15:55:36:448 - warn: [AndroidDriver] Ignored error while installing Appium Settings helper: 'Error getting device API level. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell getprop ro.build.version.sdk' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1''. Manually uninstalling the application with package id 'io.appium.settings' may help. Expect some Appium features may not work as expected unless this problem is fixed.
+2018-02-16 15:55:36:449 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:36:458 - info: [debug] [ADB] 1 device(s) connected
+2018-02-16 15:55:36:458 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","ps"]
+2018-02-16 15:55:36:467 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","ps"]
+2018-02-16 15:55:36:476 - error: [ADB] Error: Error finding if process exists. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell ps' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:884:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error finding if process exists. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell ps' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:884:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-16 15:55:36:477 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-16 15:55:36:477 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-02-16 15:55:36:478 - info: [debug] [ADB] Getting connected devices...
+2018-02-16 15:55:36:486 - info: [debug] [ADB] 1 device(s) connected
+2018-02-16 15:55:36:486 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","am","force-stop","io.appium.unlock"]
+2018-02-16 15:55:36:494 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7437","shell","am","force-stop","io.appium.unlock"]
+2018-02-16 15:55:36:503 - error: [MJSONWP] Encountered internal error running command: Error: Error finding if process exists. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell ps' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/adb-commands.js:884:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-16 15:55:36:508 - info: [HTTP] <-- POST /wd/hub/session 500 3231 ms - 400 

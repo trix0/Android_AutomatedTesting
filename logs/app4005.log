@@ -3,3 +3,182 @@
 2018-02-14T14:45:45.628Z - info: Trying to connect to openSTF with serial number emulator-5554
 2018-02-14T14:45:45.658Z - info: Device is not available => open STF 
 2018-02-14T14:45:45.741Z - info: Disconnected undefined=> open STF 
+2018-02-15T12:38:11.840Z - info: Test execution started
+2018-02-15T12:38:11.840Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true}}}
+2018-02-15T12:38:11.868Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-15T12:38:11.951Z - info: executing command adb connect  localhost:7409
+2018-02-15T12:38:11.996Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4005 -bp6005  --log-timestamp --log /home/trixo/Code/javaRewrite/log4005.txt
+2018-02-15T12:38:11.996Z - info: Trying to create appium Server on port: 4005
+2018-02-15T12:38:49.392Z - info: Appium server created on port: 4005
+2018-02-15T12:39:14.234Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-15T12:39:16.041Z - info: App exists in device => trying to remove
+2018-02-15T12:39:22.192Z - info: App removed
+2018-02-15T12:39:22.192Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-15T12:40:23.892Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-15T12:40:29.081Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-15T12:40:30.749Z - info: Found permission button going to click #0
+2018-02-15T12:40:30.749Z - info: Running click event : Click on permission button with 5repets
+2018-02-15T12:40:30.750Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-15T12:40:30.750Z - info: Running delay for : 0
+2018-02-15T12:40:30.750Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-15T12:40:30.750Z - info: Running delay for : 6000
+2018-02-15T12:40:30.751Z - info: Running delay for : 0
+2018-02-15T12:40:31.901Z - info: Found image on screen: Click on permission button
+2018-02-15T12:40:32.279Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-15T12:40:36.756Z - info: Running delay for : 2000
+2018-02-15T12:40:39.943Z - info: Running delay for : 2000
+2018-02-15T12:40:42.919Z - info: Running delay for : 2000
+2018-02-15T12:40:45.853Z - info: Running delay for : 2000
+2018-02-15T12:40:49.073Z - info: Running delay for : 2000
+2018-02-15T12:40:51.819Z - info: Running delay for : 2000
+2018-02-15T12:40:54.644Z - info: Running delay for : 2000
+2018-02-15T12:40:57.776Z - info: Running delay for : 2000
+2018-02-15T12:41:00.561Z - info: Running delay for : 2000
+2018-02-15T12:41:03.920Z - info: Found image on screen: Loading screen
+2018-02-15T12:41:03.921Z - info: Test:Clean Install[FINISHED]
+2018-02-15T12:41:03.943Z - info: Disconnected localhost:7409=> open STF 
+2018-02-15T12:41:03.957Z - info: Appium err 2018-02-15 12:41:03:956 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-15T12:41:03.966Z - info: Appium err 2018-02-15 12:41:03:966 - [Appium] Had trouble ending session 2ceb9cb4-5642-40d5-9d29-041581418d24: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+
+2018-02-15T12:41:04.302Z - info: Appium err 2018-02-15 12:41:04:301 - [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7409' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T12:42:10.514Z - info: Appium err 2018-02-15 12:42:10:511 - [UiAutomator] UiAutomator exited unexpectedly with code null, signal SIGINT
+
+2018-02-15T12:42:10.540Z - info: You are not owner localhost:7409 => open STF 
+2018-02-15T12:42:10.546Z - info: You are not owner localhost:7409 => open STF 
+2018-02-15T12:42:17.094Z - info: Appium err 2018-02-15 12:42:17:094 - [ADB] Error: Error while getting connected devices. Original error: Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 devices' exited with code 1
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:170:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Error while getting connected devices. Original error: Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 devices' exited with code 1
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:170:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T12:42:17.095Z - info: Appium err Unhandled rejection Error: Error while getting connected devices. Original error: Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7409 devices' exited with code 1
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at ADB.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:170:9)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T12:42:17.108Z - info: Appium on close  null
+2018-02-15T13:19:47.999Z - info: Test execution started
+2018-02-15T13:19:48.000Z - info: Got following options to run{"testName":"Clean Install","UDID":"emulator-5554","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true}}}
+2018-02-15T13:19:48.008Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-15T13:19:48.112Z - info: You are not owner undefined => open STF 
+2018-02-15T13:27:41.337Z - info: Test execution started
+2018-02-15T13:27:41.338Z - info: Got following options to run{"testName":"Clean Install","UDID":"emulator-5554","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true}}}
+2018-02-15T13:27:41.346Z - info: Trying to connect to openSTF with serial number emulator-5554
+2018-02-15T13:27:41.402Z - info: executing command adb connect  localhost:7405
+2018-02-15T13:27:41.410Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4005 -bp6005  --log-timestamp --log /home/trixo/Code/javaRewrite/log4005.txt
+2018-02-15T13:27:41.410Z - info: Trying to create appium Server on port: 4005
+2018-02-15T13:27:43.736Z - info: Appium server created on port: 4005
+2018-02-15T13:27:48.858Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-15T13:27:49.048Z - info: App exists in device => trying to remove
+2018-02-15T13:27:49.912Z - info: App removed
+2018-02-15T13:27:49.912Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-15T13:28:02.549Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-15T13:28:03.724Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-15T13:28:04.302Z - info: Found permission button going to click #0
+2018-02-15T13:28:04.302Z - info: Running click event : Click on permission button with 5repets
+2018-02-15T13:28:04.302Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-15T13:28:04.302Z - info: Running delay for : 0
+2018-02-15T13:28:04.303Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-15T13:28:04.303Z - info: Running delay for : 6000
+2018-02-15T13:28:04.303Z - info: Running delay for : 0
+2018-02-15T13:28:04.763Z - info: Found image on screen: Click on permission button
+2018-02-15T13:28:04.998Z - info: clicked on : Click on permission button with following coordinates x=411 y=573.5
+2018-02-15T13:28:10.303Z - info: Running delay for : 2000
+2018-02-15T13:28:12.673Z - info: Found image on screen: Loading screen
+2018-02-15T13:28:12.673Z - info: Test:Clean Install[FINISHED]
+2018-02-15T13:28:12.701Z - info: Disconnected localhost:7405=> open STF 
+2018-02-15T13:28:12.709Z - info: Appium err 2018-02-15 13:28:12:709 - [Logcat] Logcat terminated with code 0, signal null
+
+2018-02-15T13:28:12.710Z - info: Appium err 2018-02-15 13:28:12:710 - [UiAutomator] UiAutomator exited unexpectedly with code 0, signal null
+
+2018-02-15T13:28:12.845Z - info: Appium err 2018-02-15 13:28:12:845 - [Appium] Had trouble ending session 07fc81bd-0b08-40b6-996c-137c12c034dd: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7405 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7405' not found'; Code: '1'
+
+2018-02-15T13:28:12.882Z - info: Appium err 2018-02-15 13:28:12:882 - [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7405 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7405' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T13:28:12.896Z - info: Appium err Unhandled rejection Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7405 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7405' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T14:39:30.800Z - info: Test execution started
+2018-02-15T14:39:30.812Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-15T14:39:31.015Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-15T14:39:33.317Z - info: executing command adb connect  localhost:7401
+2018-02-15T14:39:33.605Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4005 -bp6005  --log-timestamp --log /home/trixo/Code/javaRewrite/log4005.txt
+2018-02-15T14:39:33.605Z - info: Trying to create appium Server on port: 4005
+2018-02-15T14:40:48.369Z - info: Appium server created on port: 4005
+2018-02-15T14:41:09.312Z - info: Appium err 2018-02-15 14:41:09:312 - [AndroidDriver] Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+ Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T14:41:09.314Z - info: Appium err 2018-02-15 14:41:09:314 - [MJSONWP] Encountered internal error running command: Error: Device localhost:7401 was not in the list of connected devices
+    at Object.wrappedLogger.errorAndThrow (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-support/lib/logging.js:69:13)
+    at Object.callee$0$0$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-driver/lib/android-helpers.js:131:16)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+
+2018-02-15T14:41:09.408Z - info: You are not owner localhost:7401 => open STF 
+2018-02-15T14:41:14.338Z - info: Appium on close  null
+2018-02-16T14:31:42.132Z - info: Test execution started
+2018-02-16T14:31:42.133Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4005,"systemPort":8205,"bpPort":6005,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-16T14:31:42.140Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-16T14:31:42.192Z - info: executing command adb connect  localhost:7421
+2018-02-16T14:31:42.198Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4005 -bp6005  --log-timestamp --log /home/trixo/Code/javaRewrite/log4005.txt
+2018-02-16T14:31:42.199Z - info: Trying to create appium Server on port: 4005
+2018-02-16T14:31:44.386Z - info: Appium server created on port: 4005
+2018-02-16T14:32:15.721Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-16T14:32:17.617Z - info: App exists in device => trying to remove
+2018-02-16T14:32:24.412Z - info: App removed
+2018-02-16T14:32:24.412Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-16T14:35:54.229Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: The driver was unexpectedly shut down!
+2018-02-16T14:35:54.242Z - info: Disconnected localhost:7421=> open STF 
+2018-02-16T14:35:54.247Z - info: You are not owner localhost:7421 => open STF 
+2018-02-16T14:35:59.250Z - info: Appium on close  null

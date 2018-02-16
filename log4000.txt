@@ -1,8 +1,1900 @@
-2018-02-15 09:56:26:188 - info: [Appium] Welcome to Appium v1.8.0-beta3
-2018-02-15 09:56:26:189 - info: [Appium] Non-default server args:
-2018-02-15 09:56:26:190 - info: [Appium]   port: 4000
-2018-02-15 09:56:26:190 - info: [Appium]   bootstrapPort: 6000
-2018-02-15 09:56:26:190 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
-2018-02-15 09:56:26:190 - info: [Appium]   logTimestamp: true
-2018-02-15 09:56:26:207 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4000
-2018-02-15 09:57:20:229 - info: [Appium] Received SIGINT - shutting down
+2018-02-15 10:38:50:191 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-02-15 10:38:50:192 - info: [Appium] Non-default server args:
+2018-02-15 10:38:50:193 - info: [Appium]   port: 4000
+2018-02-15 10:38:50:193 - info: [Appium]   bootstrapPort: 6000
+2018-02-15 10:38:50:193 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4000.txt
+2018-02-15 10:38:50:193 - info: [Appium]   logTimestamp: true
+2018-02-15 10:38:50:221 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4000
+2018-02-15 10:40:27:340 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-15 10:40:27:342 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-15 10:40:27:343 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518691227343 (11:40:27 GMT+0100 (CET))
+2018-02-15 10:40:27:345 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-15 10:40:27:345 - info: [Appium] Capabilities:
+2018-02-15 10:40:27:346 - info: [Appium]   javascriptEnabled: true
+2018-02-15 10:40:27:346 - info: [Appium]   locationContextEnabled: true
+2018-02-15 10:40:27:346 - info: [Appium]   handlesAlerts: true
+2018-02-15 10:40:27:346 - info: [Appium]   rotatable: true
+2018-02-15 10:40:27:346 - info: [Appium]   platformName: Android
+2018-02-15 10:40:27:346 - info: [Appium]   deviceName: Android
+2018-02-15 10:40:27:346 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-15 10:40:27:347 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-15 10:40:27:347 - info: [Appium]   fullReset: false
+2018-02-15 10:40:27:347 - info: [Appium]   newCommandTimeout: 120000
+2018-02-15 10:40:27:347 - info: [Appium]   skipUnlock: true
+2018-02-15 10:40:27:349 - info: [Appium]   udid: localhost:7401
+2018-02-15 10:40:27:349 - info: [Appium]   requestOrigins: {
+2018-02-15 10:40:27:349 - info: [Appium]     url: http://webdriver.io
+2018-02-15 10:40:27:349 - info: [Appium]     version: 4.10.1
+2018-02-15 10:40:27:349 - info: [Appium]     name: webdriverio
+2018-02-15 10:40:27:350 - info: [Appium]   }
+2018-02-15 10:40:27:354 - info: [debug] [BaseDriver] 
+2018-02-15 10:40:27:355 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-15 10:40:27:360 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-15 10:40:27:361 - info: [BaseDriver] Session created with session id: 116f9a56-df55-4dc4-bd19-def01b2d8ee4
+2018-02-15 10:40:27:362 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-15 10:40:28:972 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-15 10:40:28:975 - info: [ADB] Checking whether adb is present
+2018-02-15 10:40:29:052 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-02-15 10:40:29:053 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-02-15 10:40:29:053 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-02-15 10:40:29:053 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:40:29:054 - info: [AndroidDriver] Retrieving device list
+2018-02-15 10:40:29:054 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-15 10:40:29:055 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:29:060 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:29:061 - info: [AndroidDriver] Using device: localhost:7401
+2018-02-15 10:40:29:061 - info: [ADB] Checking whether adb is present
+2018-02-15 10:40:29:063 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:40:29:064 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-02-15 10:40:29:064 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-15 10:40:29:064 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-15 10:40:29:065 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:29:070 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:29:071 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:40:30:684 - info: [AndroidDriver] Starting Android session
+2018-02-15 10:40:30:686 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","wait-for-device"]
+2018-02-15 10:40:30:694 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:30:700 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:30:700 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","echo","ping"]
+2018-02-15 10:40:30:727 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-02-15 10:40:30:728 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-02-15 10:40:30:728 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:30:734 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:30:735 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.settings"]
+2018-02-15 10:40:32:357 - info: [debug] [ADB] App is installed
+2018-02-15 10:40:32:358 - info: [debug] [ADB] Getting package info for io.appium.settings
+2018-02-15 10:40:32:358 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:32:369 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:32:369 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.settings"]
+2018-02-15 10:40:32:489 - info: [ADB] Checking whether aapt is present
+2018-02-15 10:40:32:563 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-02-15 10:40:32:705 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+2018-02-15 10:40:32:706 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:32:711 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:32:712 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-02-15 10:40:32:888 - info: [debug] [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2018-02-15 10:40:32:889 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:32:895 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:32:895 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.sdk"]
+2018-02-15 10:40:32:938 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
+2018-02-15 10:40:32:939 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:40:32:939 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:32:947 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:32:948 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","appops","set","io.appium.settings","android:mock_location","allow"]
+2018-02-15 10:40:34:766 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-02-15 10:40:34:767 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-02-15 10:40:34:768 - info: [debug] [Logcat] Starting logcat capture
+2018-02-15 10:40:34:828 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-02-15 10:40:34:829 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-02-15 10:40:34:829 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:34:839 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:34:839 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.unlock"]
+2018-02-15 10:40:36:918 - info: [debug] [ADB] App is installed
+2018-02-15 10:40:36:919 - info: [debug] [ADB] Getting package info for io.appium.unlock
+2018-02-15 10:40:36:919 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:36:925 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:36:925 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.unlock"]
+2018-02-15 10:40:36:996 - info: [ADB] Checking whether aapt is present
+2018-02-15 10:40:36:997 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-02-15 10:40:37:012 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+2018-02-15 10:40:37:013 - info: [ADB] Getting device platform version
+2018-02-15 10:40:37:013 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:37:020 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:37:020 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.release"]
+2018-02-15 10:40:37:074 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-02-15 10:40:37:075 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:37:080 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:37:080 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","wm","size"]
+2018-02-15 10:40:38:853 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:38:863 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:38:864 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.model"]
+2018-02-15 10:40:38:929 - info: [debug] [ADB] Current device property 'ro.product.model': SM-A300FU
+2018-02-15 10:40:38:930 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:38:939 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:38:940 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.manufacturer"]
+2018-02-15 10:40:38:998 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': samsung
+2018-02-15 10:40:39:000 - warn: [AndroidDriver] No app sent in, not parsing package/activity
+2018-02-15 10:40:39:000 - info: [debug] [AndroidDriver] No app capability. Assuming it is already on the device
+2018-02-15 10:40:39:001 - info: [debug] [ADB] Getting install status for com.gorro.nothing
+2018-02-15 10:40:39:001 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:39:008 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:39:008 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:40:40:666 - info: [debug] [ADB] App is installed
+2018-02-15 10:40:40:666 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:40:673 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:40:674 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-15 10:40:42:439 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:42:450 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:42:450 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","clear","com.gorro.nothing"]
+2018-02-15 10:40:44:242 - info: [debug] [AndroidDriver] Performed fast reset on the installed 'com.gorro.nothing' application (stop and clear)
+2018-02-15 10:40:44:243 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2018-02-15 10:40:44:246 - info: [debug] [ADB] Forwarding system: 6000 to device: 4724
+2018-02-15 10:40:44:247 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","forward","tcp:6000","tcp:4724"]
+2018-02-15 10:40:44:257 - info: [debug] [UiAutomator] Starting UiAutomator
+2018-02-15 10:40:44:257 - info: [debug] [UiAutomator] Moving to state 'starting'
+2018-02-15 10:40:44:258 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2018-02-15 10:40:44:258 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2018-02-15 10:40:44:258 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","push","/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+2018-02-15 10:40:44:310 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2018-02-15 10:40:44:310 - info: [debug] [ADB] Getting all processes with uiautomator
+2018-02-15 10:40:44:310 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:44:316 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:44:316 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-02-15 10:40:44:478 - info: [ADB] No uiautomator process found to kill, continuing...
+2018-02-15 10:40:44:479 - info: [debug] [UiAutomator] Starting UIAutomator
+2018-02-15 10:40:44:479 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","localhost:7401","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.gorro.nothing","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2018-02-15 10:40:46:835 - info: [debug] [UiAutomator] Moving to state 'online'
+2018-02-15 10:40:46:837 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2018-02-15 10:40:46:839 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:40:46:839 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:46:844 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2018-02-15 10:40:46:845 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:46:845 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","start","-W","-n","com.gorro.nothing/com.gorro.nothing.NothingActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-02-15 10:40:46:850 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2018-02-15 10:40:50:387 - info: [Appium] New AndroidDriver session created successfully, session 116f9a56-df55-4dc4-bd19-def01b2d8ee4 added to master session list
+2018-02-15 10:40:50:390 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1518691250389 (11:40:50 GMT+0100 (CET))
+2018-02-15 10:40:50:394 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":true,"warnings":{},"desired":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"localhost:7401","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"},"deviceUDID":"localhost:7401","platformVersion":"6.0.1","deviceScre...
+2018-02-15 10:40:50:399 - info: [HTTP] <-- POST /wd/hub/session 200 23059 ms - 1168 
+2018-02-15 10:40:50:404 - info: [HTTP] --> POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
+2018-02-15 10:40:50:406 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:40:50:407 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
+2018-02-15 10:40:50:407 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:40:50:418 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:40:50:419 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-02-15 10:40:52:101 - info: [debug] [ADB] App is not installed
+2018-02-15 10:40:52:104 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: false
+2018-02-15 10:40:52:106 - info: [HTTP] <-- POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/app_installed 200 1701 ms - 77 
+2018-02-15 10:40:52:111 - info: [HTTP] --> POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/install_app {"appPath":"/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk"}
+2018-02-15 10:40:52:112 - info: [debug] [MJSONWP] Calling AppiumDriver.installApp() with args: ["/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk",null,null,null,"116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:40:52:114 - info: [BaseDriver] Using local app '/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk'
+2018-02-15 10:40:52:116 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","install","-r","/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk"]
+2018-02-15 10:41:40:306 - info: [debug] [ADB] Install command stdout: [  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  0%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  1%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  2%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  3%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  4%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  5%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  6%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  7%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  8%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[  9%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 10%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 11%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 12%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 13%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 14%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 15%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 16%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 17%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 18%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 19%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 20%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 21%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 22%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 23%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 24%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 25%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 26%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 27%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 28%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 29%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 30%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 31%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 32%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 33%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 34%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 35%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 36%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 37%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 38%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 39%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 40%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 41%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 42%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 43%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 44%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 45%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 46%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 47%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 48%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 49%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 50%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 51%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 52%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 53%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 54%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 55%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 56%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 57%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 58%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 59%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 60%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 61%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 62%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 63%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 64%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 65%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 66%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 67%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 68%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 69%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 70%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 71%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 72%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 73%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 74%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 75%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 76%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 77%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 78%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 79%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 80%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 81%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 82%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 83%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 84%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 85%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 86%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 87%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 88%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 89%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 90%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 91%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 92%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 93%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 94%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 95%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 96%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 97%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 98%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[ 99%] /data/local/tmp/pl.apk
+[100%] /data/local/tmp/pl.apk
+/home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk: 1 file pushed. 5.2 MB/s (93175623 bytes in 17.198s)
+	pkg: /data/local/tmp/pl.apk
+Success
+2018-02-15 10:41:40:308 - info: [debug] [MJSONWP] Responding to client with driver.installApp() result: null
+2018-02-15 10:41:40:311 - info: [HTTP] <-- POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/install_app 200 48199 ms - 76 
+2018-02-15 10:41:40:316 - info: [HTTP] --> POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/app_installed {"bundleId":"com.pointvoucher.playlondonpv"}
+2018-02-15 10:41:40:317 - info: [debug] [MJSONWP] Calling AppiumDriver.isAppInstalled() with args: ["com.pointvoucher.playlondonpv","116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:40:319 - info: [debug] [ADB] Getting install status for com.pointvoucher.playlondonpv
+2018-02-15 10:41:40:320 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:41:40:326 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:41:40:326 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-02-15 10:41:42:564 - info: [debug] [ADB] App is installed
+2018-02-15 10:41:42:564 - info: [debug] [MJSONWP] Responding to client with driver.isAppInstalled() result: true
+2018-02-15 10:41:42:565 - info: [HTTP] <-- POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/app_installed 200 2248 ms - 76 
+2018-02-15 10:41:42:567 - info: [HTTP] --> POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/start_activity {"appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","appWaitPackage":"com.android.packageinstaller","appWaitActivity":"com.android.packageinstaller.permission.ui.GrantPermissionsActivity"}
+2018-02-15 10:41:42:568 - info: [debug] [MJSONWP] Calling AppiumDriver.startActivity() with args: ["com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity",null,null,null,null,null,null,null,"116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:42:568 - info: [debug] [AndroidDriver] Starting package 'com.pointvoucher.playlondonpv' and activity 'com.unity3d.player.UnityPlayerActivity'
+2018-02-15 10:41:42:569 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:41:42:570 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:41:42:577 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:41:42:577 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","start","-W","-n","com.pointvoucher.playlondonpv/com.unity3d.player.UnityPlayerActivity","-S"]
+2018-02-15 10:41:46:426 - info: [debug] [ADB] Waiting up to 20000ms for activity matching pkg: 'com.android.packageinstaller' and activity: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity' to be focused
+2018-02-15 10:41:46:426 - info: [debug] [ADB] Possible activities, to be checked: 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
+2018-02-15 10:41:46:430 - info: [debug] [ADB] Getting focused package and activity
+2018-02-15 10:41:46:430 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:41:46:440 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:41:46:440 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","window","windows"]
+2018-02-15 10:41:46:535 - info: [debug] [ADB] Found package: 'com.android.packageinstaller' and fully qualified activity name : 'com.android.packageinstaller.permission.ui.GrantPermissionsActivity'
+2018-02-15 10:41:46:537 - info: [debug] [MJSONWP] Responding to client with driver.startActivity() result: null
+2018-02-15 10:41:46:537 - info: [HTTP] <-- POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/appium/device/start_activity 200 3970 ms - 76 
+2018-02-15 10:41:46:543 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:41:46:544 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:46:546 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:41:48:029 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezB3a5l6Xke1vG831qrms1uUiLV0Y8VWRZsy4AUHwgGDAtBgFyO78iX4SsIAiRIThQbMYzkwD+KfpCYISlRUnezaq05vzd7ztm7Vu0i20UW3FSA3mPkn/+Lf9mePfuKrFU2Z3ff+nj6JIsXNZzPw8dWVeWc+Gzy42ZZWXq6rdP/23z+2WLOD/zmt/i9D30t3XD21IqJs2e/KH964//8IROru4E//DV+eOXf/QWLtqnZnj17xinLoqukp64hc+oqmasWNScJPR1i0xWarpKeuobMqatkrlrUnCT0dIhNV2i6SnrqGjKnrpK5IjInCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0haarpKeuIXPqKpmrFjUnCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0RYuaq/XFBzbf+ID/+mO+Nbisba78MMNnny++P6er1S+P8lsfnfzljetkVvn1F+03qsxvlB8Xf/45n+IjXz8nT00seOHZL9Jvncl3+bc/9BP+9V/yT36ZP3nB+nLaZFl1lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcxVi5qThJ4OsekKTVdJT11D5tRVMlctak4SejrEpis0XSU9dQ2ZU1fJXLWoOUno6RCbrtB0lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcwVkTlJ6OkQm67QdJX01DVkTl0lc0VkThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV9NQ1ZE5dJXPVouYkoadDbLpC01XSU9eQOXWVzFWLmpOEng6x6QpNV0lPXUPm1FUyVy1qThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV...
+2018-02-15 10:41:48:034 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 1491 ms - 627306 
+2018-02-15 10:41:48:395 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:41:48:396 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:48:396 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:41:49:600 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezB3a5l6Xke1vG831qrms1uUiLV0Y8VWRZsy4AUHwgGDAtBgFyO78iX4SsIAiRIThQbMYzkwD+KfpCYISlRUnezaq05vzd7ztm7Vu0i20UW3FSA3mPkn/+Lf9mePfuKrFU2Z3ff+nj6JIsXNZzPw8dWVeWc+Gzy42ZZWXq6rdP/23z+2WLOD/zmt/i9D30t3XD21IqJs2e/KH964//8IROru4E//DV+eOXf/QWLtqnZnj17xinLoqukp64hc+oqmasWNScJPR1i0xWarpKeuobMqatkrlrUnCT0dIhNV2i6SnrqGjKnrpK5IjInCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0haarpKeuIXPqKpmrFjUnCT0dYtMVmq6SnrqGzKmrZK5a1Jwk9HSITVdoukp66hoyp66SuWpRc5LQ0yE2XaHpKumpa8icukrmqkXNSUJPh9h0RYuaq/XFBzbf+ID/+mO+Nbisba78MMNnny++P6er1S+P8lsfnfzljetkVvn1F+03qsxvlB8Xf/45n+IjXz8nT00seOHZL9Jvncl3+bc/9BP+9V/yT36ZP3nB+nLaZFl1lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcxVi5qThJ4OsekKTVdJT11D5tRVMlctak4SejrEpis0XSU9dQ2ZU1fJXLWoOUno6RCbrtB0lfTUNWROXSVz1aLmJKGnQ2y6QtNV0lPXkDl1lcwVkTlJ6OkQm67QdJX01DVkTl0lc0VkThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV9NQ1ZE5dJXPVouYkoadDbLpC01XSU9eQOXWVzFWLmpOEng6x6QpNV0lPXUPm1FUyVy1qThJ6OsSmKzRdJT11DZlTV8lctag5SejpEJuu0HSV...
+2018-02-15 10:41:49:605 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 1209 ms - 627306 
+2018-02-15 10:41:49:667 - info: [HTTP] --> POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/touch/perform {"actions":[{"action":"tap","options":{"x":438,"y":556.5,"count":1}}]}
+2018-02-15 10:41:49:667 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":438,"y":556.5,"count":1}}],"116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:49:671 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":438,"y":556.5}}
+2018-02-15 10:41:49:710 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":438,"y":556.5}}
+2018-02-15 10:41:49:773 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-02-15 10:41:49:774 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-02-15 10:41:49:903 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-02-15 10:41:50:159 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-02-15 10:41:50:160 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-02-15 10:41:50:162 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-02-15 10:41:50:166 - info: [HTTP] <-- POST /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/touch/perform 200 497 ms - 76 
+2018-02-15 10:41:56:402 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:41:56:402 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:41:56:402 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:41:58:997 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBy4+9W34f5Oez1rt3VZ3T3af7+JL42onjmIBJwECUMDGCDBJlAAoeIAb8W5kzQEJIMDQIRAagTCBcQnCIHGQn8S22E7f78jtVe+93rS/17rfrt11tO+4+cneQTj1P/uYvruXNm++StXebOzc/8PHw47n4YFncHRcfZ9V7d5f46uDrk/PgPIfTOvzjyVe/ejHGh/7c9/GzH/lMOuHOaysG7rz5XvmFE3/715i4uDng536CX3vif/l1zqZNH+XNmzcs7XxWvcuc5rJoY5itaWOoRBuDhDkFldhUa1Sp3mVOc1m0MczWtDFUoo1BwpyCSmyqNapU7zKnuSzaGGZr2hgkMgYJcwoqsanWqFK9y5zmsmhjmK1pY6hEG4OEOQWV2FRrVKneZU5zWbQxzNa0MVSijUHCnIJKbKo1qlTvMqe5LNoYZmvaGCrRxiBhTkElNtUaVap3mdNcFm0MszVtDJVoY5Awp6ASm2qNKtW7zGkuizaG2Zo2hkq0MUiYU1CJTbVGlepd5jSXRRvDbE0bQyXaGCTMKajEplqjSvUuc5rLoo1htqaNoRJtDBLmFFRiU62pRF9X64cf2nz+Q/61j/n+A/drGSu/nsVXvn72T8bwWBd/8tD99JeOfmPlaWVdup98KH+2N/Pz3dc7/+BrfAVf8tlz9NrAGR94873003fkR/iffs3v89//Bn/9h/h7D6zvpk07X1TvMqe5LNoYZmvaGCrRxiBhTkElNtUaVap3mdNcFm0MszVtDJVoY5Awp6ASm2qNKtW7zGkuizaG2Zo2hkq0MUiYU1CJTbVGlepd5jSXRRvDbE0bQyXaGCTMKajEplqjSvUuc5rLoo1htqaNoRJtDBLmFFRiU61RpXqXOc1l0cYwW9PGIJExSJhTUIlNtUaV6l3mNJdFG8NsTRuDRMYgYU5BJTbVGlWqd5nTXBZtDLM1bQyVaGOQMKegEptq...
+2018-02-15 10:41:59:002 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 2600 ms - 819938 
+2018-02-15 10:42:01:079 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:01:079 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:01:080 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:01:975 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApsklEQVR4AezBCbCl513Y6d/7/75zzt1602pZbsuyvBuDAW8QGwyGwYEQAhSLSYAQoIYwJJBJQpgUQyAhKaoCzIwpEjIZICw1drGUWQwG7zaEsZFX2Xi3LFmStbZ6u8s55/u+9x2uuzpo6b5Ld79t3e7f86Q/2H9lQZIkqaJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSp...
+2018-02-15 10:42:01:976 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 897 ms - 22606 
+2018-02-15 10:42:04:038 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:04:040 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:04:041 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:04:929 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApsklEQVR4AezBCbCl513Y6d/7/75zzt1602pZbsuyvBuDAW8QGwyGwYEQAhSLSYAQoIYwJJBJQpgUQyAhKaoCzIwpEjIZICw1drGUWQwG7zaEsZFX2Xi3LFmStbZ6u8s55/u+9x2uuzpo6b5Ld79t3e7f86Q/2H9lQZIkqaJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSp...
+2018-02-15 10:42:04:930 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 895 ms - 22606 
+2018-02-15 10:42:06:980 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:06:981 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:06:982 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:08:053 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApsklEQVR4AezBCbCl513Y6d/7/75zzt1602pZbsuyvBuDAW8QGwyGwYEQAhSLSYAQoIYwJJBJQpgUQyAhKaoCzIwpEjIZICw1drGUWQwG7zaEsZFX2Xi3LFmStbZ6u8s55/u+9x2uuzpo6b5Ld79t3e7f86Q/2H9lQZIkqaJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSp...
+2018-02-15 10:42:08:054 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 1074 ms - 22606 
+2018-02-15 10:42:10:103 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:10:104 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:10:105 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:10:895 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApsklEQVR4AezBCbCl513Y6d/7/75zzt1602pZbsuyvBuDAW8QGwyGwYEQAhSLSYAQoIYwJJBJQpgUQyAhKaoCzIwpEjIZICw1drGUWQwG7zaEsZFX2Xi3LFmStbZ6u8s55/u+9x2uuzpo6b5Ld79t3e7f86Q/2H9lQZIkqaJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSpskCSJKmyQJIkqbJAkiSp...
+2018-02-15 10:42:10:896 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 793 ms - 22606 
+2018-02-15 10:42:12:945 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:12:946 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:12:946 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:14:173 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAApsUlEQVR4AezBCbSnZ13g+e/ze9//cpdaE7KSDYGETUAWwa1BsEFEHdsNtGnbxjku43TbPc4cpnVsVHSYo92eto/T9qhtO0wLDtiKCwwQRMAFCBIIEIICIYSspFKVqrr3/pf3fZ6xrBOzVd3636SeqlTd7+eT/mDnOQVJkqSKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmS...
+2018-02-15 10:42:14:173 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 1228 ms - 22750 
+2018-02-15 10:42:16:222 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:16:223 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:16:224 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:17:114 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAp9ElEQVR4AezBCbhn6V3Q+e/7O+e/3Htr6a7e0t10mk46O0vCkgQFDBE1wAjiPGFfBsVxGQdBcUBUBsY45hEZH1QUBwHRmUk0cRhQCSQhbQhoYvaQPZ2kO92dql6qa733v5xz3ne81NOkl7pbdb2V3Krv55N+7dA1BUmSpIoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKkygJJkqTKAkmSpMoCSZKk...
+2018-02-15 10:42:17:115 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 893 ms - 22646 
+2018-02-15 10:42:19:164 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:19:165 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:19:166 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:19:785 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAAAklEQVR4AewaftIAAA4nSURBVO3BQQHAQAwEoWn8e76q2B/wVS8AgKELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4AgLELAGDsAgAYuwAAxi4A...
+2018-02-15 10:42:19:786 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 622 ms - 5002 
+2018-02-15 10:42:21:843 - info: [HTTP] --> GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot {}
+2018-02-15 10:42:21:843 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:21:844 - info: [debug] [ADB] Device API level: 23
+2018-02-15 10:42:23:103 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB5hU1d3A4d85596Z7X2BhV0WpfciYEURFbG32LuJGnuMYomJkXwm0Yg9thQTW4wKatRYsKEGxQKiICgdpJeF7WXuved7hn3WjBvK7O6Msvh/XwVYhBBCCCGSSCOEEEIIkWQaIYQQQogk0wghhBBCJJlGCCGEECLJNEIIIYQQSaYRQgghhEgyjRBCCCFEkmmEEEIIIZJMI4QQQgiRZBohhBBCiCTTCCGEEEIkmUYIIYQQIsk0QgghhBBJphFCCCGESDKNEEIIIUSSaYQQQgghkkwjhBBCCJFkGiGEEEKIJNMIIYQQQiSZRiSdUooopRSNFEIIIcQPiYNIKmUMBxxxOvW2Gq8uhfVLZhI0BKzfuIra6kqU0lgboJTCWosQQgixK3IQSZVbXMyE+x5BB2B8qKysxHVdli1ahFdbyZsvPcLcWe9TE3FZPH8W1lpsECCEEELsShxEErmMPeg0PM+SahXWWlLT0qivV3Tt3hetNb2HjiAzrFmx/GuWL1/N+289y78n/YmGhgi1tTVYaxFCCCHaOwPchEgCRYcOXbn4N3eRlpFDJOLjBxZQBIHCWghsgGctNRGLm5ZJUeciRozcn2NPuYihI0ZTXbmZVSuXYAMLWIQQQoj2ykEkTVHnYjqVdEP5lqjAQmAtGIsKFFZbmlig3iowLm5WNnvsM5oBQ0aycuUKnvvnn3jhqQfwIg0IIYQQ7ZEBbkIkXGpqKmdecQPd+gxBBZb/odimAIhYCByXLp0LOeDAMQweOYa6zV+zevUaPM9DCCGEaE8McBMi4UpLS7lowp9QKJSl1eo9S62v6dC5K/sdfTYl3Xszd8Z71NXWYK1FCCGEaA8McBMi4cYceQ7DDhiLDkiMAHRg2X33vuw3egy5GQ5LFi2irr4OIYQQYmdngJsQCZWf34VLfnMP2Tn5KEvbWbZQCqxVZOR0Zsi+R7J7z4EsmDuL8s0b...
+2018-02-15 10:42:23:107 - info: [HTTP] <-- GET /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4/screenshot 200 1267 ms - 334618 
+2018-02-15 10:42:23:181 - info: [HTTP] --> DELETE /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4 {}
+2018-02-15 10:42:23:182 - info: [debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["116f9a56-df55-4dc4-bd19-def01b2d8ee4"]
+2018-02-15 10:42:23:182 - info: [debug] [BaseDriver] Event 'quitSessionRequested' logged at 1518691343182 (11:42:23 GMT+0100 (CET))
+2018-02-15 10:42:23:183 - info: [Appium] Removing session 116f9a56-df55-4dc4-bd19-def01b2d8ee4 from our master session list
+2018-02-15 10:42:23:184 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-15 10:42:23:185 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:23:210 - error: [Logcat] Logcat terminated with code 0, signal null
+2018-02-15 10:42:23:210 - error: [UiAutomator] UiAutomator exited unexpectedly with code 0, signal null
+2018-02-15 10:42:23:210 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2018-02-15 10:42:23:214 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-15 10:42:23:215 - info: [debug] [ADB] 1 device(s) connected
+2018-02-15 10:42:23:215 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:23:222 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-15 10:42:23:229 - warn: [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
+2018-02-15 10:42:23:229 - info: [Appium] Removing session 116f9a56-df55-4dc4-bd19-def01b2d8ee4 from our master session list
+2018-02-15 10:42:23:230 - info: [debug] [ADB] 1 device(s) connected
+2018-02-15 10:42:23:230 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-15 10:42:23:237 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-15 10:42:23:246 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.gorro.nothing"]
+2018-02-15 10:42:23:253 - error: [Appium] Had trouble ending session 116f9a56-df55-4dc4-bd19-def01b2d8ee4: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7401' not found'; Code: '1'
+2018-02-15 10:42:23:259 - error: [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell am force-stop com.gorro.nothing' exited with code 1'; Stderr: 'error: device 'localhost:7401' not found'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-15 10:42:23:260 - info: [HTTP] <-- DELETE /wd/hub/session/116f9a56-df55-4dc4-bd19-def01b2d8ee4 500 79 ms - 414 
+2018-02-15 10:42:23:794 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-15 10:42:23:794 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-15 10:42:23:794 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518691343794 (11:42:23 GMT+0100 (CET))
+2018-02-15 10:42:23:795 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-15 10:42:23:796 - info: [Appium] Capabilities:
+2018-02-15 10:42:23:796 - info: [Appium]   javascriptEnabled: true
+2018-02-15 10:42:23:796 - info: [Appium]   locationContextEnabled: true
+2018-02-15 10:42:23:796 - info: [Appium]   handlesAlerts: true
+2018-02-15 10:42:23:797 - info: [Appium]   rotatable: true
+2018-02-15 10:42:23:797 - info: [Appium]   platformName: Android
+2018-02-15 10:42:23:797 - info: [Appium]   deviceName: Android
+2018-02-15 10:42:23:797 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-15 10:42:23:797 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-15 10:42:23:797 - info: [Appium]   fullReset: false
+2018-02-15 10:42:23:797 - info: [Appium]   newCommandTimeout: 120000
+2018-02-15 10:42:23:797 - info: [Appium]   skipUnlock: true
+2018-02-15 10:42:23:798 - info: [Appium]   udid: localhost:7401
+2018-02-15 10:42:23:798 - info: [Appium]   requestOrigins: {
+2018-02-15 10:42:23:798 - info: [Appium]     url: http://webdriver.io
+2018-02-15 10:42:23:798 - info: [Appium]     version: 4.10.1
+2018-02-15 10:42:23:798 - info: [Appium]     name: webdriverio
+2018-02-15 10:42:23:798 - info: [Appium]   }
+2018-02-15 10:42:23:799 - info: [debug] [BaseDriver] 
+2018-02-15 10:42:23:799 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-15 10:42:23:801 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-15 10:42:23:801 - info: [BaseDriver] Session created with session id: 91915917-9f7d-4d45-a439-1c798ae74143
+2018-02-15 10:42:23:802 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-15 10:42:23:844 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-15 10:42:23:845 - info: [ADB] Checking whether adb is present
+2018-02-15 10:42:23:846 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:42:23:846 - info: [AndroidDriver] Retrieving device list
+2018-02-15 10:42:23:846 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-15 10:42:23:846 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:23:852 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:23:852 - info: [AndroidDriver] Using device: localhost:7401
+2018-02-15 10:42:23:853 - info: [ADB] Checking whether adb is present
+2018-02-15 10:42:23:854 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:42:23:855 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-02-15 10:42:23:855 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-15 10:42:23:855 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-15 10:42:23:855 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:23:861 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:23:862 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:42:23:869 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:42:23:876 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-15 10:42:23:876 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-02-15 10:42:23:876 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:23:883 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:23:883 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:42:23:891 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:42:23:899 - error: [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell pm list packages com.gorro.nothing' exited with code 1'; Stderr: 'error: device unauthorized.
+This adb server's $ADB_VENDOR_KEYS is not set
+Try 'adb kill-server' if that seems wrong.
+Otherwise check for a confirmation dialog on your device.'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-15 10:42:23:900 - info: [HTTP] <-- POST /wd/hub/session 500 106 ms - 520 
+2018-02-15 10:42:59:409 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-15 10:42:59:409 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-15 10:42:59:409 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518691379409 (11:42:59 GMT+0100 (CET))
+2018-02-15 10:42:59:409 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-15 10:42:59:410 - info: [Appium] Capabilities:
+2018-02-15 10:42:59:410 - info: [Appium]   javascriptEnabled: true
+2018-02-15 10:42:59:410 - info: [Appium]   locationContextEnabled: true
+2018-02-15 10:42:59:410 - info: [Appium]   handlesAlerts: true
+2018-02-15 10:42:59:410 - info: [Appium]   rotatable: true
+2018-02-15 10:42:59:410 - info: [Appium]   platformName: Android
+2018-02-15 10:42:59:410 - info: [Appium]   deviceName: Android
+2018-02-15 10:42:59:410 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-15 10:42:59:411 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-15 10:42:59:411 - info: [Appium]   fullReset: false
+2018-02-15 10:42:59:411 - info: [Appium]   newCommandTimeout: 120000
+2018-02-15 10:42:59:411 - info: [Appium]   skipUnlock: true
+2018-02-15 10:42:59:411 - info: [Appium]   udid: localhost:7401
+2018-02-15 10:42:59:411 - info: [Appium]   requestOrigins: {
+2018-02-15 10:42:59:411 - info: [Appium]     url: http://webdriver.io
+2018-02-15 10:42:59:411 - info: [Appium]     version: 4.10.1
+2018-02-15 10:42:59:411 - info: [Appium]     name: webdriverio
+2018-02-15 10:42:59:412 - info: [Appium]   }
+2018-02-15 10:42:59:412 - info: [debug] [BaseDriver] 
+2018-02-15 10:42:59:412 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-15 10:42:59:414 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-15 10:42:59:414 - info: [BaseDriver] Session created with session id: c997e657-0e22-46c2-b53f-f5dcd4931c4c
+2018-02-15 10:42:59:414 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-15 10:42:59:455 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-15 10:42:59:456 - info: [ADB] Checking whether adb is present
+2018-02-15 10:42:59:456 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:42:59:456 - info: [AndroidDriver] Retrieving device list
+2018-02-15 10:42:59:456 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-15 10:42:59:456 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:59:462 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:59:463 - info: [AndroidDriver] Using device: localhost:7401
+2018-02-15 10:42:59:463 - info: [ADB] Checking whether adb is present
+2018-02-15 10:42:59:463 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:42:59:464 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-02-15 10:42:59:464 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-15 10:42:59:464 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-15 10:42:59:464 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:59:470 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:59:470 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:42:59:477 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:42:59:484 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-15 10:42:59:484 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-02-15 10:42:59:484 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:42:59:491 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:42:59:491 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:42:59:499 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:42:59:507 - error: [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell pm list packages com.gorro.nothing' exited with code 1'; Stderr: 'error: device unauthorized.
+This adb server's $ADB_VENDOR_KEYS is not set
+Try 'adb kill-server' if that seems wrong.
+Otherwise check for a confirmation dialog on your device.'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-15 10:42:59:508 - info: [HTTP] <-- POST /wd/hub/session 500 99 ms - 520 
+2018-02-15 10:43:18:368 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}}}
+2018-02-15 10:43:18:369 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.1","name":"webdriverio"}},null,null]
+2018-02-15 10:43:18:369 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1518691398369 (11:43:18 GMT+0100 (CET))
+2018-02-15 10:43:18:369 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-02-15 10:43:18:369 - info: [Appium] Capabilities:
+2018-02-15 10:43:18:369 - info: [Appium]   javascriptEnabled: true
+2018-02-15 10:43:18:369 - info: [Appium]   locationContextEnabled: true
+2018-02-15 10:43:18:370 - info: [Appium]   handlesAlerts: true
+2018-02-15 10:43:18:370 - info: [Appium]   rotatable: true
+2018-02-15 10:43:18:370 - info: [Appium]   platformName: Android
+2018-02-15 10:43:18:370 - info: [Appium]   deviceName: Android
+2018-02-15 10:43:18:370 - info: [Appium]   appPackage: com.gorro.nothing
+2018-02-15 10:43:18:370 - info: [Appium]   appActivity: com.gorro.nothing.NothingActivity
+2018-02-15 10:43:18:370 - info: [Appium]   fullReset: false
+2018-02-15 10:43:18:370 - info: [Appium]   newCommandTimeout: 120000
+2018-02-15 10:43:18:370 - info: [Appium]   skipUnlock: true
+2018-02-15 10:43:18:371 - info: [Appium]   udid: localhost:7401
+2018-02-15 10:43:18:371 - info: [Appium]   requestOrigins: {
+2018-02-15 10:43:18:371 - info: [Appium]     url: http://webdriver.io
+2018-02-15 10:43:18:371 - info: [Appium]     version: 4.10.1
+2018-02-15 10:43:18:372 - info: [Appium]     name: webdriverio
+2018-02-15 10:43:18:372 - info: [Appium]   }
+2018-02-15 10:43:18:373 - info: [debug] [BaseDriver] 
+2018-02-15 10:43:18:373 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-02-15 10:43:18:375 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, requestOrigins.
+2018-02-15 10:43:18:376 - info: [BaseDriver] Session created with session id: 0f8dcae9-aabf-4f37-9f6c-366e691808dd
+2018-02-15 10:43:18:376 - info: [debug] [AndroidDriver] Getting Java version
+2018-02-15 10:43:18:419 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-02-15 10:43:18:421 - info: [ADB] Checking whether adb is present
+2018-02-15 10:43:18:421 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:43:18:421 - info: [AndroidDriver] Retrieving device list
+2018-02-15 10:43:18:422 - info: [debug] [ADB] Trying to find a connected android device
+2018-02-15 10:43:18:422 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:43:18:428 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:43:18:428 - info: [AndroidDriver] Using device: localhost:7401
+2018-02-15 10:43:18:429 - info: [ADB] Checking whether adb is present
+2018-02-15 10:43:18:429 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-02-15 10:43:18:429 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-02-15 10:43:18:429 - info: [AndroidDriver] App file was not listed, instead we're going to run com.gorro.nothing directly on the device
+2018-02-15 10:43:18:430 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-02-15 10:43:18:430 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:43:18:438 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:43:18:438 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:43:18:445 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.gorro.nothing"]
+2018-02-15 10:43:18:452 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-02-15 10:43:18:452 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-02-15 10:43:18:452 - info: [debug] [ADB] Getting connected devices...
+2018-02-15 10:43:18:459 - info: [debug] [ADB] 2 device(s) connected
+2018-02-15 10:43:18:459 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:43:18:468 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","io.appium.unlock"]
+2018-02-15 10:43:18:475 - error: [MJSONWP] Encountered internal error running command: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 shell pm list packages com.gorro.nothing' exited with code 1'; Stderr: 'error: device unauthorized.
+This adb server's $ADB_VENDOR_KEYS is not set
+Try 'adb kill-server' if that seems wrong.
+Otherwise check for a confirmation dialog on your device.'; Code: '1'
+    at ADB.execFunc$ (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-adb/lib/tools/system-calls.js:317:13)
+    at tryCatch (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at <anonymous>
+2018-02-15 10:43:18:476 - info: [HTTP] <-- POST /wd/hub/session 500 107 ms - 520 
+2018-02-15 10:46:05:478 - info: [Appium] Received SIGINT - shutting down

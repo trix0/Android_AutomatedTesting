@@ -42,7 +42,8 @@ logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
 let desCaps=jArguments.desCaps;
 
-
+console.log(desCaps.parameters)
+console.log("____________________________argument")
 
 //////////// capabilities options for appium//////////
 let opts = {
@@ -61,7 +62,10 @@ const clientSwag = new Swagger({
 })
 
 
-///////////////////////////Init call///////////////
+
+
+
+
 const serial = jArguments.UDID;          /////////// serial number of phone
 
 
@@ -110,7 +114,9 @@ async function fnInit(){
     });
     //await fnLoginTest(client);
 
-    await test.run(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl"); // runs test
+    await test.run(client,desCaps.parameters).catch(err=>{
+      logger.info("ERROR[MyERr]: TEST FINISHED WITH ERROR: "+err)
+    }); // runs test
     await fnDisconnect(UDID);
 
     //await fnCleanInstall(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl");
@@ -181,7 +187,7 @@ async function fnConnectStf(serial){
     process.on('SIGINT', ()=>{
       fnDisconnect(remoteConnectUDID);
     });
-    //const createServer=await fnCreateServer(opts.port,jArguments.bpPort);
+    const createServer=await fnCreateServer(opts.port,jArguments.bpPort);
     return(remoteConnectUDID);
   }
   catch(err){
@@ -225,7 +231,6 @@ function fnDisconnect(UDID){
 
         }
         logger.info("Disconnected "+UDID+"=> open STF ")
-        console.log("Disconnected!")
       })
     })
   })
@@ -248,7 +253,7 @@ function fnCreateServer(port,bpPort){
       }
     });
     appiumServer.stderr.on('data', function(data) {
-      logger.info("Appium err "+ data)
+      //logger.info("Appium err "+ data)
       reject(data)
     });
     appiumServer.on('close', function(code) {

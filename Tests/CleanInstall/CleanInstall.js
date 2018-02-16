@@ -2,8 +2,12 @@ var images = require('../../images.js');
 
 module.exports = function(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
   return {
-  run:async function fnCleanInstall(client,appPackage,activityName,apkFileName){
+  run:async function fnCleanInstall(client,params){
     try{
+        let appPackage=params.appPackage;
+        let activityName=params.activityName;
+        let apkFileName=params.apkFileName;
+
         const init=await client.init();    // appium init (lunch app)
         logger.info("Running clean Install test with following paramters, appPackage: "+appPackage+" activityName: "+activityName+" apkFile: " + __dirname+'/apk/'+apkFileName+'.apk');
         // is apk installed ?
@@ -31,6 +35,18 @@ module.exports = function(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoa
         loading= await fnTestFinish(images.img2,client,20,"Loading screen",testName,6000,2000);
         client.end();
       }
+
+
+
+
+
+
+
+
+
+
+
+
       catch(err){
         client.end();
         throw err;
