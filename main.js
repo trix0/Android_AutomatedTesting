@@ -9,7 +9,7 @@ const fs =require("fs");
 const moment = require('moment');
 const app = express();
 const portfinder = require('portfinder');
-const iExpressPort=3212;
+const iExpressPort=3211;
 stfChecker=false;
 iTestId=fnLoadTestNumber();
 ON_DEATH = require('death')({uncaughtException: true}) 
@@ -70,7 +70,7 @@ rl.on('line', function(line){
 
 app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
 
-
+fnGetAllDevices2();
 
 
 async function fnExecuteCommand(data){
@@ -142,17 +142,16 @@ try{
 			return new Error("Test Does not Exists!!!-> Make sure you enter correct test name")
 		}
 
-		let devices=await fnGetAllDevices();
-		if(devices.length<1){
-			console.log("0 devices found")
-		}
-		else{
+		let devices=await fnGetAllDevices2();
 			for(var r=0; r<devices.length; r++){
-				let UDID=devices[r];
-				testName=JSON.parse(desCaps).testName;
-				iTestId++
-				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
-			}
+				if(devices[r]!=undefined){
+					let UDID=devices[r];
+					testName=JSON.parse(desCaps).testName;
+					iTestId++
+					fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)					
+				}	
+					
+				
 		}
 	
 
@@ -198,6 +197,46 @@ function fnReadFile(filePath){
 		}))
 	})
 }
+
+async function getUsers (userIds) {
+  const pArray = userIds.map(async userId => {
+    const response = await fetch(`/api/users/${userId}`);
+    return response.json();
+  });
+  const users = await Promise.all(pArray);
+  // ... do some stuff
+  return users;
+}
+
+function fnGetAllDevices2(){ // needs fix 
+	return new Promise(async (resolve)=>{
+		let stfUp=await fnIsStfUp();
+		let adbDevices=await fnGetAllDevices();
+		if(stfUp&&!adbDevices.length<1){
+
+			const getDevices=await clientSwag.then((api)=>{
+		      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
+		    }).catch(err=>{
+		    	throw(err);
+		    })
+		    let allDevices=getDevices.obj.devices.map(async device=>{
+		    	if(device.present&&device.ready&&!device.using){
+		    		console.log("deviceeeee")
+		    		return device.serial;
+		    	}
+		    	return;
+		    })
+		    const devices = await Promise.all(allDevices);
+		    console.log(devices)
+		    resolve(devices);
+		}
+	})
+
+
+}
+
+
+
 
 function fnGetAllDevices(){ // needs fix 
 	return new Promise((resolve)=>{
@@ -255,118 +294,130 @@ function fnDoesGroupTestExists(testName,fileType){
 
 
 async function fnRunBundle(testName,UDID,desCaps){
-try{
+	return new Promise(async (resolve,reject)=>{
+		try{
 
-	let previousTestSkipValue;
-	var iIndex=0;
-	let jStatusFormat={
-		"id":null,
-		"UDID":"",
-		"testName":"",
-		"status":null,
-		"timeStamp":"",
-		"port":0
-	}
-	let jGroupTestFormat={
-		"id":null,
-		"testName":"",
-		"tests":[]
-	}
-		desCaps=JSON.parse(desCaps);
-		let testId=iTestId;
-		let testIndex=0;
-
-
-	if(desCaps.groupTest){
-
-	jGroupTestFormat.id=testId;
-	jGroupTestFormat.testName=testName;
-	runningTests.push(jGroupTestFormat);
-    fnBlockLoop(desCaps.tests,desCaps, async function(desCaps,cb){ 
-	jStatusFormat={
-		"id":null,
-		"UDID":"",
-		"testName":"",
-		"status":null,
-		"timeStamp":"",
-		"port":0
-	}
-    	let testJsonExists= await fnDoesTestExists(desCaps.tests[iIndex].testFolder,"json").catch(err=>{});
-    	if(testJsonExists){
-    		testName=desCaps.tests[iIndex].testFolder;
-    		let groupTestCaps=desCaps;
-    		var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
-			systemPort++;
-			port++;
-			bpPort++
-			iIndex++	
-
-    		jStatusFormat.id=testIndex;
-			testIndex++
-			jStatusFormat.UDID=UDID;
-			jStatusFormat.testName=testName;
-			jStatusFormat.timeStamp=await moment().format();
-			jStatusFormat.port=port;
-			jStatusFormat.status="Test not completed";
-			desCaps=JSON.parse(desCaps);
-			let stfCheck=await fnStfCheck(UDID,20,2000);
-			if(stfCheck===false){
-				jStatusFormat.status="Could not reach device."
-				runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
-				throw new Error("Could not reach device: "+UDID)
+			let previousTestSkipValue;
+			var iIndex=0;
+			let jStatusFormat={
+				"id":null,
+				"UDID":"",
+				"testName":"",
+				"status":null,
+				"timeStamp":"",
+				"port":0
 			}
-			runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
-
-			let runStatus;
-			jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
-			previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
-			if(previousTestSkipValue===false&&runStatus.indexOf("ERROR[MyERr]")>-1){
-				console.log("We should stop group test Here")
-				return("Test Failed, Can not Continue")
+			let jGroupTestFormat={
+				"id":null,
+				"testName":"",
+				"tests":[]
 			}
-    	}
-    	else{
-    		throw new Error("Test does not exists")
-    	}
+				desCaps=JSON.parse(desCaps);
+				let testId=iTestId;
+				let testIndex=0;
 
-    } ).catch(err=>{
-    	console.log(err);
-    	console.log("throwing errors here");
-    });
-			
-	}
-	else if(!desCaps.groupTest){
-		console.log("Single Test")
-		systemPort++;
-		port++;
-		bpPort++
-		iTestId++;
-		jStatusFormat.id=iTestId;
-		jStatusFormat.UDID=UDID;
-		jStatusFormat.testName=testName;
-		jStatusFormat.timeStamp=moment().format();
-		jStatusFormat.port=port;
-		jStatusFormat.status="Test not completed"
-		let stfCheck=await fnStfCheck(UDID,20,2000);
 
-		if(stfCheck===false){
-			jStatusFormat.status="Could not reach device."
-			runningTests.push(jStatusFormat);
-			throw new Error("Could not reach device: "+UDID)
+			if(desCaps.groupTest){
+
+			jGroupTestFormat.id=testId;
+			jGroupTestFormat.testName=testName;
+			runningTests.push(jGroupTestFormat);
+		    fnBlockLoop(desCaps.tests,desCaps, async function(desCaps,cb){ 
+			jStatusFormat={
+				"id":null,
+				"UDID":"",
+				"testName":"",
+				"status":null,
+				"timeStamp":"",
+				"port":0
+			}
+		    	let testJsonExists= await fnDoesTestExists(desCaps.tests[iIndex].testFolder,"json").catch(err=>{});
+		    	if(testJsonExists){
+		    		testName=desCaps.tests[iIndex].testFolder;
+		    		let groupTestCaps=desCaps;
+		    		var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
+					systemPort++;
+					port++;
+					bpPort++
+					iIndex++	
+
+		    		jStatusFormat.id=testIndex;
+					testIndex++
+					jStatusFormat.UDID=UDID;
+					jStatusFormat.testName=testName;
+					jStatusFormat.timeStamp=await moment().format();
+					jStatusFormat.port=port;
+					jStatusFormat.status="Test not completed";
+					desCaps=JSON.parse(desCaps);
+					let stfCheck=await fnStfCheck(UDID,20,2000);
+					if(stfCheck===false){
+						jStatusFormat.status="Could not reach device."
+						runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
+						throw new Error("Could not reach device: "+UDID)
+					}
+					runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
+
+					let runStatus;
+					
+					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
+					previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
+					if(previousTestSkipValue===false&&runStatus.indexOf("ERROR[MyERr]")>-1){
+						console.log(previousTestSkipValue)
+						console.log("We should stop group test Here")
+						fnChangeTestProperty(testId,testIndex-1,"status","Test Failed: "+runStatus);
+						throw new Error("Test Failed, Can not Continue")
+					}
+					else if(runStatus.indexOf("ERROR[MyERr]")>-1){
+						fnChangeTestProperty(testId,testIndex-1,"status","Test Failed: "+runStatus);
+					}
+					else{
+						fnChangeTestProperty(testId,testIndex-1,"status","Test Finished");	
+					}
+					
+		    	}
+		    	else{
+		    		throw new Error("Test does not exists")
+		    	}
+
+		    } ).catch(err=>{
+		    	console.log(err);
+		    });
+					
+			}
+			else if(!desCaps.groupTest){
+				console.log("Single Test")
+				systemPort++;
+				port++;
+				bpPort++
+				iTestId++;
+				jStatusFormat.id=iTestId;
+				jStatusFormat.UDID=UDID;
+				jStatusFormat.testName=testName;
+				jStatusFormat.timeStamp=moment().format();
+				jStatusFormat.port=port;
+				jStatusFormat.status="Test not completed"
+				let stfCheck=await fnStfCheck(UDID,20,2000);
+
+				if(stfCheck===false){
+					jStatusFormat.status="Could not reach device."
+					runningTests.push(jStatusFormat);
+					throw new Error("Could not reach device: "+UDID)
+				}
+				runningTests.push(jStatusFormat);
+				jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
+
+
+			}
+			else{
+				return new Error("Failed to run  Test");
+			}
+
 		}
-		runningTests.push(jStatusFormat);
-		jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
+		catch(err){
+			console.log(err)
+		}		
+	})
 
-
-	}
-	else{
-		return new Error("Failed to run  Test");
-	}
-
-}
-catch(err){
-	console.log(err)
-}
 
 }
 
@@ -375,6 +426,24 @@ function fnPushTestToGroupTest(groupID,testId){
 	for(var x=runningTests.length-1; x>=0; x--){
 		if(groupID===runningTests[x].id){
 			return x
+			break;
+		}
+	}
+
+}
+
+function fnChangeTestProperty(groupID,testId,field,value){
+	for(var x=runningTests.length-1; x>=0; x--){
+		if(groupID===runningTests[x].id){
+			let groupsTests=runningTests[x].tests;
+			for(var y=groupsTests.length-1; y>=0; y--){
+				if(groupsTests[y].id===testId){
+					runningTests[x].tests[y][field]=value;
+					console.log(runningTests[x].tests[y]);
+					break;
+				}
+			}
+
 			break;
 		}
 	}
@@ -519,10 +588,12 @@ async function fnStfCheck(serial,repeats,repeatDelay){
  console.log(isUp+"isup")
  let deviceAcces=await fnIsDeviceAccesable(serial,repeats,repeatDelay);
  if(!isUp&&!stfChecker){
+ 	stfChecker=true;
  	let status=await fnStartStf("local")
  	if(!status){
  		return false;
  	}
+ 	stfChecker=false
  }
  else if(!deviceAcces){
  	console.log("Couldnt access device "+serial+" after "+ (repeatDelay*repeats)/1000 +"seconds ")

@@ -5342,3 +5342,478 @@ error: device 'localhost:7405' not found'; Code: '1'
 2018-02-16T15:55:36.511Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Error finding if process exists. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7437 shell ps' exited with code 1'; Stderr: 'error: device 'localhost:7437' not found'; Code: '1'
 2018-02-16T15:55:36.517Z - info: You are not owner localhost:7437 => open STF 
 2018-02-16T15:55:41.523Z - info: Appium on close  null
+2018-02-19T08:26:56.715Z - info: Test execution started
+2018-02-19T08:26:56.716Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:26:56.724Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:26:56.774Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:26:56.781Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:26:56.781Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:26:59.059Z - info: Appium server created on port: 4002
+2018-02-19T08:27:16.580Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:27:18.344Z - info: App does not exist in device 
+2018-02-19T08:27:18.344Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:28:06.121Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T08:28:09.735Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T08:28:10.953Z - info: Found permission button going to click #0
+2018-02-19T08:28:10.954Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T08:28:10.954Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T08:28:10.954Z - info: Running delay for : 0
+2018-02-19T08:28:10.954Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T08:28:10.954Z - info: Running delay for : 6000
+2018-02-19T08:28:10.956Z - info: Running delay for : 0
+2018-02-19T08:28:12.114Z - info: Found image on screen: Click on permission button
+2018-02-19T08:28:12.391Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T08:28:16.960Z - info: Running delay for : 2000
+2018-02-19T08:28:19.634Z - info: Running delay for : 2000
+2018-02-19T08:28:22.333Z - info: Running delay for : 2000
+2018-02-19T08:28:24.871Z - info: Running delay for : 2000
+2018-02-19T08:28:27.601Z - info: Running delay for : 2000
+2018-02-19T08:28:30.385Z - info: Running delay for : 2000
+2018-02-19T08:28:33.334Z - info: Found image on screen: Loading screen
+2018-02-19T08:28:33.334Z - info: Test:Clean Install[FINISHED]
+2018-02-19T08:28:33.358Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:31:01.797Z - info: Appium on close  null
+2018-02-19T08:31:01.798Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:31:01.801Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:34:24.025Z - info: Test execution started
+2018-02-19T08:34:24.026Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:34:24.034Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:34:24.084Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:34:24.091Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:34:24.091Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:34:26.360Z - info: Appium server created on port: 4002
+2018-02-19T08:34:41.458Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:34:43.174Z - info: App does not exist in device 
+2018-02-19T08:34:43.175Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:35:32.015Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T08:35:36.047Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T08:35:37.434Z - info: Found permission button going to click #0
+2018-02-19T08:35:37.435Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T08:35:37.435Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T08:35:37.435Z - info: Running delay for : 0
+2018-02-19T08:35:37.435Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T08:35:37.435Z - info: Running delay for : 6000
+2018-02-19T08:35:37.437Z - info: Running delay for : 0
+2018-02-19T08:35:38.699Z - info: Found image on screen: Click on permission button
+2018-02-19T08:35:39.007Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T08:35:43.441Z - info: Running delay for : 2000
+2018-02-19T08:35:46.149Z - info: Running delay for : 2000
+2018-02-19T08:35:48.808Z - info: Running delay for : 2000
+2018-02-19T08:35:51.388Z - info: Running delay for : 2000
+2018-02-19T08:35:54.103Z - info: Running delay for : 2000
+2018-02-19T08:35:56.932Z - info: Running delay for : 2000
+2018-02-19T08:35:59.640Z - info: Running delay for : 2000
+2018-02-19T08:36:02.507Z - info: Found image on screen: Loading screen
+2018-02-19T08:36:02.507Z - info: Test:Clean Install[FINISHED]
+2018-02-19T08:36:02.534Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:36:11.993Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:36:11.993Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:36:11.994Z - info: Appium on close  null
+2018-02-19T08:37:59.424Z - info: Test execution started
+2018-02-19T08:37:59.425Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:37:59.433Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:37:59.489Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:37:59.496Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:37:59.496Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:38:00.961Z - info: Appium on close  null
+2018-02-19T08:38:00.981Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:40:30.415Z - info: Test execution started
+2018-02-19T08:40:30.416Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:40:30.424Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:40:30.486Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:40:30.494Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:40:30.494Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:40:32.656Z - info: Appium server created on port: 4002
+2018-02-19T08:40:49.046Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:40:50.723Z - info: App does not exist in device 
+2018-02-19T08:40:50.724Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:41:42.930Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7405 install -r /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk' exited with code 255'; Stderr: '- waiting for device -'; Code: '255'
+2018-02-19T08:41:42.946Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:41:46.872Z - info: Test execution started
+2018-02-19T08:41:46.873Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:41:46.881Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:41:46.930Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:41:46.936Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:41:46.936Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:41:47.941Z - info: Appium on close  null
+2018-02-19T08:41:49.259Z - info: Appium server created on port: 4002
+2018-02-19T08:42:05.466Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:42:07.111Z - info: App does not exist in device 
+2018-02-19T08:42:07.111Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:42:55.045Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T08:42:58.479Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T08:42:59.808Z - info: Found permission button going to click #0
+2018-02-19T08:42:59.808Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T08:42:59.808Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T08:42:59.808Z - info: Running delay for : 0
+2018-02-19T08:42:59.809Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T08:42:59.809Z - info: Running delay for : 6000
+2018-02-19T08:42:59.810Z - info: Running delay for : 0
+2018-02-19T08:43:00.973Z - info: Found image on screen: Click on permission button
+2018-02-19T08:43:01.140Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T08:43:05.814Z - info: Running delay for : 2000
+2018-02-19T08:43:08.831Z - info: Running delay for : 2000
+2018-02-19T08:43:11.781Z - info: Running delay for : 2000
+2018-02-19T08:43:14.764Z - info: Running delay for : 2000
+2018-02-19T08:43:17.758Z - info: Running delay for : 2000
+2018-02-19T08:43:20.794Z - info: Running delay for : 2000
+2018-02-19T08:43:23.788Z - info: Running delay for : 2000
+2018-02-19T08:43:26.739Z - info: Running delay for : 2000
+2018-02-19T08:43:29.747Z - info: Running delay for : 2000
+2018-02-19T08:43:32.737Z - info: Running delay for : 2000
+2018-02-19T08:43:35.732Z - info: Running delay for : 2000
+2018-02-19T08:43:38.695Z - info: Running delay for : 2000
+2018-02-19T08:43:41.716Z - info: Running delay for : 2000
+2018-02-19T08:43:44.785Z - info: Running delay for : 2000
+2018-02-19T08:43:47.734Z - info: Running delay for : 2000
+2018-02-19T08:43:50.840Z - info: Running delay for : 2000
+2018-02-19T08:43:53.834Z - info: Running delay for : 2000
+2018-02-19T08:43:56.879Z - info: Running delay for : 2000
+2018-02-19T08:43:59.935Z - info: Running delay for : 2000
+2018-02-19T08:44:02.991Z - info: Running delay for : 2000
+2018-02-19T08:44:06.020Z - info: Looking for image on screen #20
+2018-02-19T08:44:06.020Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Loading screen
+2018-02-19T08:44:06.043Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:44:32.383Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:44:32.384Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:44:32.384Z - info: Appium on close  null
+2018-02-19T08:47:04.541Z - info: Test execution started
+2018-02-19T08:47:04.542Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:47:04.551Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:47:04.596Z - info: executing command adb connect  localhost:7405
+2018-02-19T08:47:04.604Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:47:04.604Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:47:06.735Z - info: Appium server created on port: 4002
+2018-02-19T08:47:22.801Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:47:24.490Z - info: App does not exist in device 
+2018-02-19T08:47:24.490Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:48:12.168Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T08:48:15.628Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T08:48:16.852Z - info: Found permission button going to click #0
+2018-02-19T08:48:16.852Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T08:48:16.853Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T08:48:16.853Z - info: Running delay for : 0
+2018-02-19T08:48:16.853Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T08:48:16.853Z - info: Running delay for : 6000
+2018-02-19T08:48:16.854Z - info: Running delay for : 0
+2018-02-19T08:48:17.985Z - info: Found image on screen: Click on permission button
+2018-02-19T08:48:18.170Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T08:48:22.857Z - info: Running delay for : 2000
+2018-02-19T08:48:24.864Z - info: Running delay for : 2000
+2018-02-19T08:48:26.872Z - info: Running delay for : 2000
+2018-02-19T08:48:28.881Z - info: Running delay for : 2000
+2018-02-19T08:48:30.887Z - info: Running delay for : 2000
+2018-02-19T08:48:31.387Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:48:31.389Z - info: You are not owner localhost:7405 => open STF 
+2018-02-19T08:48:32.892Z - info: Running delay for : 2000
+2018-02-19T08:48:34.899Z - info: Running delay for : 2000
+2018-02-19T08:48:36.904Z - info: Running delay for : 2000
+2018-02-19T08:48:38.908Z - info: Running delay for : 2000
+2018-02-19T08:48:40.912Z - info: Running delay for : 2000
+2018-02-19T08:48:42.918Z - info: Running delay for : 2000
+2018-02-19T08:48:44.923Z - info: Running delay for : 2000
+2018-02-19T08:48:46.928Z - info: Running delay for : 2000
+2018-02-19T08:48:48.935Z - info: Running delay for : 2000
+2018-02-19T08:48:50.940Z - info: Running delay for : 2000
+2018-02-19T08:48:52.945Z - info: Running delay for : 2000
+2018-02-19T08:48:54.949Z - info: Running delay for : 2000
+2018-02-19T08:48:56.956Z - info: Running delay for : 2000
+2018-02-19T08:48:58.961Z - info: Running delay for : 2000
+2018-02-19T08:49:00.967Z - info: Running delay for : 2000
+2018-02-19T08:49:02.972Z - info: Looking for image on screen #20
+2018-02-19T08:49:02.974Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Loading screen
+2018-02-19T08:49:02.991Z - info: Disconnected localhost:7405=> open STF 
+2018-02-19T08:49:05.635Z - info: Test execution started
+2018-02-19T08:49:05.636Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T08:49:05.643Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T08:49:05.690Z - info: executing command adb connect  localhost:7413
+2018-02-19T08:49:05.696Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T08:49:05.696Z - info: Trying to create appium Server on port: 4002
+2018-02-19T08:49:07.837Z - info: Appium server created on port: 4002
+2018-02-19T08:49:07.992Z - info: Appium on close  null
+2018-02-19T08:49:22.602Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:49:24.273Z - info: App exists in device => trying to remove
+2018-02-19T08:49:29.867Z - info: App removed
+2018-02-19T08:49:29.868Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T08:49:46.739Z - info: Disconnected localhost:7413=> open STF 
+2018-02-19T08:49:46.740Z - info: Disconnected localhost:7413=> open STF 
+2018-02-19T08:49:46.866Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7413 install -r /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk' exited with code null'; Stderr: 'error: protocol fault: failed to read stat response: Success'; Code: 'null'
+2018-02-19T08:49:46.874Z - info: You are not owner localhost:7413 => open STF 
+2018-02-19T08:49:51.886Z - info: Appium on close  null
+2018-02-19T09:36:48.474Z - info: Test execution started
+2018-02-19T09:36:48.474Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T09:36:48.482Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T09:36:48.529Z - info: executing command adb connect  localhost:7421
+2018-02-19T09:36:48.536Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T09:36:48.536Z - info: Trying to create appium Server on port: 4002
+2018-02-19T09:36:50.833Z - info: Appium server created on port: 4002
+2018-02-19T09:37:07.238Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:37:09.020Z - info: App exists in device => trying to remove
+2018-02-19T09:37:15.078Z - info: App removed
+2018-02-19T09:37:15.079Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:38:07.047Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T09:38:10.622Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T09:38:11.988Z - info: Found permission button going to click #0
+2018-02-19T09:38:11.988Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T09:38:11.988Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T09:38:11.988Z - info: Running delay for : 0
+2018-02-19T09:38:11.989Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T09:38:11.989Z - info: Running delay for : 6000
+2018-02-19T09:38:11.989Z - info: Running delay for : 0
+2018-02-19T09:38:13.267Z - info: Found image on screen: Click on permission button
+2018-02-19T09:38:13.474Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T09:38:17.993Z - info: Running delay for : 2000
+2018-02-19T09:38:20.994Z - info: Running delay for : 2000
+2018-02-19T09:38:24.350Z - info: Running delay for : 2000
+2018-02-19T09:38:27.153Z - info: Running delay for : 2000
+2018-02-19T09:38:29.920Z - info: Running delay for : 2000
+2018-02-19T09:38:32.826Z - info: Running delay for : 2000
+2018-02-19T09:38:35.726Z - info: Running delay for : 2000
+2018-02-19T09:38:38.541Z - info: Running delay for : 2000
+2018-02-19T09:38:41.965Z - info: Found image on screen: Loading screen
+2018-02-19T09:38:41.965Z - info: Test:Clean Install[FINISHED]
+2018-02-19T09:38:41.985Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T09:38:47.694Z - info: Appium on close  null
+2018-02-19T09:38:47.698Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:38:47.699Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:44:34.831Z - info: Test execution started
+2018-02-19T09:44:34.832Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T09:44:34.840Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T09:44:34.883Z - info: executing command adb connect  localhost:7421
+2018-02-19T09:44:34.889Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T09:44:34.889Z - info: Trying to create appium Server on port: 4002
+2018-02-19T09:44:37.012Z - info: Appium server created on port: 4002
+2018-02-19T09:44:53.067Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:44:54.747Z - info: App exists in device => trying to remove
+2018-02-19T09:45:00.904Z - info: App removed
+2018-02-19T09:45:00.904Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:45:53.102Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T09:45:57.082Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T09:45:58.510Z - info: Found permission button going to click #0
+2018-02-19T09:45:58.510Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T09:45:58.511Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T09:45:58.511Z - info: Running delay for : 0
+2018-02-19T09:45:58.511Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T09:45:58.511Z - info: Running delay for : 6000
+2018-02-19T09:45:58.512Z - info: Running delay for : 0
+2018-02-19T09:45:59.842Z - info: Found image on screen: Click on permission button
+2018-02-19T09:46:00.014Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T09:46:04.517Z - info: Running delay for : 2000
+2018-02-19T09:46:07.523Z - info: Running delay for : 2000
+2018-02-19T09:46:10.514Z - info: Running delay for : 2000
+2018-02-19T09:46:13.732Z - info: Running delay for : 2000
+2018-02-19T09:46:16.916Z - info: Running delay for : 2000
+2018-02-19T09:46:20.055Z - info: Running delay for : 2000
+2018-02-19T09:46:23.153Z - info: Running delay for : 2000
+2018-02-19T09:46:26.399Z - info: Running delay for : 2000
+2018-02-19T09:46:29.526Z - info: Running delay for : 2000
+2018-02-19T09:46:32.623Z - info: Running delay for : 2000
+2018-02-19T09:46:35.590Z - info: Running delay for : 2000
+2018-02-19T09:46:38.576Z - info: Running delay for : 2000
+2018-02-19T09:46:41.583Z - info: Running delay for : 2000
+2018-02-19T09:46:44.542Z - info: Running delay for : 2000
+2018-02-19T09:46:47.704Z - info: Running delay for : 2000
+2018-02-19T09:46:50.638Z - info: Running delay for : 2000
+2018-02-19T09:46:53.718Z - info: Running delay for : 2000
+2018-02-19T09:46:56.702Z - info: Running delay for : 2000
+2018-02-19T09:46:59.787Z - info: Running delay for : 2000
+2018-02-19T09:47:02.876Z - info: Running delay for : 2000
+2018-02-19T09:47:05.914Z - info: Looking for image on screen #20
+2018-02-19T09:47:05.914Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Loading screen
+2018-02-19T09:47:05.931Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T09:48:37.888Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:48:37.889Z - info: Appium on close  null
+2018-02-19T09:48:37.889Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:51:17.050Z - info: Test execution started
+2018-02-19T09:51:17.051Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T09:51:17.058Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T09:51:17.105Z - info: executing command adb connect  localhost:7421
+2018-02-19T09:51:17.113Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T09:51:17.113Z - info: Trying to create appium Server on port: 4002
+2018-02-19T09:51:19.313Z - info: Appium server created on port: 4002
+2018-02-19T09:51:34.771Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:51:36.455Z - info: App exists in device => trying to remove
+2018-02-19T09:51:42.334Z - info: App removed
+2018-02-19T09:51:42.334Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:52:32.067Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T09:52:36.349Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T09:52:37.697Z - info: Found permission button going to click #0
+2018-02-19T09:52:37.698Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T09:52:37.698Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T09:52:37.698Z - info: Running delay for : 0
+2018-02-19T09:52:37.698Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T09:52:37.698Z - info: Running delay for : 6000
+2018-02-19T09:52:37.700Z - info: Running delay for : 0
+2018-02-19T09:52:38.825Z - info: Found image on screen: Click on permission button
+2018-02-19T09:52:39.011Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T09:52:43.704Z - info: Running delay for : 2000
+2018-02-19T09:52:46.632Z - info: Running delay for : 2000
+2018-02-19T09:52:49.737Z - info: Running delay for : 2000
+2018-02-19T09:52:52.458Z - info: Running delay for : 2000
+2018-02-19T09:52:55.189Z - info: Running delay for : 2000
+2018-02-19T09:52:57.928Z - info: Running delay for : 2000
+2018-02-19T09:53:01.131Z - info: Running delay for : 2000
+2018-02-19T09:53:04.055Z - info: Running delay for : 2000
+2018-02-19T09:53:06.680Z - info: Running delay for : 2000
+2018-02-19T09:53:09.954Z - info: Found image on screen: Loading screen
+2018-02-19T09:53:09.954Z - info: Test:Clean Install[FINISHED]
+2018-02-19T09:53:09.973Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T09:55:28.020Z - info: Appium on close  null
+2018-02-19T09:55:28.024Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:55:28.024Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T09:58:04.341Z - info: Test execution started
+2018-02-19T09:58:04.342Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T09:58:04.349Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T09:58:04.396Z - info: executing command adb connect  localhost:7421
+2018-02-19T09:58:04.405Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T09:58:04.405Z - info: Trying to create appium Server on port: 4002
+2018-02-19T09:58:06.642Z - info: Appium server created on port: 4002
+2018-02-19T09:58:22.402Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:58:24.199Z - info: App exists in device => trying to remove
+2018-02-19T09:58:29.883Z - info: App removed
+2018-02-19T09:58:29.883Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T09:59:20.418Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T09:59:24.729Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T09:59:26.058Z - info: Found permission button going to click #0
+2018-02-19T09:59:26.058Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T09:59:26.059Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T09:59:26.059Z - info: Running delay for : 0
+2018-02-19T09:59:26.059Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T09:59:26.059Z - info: Running delay for : 6000
+2018-02-19T09:59:26.060Z - info: Running delay for : 0
+2018-02-19T09:59:27.194Z - info: Found image on screen: Click on permission button
+2018-02-19T09:59:27.384Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T09:59:32.065Z - info: Running delay for : 2000
+2018-02-19T09:59:35.002Z - info: Running delay for : 2000
+2018-02-19T09:59:38.031Z - info: Running delay for : 2000
+2018-02-19T09:59:40.973Z - info: Running delay for : 2000
+2018-02-19T09:59:43.776Z - info: Running delay for : 2000
+2018-02-19T09:59:46.465Z - info: Running delay for : 2000
+2018-02-19T09:59:49.549Z - info: Running delay for : 2000
+2018-02-19T09:59:52.465Z - info: Running delay for : 2000
+2018-02-19T09:59:55.202Z - info: Running delay for : 2000
+2018-02-19T09:59:58.415Z - info: Found image on screen: Loading screen
+2018-02-19T09:59:58.415Z - info: Test:Clean Install[FINISHED]
+2018-02-19T09:59:58.434Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T10:04:13.232Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T10:04:13.233Z - info: Appium on close  null
+2018-02-19T10:04:13.233Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T10:09:46.133Z - info: Test execution started
+2018-02-19T10:09:46.134Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T10:09:46.141Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T10:09:46.184Z - info: executing command adb connect  localhost:7421
+2018-02-19T10:09:46.191Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T10:09:46.191Z - info: Trying to create appium Server on port: 4002
+2018-02-19T10:09:48.357Z - info: Appium server created on port: 4002
+2018-02-19T10:10:07.749Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T10:10:09.527Z - info: App exists in device => trying to remove
+2018-02-19T10:10:16.121Z - info: App removed
+2018-02-19T10:10:16.121Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T10:11:06.588Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T10:11:10.712Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T10:11:12.040Z - info: Found permission button going to click #0
+2018-02-19T10:11:12.040Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T10:11:12.040Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T10:11:12.041Z - info: Running delay for : 0
+2018-02-19T10:11:12.041Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T10:11:12.041Z - info: Running delay for : 6000
+2018-02-19T10:11:12.042Z - info: Running delay for : 0
+2018-02-19T10:11:13.254Z - info: Found image on screen: Click on permission button
+2018-02-19T10:11:13.559Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T10:11:18.044Z - info: Running delay for : 2000
+2018-02-19T10:11:21.205Z - info: Running delay for : 2000
+2018-02-19T10:11:24.255Z - info: Running delay for : 2000
+2018-02-19T10:11:27.136Z - info: Running delay for : 2000
+2018-02-19T10:11:30.343Z - info: Running delay for : 2000
+2018-02-19T10:11:33.044Z - info: Running delay for : 2000
+2018-02-19T10:11:35.899Z - info: Running delay for : 2000
+2018-02-19T10:11:38.755Z - info: Running delay for : 2000
+2018-02-19T10:11:42.136Z - info: Found image on screen: Loading screen
+2018-02-19T10:11:42.136Z - info: Test:Clean Install[FINISHED]
+2018-02-19T10:11:42.162Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T10:25:22.346Z - info: Appium on close  null
+2018-02-19T10:25:22.347Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T10:25:22.348Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T10:27:21.113Z - info: Test execution started
+2018-02-19T10:27:21.114Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T10:27:21.125Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T10:27:21.167Z - info: executing command adb connect  localhost:7421
+2018-02-19T10:27:21.175Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T10:27:21.175Z - info: Trying to create appium Server on port: 4002
+2018-02-19T10:27:23.574Z - info: Appium server created on port: 4002
+2018-02-19T10:27:39.627Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T10:27:41.435Z - info: App exists in device => trying to remove
+2018-02-19T10:27:47.503Z - info: App removed
+2018-02-19T10:27:47.503Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T10:28:36.395Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T10:28:40.797Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T10:28:42.052Z - info: Found permission button going to click #0
+2018-02-19T10:28:42.052Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T10:28:42.052Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T10:28:42.053Z - info: Running delay for : 0
+2018-02-19T10:28:42.053Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T10:28:42.053Z - info: Running delay for : 6000
+2018-02-19T10:28:42.054Z - info: Running delay for : 0
+2018-02-19T10:28:43.211Z - info: Found image on screen: Click on permission button
+2018-02-19T10:28:43.475Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T10:28:48.058Z - info: Running delay for : 2000
+2018-02-19T10:28:51.205Z - info: Running delay for : 2000
+2018-02-19T10:28:54.063Z - info: Running delay for : 2000
+2018-02-19T10:28:56.939Z - info: Running delay for : 2000
+2018-02-19T10:28:59.868Z - info: Running delay for : 2000
+2018-02-19T10:29:02.577Z - info: Running delay for : 2000
+2018-02-19T10:29:05.348Z - info: Running delay for : 2000
+2018-02-19T10:29:08.322Z - info: Running delay for : 2000
+2018-02-19T10:29:11.778Z - info: Found image on screen: Loading screen
+2018-02-19T10:29:11.778Z - info: Test:Clean Install[FINISHED]
+2018-02-19T10:29:11.800Z - info: Disconnected localhost:7421=> open STF 
+2018-02-19T10:42:46.734Z - info: Appium on close  null
+2018-02-19T10:42:46.736Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T10:42:46.737Z - info: You are not owner localhost:7421 => open STF 
+2018-02-19T11:33:10.103Z - info: Test execution started
+2018-02-19T11:33:10.104Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T11:33:10.113Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T11:33:10.164Z - info: executing command adb connect  localhost:7429
+2018-02-19T11:33:10.170Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T11:33:10.170Z - info: Trying to create appium Server on port: 4002
+2018-02-19T11:33:12.538Z - info: Appium server created on port: 4002
+2018-02-19T11:33:22.942Z - info: Disconnected localhost:7429=> open STF 
+2018-02-19T11:33:22.943Z - info: Disconnected localhost:7429=> open STF 
+2018-02-19T11:33:23.017Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7429 shell getprop ro.product.model' exited with code 1'; Stderr: 'error: device 'localhost:7429' not found'; Code: '1'
+2018-02-19T11:33:23.024Z - info: You are not owner localhost:7429 => open STF 
+2018-02-19T11:33:30.915Z - info: Appium on close  null
+2018-02-19T11:36:07.752Z - info: Test execution started
+2018-02-19T11:36:07.753Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T11:36:07.760Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T11:36:07.805Z - info: executing command adb connect  localhost:7429
+2018-02-19T11:36:07.811Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp6002  --log-timestamp --log /home/trixo/Code/javaRewrite/log4002.txt
+2018-02-19T11:36:07.811Z - info: Trying to create appium Server on port: 4002
+2018-02-19T11:36:09.974Z - info: Appium server created on port: 4002
+2018-02-19T11:36:25.837Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T11:36:27.628Z - info: App exists in device => trying to remove
+2018-02-19T11:36:33.731Z - info: App removed
+2018-02-19T11:36:33.731Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T11:37:23.758Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T11:37:27.552Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T11:37:28.944Z - info: Found permission button going to click #0
+2018-02-19T11:37:28.945Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T11:37:28.945Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T11:37:28.945Z - info: Running delay for : 0
+2018-02-19T11:37:28.946Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T11:37:28.946Z - info: Running delay for : 6000
+2018-02-19T11:37:28.947Z - info: Running delay for : 0
+2018-02-19T11:37:30.228Z - info: Found image on screen: Click on permission button
+2018-02-19T11:37:30.471Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T11:37:34.949Z - info: Running delay for : 2000
+2018-02-19T11:37:37.803Z - info: Running delay for : 2000
+2018-02-19T11:37:40.569Z - info: Running delay for : 2000
+2018-02-19T11:37:43.123Z - info: Running delay for : 2000
+2018-02-19T11:37:45.856Z - info: Running delay for : 2000
+2018-02-19T11:37:48.530Z - info: Running delay for : 2000
+2018-02-19T11:37:51.081Z - info: Running delay for : 2000
+2018-02-19T11:37:53.984Z - info: Found image on screen: Loading screen
+2018-02-19T11:37:53.984Z - info: Test:Clean Install[FINISHED]
+2018-02-19T11:37:54.005Z - info: Disconnected localhost:7429=> open STF 
+2018-02-19T11:41:55.494Z - info: Appium on close  null
+2018-02-19T11:41:55.495Z - info: You are not owner localhost:7429 => open STF 
+2018-02-19T11:41:55.498Z - info: You are not owner localhost:7429 => open STF 
