@@ -44,9 +44,9 @@ app.get('/', (req, res) => {
 
 
 })
-
-
-//fnStartStf("local");
+fnIsPortFree(7100).then(data=>{
+	console.log(data);
+});
 
 ///// swagger client to authoriize openSTF/////////////
 const clientSwag = new Swagger({
@@ -160,8 +160,11 @@ try{
 
 
 	}
-	else if(data.indexOf("runG ")===0){
-		console.log("Running Group Test")
+	else if(data.indexOf("buildTest ")===0){
+		let datasplit=data.split(" ");
+		let testName=datasplit[1];
+		console.log(testName)	
+		fnBuildTest(testName);	
 	}
 	else if(data.indexOf("runGAll")===0){
 		console.log("Running Group Test on all devices")
@@ -198,15 +201,6 @@ function fnReadFile(filePath){
 	})
 }
 
-async function getUsers (userIds) {
-  const pArray = userIds.map(async userId => {
-    const response = await fetch(`/api/users/${userId}`);
-    return response.json();
-  });
-  const users = await Promise.all(pArray);
-  // ... do some stuff
-  return users;
-}
 
 function fnGetAllDevices2(){ // needs fix 
 	return new Promise(async (resolve)=>{
@@ -235,10 +229,22 @@ function fnGetAllDevices2(){ // needs fix
 
 }
 
+function fnBuildTest(testName){
+	let aOptions=[__dirname+'/BuildTest.js',testName] 
+	let path = "."
+	let ls = child_process.spawn('node', aOptions,)
+
+	ls.stdout.on('data', function (data) {
+	    console.log(data.toString());
+
+	});
+	ls.stderr.on('data', (data) => {
+	  console.log(`stderr: ${data}`);
+	});	
+}
 
 
-
-function fnGetAllDevices(){ // needs fix 
+function fnGetAllDevices(){ 
 	return new Promise((resolve)=>{
 		let availableDevices=[];
 			exec('adb devices','',async(err, stdout, stderr)=>{
@@ -584,6 +590,7 @@ async function fnIsStfUp(){
 }
 
 async function fnStfCheck(serial,repeats,repeatDelay){
+	console.log("stf check")
  let isUp=await fnIsStfUp();
  console.log(isUp+"isup")
  let deviceAcces=await fnIsDeviceAccesable(serial,repeats,repeatDelay);
@@ -643,7 +650,7 @@ function fnLoadTestNumber(){
 
 
 
-async function fnIsPortFree(port){
+async function fnIsPortFree(port){ // needs to be replace with soemthing else
 	return new Promise(resolve=>{
 		portfinder.basePort=port
 			try{	

@@ -32,7 +32,7 @@ imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
 imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 
 
-let test = require('./Tests/CleanInstall/CleanInstall')(timeout,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
+let test = require('./Tests/CleanInstall/CleanInstall')(timeout,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
 
 logger.info('Test execution started');
@@ -291,6 +291,25 @@ function timeout(delay){
     setTimeout(resolve,delay)
   })
 }
+
+
+
+
+
+async function fnPermissionId(bValue,client){
+  logger.info("Running fnPermission with value: "+bValue)
+  if(bValue===null){
+    return true;
+  }
+  else if(bValue === true){
+    await client.click('android=new UiSelector().resourceId("com.android.packageinstaller:id/permission_allow_button")');
+                                                                
+  }
+  else{
+    await client.click('android=new UiSelector().resourceId("com.android.packageinstaller:id/permission_deny_button")');
+  }
+}
+
 
 
 

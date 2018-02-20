@@ -614,3 +614,75 @@
 2018-02-16T14:30:40.547Z - info: Disconnected localhost:7413=> open STF 
 2018-02-16T14:35:54.201Z - info: Appium on close  null
 2018-02-16T14:35:54.242Z - info: Disconnected localhost:7413=> open STF 
+2018-02-19T13:42:21.771Z - info: Test execution started
+2018-02-19T13:42:21.772Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-19T13:42:21.779Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-19T13:42:21.825Z - info: executing command adb connect  localhost:7409
+2018-02-19T13:42:21.833Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-19T13:42:21.833Z - info: Trying to create appium Server on port: 4004
+2018-02-19T13:42:24.059Z - info: Appium server created on port: 4004
+2018-02-19T13:42:39.335Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T13:42:41.329Z - info: App exists in device => trying to remove
+2018-02-19T13:42:47.580Z - info: App removed
+2018-02-19T13:42:47.580Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-19T13:43:37.764Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-19T13:43:41.323Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-19T13:43:42.632Z - info: Found permission button going to click #0
+2018-02-19T13:43:42.632Z - info: Running click event : Click on permission button with 5repets
+2018-02-19T13:43:42.632Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-19T13:43:42.633Z - info: Running delay for : 0
+2018-02-19T13:43:42.633Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-19T13:43:42.633Z - info: Running delay for : 6000
+2018-02-19T13:43:42.634Z - info: Running delay for : 0
+2018-02-19T13:43:43.879Z - info: Found image on screen: Click on permission button
+2018-02-19T13:43:44.187Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-19T13:43:48.639Z - info: Running delay for : 2000
+2018-02-19T13:43:51.349Z - info: Running delay for : 2000
+2018-02-19T13:43:54.138Z - info: Running delay for : 2000
+2018-02-19T13:43:56.708Z - info: Running delay for : 2000
+2018-02-19T13:43:59.251Z - info: Running delay for : 2000
+2018-02-19T13:44:01.880Z - info: Running delay for : 2000
+2018-02-19T13:44:04.724Z - info: Running delay for : 2000
+2018-02-19T13:44:07.588Z - info: Found image on screen: Loading screen
+2018-02-19T13:44:07.588Z - info: Test:Clean Install[FINISHED]
+2018-02-19T13:44:07.758Z - info: Disconnected localhost:7409=> open STF 
+2018-02-19T14:03:59.683Z - info: Appium on close  null
+2018-02-19T14:03:59.702Z - info: You are not owner localhost:7409 => open STF 
+2018-02-19T14:03:59.703Z - info: You are not owner localhost:7409 => open STF 
+2018-02-20T09:20:41.155Z - info: Test execution started
+2018-02-20T09:20:41.155Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-20T09:20:41.163Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-20T09:20:41.208Z - info: executing command adb connect  localhost:7405
+2018-02-20T09:20:41.214Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-20T09:20:41.214Z - info: Trying to create appium Server on port: 4004
+2018-02-20T09:20:43.390Z - info: Appium server created on port: 4004
+2018-02-20T09:20:58.872Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-20T09:21:00.665Z - info: App exists in device => trying to remove
+2018-02-20T09:21:06.881Z - info: App removed
+2018-02-20T09:21:06.881Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-20T09:21:57.433Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-02-20T09:22:01.644Z - info: Running fnPermission with number of repeats: 5 and value: true
+2018-02-20T09:22:03.057Z - info: Found permission button going to click #0
+2018-02-20T09:22:03.057Z - info: Running click event : Click on permission button with 5repets
+2018-02-20T09:22:03.057Z - info: Looking for image on screen:Click on permission button with 5 repeats 
+2018-02-20T09:22:03.057Z - info: Running delay for : 0
+2018-02-20T09:22:03.057Z - info: Looking for image on screen:Loading screen with 20 repeats 
+2018-02-20T09:22:03.058Z - info: Running delay for : 6000
+2018-02-20T09:22:03.058Z - info: Running delay for : 0
+2018-02-20T09:22:04.217Z - info: Found image on screen: Click on permission button
+2018-02-20T09:22:04.398Z - info: clicked on : Click on permission button with following coordinates x=438 y=556.5
+2018-02-20T09:22:09.064Z - info: Running delay for : 2000
+2018-02-20T09:22:11.968Z - info: Running delay for : 2000
+2018-02-20T09:22:14.822Z - info: Running delay for : 2000
+2018-02-20T09:22:17.824Z - info: Running delay for : 2000
+2018-02-20T09:22:20.530Z - info: Running delay for : 2000
+2018-02-20T09:22:23.521Z - info: Running delay for : 2000
+2018-02-20T09:22:26.535Z - info: Running delay for : 2000
+2018-02-20T09:22:29.311Z - info: Running delay for : 2000
+2018-02-20T09:22:32.054Z - info: Running delay for : 2000
+2018-02-20T09:22:35.443Z - info: Found image on screen: Loading screen
+2018-02-20T09:22:35.443Z - info: Test:Clean Install[FINISHED]
+2018-02-20T09:22:35.462Z - info: Disconnected localhost:7405=> open STF 
+2018-02-20T09:23:47.638Z - info: Appium on close  null
+2018-02-20T09:23:47.646Z - info: You are not owner localhost:7405 => open STF 
+2018-02-20T09:23:47.650Z - info: You are not owner localhost:7405 => open STF 

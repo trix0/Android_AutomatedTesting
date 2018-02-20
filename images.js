@@ -2,7 +2,7 @@ const cv = require('opencv4nodejs');
 
 module.exports.img2 = cv.imread(__dirname+'/autoTest/CreateAccount.png');
 
-module.exports.img2 = cv.imread(__dirname+'/autoTest/CreateAccount.png');
+module.exports.img2 = cv.imread(__dirname+'/autoTest/rescaledimg2.png');
 module.exports.img3 = cv.imread(__dirname+'/autoTest/LoginButton.png');
 module.exports.imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
 module.exports.imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
