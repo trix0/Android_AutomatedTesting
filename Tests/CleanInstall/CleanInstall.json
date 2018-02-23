@@ -1,5 +1,6 @@
 {
 "testName":"Clean Install",
+"testFileName":"CleanInstall",
 "groupTest":false,
 "desiredCapabilities": {
         "platformName": "Android",

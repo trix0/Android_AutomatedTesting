@@ -1,6 +1,6 @@
 var images = require('./Images.js');
 
-module.exports = function(timeout,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
+module.exports = function(timeout,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
   return {
   run:async function fnCleanInstall(client,params){
     try{
@@ -37,7 +37,9 @@ module.exports = function(timeout,fnPermissionId,fnPermission,fnPermssionOnce,fn
 
         //await fnPermission(5,true,client);
 
-        loading= await fnTestFinish(images["LoginScreen_"+imageSize],client,20,"Loading screen",testName,6000,2000);
+        await fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,20,"Close intro Video ",30000);
+        loading= await fnTestFinish(images["matchTilesMessage"+"_"+imageSize],client,20,"Check if message is there If its there Test Completed",testName,6000,2000);
+        await timeout(10000);
         client.end();
       }
 

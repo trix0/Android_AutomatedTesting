@@ -2,7 +2,7 @@ const express = require('express');
 const readline = require('readline');
 const Swagger = require('swagger-client');
 const SWAGGER_URL = 'http://localhost:7100/api/v1/swagger.json';
-const AUTH_TOKEN  = '26cd01ab067140ec8f6934253c41eceba51ec96c0b1440f1a4fe1c6aa42c7507';
+const AUTH_TOKEN  = '2a317fbae0e5495582e4a8388329d7518e1fc7874abb40fc8940d18ad593a5f1';
 const child_process = require('child_process');
 const { exec } = require('child_process');
 const fs =require("fs");
@@ -70,7 +70,9 @@ rl.on('line', function(line){
 
 app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
 
-fnGetAllDevices2();
+fnGetAllDevices2().catch(err=>{
+	console.log(err);
+});
 
 
 async function fnExecuteCommand(data){
@@ -204,26 +206,32 @@ function fnReadFile(filePath){
 
 function fnGetAllDevices2(){ // needs fix 
 	return new Promise(async (resolve)=>{
-		let stfUp=await fnIsStfUp();
-		let adbDevices=await fnGetAllDevices();
-		if(stfUp&&!adbDevices.length<1){
+		try{
+			let stfUp=await fnIsStfUp();
+			let adbDevices=await fnGetAllDevices();
+			if(stfUp&&!adbDevices.length<1){
 
-			const getDevices=await clientSwag.then((api)=>{
-		      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
-		    }).catch(err=>{
-		    	throw(err);
-		    })
-		    let allDevices=getDevices.obj.devices.map(async device=>{
-		    	if(device.present&&device.ready&&!device.using){
-		    		console.log("deviceeeee")
-		    		return device.serial;
-		    	}
-		    	return;
-		    })
-		    const devices = await Promise.all(allDevices);
-		    console.log(devices)
-		    resolve(devices);
+				const getDevices=await clientSwag.then((api)=>{
+			      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
+			    }).catch(err=>{
+			    	throw(err);
+			    })
+			    let allDevices=getDevices.obj.devices.map(async device=>{
+			    	if(device.present&&device.ready&&!device.using){
+			    		console.log("deviceeeee")
+			    		return device.serial;
+			    	}
+			    	return;
+			    })
+			    const devices = await Promise.all(allDevices);
+			    console.log(devices)
+			    resolve(devices);
+			}			
 		}
+		catch(err){
+			console.log(err);
+		}
+
 	})
 
 
@@ -458,7 +466,6 @@ function fnChangeTestProperty(groupID,testId,field,value){
 
 
 function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
-
 	return new Promise((resolve,reject)=>{
 		let jCustomOpt=
 					{

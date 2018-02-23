@@ -686,3 +686,853 @@
 2018-02-20T09:23:47.638Z - info: Appium on close  null
 2018-02-20T09:23:47.646Z - info: You are not owner localhost:7405 => open STF 
 2018-02-20T09:23:47.650Z - info: You are not owner localhost:7405 => open STF 
+2018-02-21T13:39:48.648Z - info: Test execution started
+2018-02-21T13:39:48.648Z - info: Got following options to run{"testName":"Clean Install","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Clean Install","testFileName":"CleanInstall","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
+2018-02-21T13:39:48.669Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-21T13:39:48.716Z - info: executing command adb connect  localhost:7401
+2018-02-21T13:39:48.723Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-21T13:39:48.723Z - info: Trying to create appium Server on port: 4004
+2018-02-21T13:39:50.813Z - info: Appium server created on port: 4004
+2018-02-21T13:40:13.322Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-21T13:40:15.100Z - info: App exists in device => trying to remove
+2018-02-21T13:40:21.689Z - info: App removed
+2018-02-21T13:40:21.689Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-02-21T13:46:21.801Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: ESOCKETTIMEDOUT
+2018-02-21T13:46:21.823Z - info: Disconnected localhost:7401=> open STF 
+2018-02-21T13:46:32.503Z - info: Appium on close  null
+2018-02-21T13:46:32.515Z - info: You are not owner localhost:7401 => open STF 
+2018-02-21T13:46:32.516Z - info: You are not owner localhost:7401 => open STF 
+2018-02-21T15:55:43.342Z - info: Test execution started
+2018-02-21T15:55:43.342Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-21T15:55:43.482Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-21T15:55:43.528Z - info: executing command adb connect  localhost:7437
+2018-02-21T15:55:43.535Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-21T15:55:43.535Z - info: Trying to create appium Server on port: 4004
+2018-02-21T15:55:45.690Z - info: Appium server created on port: 4004
+2018-02-21T15:56:02.805Z - info: Running Signup email
+2018-02-21T15:56:02.835Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-21T15:56:02.836Z - info: Running delay for : 4000
+2018-02-21T15:56:06.841Z - info: Running delay for : 2000
+2018-02-21T15:56:09.702Z - info: Running delay for : 2000
+2018-02-21T15:56:12.539Z - info: Running delay for : 2000
+2018-02-21T15:56:15.267Z - info: Running delay for : 2000
+2018-02-21T15:56:18.073Z - info: Running delay for : 2000
+2018-02-21T15:56:20.787Z - info: Running delay for : 2000
+2018-02-21T15:56:23.946Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-21T15:56:23.946Z - info: Running click event : Click Login button with 5repets
+2018-02-21T15:56:23.946Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-21T15:56:23.946Z - info: Running delay for : 2000
+2018-02-21T15:56:25.949Z - info: Running delay for : 0
+2018-02-21T15:56:27.440Z - info: Found image on screen: Click Login button
+2018-02-21T15:56:27.578Z - info: clicked on : Click Login button with following coordinates x=483 y=27.5
+2018-02-21T15:56:27.578Z - info: Running click event : Click Email Login button with 5repets
+2018-02-21T15:56:27.578Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-21T15:56:27.578Z - info: Running delay for : 2000
+2018-02-21T15:56:29.580Z - info: Running delay for : 0
+2018-02-21T15:56:30.790Z - info: Found image on screen: Click Email Login button
+2018-02-21T15:56:30.922Z - info: clicked on : Click Email Login button with following coordinates x=152 y=812
+2018-02-21T15:56:30.922Z - info: Running click event : Click Yes age button with 5repets
+2018-02-21T15:56:30.922Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-21T15:56:30.922Z - info: Running delay for : 2000
+2018-02-21T15:56:32.925Z - info: Running delay for : 0
+2018-02-21T15:56:33.937Z - info: Found image on screen: Click Yes age button
+2018-02-21T15:56:34.062Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-21T15:56:34.063Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-21T15:56:34.063Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-21T15:56:34.063Z - info: Running delay for : 2000
+2018-02-21T15:56:36.064Z - info: Running delay for : 0
+2018-02-21T15:56:36.807Z - info: Found image on screen: Click on Enter Email field
+2018-02-21T15:56:36.958Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-21T15:56:42.936Z - info: Running clear keyboard (click on x0y0
+2018-02-21T15:56:43.099Z - info: Keyboard cleared
+2018-02-21T15:56:43.100Z - info: Running click event : Next email with 5repets
+2018-02-21T15:56:43.100Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-21T15:56:43.100Z - info: Running delay for : 500
+2018-02-21T15:56:43.601Z - info: Running delay for : 0
+2018-02-21T15:56:44.512Z - info: Found image on screen: Next email
+2018-02-21T15:56:44.649Z - info: clicked on : Next email with following coordinates x=401 y=598.5
+2018-02-21T15:56:44.649Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-21T15:56:44.649Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-21T15:56:44.649Z - info: Running delay for : 2000
+2018-02-21T15:56:46.652Z - info: Running delay for : 0
+2018-02-21T15:56:47.483Z - info: Found image on screen: Click on Enter Password field
+2018-02-21T15:56:47.642Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=458
+2018-02-21T15:56:51.560Z - info: Running clear keyboard (click on x0y0
+2018-02-21T15:56:51.696Z - info: Keyboard cleared
+2018-02-21T15:56:51.696Z - info: Running click event : Next password with 5repets
+2018-02-21T15:56:51.697Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-21T15:56:51.697Z - info: Running delay for : 100
+2018-02-21T15:56:51.798Z - info: Running delay for : 0
+2018-02-21T15:56:52.551Z - info: Found image on screen: Next password
+2018-02-21T15:56:52.686Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-21T15:56:52.686Z - info: Running click event : Accept terms circle with 5repets
+2018-02-21T15:56:52.686Z - info: Looking for image on screen:Accept terms circle with 5 repeats 
+2018-02-21T15:56:52.686Z - info: Running delay for : 500
+2018-02-21T15:56:53.188Z - info: Running delay for : 0
+2018-02-21T15:56:53.942Z - info: Running delay for : 0
+2018-02-21T15:56:54.705Z - info: Running delay for : 0
+2018-02-21T15:56:55.450Z - info: Running delay for : 0
+2018-02-21T15:56:56.137Z - info: Running delay for : 0
+2018-02-21T15:56:56.151Z - info: Looking for image on screen #5
+2018-02-21T15:56:56.151Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Accept terms circle
+2018-02-21T15:56:56.158Z - info: You are not owner localhost:7437 => open STF 
+2018-02-21T15:57:01.176Z - info: Appium on close  null
+2018-02-22T09:04:35.997Z - info: Test execution started
+2018-02-22T09:04:35.998Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T09:04:36.139Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T09:04:36.188Z - info: executing command adb connect  localhost:7409
+2018-02-22T09:04:36.198Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-22T09:04:36.198Z - info: Trying to create appium Server on port: 4004
+2018-02-22T09:04:38.304Z - info: Appium server created on port: 4004
+2018-02-22T09:04:55.396Z - info: Running Signup email
+2018-02-22T09:04:55.426Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T09:04:55.427Z - info: Running delay for : 4000
+2018-02-22T09:04:59.429Z - info: Running delay for : 2000
+2018-02-22T09:05:02.395Z - info: Running delay for : 2000
+2018-02-22T09:05:05.437Z - info: Running delay for : 2000
+2018-02-22T09:05:08.270Z - info: Running delay for : 2000
+2018-02-22T09:05:11.146Z - info: Running delay for : 2000
+2018-02-22T09:05:14.006Z - info: Running delay for : 2000
+2018-02-22T09:05:16.830Z - info: Running delay for : 2000
+2018-02-22T09:05:20.204Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-22T09:05:20.205Z - info: Running click event : Click Login button with 5repets
+2018-02-22T09:05:20.205Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-22T09:05:20.205Z - info: Running delay for : 2000
+2018-02-22T09:05:22.207Z - info: Running delay for : 0
+2018-02-22T09:05:23.866Z - info: Found image on screen: Click Login button
+2018-02-22T09:05:24.034Z - info: clicked on : Click Login button with following coordinates x=483 y=27.5
+2018-02-22T09:05:24.034Z - info: Running click event : Click Email Login button with 5repets
+2018-02-22T09:05:24.034Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-22T09:05:24.034Z - info: Running delay for : 2000
+2018-02-22T09:05:26.037Z - info: Running delay for : 0
+2018-02-22T09:05:27.291Z - info: Found image on screen: Click Email Login button
+2018-02-22T09:05:27.429Z - info: clicked on : Click Email Login button with following coordinates x=155 y=812
+2018-02-22T09:05:27.429Z - info: Running click event : Click Yes age button with 5repets
+2018-02-22T09:05:27.429Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-22T09:05:27.429Z - info: Running delay for : 2000
+2018-02-22T09:05:29.432Z - info: Running delay for : 0
+2018-02-22T09:05:30.397Z - info: Found image on screen: Click Yes age button
+2018-02-22T09:05:30.529Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-22T09:05:30.529Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-22T09:05:30.529Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-22T09:05:30.529Z - info: Running delay for : 2000
+2018-02-22T09:05:32.532Z - info: Running delay for : 0
+2018-02-22T09:05:33.255Z - info: Found image on screen: Click on Enter Email field
+2018-02-22T09:05:33.472Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-22T09:05:39.426Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:05:39.614Z - info: Keyboard cleared
+2018-02-22T09:05:39.614Z - info: Running click event : Next email with 5repets
+2018-02-22T09:05:39.614Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-22T09:05:39.614Z - info: Running delay for : 500
+2018-02-22T09:05:40.116Z - info: Running delay for : 0
+2018-02-22T09:05:40.969Z - info: Found image on screen: Next email
+2018-02-22T09:05:41.104Z - info: clicked on : Next email with following coordinates x=401 y=597.5
+2018-02-22T09:05:41.104Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-22T09:05:41.104Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-22T09:05:41.104Z - info: Running delay for : 2000
+2018-02-22T09:05:43.107Z - info: Running delay for : 0
+2018-02-22T09:05:43.872Z - info: Found image on screen: Click on Enter Password field
+2018-02-22T09:05:44.020Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=529
+2018-02-22T09:05:48.086Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:05:48.217Z - info: Keyboard cleared
+2018-02-22T09:05:48.217Z - info: Running click event : Next password with 5repets
+2018-02-22T09:05:48.217Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-22T09:05:48.217Z - info: Running delay for : 100
+2018-02-22T09:05:48.317Z - info: Running delay for : 0
+2018-02-22T09:05:49.076Z - info: Found image on screen: Next password
+2018-02-22T09:05:49.217Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-22T09:05:49.217Z - info: Running click event : Accept terms circle with 5repets
+2018-02-22T09:05:49.217Z - info: Looking for image on screen:Accept terms circle with 5 repeats 
+2018-02-22T09:05:49.217Z - info: Running delay for : 500
+2018-02-22T09:05:49.717Z - info: Running delay for : 0
+2018-02-22T09:05:50.568Z - info: Found image on screen: Accept terms circle
+2018-02-22T09:05:50.707Z - info: clicked on : Accept terms circle with following coordinates x=54.5 y=463
+2018-02-22T09:05:50.707Z - info: Running click event : terms next button with 5repets
+2018-02-22T09:05:50.707Z - info: Looking for image on screen:terms next button with 5 repeats 
+2018-02-22T09:05:50.707Z - info: Running delay for : 500
+2018-02-22T09:05:51.208Z - info: Running delay for : 0
+2018-02-22T09:05:51.989Z - info: Found image on screen: terms next button
+2018-02-22T09:05:52.126Z - info: clicked on : terms next button with following coordinates x=399 y=665.5
+2018-02-22T09:05:52.126Z - info: Running click event : My account button with 5repets
+2018-02-22T09:05:52.126Z - info: Looking for image on screen:My account button with 5 repeats 
+2018-02-22T09:05:52.126Z - info: Running delay for : 500
+2018-02-22T09:05:52.627Z - info: Running delay for : 0
+2018-02-22T09:05:53.471Z - info: Found image on screen: My account button
+2018-02-22T09:05:53.606Z - info: clicked on : My account button with following coordinates x=141.5 y=694
+2018-02-22T09:05:53.607Z - info: Running click event : Fill name with 5repets
+2018-02-22T09:05:53.607Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-22T09:05:53.607Z - info: Running delay for : 500
+2018-02-22T09:05:54.108Z - info: Running delay for : 0
+2018-02-22T09:05:54.871Z - info: Found image on screen: Fill name
+2018-02-22T09:05:55.041Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-22T09:05:59.040Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:05:59.184Z - info: Keyboard cleared
+2018-02-22T09:05:59.184Z - info: Running click event : BirthdayField  with 5repets
+2018-02-22T09:05:59.184Z - info: Looking for image on screen:BirthdayField  with 5 repeats 
+2018-02-22T09:05:59.184Z - info: Running delay for : 500
+2018-02-22T09:05:59.685Z - info: Running delay for : 0
+2018-02-22T09:06:00.491Z - info: Found image on screen: BirthdayField 
+2018-02-22T09:06:00.667Z - info: clicked on : BirthdayField  with following coordinates x=270.5 y=585.5
+2018-02-22T09:06:05.295Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:06:05.455Z - info: Keyboard cleared
+2018-02-22T09:06:05.455Z - info: Running click event : create profile button  with 5repets
+2018-02-22T09:06:05.456Z - info: Looking for image on screen:create profile button  with 5 repeats 
+2018-02-22T09:06:05.456Z - info: Running delay for : 500
+2018-02-22T09:06:05.956Z - info: Running delay for : 0
+2018-02-22T09:06:06.788Z - info: Found image on screen: create profile button 
+2018-02-22T09:06:06.919Z - info: clicked on : create profile button  with following coordinates x=395.5 y=752.5
+2018-02-22T09:06:06.920Z - info: Looking for image on screen:If 0 coins then looged in with 20 repeats 
+2018-02-22T09:06:06.920Z - info: Running delay for : 1000
+2018-02-22T09:06:07.921Z - info: Running delay for : 0
+2018-02-22T09:06:08.742Z - info: Running delay for : 0
+2018-02-22T09:06:09.510Z - info: Running delay for : 0
+2018-02-22T09:06:10.325Z - info: Running delay for : 0
+2018-02-22T09:06:11.203Z - info: Running delay for : 0
+2018-02-22T09:06:12.235Z - info: Running delay for : 0
+2018-02-22T09:06:13.137Z - info: Running delay for : 0
+2018-02-22T09:06:14.101Z - info: Running delay for : 0
+2018-02-22T09:06:14.959Z - info: Running delay for : 0
+2018-02-22T09:06:15.926Z - info: Running delay for : 0
+2018-02-22T09:06:16.729Z - info: Running delay for : 0
+2018-02-22T09:06:18.539Z - info: Found image on screen: If 0 coins then looged in
+2018-02-22T09:06:18.539Z - info: Running click event :  x Button   with 5repets
+2018-02-22T09:06:18.539Z - info: Looking for image on screen: x Button   with 5 repeats 
+2018-02-22T09:06:18.539Z - info: Running delay for : 5000
+2018-02-22T09:06:23.539Z - info: Running delay for : 0
+2018-02-22T09:06:24.870Z - info: Found image on screen:  x Button  
+2018-02-22T09:06:25.003Z - info: clicked on :  x Button   with following coordinates x=513 y=111
+2018-02-22T09:06:25.003Z - info: Running click event : Settings Button  with 5repets
+2018-02-22T09:06:25.003Z - info: Looking for image on screen:Settings Button  with 5 repeats 
+2018-02-22T09:06:25.003Z - info: Running delay for : 500
+2018-02-22T09:06:25.504Z - info: Running delay for : 0
+2018-02-22T09:06:27.065Z - info: Found image on screen: Settings Button 
+2018-02-22T09:06:27.200Z - info: clicked on : Settings Button  with following coordinates x=44 y=903
+2018-02-22T09:06:27.200Z - info: Running click event : Logout Button  with 5repets
+2018-02-22T09:06:27.200Z - info: Looking for image on screen:Logout Button  with 5 repeats 
+2018-02-22T09:06:27.201Z - info: Running delay for : 500
+2018-02-22T09:06:27.702Z - info: Running delay for : 0
+2018-02-22T09:06:28.641Z - info: Found image on screen: Logout Button 
+2018-02-22T09:06:28.770Z - info: clicked on : Logout Button  with following coordinates x=437 y=210
+2018-02-22T09:06:28.770Z - info: Running click event : Big Ok Logout button  with 5repets
+2018-02-22T09:06:28.770Z - info: Looking for image on screen:Big Ok Logout button  with 5 repeats 
+2018-02-22T09:06:28.770Z - info: Running delay for : 500
+2018-02-22T09:06:29.271Z - info: Running delay for : 0
+2018-02-22T09:06:30.637Z - info: Running delay for : 0
+2018-02-22T09:06:31.793Z - info: Running delay for : 0
+2018-02-22T09:06:32.979Z - info: Found image on screen: Big Ok Logout button 
+2018-02-22T09:06:33.121Z - info: clicked on : Big Ok Logout button  with following coordinates x=269.5 y=638
+2018-02-22T09:06:33.121Z - info: Looking for image on screen:Logout status correct with 20 repeats 
+2018-02-22T09:06:33.122Z - info: Running delay for : 5000
+2018-02-22T09:06:38.122Z - info: Running delay for : 0
+2018-02-22T09:06:39.656Z - info: Running delay for : 0
+2018-02-22T09:06:41.069Z - info: Running delay for : 0
+2018-02-22T09:06:42.586Z - info: Running delay for : 0
+2018-02-22T09:06:46.290Z - info: Found image on screen: Logout status correct
+2018-02-22T09:06:50.976Z - info: Disconnected localhost:7409=> open STF 
+2018-02-22T09:24:30.120Z - info: Appium on close  null
+2018-02-22T09:45:18.866Z - info: Test execution started
+2018-02-22T09:45:18.867Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T09:45:19.008Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T09:45:19.072Z - info: executing command adb connect  localhost:7401
+2018-02-22T09:45:19.080Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-22T09:45:19.081Z - info: Trying to create appium Server on port: 4004
+2018-02-22T09:45:21.327Z - info: Appium server created on port: 4004
+2018-02-22T09:45:36.137Z - info: Running Signup email
+2018-02-22T09:45:36.169Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T09:45:36.169Z - info: Running delay for : 4000
+2018-02-22T09:45:40.174Z - info: Running delay for : 2000
+2018-02-22T09:45:42.935Z - info: Running delay for : 2000
+2018-02-22T09:45:45.864Z - info: Running delay for : 2000
+2018-02-22T09:45:48.631Z - info: Running delay for : 2000
+2018-02-22T09:45:51.453Z - info: Running delay for : 2000
+2018-02-22T09:45:54.148Z - info: Running delay for : 2000
+2018-02-22T09:45:57.664Z - info: Running delay for : 2000
+2018-02-22T09:46:01.368Z - info: Running delay for : 2000
+2018-02-22T09:46:04.364Z - info: Running delay for : 2000
+2018-02-22T09:46:08.564Z - info: Running delay for : 2000
+2018-02-22T09:46:12.038Z - info: Running delay for : 2000
+2018-02-22T09:46:16.829Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-22T09:46:16.830Z - info: Running click event : Click Login button with 5repets
+2018-02-22T09:46:16.830Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-22T09:46:16.830Z - info: Running delay for : 2000
+2018-02-22T09:46:18.832Z - info: Running delay for : 0
+2018-02-22T09:46:21.830Z - info: Found image on screen: Click Login button
+2018-02-22T09:46:21.979Z - info: clicked on : Click Login button with following coordinates x=477 y=29.5
+2018-02-22T09:46:21.979Z - info: Running click event : Click Email Login button with 5repets
+2018-02-22T09:46:21.979Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-22T09:46:21.979Z - info: Running delay for : 2000
+2018-02-22T09:46:23.982Z - info: Running delay for : 0
+2018-02-22T09:46:25.210Z - info: Found image on screen: Click Email Login button
+2018-02-22T09:46:25.344Z - info: clicked on : Click Email Login button with following coordinates x=152 y=812
+2018-02-22T09:46:25.344Z - info: Running click event : Click Yes age button with 5repets
+2018-02-22T09:46:25.344Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-22T09:46:25.344Z - info: Running delay for : 2000
+2018-02-22T09:46:27.347Z - info: Running delay for : 0
+2018-02-22T09:46:28.297Z - info: Found image on screen: Click Yes age button
+2018-02-22T09:46:28.438Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-22T09:46:28.439Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-22T09:46:28.439Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-22T09:46:28.439Z - info: Running delay for : 2000
+2018-02-22T09:46:30.442Z - info: Running delay for : 0
+2018-02-22T09:46:31.234Z - info: Found image on screen: Click on Enter Email field
+2018-02-22T09:46:31.447Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-22T09:46:36.936Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:46:37.086Z - info: Keyboard cleared
+2018-02-22T09:46:37.086Z - info: Running click event : Next email with 5repets
+2018-02-22T09:46:37.087Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-22T09:46:37.087Z - info: Running delay for : 500
+2018-02-22T09:46:37.588Z - info: Running delay for : 0
+2018-02-22T09:46:38.387Z - info: Found image on screen: Next email
+2018-02-22T09:46:38.528Z - info: clicked on : Next email with following coordinates x=401 y=597.5
+2018-02-22T09:46:38.528Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-22T09:46:38.528Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-22T09:46:38.528Z - info: Running delay for : 2000
+2018-02-22T09:46:40.530Z - info: Running delay for : 0
+2018-02-22T09:46:41.395Z - info: Found image on screen: Click on Enter Password field
+2018-02-22T09:46:41.548Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=529
+2018-02-22T09:46:45.696Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:46:45.834Z - info: Keyboard cleared
+2018-02-22T09:46:45.835Z - info: Running click event : Next password with 5repets
+2018-02-22T09:46:45.835Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-22T09:46:45.835Z - info: Running delay for : 100
+2018-02-22T09:46:45.935Z - info: Running delay for : 0
+2018-02-22T09:46:46.718Z - info: Found image on screen: Next password
+2018-02-22T09:46:46.854Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-22T09:46:46.855Z - info: Running click event : My account button with 5repets
+2018-02-22T09:46:46.855Z - info: Looking for image on screen:My account button with 5 repeats 
+2018-02-22T09:46:46.855Z - info: Running delay for : 500
+2018-02-22T09:46:47.356Z - info: Running delay for : 0
+2018-02-22T09:46:48.208Z - info: Found image on screen: My account button
+2018-02-22T09:46:48.339Z - info: clicked on : My account button with following coordinates x=141.5 y=694
+2018-02-22T09:46:48.340Z - info: Running click event : Fill name with 5repets
+2018-02-22T09:46:48.340Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-22T09:46:48.340Z - info: Running delay for : 500
+2018-02-22T09:46:48.841Z - info: Running delay for : 0
+2018-02-22T09:46:49.591Z - info: Found image on screen: Fill name
+2018-02-22T09:46:49.749Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-22T09:46:54.414Z - info: Running clear keyboard (click on x0y0
+2018-02-22T09:46:54.574Z - info: Keyboard cleared
+2018-02-22T09:46:54.574Z - info: Running click event : BirthdayField  with 5repets
+2018-02-22T09:46:54.574Z - info: Looking for image on screen:BirthdayField  with 5 repeats 
+2018-02-22T09:46:54.574Z - info: Running delay for : 500
+2018-02-22T09:46:55.075Z - info: Running delay for : 0
+2018-02-22T09:46:55.919Z - info: Found image on screen: BirthdayField 
+2018-02-22T09:46:56.081Z - info: clicked on : BirthdayField  with following coordinates x=270.5 y=585.5
+2018-02-22T09:47:00.746Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An element could not be located on the page using the given search parameters ("android=new UiSelector().text("1995")").
+2018-02-22T09:47:00.770Z - info: Disconnected localhost:7401=> open STF 
+2018-02-22T09:55:39.589Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T09:55:39.590Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T09:55:44.616Z - info: Appium on close  null
+2018-02-22T10:14:25.282Z - info: Test execution started
+2018-02-22T10:14:25.283Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T10:14:25.426Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T10:14:25.475Z - info: executing command adb connect  localhost:7401
+2018-02-22T10:14:25.484Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-22T10:14:25.484Z - info: Trying to create appium Server on port: 4004
+2018-02-22T10:14:27.610Z - info: Appium server created on port: 4004
+2018-02-22T10:14:48.474Z - info: Running Signup email
+2018-02-22T10:14:48.503Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T10:14:48.503Z - info: Running delay for : 4000
+2018-02-22T10:14:52.507Z - info: Running delay for : 2000
+2018-02-22T10:14:55.380Z - info: Running delay for : 2000
+2018-02-22T10:14:58.142Z - info: Running delay for : 2000
+2018-02-22T10:15:00.833Z - info: Running delay for : 2000
+2018-02-22T10:15:03.504Z - info: Running delay for : 2000
+2018-02-22T10:15:06.314Z - info: Running delay for : 2000
+2018-02-22T10:15:09.641Z - info: Running delay for : 2000
+2018-02-22T10:15:12.845Z - info: Running delay for : 2000
+2018-02-22T10:15:16.409Z - info: Running delay for : 2000
+2018-02-22T10:15:19.912Z - info: Running delay for : 2000
+2018-02-22T10:15:24.865Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-22T10:15:24.865Z - info: Running click event : Click Login button with 5repets
+2018-02-22T10:15:24.865Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-22T10:15:24.865Z - info: Running delay for : 2000
+2018-02-22T10:15:26.868Z - info: Running delay for : 0
+2018-02-22T10:15:29.629Z - info: Found image on screen: Click Login button
+2018-02-22T10:15:29.785Z - info: clicked on : Click Login button with following coordinates x=477 y=29.5
+2018-02-22T10:15:29.785Z - info: Running click event : Click Email Login button with 5repets
+2018-02-22T10:15:29.786Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-22T10:15:29.786Z - info: Running delay for : 2000
+2018-02-22T10:15:31.788Z - info: Running delay for : 0
+2018-02-22T10:15:32.960Z - info: Found image on screen: Click Email Login button
+2018-02-22T10:15:33.093Z - info: clicked on : Click Email Login button with following coordinates x=152 y=812
+2018-02-22T10:15:33.093Z - info: Running click event : Click Yes age button with 5repets
+2018-02-22T10:15:33.093Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-22T10:15:33.093Z - info: Running delay for : 2000
+2018-02-22T10:15:35.095Z - info: Running delay for : 0
+2018-02-22T10:15:36.080Z - info: Found image on screen: Click Yes age button
+2018-02-22T10:15:36.209Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-22T10:15:36.209Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-22T10:15:36.209Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-22T10:15:36.209Z - info: Running delay for : 2000
+2018-02-22T10:15:38.212Z - info: Running delay for : 0
+2018-02-22T10:15:38.958Z - info: Found image on screen: Click on Enter Email field
+2018-02-22T10:15:39.188Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-22T10:15:44.712Z - info: Running clear keyboard (click on x0y0
+2018-02-22T10:15:44.872Z - info: Keyboard cleared
+2018-02-22T10:15:44.872Z - info: Running click event : Next email with 5repets
+2018-02-22T10:15:44.872Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-22T10:15:44.872Z - info: Running delay for : 500
+2018-02-22T10:15:45.374Z - info: Running delay for : 0
+2018-02-22T10:15:46.174Z - info: Found image on screen: Next email
+2018-02-22T10:15:46.311Z - info: clicked on : Next email with following coordinates x=401 y=597.5
+2018-02-22T10:15:46.311Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-22T10:15:46.312Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-22T10:15:46.312Z - info: Running delay for : 2000
+2018-02-22T10:15:48.315Z - info: Running delay for : 0
+2018-02-22T10:15:49.078Z - info: Found image on screen: Click on Enter Password field
+2018-02-22T10:15:49.210Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=529
+2018-02-22T10:15:53.387Z - info: Running clear keyboard (click on x0y0
+2018-02-22T10:15:53.528Z - info: Keyboard cleared
+2018-02-22T10:15:53.528Z - info: Running click event : Next password with 5repets
+2018-02-22T10:15:53.529Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-22T10:15:53.529Z - info: Running delay for : 100
+2018-02-22T10:15:53.629Z - info: Running delay for : 0
+2018-02-22T10:15:54.364Z - info: Found image on screen: Next password
+2018-02-22T10:15:54.502Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-22T10:15:54.503Z - info: Running click event : My account button with 5repets
+2018-02-22T10:15:54.503Z - info: Looking for image on screen:My account button with 5 repeats 
+2018-02-22T10:15:54.503Z - info: Running delay for : 500
+2018-02-22T10:15:55.004Z - info: Running delay for : 0
+2018-02-22T10:15:55.880Z - info: Found image on screen: My account button
+2018-02-22T10:15:56.010Z - info: clicked on : My account button with following coordinates x=141.5 y=694
+2018-02-22T10:15:56.010Z - info: Running click event : Fill name with 5repets
+2018-02-22T10:15:56.010Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-22T10:15:56.010Z - info: Running delay for : 500
+2018-02-22T10:15:56.510Z - info: Running delay for : 0
+2018-02-22T10:15:57.294Z - info: Found image on screen: Fill name
+2018-02-22T10:15:57.461Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-22T10:16:01.700Z - info: Running click event : Fill name with 5repets
+2018-02-22T10:16:01.700Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-22T10:16:01.700Z - info: Running delay for : 500
+2018-02-22T10:16:02.201Z - info: Running delay for : 0
+2018-02-22T10:16:03.084Z - info: Found image on screen: Fill name
+2018-02-22T10:16:03.245Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-22T10:16:03.765Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An element could not be located on the page using the given search parameters ("android=new UiSelector().text("testName")").
+2018-02-22T10:16:03.788Z - info: Disconnected localhost:7401=> open STF 
+2018-02-22T10:20:36.875Z - info: Appium on close  null
+2018-02-22T10:20:36.895Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T10:20:36.895Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T14:08:14.494Z - info: Test execution started
+2018-02-22T14:08:14.495Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T14:08:14.634Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T14:08:14.680Z - info: executing command adb connect  localhost:7401
+2018-02-22T14:08:14.688Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-22T14:08:14.689Z - info: Trying to create appium Server on port: 4004
+2018-02-22T14:08:16.748Z - info: Appium server created on port: 4004
+2018-02-22T14:08:33.985Z - info: Running Signup email
+2018-02-22T14:08:34.014Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T14:08:34.014Z - info: Running delay for : 4000
+2018-02-22T14:08:38.020Z - info: Running delay for : 2000
+2018-02-22T14:08:41.059Z - info: Running delay for : 2000
+2018-02-22T14:08:43.970Z - info: Running delay for : 2000
+2018-02-22T14:08:46.752Z - info: Running delay for : 2000
+2018-02-22T14:08:49.554Z - info: Running delay for : 2000
+2018-02-22T14:08:52.287Z - info: Running delay for : 2000
+2018-02-22T14:08:55.468Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-22T14:08:55.468Z - info: Running click event : Click Login button with 5repets
+2018-02-22T14:08:55.468Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-22T14:08:55.468Z - info: Running delay for : 2000
+2018-02-22T14:08:57.471Z - info: Running delay for : 0
+2018-02-22T14:08:58.949Z - info: Found image on screen: Click Login button
+2018-02-22T14:08:59.114Z - info: clicked on : Click Login button with following coordinates x=483 y=27.5
+2018-02-22T14:08:59.292Z - info: Running click event : Click Email Login button with 5repets
+2018-02-22T14:08:59.292Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-22T14:08:59.292Z - info: Running delay for : 2000
+2018-02-22T14:09:01.294Z - info: Running delay for : 0
+2018-02-22T14:09:02.532Z - info: Found image on screen: Click Email Login button
+2018-02-22T14:09:02.663Z - info: clicked on : Click Email Login button with following coordinates x=154 y=812
+2018-02-22T14:09:02.663Z - info: Running click event : Click Yes age button with 5repets
+2018-02-22T14:09:02.663Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-22T14:09:02.663Z - info: Running delay for : 2000
+2018-02-22T14:09:04.665Z - info: Running delay for : 0
+2018-02-22T14:09:05.583Z - info: Found image on screen: Click Yes age button
+2018-02-22T14:09:05.708Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-22T14:09:05.708Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-22T14:09:05.708Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-22T14:09:05.708Z - info: Running delay for : 2000
+2018-02-22T14:09:07.710Z - info: Running delay for : 0
+2018-02-22T14:09:08.523Z - info: Found image on screen: Click on Enter Email field
+2018-02-22T14:09:08.773Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-22T14:09:14.867Z - info: Running clear keyboard (click on x0y0
+2018-02-22T14:09:15.007Z - info: Keyboard cleared
+2018-02-22T14:09:15.007Z - info: Running click event : Next email with 5repets
+2018-02-22T14:09:15.007Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-22T14:09:15.007Z - info: Running delay for : 500
+2018-02-22T14:09:15.509Z - info: Running delay for : 0
+2018-02-22T14:09:16.418Z - info: Found image on screen: Next email
+2018-02-22T14:09:16.560Z - info: clicked on : Next email with following coordinates x=401 y=597.5
+2018-02-22T14:09:16.560Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-22T14:09:16.560Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-22T14:09:16.560Z - info: Running delay for : 2000
+2018-02-22T14:09:18.563Z - info: Running delay for : 0
+2018-02-22T14:09:19.494Z - info: Found image on screen: Click on Enter Password field
+2018-02-22T14:09:19.690Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=529
+2018-02-22T14:09:23.956Z - info: Running clear keyboard (click on x0y0
+2018-02-22T14:09:24.096Z - info: Keyboard cleared
+2018-02-22T14:09:24.096Z - info: Running click event : Next password with 5repets
+2018-02-22T14:09:24.096Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-22T14:09:24.096Z - info: Running delay for : 100
+2018-02-22T14:09:24.197Z - info: Running delay for : 0
+2018-02-22T14:09:24.963Z - info: Found image on screen: Next password
+2018-02-22T14:09:25.099Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-22T14:09:25.099Z - info: Running click event : Accept terms circle with 5repets
+2018-02-22T14:09:25.100Z - info: Looking for image on screen:Accept terms circle with 5 repeats 
+2018-02-22T14:09:25.100Z - info: Running delay for : 500
+2018-02-22T14:09:25.601Z - info: Running delay for : 0
+2018-02-22T14:09:26.443Z - info: Found image on screen: Accept terms circle
+2018-02-22T14:09:26.580Z - info: clicked on : Accept terms circle with following coordinates x=54.5 y=463
+2018-02-22T14:09:26.580Z - info: Running click event : terms next button with 5repets
+2018-02-22T14:09:26.580Z - info: Looking for image on screen:terms next button with 5 repeats 
+2018-02-22T14:09:26.580Z - info: Running delay for : 500
+2018-02-22T14:09:27.082Z - info: Running delay for : 0
+2018-02-22T14:09:27.888Z - info: Found image on screen: terms next button
+2018-02-22T14:09:28.012Z - info: clicked on : terms next button with following coordinates x=399 y=665.5
+2018-02-22T14:09:28.013Z - info: Running click event : My account button with 5repets
+2018-02-22T14:09:28.013Z - info: Looking for image on screen:My account button with 5 repeats 
+2018-02-22T14:09:28.013Z - info: Running delay for : 500
+2018-02-22T14:09:28.514Z - info: Running delay for : 0
+2018-02-22T14:09:29.344Z - info: Found image on screen: My account button
+2018-02-22T14:09:29.487Z - info: clicked on : My account button with following coordinates x=141.5 y=694
+2018-02-22T14:09:29.488Z - info: Running click event : Fill name with 5repets
+2018-02-22T14:09:29.488Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-22T14:09:29.488Z - info: Running delay for : 500
+2018-02-22T14:09:29.989Z - info: Running delay for : 0
+2018-02-22T14:09:30.765Z - info: Found image on screen: Fill name
+2018-02-22T14:09:30.925Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-22T14:09:35.087Z - info: Running clear keyboard (click on x0y0
+2018-02-22T14:09:35.225Z - info: Keyboard cleared
+2018-02-22T14:09:35.225Z - info: Running click event : BirthdayField  with 5repets
+2018-02-22T14:09:35.226Z - info: Looking for image on screen:BirthdayField  with 5 repeats 
+2018-02-22T14:09:35.226Z - info: Running delay for : 500
+2018-02-22T14:09:35.727Z - info: Running delay for : 0
+2018-02-22T14:09:36.530Z - info: Found image on screen: BirthdayField 
+2018-02-22T14:09:36.688Z - info: clicked on : BirthdayField  with following coordinates x=270.5 y=585.5
+2018-02-22T14:09:42.109Z - info: Running clear keyboard (click on x0y0
+2018-02-22T14:09:42.262Z - info: Keyboard cleared
+2018-02-22T14:09:42.263Z - info: Running click event : create profile button  with 5repets
+2018-02-22T14:09:42.263Z - info: Looking for image on screen:create profile button  with 5 repeats 
+2018-02-22T14:09:42.263Z - info: Running delay for : 500
+2018-02-22T14:09:42.764Z - info: Running delay for : 0
+2018-02-22T14:09:43.621Z - info: Found image on screen: create profile button 
+2018-02-22T14:09:43.757Z - info: clicked on : create profile button  with following coordinates x=395.5 y=751.5
+2018-02-22T14:09:43.758Z - info: Looking for image on screen:If 0 coins then looged in with 20 repeats 
+2018-02-22T14:09:43.758Z - info: Running delay for : 1000
+2018-02-22T14:09:44.759Z - info: Running delay for : 0
+2018-02-22T14:09:46.409Z - info: Found image on screen: If 0 coins then looged in
+2018-02-22T14:09:46.410Z - info: Running click event :  x Button   with 5repets
+2018-02-22T14:09:46.410Z - info: Looking for image on screen: x Button   with 5 repeats 
+2018-02-22T14:09:46.410Z - info: Running delay for : 5000
+2018-02-22T14:09:51.411Z - info: Running delay for : 0
+2018-02-22T14:09:52.682Z - info: Found image on screen:  x Button  
+2018-02-22T14:09:52.808Z - info: clicked on :  x Button   with following coordinates x=513 y=111
+2018-02-22T14:09:52.808Z - info: Running click event : Settings Button  with 5repets
+2018-02-22T14:09:52.808Z - info: Looking for image on screen:Settings Button  with 5 repeats 
+2018-02-22T14:09:52.809Z - info: Running delay for : 500
+2018-02-22T14:09:53.310Z - info: Running delay for : 0
+2018-02-22T14:09:54.993Z - info: Found image on screen: Settings Button 
+2018-02-22T14:09:55.122Z - info: clicked on : Settings Button  with following coordinates x=44 y=903
+2018-02-22T14:09:55.122Z - info: Running click event : Logout Button  with 5repets
+2018-02-22T14:09:55.122Z - info: Looking for image on screen:Logout Button  with 5 repeats 
+2018-02-22T14:09:55.122Z - info: Running delay for : 500
+2018-02-22T14:09:55.623Z - info: Running delay for : 0
+2018-02-22T14:09:56.587Z - info: Found image on screen: Logout Button 
+2018-02-22T14:09:56.718Z - info: clicked on : Logout Button  with following coordinates x=437 y=210
+2018-02-22T14:09:56.718Z - info: Running click event : Big Ok Logout button  with 5repets
+2018-02-22T14:09:56.718Z - info: Looking for image on screen:Big Ok Logout button  with 5 repeats 
+2018-02-22T14:09:56.718Z - info: Running delay for : 500
+2018-02-22T14:09:57.220Z - info: Running delay for : 0
+2018-02-22T14:09:58.552Z - info: Running delay for : 0
+2018-02-22T14:09:59.764Z - info: Running delay for : 0
+2018-02-22T14:10:01.094Z - info: Found image on screen: Big Ok Logout button 
+2018-02-22T14:10:01.224Z - info: clicked on : Big Ok Logout button  with following coordinates x=269.5 y=638
+2018-02-22T14:10:01.224Z - info: Looking for image on screen:Logout status correct with 20 repeats 
+2018-02-22T14:10:01.224Z - info: Running delay for : 5000
+2018-02-22T14:10:06.224Z - info: Running delay for : 0
+2018-02-22T14:10:07.792Z - info: Running delay for : 0
+2018-02-22T14:10:09.231Z - info: Running delay for : 0
+2018-02-22T14:10:10.860Z - info: Running delay for : 0
+2018-02-22T14:10:13.697Z - info: Found image on screen: Logout status correct
+2018-02-22T14:10:16.940Z - info: Disconnected localhost:7401=> open STF 
+2018-02-22T14:11:25.598Z - info: Appium on close  null
+2018-02-22T14:11:25.609Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T14:11:25.613Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T14:37:50.095Z - info: Test execution started
+2018-02-22T14:37:50.096Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T14:37:50.236Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T14:37:50.286Z - info: executing command adb connect  localhost:7401
+2018-02-22T14:37:50.297Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-22T14:37:50.297Z - info: Trying to create appium Server on port: 4004
+2018-02-22T14:37:52.400Z - info: Appium server created on port: 4004
+2018-02-22T14:38:12.765Z - info: Running Signup email
+2018-02-22T14:38:12.804Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T14:38:12.805Z - info: Running delay for : 4000
+2018-02-22T14:38:16.811Z - info: Running delay for : 2000
+2018-02-22T14:38:19.676Z - info: Running delay for : 2000
+2018-02-22T14:38:22.432Z - info: Running delay for : 2000
+2018-02-22T14:38:25.589Z - info: Running delay for : 2000
+2018-02-22T14:38:28.289Z - info: Running delay for : 2000
+2018-02-22T14:38:31.295Z - info: Running delay for : 2000
+2018-02-22T14:38:34.100Z - info: Running delay for : 2000
+2018-02-22T14:38:36.959Z - info: Running delay for : 2000
+2018-02-22T14:38:40.621Z - info: Running delay for : 2000
+2018-02-22T14:38:43.607Z - info: Running delay for : 2000
+2018-02-22T14:38:47.892Z - info: Running delay for : 2000
+2018-02-22T14:38:51.214Z - info: Running delay for : 2000
+2018-02-22T14:38:55.910Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-22T14:38:55.911Z - info: Running click event : Click Login button with 5repets
+2018-02-22T14:38:55.911Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-22T14:38:55.911Z - info: Running delay for : 2000
+2018-02-22T14:38:57.913Z - info: Running delay for : 0
+2018-02-22T14:39:00.719Z - info: Found image on screen: Click Login button
+2018-02-22T14:39:00.989Z - info: clicked on : Click Login button with following coordinates x=477 y=29.5
+2018-02-22T14:39:04.392Z - info: Running click event : Click Email Login button with 5repets
+2018-02-22T14:39:04.392Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-22T14:39:04.392Z - info: Running delay for : 2000
+2018-02-22T14:39:06.395Z - info: Running delay for : 0
+2018-02-22T14:39:06.967Z - info: Running delay for : 0
+2018-02-22T14:39:07.581Z - info: Running delay for : 0
+2018-02-22T14:39:08.158Z - info: Running delay for : 0
+2018-02-22T14:39:08.748Z - info: Running delay for : 0
+2018-02-22T14:39:09.314Z - info: Looking for image on screen #5
+2018-02-22T14:39:09.315Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Click Email Login button
+2018-02-22T14:39:09.336Z - info: Disconnected localhost:7401=> open STF 
+2018-02-22T14:50:14.800Z - info: Appium on close  null
+2018-02-22T14:50:14.893Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T14:50:14.893Z - info: You are not owner localhost:7401 => open STF 
+2018-02-23T08:19:37.296Z - info: Test execution started
+2018-02-23T08:19:37.296Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-23T08:19:37.436Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-23T08:19:37.486Z - info: executing command adb connect  localhost:7413
+2018-02-23T08:19:37.494Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-23T08:19:37.494Z - info: Trying to create appium Server on port: 4004
+2018-02-23T08:19:39.622Z - info: Appium server created on port: 4004
+2018-02-23T08:19:55.098Z - info: Running Signup email
+2018-02-23T08:19:55.132Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-23T08:19:55.132Z - info: Running delay for : 4000
+2018-02-23T08:19:59.137Z - info: Running delay for : 2000
+2018-02-23T08:20:02.157Z - info: Running delay for : 2000
+2018-02-23T08:20:04.957Z - info: Running delay for : 2000
+2018-02-23T08:20:07.587Z - info: Running delay for : 2000
+2018-02-23T08:20:10.175Z - info: Running delay for : 2000
+2018-02-23T08:20:13.238Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-23T08:20:13.238Z - info: Running click event : Click Login button with 5repets
+2018-02-23T08:20:13.238Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-23T08:20:13.238Z - info: Running delay for : 2000
+2018-02-23T08:20:15.240Z - info: Running delay for : 0
+2018-02-23T08:20:16.373Z - info: Found image on screen: Click Login button
+2018-02-23T08:20:16.590Z - info: clicked on : Click Login button with following coordinates x=483 y=27.5
+2018-02-23T08:20:16.590Z - info: Running click event : Click Email Login button with 5repets
+2018-02-23T08:20:16.590Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-23T08:20:16.590Z - info: Running delay for : 2000
+2018-02-23T08:20:18.591Z - info: Running delay for : 0
+2018-02-23T08:20:19.551Z - info: Found image on screen: Click Email Login button
+2018-02-23T08:20:19.682Z - info: clicked on : Click Email Login button with following coordinates x=151 y=812
+2018-02-23T08:20:19.682Z - info: Running click event : Click Yes age button with 5repets
+2018-02-23T08:20:19.682Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-23T08:20:19.683Z - info: Running delay for : 2000
+2018-02-23T08:20:21.685Z - info: Running delay for : 0
+2018-02-23T08:20:22.559Z - info: Found image on screen: Click Yes age button
+2018-02-23T08:20:22.706Z - info: clicked on : Click Yes age button with following coordinates x=271 y=585
+2018-02-23T08:20:22.706Z - info: Running click event : Click on Enter Email field with 5repets
+2018-02-23T08:20:22.706Z - info: Looking for image on screen:Click on Enter Email field with 5 repeats 
+2018-02-23T08:20:22.706Z - info: Running delay for : 2000
+2018-02-23T08:20:24.708Z - info: Running delay for : 0
+2018-02-23T08:20:25.425Z - info: Found image on screen: Click on Enter Email field
+2018-02-23T08:20:25.615Z - info: clicked on : Click on Enter Email field with following coordinates x=272 y=456.5
+2018-02-23T08:20:30.512Z - info: Running clear keyboard (click on x0y0
+2018-02-23T08:20:30.648Z - info: Keyboard cleared
+2018-02-23T08:20:30.648Z - info: Running click event : Next email with 5repets
+2018-02-23T08:20:30.648Z - info: Looking for image on screen:Next email with 5 repeats 
+2018-02-23T08:20:30.648Z - info: Running delay for : 500
+2018-02-23T08:20:31.149Z - info: Running delay for : 0
+2018-02-23T08:20:31.839Z - info: Found image on screen: Next email
+2018-02-23T08:20:32.003Z - info: clicked on : Next email with following coordinates x=401 y=597.5
+2018-02-23T08:20:32.003Z - info: Running click event : Click on Enter Password field with 5repets
+2018-02-23T08:20:32.003Z - info: Looking for image on screen:Click on Enter Password field with 5 repeats 
+2018-02-23T08:20:32.003Z - info: Running delay for : 2000
+2018-02-23T08:20:34.005Z - info: Running delay for : 0
+2018-02-23T08:20:34.761Z - info: Found image on screen: Click on Enter Password field
+2018-02-23T08:20:34.931Z - info: clicked on : Click on Enter Password field with following coordinates x=270 y=529
+2018-02-23T08:20:38.818Z - info: Running clear keyboard (click on x0y0
+2018-02-23T08:20:38.959Z - info: Keyboard cleared
+2018-02-23T08:20:38.960Z - info: Running click event : Next password with 5repets
+2018-02-23T08:20:38.960Z - info: Looking for image on screen:Next password with 5 repeats 
+2018-02-23T08:20:38.960Z - info: Running delay for : 100
+2018-02-23T08:20:39.061Z - info: Running delay for : 0
+2018-02-23T08:20:39.722Z - info: Found image on screen: Next password
+2018-02-23T08:20:39.849Z - info: clicked on : Next password with following coordinates x=271 y=715
+2018-02-23T08:20:39.849Z - info: Running click event : Accept terms circle with 5repets
+2018-02-23T08:20:39.849Z - info: Looking for image on screen:Accept terms circle with 5 repeats 
+2018-02-23T08:20:39.849Z - info: Running delay for : 500
+2018-02-23T08:20:40.349Z - info: Running delay for : 0
+2018-02-23T08:20:40.983Z - info: Found image on screen: Accept terms circle
+2018-02-23T08:20:41.113Z - info: clicked on : Accept terms circle with following coordinates x=54.5 y=463
+2018-02-23T08:20:41.114Z - info: Running click event : terms next button with 5repets
+2018-02-23T08:20:41.114Z - info: Looking for image on screen:terms next button with 5 repeats 
+2018-02-23T08:20:41.114Z - info: Running delay for : 500
+2018-02-23T08:20:41.614Z - info: Running delay for : 0
+2018-02-23T08:20:42.230Z - info: Found image on screen: terms next button
+2018-02-23T08:20:42.351Z - info: clicked on : terms next button with following coordinates x=399 y=665.5
+2018-02-23T08:20:42.351Z - info: Running click event : My account button with 5repets
+2018-02-23T08:20:42.351Z - info: Looking for image on screen:My account button with 5 repeats 
+2018-02-23T08:20:42.351Z - info: Running delay for : 500
+2018-02-23T08:20:42.852Z - info: Running delay for : 0
+2018-02-23T08:20:43.535Z - info: Found image on screen: My account button
+2018-02-23T08:20:43.658Z - info: clicked on : My account button with following coordinates x=141.5 y=694
+2018-02-23T08:20:43.658Z - info: Running click event : Fill name with 5repets
+2018-02-23T08:20:43.658Z - info: Looking for image on screen:Fill name with 5 repeats 
+2018-02-23T08:20:43.658Z - info: Running delay for : 500
+2018-02-23T08:20:44.159Z - info: Running delay for : 0
+2018-02-23T08:20:44.794Z - info: Found image on screen: Fill name
+2018-02-23T08:20:44.941Z - info: clicked on : Fill name with following coordinates x=272 y=448
+2018-02-23T08:20:48.477Z - info: Running clear keyboard (click on x0y0
+2018-02-23T08:20:48.600Z - info: Keyboard cleared
+2018-02-23T08:20:48.601Z - info: Running click event : BirthdayField  with 5repets
+2018-02-23T08:20:48.601Z - info: Looking for image on screen:BirthdayField  with 5 repeats 
+2018-02-23T08:20:48.601Z - info: Running delay for : 500
+2018-02-23T08:20:49.102Z - info: Running delay for : 0
+2018-02-23T08:20:49.810Z - info: Found image on screen: BirthdayField 
+2018-02-23T08:20:49.962Z - info: clicked on : BirthdayField  with following coordinates x=270.5 y=585.5
+2018-02-23T08:20:54.802Z - info: Running clear keyboard (click on x0y0
+2018-02-23T08:20:54.941Z - info: Keyboard cleared
+2018-02-23T08:20:54.941Z - info: Running click event : create profile button  with 5repets
+2018-02-23T08:20:54.941Z - info: Looking for image on screen:create profile button  with 5 repeats 
+2018-02-23T08:20:54.941Z - info: Running delay for : 500
+2018-02-23T08:20:55.442Z - info: Running delay for : 0
+2018-02-23T08:20:56.232Z - info: Found image on screen: create profile button 
+2018-02-23T08:20:56.359Z - info: clicked on : create profile button  with following coordinates x=396.5 y=751.5
+2018-02-23T08:20:56.359Z - info: Looking for image on screen:If 0 coins then looged in with 20 repeats 
+2018-02-23T08:20:56.359Z - info: Running delay for : 1000
+2018-02-23T08:20:57.359Z - info: Running delay for : 0
+2018-02-23T08:20:58.725Z - info: Found image on screen: If 0 coins then looged in
+2018-02-23T08:20:58.725Z - info: Running click event :  x Button   with 5repets
+2018-02-23T08:20:58.725Z - info: Looking for image on screen: x Button   with 5 repeats 
+2018-02-23T08:20:58.725Z - info: Running delay for : 5000
+2018-02-23T08:21:03.726Z - info: Running delay for : 0
+2018-02-23T08:21:04.745Z - info: Found image on screen:  x Button  
+2018-02-23T08:21:04.879Z - info: clicked on :  x Button   with following coordinates x=513 y=111
+2018-02-23T08:21:04.879Z - info: Running click event : Settings Button  with 5repets
+2018-02-23T08:21:04.879Z - info: Looking for image on screen:Settings Button  with 5 repeats 
+2018-02-23T08:21:04.879Z - info: Running delay for : 500
+2018-02-23T08:21:05.380Z - info: Running delay for : 0
+2018-02-23T08:21:06.633Z - info: Found image on screen: Settings Button 
+2018-02-23T08:21:06.752Z - info: clicked on : Settings Button  with following coordinates x=44 y=903
+2018-02-23T08:21:06.753Z - info: Running click event : Logout Button  with 5repets
+2018-02-23T08:21:06.753Z - info: Looking for image on screen:Logout Button  with 5 repeats 
+2018-02-23T08:21:06.753Z - info: Running delay for : 500
+2018-02-23T08:21:07.253Z - info: Running delay for : 0
+2018-02-23T08:21:08.020Z - info: Found image on screen: Logout Button 
+2018-02-23T08:21:08.141Z - info: clicked on : Logout Button  with following coordinates x=437 y=210
+2018-02-23T08:21:08.141Z - info: Running click event : Big Ok Logout button  with 5repets
+2018-02-23T08:21:08.141Z - info: Looking for image on screen:Big Ok Logout button  with 5 repeats 
+2018-02-23T08:21:08.142Z - info: Running delay for : 500
+2018-02-23T08:21:08.643Z - info: Running delay for : 0
+2018-02-23T08:21:09.733Z - info: Running delay for : 0
+2018-02-23T08:21:10.678Z - info: Found image on screen: Big Ok Logout button 
+2018-02-23T08:21:10.801Z - info: clicked on : Big Ok Logout button  with following coordinates x=269.5 y=638
+2018-02-23T08:21:10.801Z - info: Looking for image on screen:Logout status correct with 20 repeats 
+2018-02-23T08:21:10.801Z - info: Running delay for : 6000
+2018-02-23T08:21:16.804Z - info: Running delay for : 2000
+2018-02-23T08:21:20.802Z - info: Found image on screen: Logout status correct
+2018-02-23T08:21:20.802Z - info: Test:Sign Up email[FINISHED]
+2018-02-23T08:21:23.404Z - info: Disconnected localhost:7413=> open STF 
+2018-02-23T11:59:34.431Z - info: Test execution started
+2018-02-23T11:59:34.432Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-23T11:59:34.571Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-23T11:59:34.622Z - info: executing command adb connect  localhost:7401
+2018-02-23T11:59:34.630Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-23T11:59:34.630Z - info: Trying to create appium Server on port: 4004
+2018-02-23T11:59:36.694Z - info: Appium server created on port: 4004
+2018-02-23T11:59:53.028Z - info: Running Signup email
+2018-02-23T11:59:53.062Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-23T11:59:53.062Z - info: Running delay for : 4000
+2018-02-23T11:59:57.068Z - info: Running delay for : 2000
+2018-02-23T11:59:59.800Z - info: Running delay for : 2000
+2018-02-23T12:00:02.403Z - info: Running delay for : 2000
+2018-02-23T12:00:05.043Z - info: Running delay for : 2000
+2018-02-23T12:00:08.024Z - info: Running delay for : 2000
+2018-02-23T12:00:10.716Z - info: Running delay for : 2000
+2018-02-23T12:00:13.785Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-23T12:00:13.785Z - info: Running click event : Click Login button with 5repets
+2018-02-23T12:00:13.786Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-23T12:00:13.786Z - info: Running delay for : 2000
+2018-02-23T12:00:15.788Z - info: Running delay for : 0
+2018-02-23T12:00:16.893Z - info: Found image on screen: Click Login button
+2018-02-23T12:00:17.112Z - info: clicked on : Click Login button with following coordinates x=483 y=27.5
+2018-02-23T12:00:17.112Z - info: Running click event : Click Email Login button with 5repets
+2018-02-23T12:00:17.112Z - info: Looking for image on screen:Click Email Login button with 5 repeats 
+2018-02-23T12:00:17.112Z - info: Running delay for : 2000
+2018-02-23T12:00:19.115Z - info: Running delay for : 0
+2018-02-23T12:00:20.298Z - info: Running delay for : 0
+2018-02-23T12:00:21.409Z - info: Running delay for : 0
+2018-02-23T12:00:23.036Z - info: Running delay for : 0
+2018-02-23T12:00:24.633Z - info: Running delay for : 0
+2018-02-23T12:00:26.291Z - info: Looking for image on screen #5
+2018-02-23T12:00:26.291Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Click Email Login button
+2018-02-23T12:00:26.325Z - info: Disconnected localhost:7401=> open STF 
+2018-02-23T12:03:11.439Z - info: Appium on close  null
+2018-02-23T12:03:11.464Z - info: You are not owner localhost:7401 => open STF 
+2018-02-23T12:03:11.464Z - info: You are not owner localhost:7401 => open STF 
+2018-02-23T15:07:46.355Z - info: Test execution started
+2018-02-23T15:07:46.355Z - info: Got following options to run{"testName":"Sign Up facebook","UDID":"cd21ccc5","port":4004,"systemPort":8204,"bpPort":6004,"desCaps":{"testName":"Sign Up facebook","testFileName":"SignUpFacebook","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-23T15:07:46.412Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-23T15:07:46.460Z - info: executing command adb connect  localhost:7417
+2018-02-23T15:07:46.468Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4004 -bp6004  --log-timestamp --log /home/trixo/Code/javaRewrite/log4004.txt
+2018-02-23T15:07:46.468Z - info: Trying to create appium Server on port: 4004
+2018-02-23T15:07:48.584Z - info: Appium server created on port: 4004
+2018-02-23T15:08:03.939Z - info: Running Signup email
+2018-02-23T15:08:03.971Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-23T15:08:03.971Z - info: Running delay for : 4000
+2018-02-23T15:08:07.977Z - info: Running delay for : 2000
+2018-02-23T15:08:10.764Z - info: Running delay for : 2000
+2018-02-23T15:08:13.344Z - info: Running delay for : 2000
+2018-02-23T15:08:16.002Z - info: Running delay for : 2000
+2018-02-23T15:08:18.727Z - info: Running delay for : 2000
+2018-02-23T15:08:21.860Z - info: Found image on screen: If on screen then app Loaded,Logout state true
+2018-02-23T15:08:21.860Z - info: Running click event : Click Login button with 5repets
+2018-02-23T15:08:21.860Z - info: Looking for image on screen:Click Login button with 5 repeats 
+2018-02-23T15:08:21.860Z - info: Running delay for : 2000
+2018-02-23T15:08:23.862Z - info: Running delay for : 0
+2018-02-23T15:08:24.886Z - info: Found image on screen: Click Login button
+2018-02-23T15:08:25.043Z - info: clicked on : Click Login button with following coordinates x=484 y=28.5
+2018-02-23T15:08:25.043Z - info: Running click event : Click facebook Login button with 5repets
+2018-02-23T15:08:25.043Z - info: Looking for image on screen:Click facebook Login button with 5 repeats 
+2018-02-23T15:08:25.043Z - info: Running delay for : 2000
+2018-02-23T15:08:27.045Z - info: Running delay for : 0
+2018-02-23T15:08:28.021Z - info: Found image on screen: Click facebook Login button
+2018-02-23T15:08:28.146Z - info: clicked on : Click facebook Login button with following coordinates x=386 y=809.5
+2018-02-23T15:08:28.146Z - info: Running click event : Click Yes age button with 5repets
+2018-02-23T15:08:28.146Z - info: Looking for image on screen:Click Yes age button with 5 repeats 
+2018-02-23T15:08:28.146Z - info: Running delay for : 2000
+2018-02-23T15:08:30.149Z - info: Running delay for : 0
+2018-02-23T15:08:30.959Z - info: Found image on screen: Click Yes age button
+2018-02-23T15:08:31.086Z - info: clicked on : Click Yes age button with following coordinates x=269 y=587
+2018-02-23T15:08:31.086Z - info: Looking for image on screen:Click on Enter Email field with 20 repeats 
+2018-02-23T15:08:31.087Z - info: Running delay for : 15000
+2018-02-23T15:08:46.096Z - info: Running delay for : 0
+2018-02-23T15:08:48.629Z - info: Running delay for : 0
+2018-02-23T15:08:50.907Z - info: Running delay for : 0
+2018-02-23T15:08:53.159Z - info: Running delay for : 0
+2018-02-23T15:08:55.408Z - info: Running delay for : 0
+2018-02-23T15:08:57.776Z - info: Running delay for : 0
+2018-02-23T15:08:59.969Z - info: Running delay for : 0
+2018-02-23T15:09:02.184Z - info: Running delay for : 0
+2018-02-23T15:09:04.412Z - info: Running delay for : 0
+2018-02-23T15:09:06.736Z - info: Running delay for : 0
+2018-02-23T15:09:09.002Z - info: Running delay for : 0
+2018-02-23T15:09:11.214Z - info: Running delay for : 0
+2018-02-23T15:09:13.478Z - info: Running delay for : 0
+2018-02-23T15:09:15.722Z - info: Running delay for : 0
+2018-02-23T15:09:18.052Z - info: Running delay for : 0
+2018-02-23T15:09:20.330Z - info: Running delay for : 0
+2018-02-23T15:09:22.641Z - info: Running delay for : 0
+2018-02-23T15:09:24.772Z - info: Running delay for : 0
+2018-02-23T15:09:26.928Z - info: Running delay for : 0
+2018-02-23T15:09:29.113Z - info: Running delay for : 0
+2018-02-23T15:09:31.533Z - info: Looking for image on screen #20
+2018-02-23T15:09:31.534Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : Click on Enter Email field
+2018-02-23T15:09:31.554Z - info: Disconnected localhost:7417=> open STF 
+2018-02-23T15:15:29.361Z - info: Appium on close  null
+2018-02-23T15:15:29.384Z - info: You are not owner localhost:7417 => open STF 
+2018-02-23T15:15:29.385Z - info: You are not owner localhost:7417 => open STF 

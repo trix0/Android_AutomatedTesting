@@ -27,3 +27,39 @@
 2018-02-15T14:39:30.812Z - info: Got following options to run{"testName":"Clean Install","UDID":"emulator-5554","port":4006,"systemPort":8206,"bpPort":6006,"desCaps":{"testName":"Clean Install","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}}}
 2018-02-15T14:39:31.015Z - info: Trying to connect to openSTF with serial number emulator-5554
 2018-02-15T14:39:32.808Z - info: You are not owner undefined => open STF 
+2018-02-22T09:49:59.025Z - info: Test execution started
+2018-02-22T09:49:59.025Z - info: Got following options to run{"testName":"Sign Up email","UDID":"cd21ccc5","port":4006,"systemPort":8206,"bpPort":6006,"desCaps":{"testName":"Sign Up email","testFileName":"SignUpEmail","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true},"parameters":{}}}
+2018-02-22T09:49:59.178Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-02-22T09:49:59.224Z - info: executing command adb connect  localhost:7401
+2018-02-22T09:49:59.235Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4006 -bp6006  --log-timestamp --log /home/trixo/Code/javaRewrite/log4006.txt
+2018-02-22T09:49:59.236Z - info: Trying to create appium Server on port: 4006
+2018-02-22T09:50:01.745Z - info: Appium server created on port: 4006
+2018-02-22T09:50:16.665Z - info: Running Signup email
+2018-02-22T09:50:16.693Z - info: Looking for image on screen:If on screen then app Loaded,Logout state true with 20 repeats 
+2018-02-22T09:50:16.694Z - info: Running delay for : 4000
+2018-02-22T09:50:20.699Z - info: Running delay for : 2000
+2018-02-22T09:50:23.377Z - info: Running delay for : 2000
+2018-02-22T09:50:26.159Z - info: Running delay for : 2000
+2018-02-22T09:50:28.921Z - info: Running delay for : 2000
+2018-02-22T09:50:31.660Z - info: Running delay for : 2000
+2018-02-22T09:50:34.983Z - info: Running delay for : 2000
+2018-02-22T09:50:38.348Z - info: Running delay for : 2000
+2018-02-22T09:50:41.542Z - info: Running delay for : 2000
+2018-02-22T09:50:44.889Z - info: Running delay for : 2000
+2018-02-22T09:50:48.122Z - info: Running delay for : 2000
+2018-02-22T09:50:51.424Z - info: Running delay for : 2000
+2018-02-22T09:50:54.639Z - info: Running delay for : 2000
+2018-02-22T09:50:57.838Z - info: Running delay for : 2000
+2018-02-22T09:51:01.152Z - info: Running delay for : 2000
+2018-02-22T09:51:04.381Z - info: Running delay for : 2000
+2018-02-22T09:51:07.592Z - info: Running delay for : 2000
+2018-02-22T09:51:10.850Z - info: Running delay for : 2000
+2018-02-22T09:51:13.990Z - info: Running delay for : 2000
+2018-02-22T09:51:17.294Z - info: Running delay for : 2000
+2018-02-22T09:51:20.475Z - info: Running delay for : 2000
+2018-02-22T09:51:23.741Z - info: Looking for image on screen #20
+2018-02-22T09:51:23.742Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Object not found : If on screen then app Loaded,Logout state true
+2018-02-22T09:51:23.763Z - info: Disconnected localhost:7401=> open STF 
+2018-02-22T09:55:39.596Z - info: Appium on close  null
+2018-02-22T09:55:39.623Z - info: You are not owner localhost:7401 => open STF 
+2018-02-22T09:55:39.629Z - info: You are not owner localhost:7401 => open STF 

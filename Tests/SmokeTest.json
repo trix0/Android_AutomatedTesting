@@ -7,10 +7,15 @@
 		"testFolder":"CleanInstall",
 		"conitnueOnFail":false
 		},
-				{
-		"testName":"Clean Install",
-		"testFolder":"CleanInstall",
-		"conitnueOnFail":false
+		{
+		"testName":"Sign up Email",
+		"testFolder":"SignUpEmail",
+		"conitnueOnFail":true
+		},
+		{
+		"testName":"Sign up Facebook",
+		"testFolder":"SignUpFacebook",
+		"conitnueOnFail":true
 		}
 	]
 }

@@ -2,7 +2,7 @@ const Swagger = require('swagger-client');
 const { exec } = require('child_process');
 const wdio = require('webdriverio');
 const SWAGGER_URL = 'http://localhost:7100/api/v1/swagger.json'
-const AUTH_TOKEN  = '26cd01ab067140ec8f6934253c41eceba51ec96c0b1440f1a4fe1c6aa42c7507';
+const AUTH_TOKEN  = '2a317fbae0e5495582e4a8388329d7518e1fc7874abb40fc8940d18ad593a5f1';
 const { performance } = require('perf_hooks');
 const fs =require("fs");
 const cv = require('opencv4nodejs');
@@ -32,7 +32,6 @@ imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
 imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 
 
-let test = require('./Tests/CleanInstall/CleanInstall')(timeout,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
 
 logger.info('Test execution started');
@@ -41,6 +40,8 @@ logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
 
 let desCaps=jArguments.desCaps;
+let testFileName=desCaps.testFileName;
+let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
 console.log(desCaps.parameters)
 console.log("____________________________argument")
@@ -145,6 +146,49 @@ async function fnInit(){
 //////////////////////// func def/////////////////////
 
 
+
+
+function fnWriteValue(client,value,expectedValue,repeats,selector){
+iCounter=0;
+let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=>{
+  console.log(err);
+  iCounter++;
+  if(iCounter==repeats){
+    return Promise.reject("Could write correct Value")
+  }
+  return write();
+});
+return write();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+async function fnWriteValueOnce(client,value,expectedValue,selector){
+  if(selector===undefined){
+    selector="android=new UiSelector().className(\"android.widget.EditText\")";
+  }
+  await client.keys(value);
+  console.log("Iam out here")
+  return client.getText(selector).then(data=>{
+
+    if(!expectedValue.test(data)){
+      throw new Error("Value is not correct")
+    }
+    return(true); 
+})
+
+  
+
+}
 // conect to stf///
 async function fnConnectStf(serial){
   logger.info("Trying to connect to openSTF with serial number "+serial)
@@ -523,6 +567,94 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
 
 
 
+
+
+
+
+
+function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay) {
+    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    let iCounter = 0;
+    let init = ()=> timeout(wait).then((asd)=>{
+      const attempt = () => fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay).catch(err => {
+              console.log(err.message);
+              iCounter++;
+              if (iCounter === repeats) {
+                  // Failed, out of retries
+                  logger.info("Looking for image on screen #"+iCounter);
+                  return Promise.reject("Object not found : " + desc);
+                  throw new Error("Object not found : " + desc);
+              }
+              // Retry after waiting
+              return attempt();
+          });
+          return attempt();      
+    })
+    return init();
+    
+   
+}
+
+/////// function used in fnIsOnScreen() to repeat 
+async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay=0) {
+  await timeout(repeatDelay);
+  let screenshot= await client.screenshot()
+        
+  let buf = new Buffer(screenshot.value, 'base64');
+  let img1 = cv.imdecode(buf)
+  let scalDetect= await fnScalingDetect(img,img1,scaleCounter,scaleAmount);
+  if(scalDetect==false){
+    const msg = "Can't see object yet";
+    throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc)
+  }
+ 
+        // All good
+        logger.info("Found image on screen: "+desc);
+        console.log(scalDetect);
+        console.log("Found it");
+        return scalDetect;
+}
+
+
+function fnScalingDetect(img,img2,repeats,scaleAmount){
+  let iCounter=0;
+  let func=()=> fnScalingDetectOnce(img,img2,scaleAmount).catch((err)=>{
+    iCounter++;
+    console.log(err);
+    if(iCounter>=repeats){
+      return Promise.reject(false)
+    }
+    img=err;
+    return func()
+  })
+  return func();
+}
+
+function fnScalingDetectOnce(img,img1,scaleAmount){
+  console.log(img)
+  console.log("recived img")
+return new Promise((resolve,reject)=>{
+  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  if (result.maxVal <= 0.65) {
+    let rescaled=img.rescale(scaleAmount);
+      console.log(rescaled)
+  console.log("rescaled img")
+    reject(rescaled)
+  }
+  resolve(result);
+})
+
+}
+
+
+
+
+
+
+
+
+
+
 //// main function to dettect if test finished
 function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeatDelay) {
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
@@ -547,7 +679,6 @@ function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeat
    
 }
 
-/////// function used in fnIsOnScreen() to repeat 
 async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0) {
   await timeout(repeatDelay);
   let screenshot= await client.screenshot()
@@ -579,6 +710,33 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
     logger.info("Running click event : "+desc+" with "+ repeats + "repets");
     let coordinates= await fnIsOnScreen(img,client,repeats,desc,wait);
+    let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
+    let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
+    let performClick= await  client.touchPerform([{
+        action: 'tap',
+        options: {
+            x: xLocation,   // x offset
+            y: yLocation,   // y offset
+            count: 1 // number of touches
+        }
+      }])
+    logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
+    console.log("Click Performed: "+desc);
+    return(true);
+  }
+  catch(err){
+    console.log(err);
+    throw (err)
+  }
+    
+  
+}
+
+
+async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmount,wait,repeatDelay,offsetX=0,offsetY=0){
+  try{
+    logger.info("Running Scalaable click event : "+desc+" with "+ repeats + "repets");                     
+    let coordinates= await fnIsOnScreenScalable(img,client, repeats, desc,scaleCounter,scaleAmount, wait,repeatDelay) 
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
     let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
     let performClick= await  client.touchPerform([{

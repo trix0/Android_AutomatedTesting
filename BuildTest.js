@@ -9,13 +9,7 @@ const buildScreenSize={
 "deviceHeight":2560
 }
 
-const allDevices=[
-{
-"deviceName":"buildDevice",
-"deviceUDID":"",
-"deviceWidth":1440,
-"deviceHeight":2560
-},
+const allDevicesList=[
 {
 "deviceName":"Samusng A3",
 "deviceUDID":"cd21ccc5",
@@ -27,9 +21,57 @@ const allDevices=[
 "deviceUDID":"",
 "deviceWidth":768,
 "deviceHeight":1280
-}
-
+},
+{
+"deviceName":"Samsung Galaxy Tab 4",
+"deviceUDID":"",
+"deviceWidth":800,
+"deviceHeight":1280
+},
+{
+"deviceName":"Samsung Galaxy J7",
+"deviceUDID":"",
+"deviceWidth":720,
+"deviceHeight":1280
+},
+{
+"deviceName":"Samsung Galaxy S4",
+"deviceUDID":"",
+"deviceWidth":1080,
+"deviceHeight":1920
+},
+{
+"deviceName":"Samsung Galaxy S5",
+"deviceUDID":"",
+"deviceWidth":1080,
+"deviceHeight":1920
+},
+{
+"deviceName":"Samsung Galaxy S6",
+"deviceUDID":"",
+"deviceWidth":1440,
+"deviceHeight":2560
+},
+{
+"deviceName":"Samsung Galaxy S7",
+"deviceUDID":"",
+"deviceWidth":1440,
+"deviceHeight":2560
+},
+{
+"deviceName":"Xperia Z3 (D6653)",
+"deviceUDID":"",
+"deviceWidth":1080,
+"deviceHeight":1920
+},
 ]
+
+
+let allDevices = allDevicesList.filter((device, index, self) =>
+  index === self.findIndex((t) => (
+    t.deviceHeight === device.deviceHeight
+  ))
+)
 
 let fileTemplate="const cv = require('opencv4nodejs');\n";
 let imageTemplate="module.exports.{{imaneName}} = cv.imread(__dirname+'/Images/{{imageNameFull}}');"
