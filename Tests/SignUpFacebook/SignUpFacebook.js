@@ -1,5 +1,5 @@
 var images = require('./Images.js');
-module.exports = function(timeout,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
+module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
   return {
   run:async function fnSignUpEmail(client,params){
     try{
@@ -18,26 +18,21 @@ module.exports = function(timeout,fnClickScalable,fnScalingDetect,fnScalingDetec
 
         await fnClick(images["FacebookLoginButton"+"_"+imageSize],client,5,"Click facebook Login button",2000);
         await fnClick(images["YesButton"+"_"+imageSize],client,5,"Click Yes age button",2000);
-        //await fnClick(images["EnterEmailField"+"_"+imageSize],client,10,"Click on Enter Email field",5000);
-        await fnClickScalable(images["EnterEmailField"],client,10,"Click on Enter Email field",50,0.9,5000,0)
-        
 
-        await timeout(10000);
+        await fnClickScalable(images["EnterEmailField"],client,10,"Click on Enter Email field",10,0.9,5000,0)
         
-        //await client.click("new UiSelector().Text(\"Email or Phone\")")
         await client.keys("msa@pointvoucher.com");
         await fnClearKeyBoard(client);
-        //await fnClick(images["EnterPasswordField"+"_"+imageSize],client,5,"Click on Enter Password field",2000);
-        client.click("new UiSelector().password(\"True\")")
+
+        await fnClickScalable(images["EnterPasswordField"],client,10,"Click on password field",10,0.9,5000,0)
         await client.keys("atTesting123");
         await fnClearKeyBoard(client);
-        await fnClick(images["FacebookLogInButtonBlue"+"_"+imageSize],client,5,"Login Button ",1000);
-        await fnClick(images["FacebookLoginContinueButton"+"_"+imageSize],client,5,"Continiue button",100);
+        //await fnClickScalable(images["FacebookLogInButtonBlue"],client,10,"Click on login button",10,0.9,5000,0)
+        await fnIsOnScreenScalable(images["FacebookLoginContinueButton"],client,20, "detect continiue button",10,0.9,5000,2000) 
+        await fnClickScalable(images["FacebookLoginContinueButton"],client,10,"Click on continiue button",10,0.9,5000,0)
         
-
-
-        await fnClick(images["AcceptTermsCircle"+"_"+imageSize],client,5,"Accept terms circle",500);
-        await fnClick(images["TermsNextButton"+"_"+imageSize],client,5,"terms next button",500);
+        // await fnClick(images["AcceptTermsCircle"+"_"+imageSize],client,5,"Accept terms circle",500);
+        // await fnClick(images["TermsNextButton"+"_"+imageSize],client,5,"terms next button",500);
         // There is no way for me to find out which hub should be openned. Its up to your account. You can pass properties in json file and use it in here to make different scenarious. Or build more tests with known results, because "If the account contains completed levels/hub the current active hub shall be opened." is not discoverable. 
         
         await fnIsOnScreen(images["CoinsIndicator"+"_"+imageSize],client,20,"If 0 coins then looged in",1000);

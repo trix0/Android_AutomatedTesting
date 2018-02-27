@@ -10,7 +10,8 @@
         "fullReset":false,
 	"noReset":true,
         "newCommandTimeout":120000,
-        "skipUnlock":true
+        "skipUnlock":true,
+        "androidInstallTimeout":150000
       },
 "parameters":{
 	"appPackage":"com.pointvoucher.playlondonpv",

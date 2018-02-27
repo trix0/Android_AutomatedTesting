@@ -17,7 +17,7 @@
     "opencv4nodejs": "^2.37.1",
     "portfinder": "^1.0.13",
     "swagger-client": "2.1.9",
-    "webdriverio": "^4.10.1",
+    "webdriverio": "^4.10.2",
     "winston": "^2.4.0"
   }
 }

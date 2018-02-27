@@ -16,6 +16,12 @@
 		"testName":"Sign up Facebook",
 		"testFolder":"SignUpFacebook",
 		"conitnueOnFail":true
+		},
+		{
+		"testName":"PlayLondon Shop",
+		"testFolder":"PlayLondonShop",
+		"conitnueOnFail":true
 		}
 	]
 }
+

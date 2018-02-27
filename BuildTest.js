@@ -85,9 +85,10 @@ try{
 const testExist=fnDoesTestExists(testName,"js");
 	if(testExist){
 		let images=await fnLoadFiles(testName);
+		await fnBuildBaseImageNames(images);
 		for(var x=0; x<allDevices.length; x++){
 			for(var y=0; y<images.length; y++){
-				fnRescaleImage(testName,images[y],buildScreenSize.deviceHeight,allDevices[x].deviceHeight);
+				await fnRescaleImage(testName,images[y],buildScreenSize.deviceHeight,allDevices[x].deviceHeight);
 			}
 		}
 
@@ -108,6 +109,19 @@ console.log(err);
 function fnLoadFiles(testName){
 	let images=fs.readdirSync('Tests/'+testName+"/Images")
 	return images;
+}
+
+async function fnBuildBaseImageNames(images){
+	for(let image of images){
+		let func=await (()=>{
+			let imgTemplate=imageTemplate;
+			let imageName=image.split(".");
+			imgTemplate=imgTemplate.replace("{{imaneName}}",imageName[0]);
+			imgTemplate=imgTemplate.replace("{{imageNameFull}}",imageName[0]+".png");
+			fileTemplate+="\n"+imgTemplate;
+		})();
+	}
+
 }
 
 function fnDoesTestExists(testName,fileType){

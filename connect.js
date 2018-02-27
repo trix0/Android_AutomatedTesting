@@ -41,7 +41,7 @@ logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
 let desCaps=jArguments.desCaps;
 let testFileName=desCaps.testFileName;
-let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
+let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
 console.log(desCaps.parameters)
 console.log("____________________________argument")
@@ -148,6 +148,126 @@ async function fnInit(){
 
 
 
+
+function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repeats,desc,wait,repeatDelay){
+  if(deviceHeight>scrollAmount){
+    let iCounter=0;
+    let func=()=> fnScrollAndFindOnce(img, desc,iCounter,client).then(async data=>{
+      if(movePosition>0){
+        console.log(data.maxLoc);
+        await client.touchAction(
+        [
+            { action: 'press', x: 0, y:data.maxLoc.y},
+            { action: 'moveTo', x: 0, y: movePosition },
+            { action: 'wait', ms: 500},
+            'release',
+        ])       
+      }
+
+
+    })
+    .catch(async err => {
+      console.log(err);
+      iCounter++;
+      if(iCounter==repeats){
+        // we should scroll
+        console.log("running once");
+        iCounter=0;
+         await client.touchAction(
+          [
+              { action: 'press', x: 0, y:scrollAmount},
+              { action: 'moveTo', x: 0, y: 1 },
+              { action: 'wait', ms: 500},
+              'release',
+          ])
+      }
+      return func();
+
+    })
+    return func();   
+  }
+  throw new  Error("scrollAmount is Too Big");
+
+
+}
+
+async function fnScrollAndFindOnce(img, desc,iCounter,client){
+  let screenshot= await client.screenshot()      
+  let buf = new Buffer(screenshot.value, 'base64');
+  let img1 = cv.imdecode(buf)
+  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  if (result.maxVal <= 0.65) {
+      // Fail
+      const msg = "Can't see object yet";
+      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+  }
+        // All good
+        logger.info("Found image on screen: "+desc);
+        return result;
+}
+
+
+
+
+function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
+    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    let iCounter = 0;
+    let init = ()=> timeout(wait).then((asd)=>{
+      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).catch(err => {
+              console.log(err.message);
+              iCounter++;
+              if (iCounter === repeats) {
+                  // Failed, out of retries
+                  logger.info("Looking for image on screen #"+iCounter);
+                  return Promise.reject("Object not found : " + desc);
+                  throw new Error("Object not found : " + desc);
+              }
+              // Retry after waiting
+              return attempt();
+          });
+          return attempt();      
+    })
+    return init();
+    
+   
+}
+
+/////// function used in fnIsOnScreen() to repeat 
+async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
+  await timeout(repeatDelay);
+  let screenshot= await client.screenshot()
+        
+  let buf = new Buffer(screenshot.value, 'base64');
+  let img1 = cv.imdecode(buf)
+  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  if (result.maxVal <= 0.65) {
+      // Fail
+      const msg = "Can't see object yet";
+      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+  }
+        // All good
+        logger.info("Found image on screen: "+desc);
+        return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Needs to be implemented
+// function fnScrollAndFindScalable(){
+//   fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay);
+// }
+
+
+
 function fnWriteValue(client,value,expectedValue,repeats,selector){
 iCounter=0;
 let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=>{
@@ -175,6 +295,7 @@ return write();
 async function fnWriteValueOnce(client,value,expectedValue,selector){
   if(selector===undefined){
     selector="android=new UiSelector().className(\"android.widget.EditText\")";
+   
   }
   await client.keys(value);
   console.log("Iam out here")
@@ -620,8 +741,9 @@ function fnScalingDetect(img,img2,repeats,scaleAmount){
   let iCounter=0;
   let func=()=> fnScalingDetectOnce(img,img2,scaleAmount).catch((err)=>{
     iCounter++;
-    console.log(err);
+    
     if(iCounter>=repeats){
+      console.log(err);
       return Promise.reject(false)
     }
     img=err;
@@ -630,18 +752,21 @@ function fnScalingDetect(img,img2,repeats,scaleAmount){
   return func();
 }
 
+// img = template
+// img 1 = screenshot 
 function fnScalingDetectOnce(img,img1,scaleAmount){
   console.log(img)
   console.log("recived img")
 return new Promise((resolve,reject)=>{
-  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
-  if (result.maxVal <= 0.65) {
-    let rescaled=img.rescale(scaleAmount);
-      console.log(rescaled)
-  console.log("rescaled img")
-    reject(rescaled)
-  }
-  resolve(result);
+    let result = img1.matchTemplate(img, 5).minMaxLoc();
+    console.log(result); 
+    if (result.maxVal <= 0.65) {
+      let rescaled=img.rescale(scaleAmount);
+      reject(rescaled)
+    }
+    resolve(result); 
+
+
 })
 
 }
