@@ -21,6 +21,11 @@
 		"testName":"PlayLondon Shop",
 		"testFolder":"PlayLondonShop",
 		"conitnueOnFail":true
+		},
+		{
+		"testName":"Go To Profile",
+		"testFolder":"GoToProfile",
+		"conitnueOnFail":true
 		}
 	]
 }

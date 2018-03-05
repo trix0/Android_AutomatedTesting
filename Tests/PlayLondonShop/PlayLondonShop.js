@@ -1,5 +1,5 @@
 var images = require('./Images.js');
-module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
+module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalin750gDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger) {
   return {
   run:async function fnPlayLondonShop(client,params){
     try{
@@ -32,7 +32,7 @@ module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickSca
         
         //await fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,5," x Button  ",5000);
         await fnClick(images["BackArrow"+"_"+imageSize],client,5,"back arrow button ",500);
-        await fnClick(images["VoucherShop"+"_"+imageSize],client,5,"Voucher shop button ",5000);
+        await fnClick(images["VoucherShop"+"_"+imageSize],client,10,"Voucher shop button ",5000);
         await fnIsOnScreen(images["VoucherShopIsOpenned"+"_"+imageSize],client,20,"Voucher shop openned",1000);
         await fnClick(images["CloseShopButton"+"_"+imageSize],client,5,"close voucher shop",500);
         await fnIsOnScreen(images["HubIcons"+"_"+imageSize],client,20,"check if we are in hub",1000);

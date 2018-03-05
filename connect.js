@@ -32,8 +32,6 @@ imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
 imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 
 
-
-
 logger.info('Test execution started');
 logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
@@ -41,10 +39,8 @@ logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
 let desCaps=jArguments.desCaps;
 let testFileName=desCaps.testFileName;
-let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnLoading,fnIsLoadingOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
+let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
 
-console.log(desCaps.parameters)
-console.log("____________________________argument")
 
 //////////// capabilities options for appium//////////
 let opts = {
@@ -64,38 +60,8 @@ const clientSwag = new Swagger({
 
 
 
-
-
-
 const serial = jArguments.UDID;          /////////// serial number of phone
-
-
-
-
-
-console.log("serial:"+serial)
-
-
-
-
-
 fnInit(); // entry point
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 async function fnInit(){
@@ -104,35 +70,17 @@ async function fnInit(){
     UDID=await fnConnectStf(serial); /////////////connect to stf -> returns UDID 7
     opts.desiredCapabilities.udid=UDID                    //////////assign udid
 
-
-
-
-
     const client =wdio.remote(opts);       //getting appium client connection
     process.on('SIGINT', ()=>{
       client.end();
       fnDisconnect(UDID);  // disconnects from open stf
     });
-    //await fnLoginTest(client);
 
     await test.run(client,desCaps.parameters).catch(err=>{
       logger.info("ERROR[MyERr]: TEST FINISHED WITH ERROR: "+err)
     }); // runs test
     await fnDisconnect(UDID);
 
-    //await fnCleanInstall(client,"com.pointvoucher.playlondonpv","com.unity3d.player.UnityPlayerActivity","pl");
-    //await fnPermission(5,null,client);
-    // const loading=await fnLoading(40,client); // loading time 40 screenshots request afterwards error
-    // if(loading==1){
-    //   console.log("running test1");
-    //   const fnTest=await fnLoginTest(client);
-    // }
-    // else{
-    //   console.log("running test 2");
-    //   const fnTest=await fnLoginTest2(client);
-    // }
-
-    //await fnDisconnect(UDID);
   }
   catch(err){
     fnDisconnect(UDID);
@@ -144,8 +92,6 @@ async function fnInit(){
 
 
 //////////////////////// func def/////////////////////
-
-
 
 
 
@@ -171,7 +117,6 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
       iCounter++;
       if(iCounter==repeats){
         // we should scroll
-        console.log("running once");
         iCounter=0;
          await client.touchAction(
           [
@@ -186,6 +131,7 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
     })
     return func();   
   }
+  logger.info(new Error("scrollAmount is Too Big"))
   throw new  Error("scrollAmount is Too Big");
 
 
@@ -218,7 +164,7 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  logger.info("Looking for image on screen #"+iCounter);
+                  logger.info("Object not found : " + desc);
                   return Promise.reject("Object not found : " + desc);
                   throw new Error("Object not found : " + desc);
               }
@@ -255,12 +201,6 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
 
 
 
-
-
-
-
-
-
 //Needs to be implemented
 // function fnScrollAndFindScalable(){
 //   fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay);
@@ -274,21 +214,13 @@ let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=
   console.log(err);
   iCounter++;
   if(iCounter==repeats){
-    return Promise.reject("Could write correct Value")
+    logger.info("Could not write correct Value" + value)
+    return Promise.reject("Could not write correct Value")
   }
   return write();
 });
 return write();
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -298,10 +230,10 @@ async function fnWriteValueOnce(client,value,expectedValue,selector){
    
   }
   await client.keys(value);
-  console.log("Iam out here")
   return client.getText(selector).then(data=>{
 
     if(!expectedValue.test(data)){
+      logger.info("Value is not correct -> repeating")
       throw new Error("Value is not correct")
     }
     return(true); 
@@ -382,7 +314,7 @@ function fnDisconnect(UDID){
       })
 
       if (!hasDevice) {
-        logger.info("You are not owner "+ UDID+" => open STF ")
+        logger.info("You are not owner of "+ UDID+" => open STF ")
         throw new Error('You are not owner')
       }
 
@@ -432,21 +364,21 @@ function fnCreateServer(port,bpPort){
 
 
 //rconnect to device 
-function fnConnect(UDID){
-  return new Promise((resolve,reject)=>{
-    const client = wdio.remote(opts);
-    client.init(opts, (error) =>{
-      if (error) {
-        reject(new Error('Session did not start properly. Please make sure you sauce credentials are correct'));
-      }    
+// function fnConnect(UDID){
+//   return new Promise((resolve,reject)=>{
+//     const client = wdio.remote(opts);
+//     client.init(opts, (error) =>{
+//       if (error) {
+//         reject(new Error('Session did not start properly. Please make sure you sauce credentials are correct'));
+//       }    
     
-    })
-    .then(()=>{
-      return(client);
-    })   
+//     })
+//     .then(()=>{
+//       return(client);
+//     })   
     
-  })
-}
+//   })
+// }
 
 
 /// nice timeout function
@@ -485,7 +417,6 @@ function fnPermission(repeat,bValue,client){
     return true;
   }
   const attempt = () => fnPermssionOnce(iCounter,bValue,client).catch(err => {
-      console.log(err.message+"Iam here");
       iCounter++;
       if (iCounter === repeat) {
           // Failed, out of retries
@@ -552,60 +483,7 @@ function fnPermssionOnce(iCounter,bValue,client){
 
 
 
-/// main loading function 
-function fnLoading(repeat,client){
-  let iCounter = 0;
-  const attempt = () => fnIsLoadingOnce(iCounter,client).catch(err => {
-      console.log(err.message);
-      iCounter++;
-      if (iCounter === repeat) {
-          // Failed, out of retries
-          logger.info("Could not find loading screen")
-          return Promise.reject( new Error("Couldnt find loading screen"));
-      }
-      // Retry 
-      return attempt();
-  });
-  return attempt();      
-}
 
-
-// loading once //// used to repeat in fnLoading()
-function fnIsLoadingOnce(iCounter,client){
-  let testId=0;
-  return client.screenshot()
-    .then(async (data) => {            
-      let buf = new Buffer(data.value, 'base64');
-      let img1 = cv.imdecode(buf)
-      for(var t=0; t<2; t++){
-        let result = img1.matchTemplate(img2, 5).minMaxLoc(); 
-        let result2 = img1.matchTemplate(img3, 5).minMaxLoc(); 
-
-        if (result.maxVal >= 0.65) {
-            // Fail
-            testId=1;
-            
-        }
-        else if(result2.maxVal>=0.65){
-            testId=2;
-        }
-        else{
-          logger.info("Still Loading #"+iCounter);
-          const msg = "Still Loading #"+iCounter;
-
-            throw new Error(msg);            
-          
-
-        }
-        // All good
-        logger.info("Loading finished on  #"+iCounter +"repets");
-
-        return testId
-
-      }
-
-  });
-}
 
 
 
@@ -678,21 +556,7 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
         return result;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  detecting elements that are not scaled same way the game interface is. // be care about scale counter and scaleAmount !!!!
 function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay) {
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
@@ -716,7 +580,7 @@ function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAm
    
 }
 
-/////// function used in fnIsOnScreen() to repeat 
+/////// function used in fnIsOnScreenScalable() to repeat 
 async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay=0) {
   await timeout(repeatDelay);
   let screenshot= await client.screenshot()
@@ -731,12 +595,10 @@ async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCoun
  
         // All good
         logger.info("Found image on screen: "+desc);
-        console.log(scalDetect);
-        console.log("Found it");
         return scalDetect;
 }
 
-
+/// used in fnIsOnScreenOnceScalable -> scales the image down 
 function fnScalingDetect(img,img2,repeats,scaleAmount){
   let iCounter=0;
   let func=()=> fnScalingDetectOnce(img,img2,scaleAmount).catch((err)=>{
@@ -755,8 +617,6 @@ function fnScalingDetect(img,img2,repeats,scaleAmount){
 // img = template
 // img 1 = screenshot 
 function fnScalingDetectOnce(img,img1,scaleAmount){
-  console.log(img)
-  console.log("recived img")
 return new Promise((resolve,reject)=>{
     let result = img1.matchTemplate(img, 5).minMaxLoc();
     console.log(result); 
@@ -770,14 +630,6 @@ return new Promise((resolve,reject)=>{
 })
 
 }
-
-
-
-
-
-
-
-
 
 
 //// main function to dettect if test finished
@@ -825,12 +677,8 @@ async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0
 
 
 
-
-
-
-
 ////// functions used to click on elements -> find based on image -> template matching 
-
+/// be care with offsets its not calculated based on screen size !
 async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
     logger.info("Running click event : "+desc+" with "+ repeats + "repets");
@@ -857,7 +705,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   
 }
 
-
+// scalable click function, be careful with scaleCounter and scaleAmount
 async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmount,wait,repeatDelay,offsetX=0,offsetY=0){
   try{
     logger.info("Running Scalaable click event : "+desc+" with "+ repeats + "repets");                     
@@ -922,111 +770,3 @@ function SaveImage (imageData,imageName){
 
 }
 
-////////////////////////////////////TESTS/////////////////////////////////////////////
-
-
-async function fnCleanInstall(client,appPackage,activityName,apkFileName){
-  try{
-    const init=await client.init();    // appium init (lunch app)
-    logger.info("Running clean Install test with following paramters, appPackage: "+appPackage+" activityName: "+activityName+" apkFile: " + __dirname+'/apk/'+apkFileName+'.apk');
-    // is apk installed ?
-    let appExists= await client.isAppInstalled(appPackage);
-    if(appExists.value){                                        //if apk installed -> remove
-      logger.info("App exists in device => trying to remove");
-      await client.removeApp(appPackage).then(()=>{
-        logger.info("App removed")
-      })
-    } 
-    else{
-      logger.info("App does not exist in device ");
-    }                             
-    logger.info("Installing app to device "+ __dirname+'/apk/'+apkFileName+'.apk');
-    await client.installApp(__dirname+'/apk/'+apkFileName+'.apk')
-    let appExistsAfter= await client.isAppInstalled(appPackage);
-    if(!appExistsAfter.value){                                        //if apk not installed error
-      logger.info("apk was not installed:"+ appExistsAfter);
-      throw new Error(appExistsAfter+"Apk is not installed");
-    } 
-     logger.info("starting package : " + appPackage+" with activity name: "+activityName);
-    await client.startActivity(appPackage,activityName,"com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
-
-    await fnPermission(5,true,client);
-
-    loading= await fnIsOnScreen(img2,client,20,"if on scree then test passed",6000,2000);
-    client.end();
-  }
-  catch(err){
-    client.end();
-    throw err;
-  }
-}
-
-
-
-async function fnLoginTest(client){
-  console.log("Login test running");
-  try{
-    const init=await client.init();    // appium init (lunch app)
-    loading= await fnIsOnScreen(img2,client,20,"loading",6000,2000);
-    await fnClick(imgLoginEmail,client,5,"Email button",500);
-    await fnClick(imgloginAgeConfirmYes,client,5,"Confirm Age button",2000);
-    await fnClick(imgloginEnterEmail,client,5,"Enter Email",1200);
-    client.keys("matusko.satara@gmail.com");
-    await fnClearKeyBoard(client);
-    await fnClick(imgloginYellowNextButton,client,5,"Next",500);
-    await fnClick(imgLoginPassword,client,5,"enter Password",2000);
-    client.keys("123123");
-    await fnClearKeyBoard(client);
-    await fnClick(imgloginYellowNextButton,client,5,"Next",500);
-    await fnClick(imgloginAcceptConditions,client,5,"Accept Conditions",500);
-    await fnClick(imgloginYellowNextButton,client,5,"Next",500);
-    await fnClick(imgloginPassed,client,5,"x",500);
-    await fnIsOnScreen(imgFriendsForEverX,client,25,"waiting for another loading (x)",2000);
-    await fnClick(imgFriendsForEverX,client,5,"x",500);
-    await fnClick(imgSettingsButton,client,5,"settings Button",500);
-    await fnClick(imgLogOutButton,client,5,"Logout Button",500);
-    await fnClick(imgBigOkButton,client,5,"big ok Button",500);
-    await fnIsOnScreen(img3,client,20,"if on scree then test passed",4000);
-    await fnSaveScreenShot(client);
-    await client.end();
-  }
-  catch(err){
-    client.end();
-    throw err;
-  }
-
-
-}
-
-
-async function fnLoginTest2(client){
-  console.log("Login test running");
-  try{
-    const init=await client.init();    // appium init (lunch app)
-    loading= await fnIsOnScreen(img3,client,20,"loading",6000,2000);
-    await fnClick(img3,client,5,"login button",500);
-    await fnClick(imgLoginEmail,client,5,"Email button",500);
-    await fnClick(imgloginAgeConfirmYes,client,5,"Confirm Age button",2000);
-    await fnClick(imgloginEnterEmail,client,5,"Enter Email",1200);
-    client.keys("matusko.satara@gmail.com");
-    await fnClearKeyBoard(client);
-    await fnClick(imgloginYellowNextButton,client,5,"Next",500);
-    await fnClick(imgLoginPassword,client,5,"enter Password",2000);
-    client.keys("123123");
-    await fnClearKeyBoard(client);
-    await fnClick(imgloginYellowNextButton,client,5,"Next",500);
-    await fnClick(imgFriendsForEverX,client,20,"x",500);
-    await fnClick(imgSettingsButton,client,5,"settings Button",500);
-    await fnClick(imgLogOutButton,client,5,"Logout Button",500);
-    await fnClick(imgBigOkButton,client,5,"big ok Button",500);
-    await fnIsOnScreen(img3,client,20,"if on scree then test passed",2000);
-    await fnSaveScreenShot(client);
-    client.end();
-  }
-  catch(err){
-    client.end();
-    throw err;
-  }
-
-
-}
