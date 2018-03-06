@@ -14,12 +14,17 @@
         "skipUnlock":true,
         "androidInstallTimeout":150000
       },
-"parameters":{
+"parameters":[{
 	"appPackage":"com.pointvoucher.playlondonpv",
 	"activityName":"com.unity3d.player.UnityPlayerActivity",
 	"apkFileName":"pl"
-
-
+},
+{
+    "appPackage":"com.pointvoucher.playlondonpv",
+    "activityName":"com.unity3d.player.UnityPlayerActivity",
+    "apkFileName":"pl"
 }
+
+]
 
 }

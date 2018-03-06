@@ -29,7 +29,7 @@ module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickSca
         await fnIsOnScreen(images["CoinsIndicator"+"_"+imageSize],client,20,"If 0 coins then looged in",1000);
         await fnClick(images["CoinsIndicator"+"_"+imageSize],client,5,"coins button ",0);
         await fnClick(images["MyAccountButton"+"_"+imageSize],client,10,"My Account button ",2000);
-        await timeout(3000)
+        await timeout(6000)
         await fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
         await fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,150,2,"scrolling",7000,1000)
         await fnClick(images["ProfileDropDown"+"_"+imageSize],client,5,"My profile open dropdown ",500);
@@ -76,7 +76,7 @@ module.exports = function(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickSca
 
         await fnClick(images["CloseShopButton"+"_"+imageSize],client,5,"close voucher shop",500);
         await fnClick(images["MyAccountButton"+"_"+imageSize],client,10,"My Account button ",2000);
-        await timeout(3000)
+        await timeout(6000)
 
         await fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
         await fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,150,2,"scrolling",7000,1000)

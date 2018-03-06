@@ -16,7 +16,7 @@ ON_DEATH = require('death')({uncaughtException: true})
 systemPort=8200;
 port=4000;
 bpPort=6000;
-runningTests=[];
+runningTests=[]; // array of running tests
 runningTestTemplate={
 	"testId":1,
 	"systemPort":1,
@@ -41,9 +41,12 @@ ON_DEATH(
 
 app.get('/', (req, res) => {
 
-
+// mb some frontend ? 
 
 })
+
+
+
 fnIsPortFree(7100).then(data=>{
 	console.log(data);
 });
@@ -78,6 +81,7 @@ fnGetAllDevices2().catch(err=>{
 async function fnExecuteCommand(data){
 
 try{
+	// if there is run command 
 	if(data.indexOf("run ")===0){ 
 		console.log("recognized command run");
 		let datasplit=data.split(" ");
@@ -87,70 +91,74 @@ try{
 		let groupTestJsonExists= await fnDoesGroupTestExists(testName,"json").catch(err=>{});
 		if(testJsonExists){
 			var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
-			console.log("normal")	
+			console.log("Executing normal test")	
 		}
 		else if(groupTestJsonExists){
 			var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+".json");	
-			console.log("group")
+			console.log("Executing group test")
 		}
 		else{
-			return new Error("Test Does not Exists!!!-> Make sure you enter correct test name")
+			return new Error("Test Does not Exists!!!-> Make sure you entered correct test name")
 		}
-
-			
-			//console.log(desCaps);
+			// if there is more udids separated by comma
 			if(serials.indexOf(",")> -1){
-				// if there is more udids separated by comma
 				serials=serials.split(",");
+				let runID=0;
+				desCaps=JSON.parse(desCaps);
 				for(var s=0; s<serials.length; s++){
 					let UDID=serials[s];
-					testName=JSON.parse(desCaps).testName;
-					iTestId++
-					fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
-
-
+					testName=desCaps.testName;
+					fnRunBundle(testName,UDID,desCaps,runID)
+					runID++;
 				}
 			}
+			// just one udid
 			else{
-				// just one udid
+
 				let UDID=serials;
-				testName=JSON.parse(desCaps).testName;
-				fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)
+				desCaps=JSON.parse(desCaps);
+				testName=desCaps.testName;
+				fnRunBundle(testName,UDID,desCaps)
 
 
 			}
-
-		// fnRunOnce(serial,port,systemPort,bpPort).catch(err=>{
-		// 	throw err;
-		// });
-
 	}
+	// if there is a runOnAll Command 
 	else if(data.indexOf("runOnAll")===0){
 		let datasplit=data.split(" ");
 		let testName=datasplit[1];
+		let testType="";
 
-
-		let testJsonExists= await fnDoesTestExists(testName,"json").catch(err=>{});
-		let groupTestJsonExists= await fnDoesGroupTestExists(testName,"json").catch(err=>{});
+		let testJsonExists= await fnDoesTestExists(testName,"json").catch(err=>{}); // checks if test exists
+		let groupTestJsonExists= await fnDoesGroupTestExists(testName,"json").catch(err=>{
+			console.log("asd")
+		});// checks if group test exists
 		if(testJsonExists){
 			var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
 			console.log("normal")	
+			testType="normal";
 		}
 		else if(groupTestJsonExists){
 			var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+".json");	
 			console.log("group")
+			testType="group";
 		}
 		else{
-			return new Error("Test Does not Exists!!!-> Make sure you enter correct test name")
+
+			throw new Error("Test Does not Exists!!!-> Make sure you entered correct test name")
 		}
 
 		let devices=await fnGetAllDevices2();
+		let runID=0;
+		desCaps=JSON.parse(desCaps);
 			for(var r=0; r<devices.length; r++){
 				if(devices[r]!=undefined){
 					let UDID=devices[r];
-					testName=JSON.parse(desCaps).testName;
-					iTestId++
-					fnRunBundle(testName,UDID,desCaps,port,systemPort,bpPort)					
+					testName=desCaps.testName;
+					console.log(desCaps)
+					console.log("desCaps_______________")
+					fnRunBundle(testName,UDID,desCaps,runID)
+					runID++;					
 				}	
 					
 				
@@ -162,16 +170,14 @@ try{
 
 
 	}
+	// build test ( scale images, create images.js to export images )
 	else if(data.indexOf("buildTest ")===0){
 		let datasplit=data.split(" ");
 		let testName=datasplit[1];
-		console.log(testName)	
 		fnBuildTest(testName);	
 	}
-	else if(data.indexOf("runGAll")===0){
-		console.log("Running Group Test on all devices")
-	}
-	else if(data.indexOf("help")===0){
+	// show json output of all running tests
+	else if(data.indexOf("Tests")===0){
 		console.log(JSON.stringify(runningTests))
 		return true;
 	}
@@ -204,12 +210,13 @@ function fnReadFile(filePath){
 }
 
 
+
+// get all available devices
 function fnGetAllDevices2(){ // needs fix 
 	return new Promise(async (resolve)=>{
 		try{
 			let stfUp=await fnIsStfUp();
-			let adbDevices=await fnGetAllDevices();
-			if(stfUp&&!adbDevices.length<1){
+			if(stfUp){
 
 				const getDevices=await clientSwag.then((api)=>{
 			      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
@@ -218,7 +225,6 @@ function fnGetAllDevices2(){ // needs fix
 			    })
 			    let allDevices=getDevices.obj.devices.map(async device=>{
 			    	if(device.present&&device.ready&&!device.using){
-			    		console.log("deviceeeee")
 			    		return device.serial;
 			    	}
 			    	return;
@@ -237,6 +243,8 @@ function fnGetAllDevices2(){ // needs fix
 
 }
 
+
+// build test (rescales images and builds images.js)
 function fnBuildTest(testName){
 	let aOptions=[__dirname+'/BuildTest.js',testName] 
 	let path = "."
@@ -252,32 +260,7 @@ function fnBuildTest(testName){
 }
 
 
-function fnGetAllDevices(){ 
-	return new Promise((resolve)=>{
-		let availableDevices=[];
-			exec('adb devices','',async(err, stdout, stderr)=>{
-
-				let data=stdout.split(/\r?\n/);
-				data.shift();
-				for(var t=0; t<data.length; t++){
-					if(data[t].indexOf("device")!=-1){
-						let currentData=data[t].toString();
-						currentData=currentData.replace("device","")
-						currentData=currentData.replace("\t","")
-						availableDevices.push(currentData);
-
-					}
-
-				}
-				resolve(availableDevices);
-			});			
-	})
-
-
-
-}
-
-
+// checks if test exists
 function fnDoesTestExists(testName,fileType){
 	return new Promise((resolve,reject)=>{
 		fs.readFile('Tests/'+testName+"/"+testName+"."+fileType,"utf-8",(err, data) => {  
@@ -291,11 +274,11 @@ function fnDoesTestExists(testName,fileType){
 	})
 }
 
+// checks if group test exists
 function fnDoesGroupTestExists(testName,fileType){
 	return new Promise((resolve,reject)=>{
 		fs.readFile('Tests/'+testName+"."+fileType,"utf-8",(err, data) => {  
 		    if (err){
-		    	console.log(err);
 		    	reject(new Error("File does not exists"));
 		    }
 		    else{
@@ -306,11 +289,11 @@ function fnDoesGroupTestExists(testName,fileType){
 }
 
 
-
-async function fnRunBundle(testName,UDID,desCaps){
+// all configuration for running a test
+async function fnRunBundle(testName,UDID,desCaps,runID=0){
 	return new Promise(async (resolve,reject)=>{
 		try{
-
+			console.log("runID:"+runID)
 			let previousTestSkipValue;
 			var iIndex=0;
 			let jStatusFormat={
@@ -326,7 +309,8 @@ async function fnRunBundle(testName,UDID,desCaps){
 				"testName":"",
 				"tests":[]
 			}
-				desCaps=JSON.parse(desCaps);
+				
+				iTestId++
 				let testId=iTestId;
 				let testIndex=0;
 
@@ -354,7 +338,6 @@ async function fnRunBundle(testName,UDID,desCaps){
 					port++;
 					bpPort++
 					iIndex++	
-
 		    		jStatusFormat.id=testIndex;
 					testIndex++
 					jStatusFormat.UDID=UDID;
@@ -372,6 +355,9 @@ async function fnRunBundle(testName,UDID,desCaps){
 					runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
 
 					let runStatus;
+					if(desCaps.parameters.length>1){
+					desCaps.parameters=desCaps.parameters[runID];
+					}
 					
 					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
 					previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
@@ -418,6 +404,13 @@ async function fnRunBundle(testName,UDID,desCaps){
 					throw new Error("Could not reach device: "+UDID)
 				}
 				runningTests.push(jStatusFormat);
+				console.log(desCaps);
+				if(desCaps.parameters.length>1){
+					desCaps.parameters=desCaps.parameters[runID];
+				}
+				console.log("desCaps________");
+				console.log(desCaps);
+				console.log("desCaps________");
 				jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
 
 
@@ -435,7 +428,7 @@ async function fnRunBundle(testName,UDID,desCaps){
 
 }
 
-
+// push to array in group test to have test under 1 json object
 function fnPushTestToGroupTest(groupID,testId){
 	for(var x=runningTests.length-1; x>=0; x--){
 		if(groupID===runningTests[x].id){
@@ -446,6 +439,7 @@ function fnPushTestToGroupTest(groupID,testId){
 
 }
 
+// changes test property based on test id and index
 function fnChangeTestProperty(groupID,testId,field,value){
 	for(var x=runningTests.length-1; x>=0; x--){
 		if(groupID===runningTests[x].id){
@@ -453,7 +447,6 @@ function fnChangeTestProperty(groupID,testId,field,value){
 			for(var y=groupsTests.length-1; y>=0; y--){
 				if(groupsTests[y].id===testId){
 					runningTests[x].tests[y][field]=value;
-					console.log(runningTests[x].tests[y]);
 					break;
 				}
 			}
@@ -465,6 +458,8 @@ function fnChangeTestProperty(groupID,testId,field,value){
 }
 
 
+
+// function which spawns child process and executes test
 function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 	return new Promise((resolve,reject)=>{
 		let jCustomOpt=
@@ -506,7 +501,7 @@ function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
 
 
 
-
+// easy timeout
 function timeout(delay){
   return new Promise((resolve)=>{
     setTimeout(resolve,delay)
@@ -517,13 +512,8 @@ function timeout(delay){
 
 
 
-function timeoutTest(delay){
-  return new Promise((resolve)=>{
-  	console.log("testing")
-    setTimeout(resolve,delay)
-  })
-}
 
+// block loop (in sequence)
 async function fnBlockLoop(input,param,func){
     for(const item of input){
         let funct = await func(param);
@@ -533,7 +523,7 @@ async function fnBlockLoop(input,param,func){
 
 
 
-
+// checks if device accesable
 function fnIsDeviceAccesable(serial,repeats,repeatDelay) {
 
     let iCounter = 0;
@@ -553,7 +543,7 @@ function fnIsDeviceAccesable(serial,repeats,repeatDelay) {
    return attempt();
 }
 
-
+// used in fnIsDeviceAccesable
 async function fnIsDeviceAccesableOnce(serial,repeatDelay){
 await timeout(repeatDelay);
     const getDevices=await clientSwag.then((api)=>{
@@ -581,6 +571,8 @@ await timeout(repeatDelay);
     return (true);;
 }
 
+
+// check if stf is up and running -> used in fnStfCheck
 async function fnIsStfUp(){
 	return new Promise(async (resolve)=>{
 		let CheckBool= await fnIsPortFree(7100);
@@ -596,6 +588,8 @@ async function fnIsStfUp(){
 	})
 }
 
+
+// check if stf is up and running
 async function fnStfCheck(serial,repeats,repeatDelay){
 	console.log("stf check")
  let isUp=await fnIsStfUp();
@@ -617,7 +611,7 @@ async function fnStfCheck(serial,repeats,repeatDelay){
 }
 
 
-
+// should start stf if not running
 function fnStartStf(url){
 	return new Promise(resolve=>{
 		let stf=exec("stf " + url);
@@ -642,7 +636,7 @@ function fnStartStf(url){
 }
 
 
-
+// loads test index from file at the beginning of file
 function fnLoadTestNumber(){
 
 	let testNumber=fs.readFileSync('./idCounter','utf-8');
@@ -656,7 +650,7 @@ function fnLoadTestNumber(){
 
 
 
-
+// checks if port is free -> does not work needs replace
 async function fnIsPortFree(port){ // needs to be replace with soemthing else
 	return new Promise(resolve=>{
 		portfinder.basePort=port
@@ -681,7 +675,7 @@ async function fnIsPortFree(port){ // needs to be replace with soemthing else
 }
 
 
-
+// releases device to be available to use
 function fnDisconnect(UDID){
   clientSwag.then(function(api) {
     return api.user.getUserDevices({

@@ -3,12 +3,15 @@ const cv = require('opencv4nodejs');
 
 
 
-
+//// this is the screen size you build test on -> should be equal or bigger than the biggest device resolution -> cause we scale down 
 const buildScreenSize={
 "deviceWidth":1440,
 "deviceHeight":2560
 }
 
+
+
+// list of all devices 
 const allDevicesList=[
 {
 "deviceName":"Samusng A3",
@@ -66,7 +69,7 @@ const allDevicesList=[
 },
 ]
 
-
+// filter based on height 
 let allDevices = allDevicesList.filter((device, index, self) =>
   index === self.findIndex((t) => (
     t.deviceHeight === device.deviceHeight
@@ -97,7 +100,7 @@ const testExist=fnDoesTestExists(testName,"js");
 	}
 	fs.writeFile(__dirname+'/Tests/'+testName+'/Images.js', fileTemplate, (err) => {
 	  if (err) throw err;
-	  console.log('The file has been saved!');
+	  console.log('Please manually verify that images are not corupted ');
 	});
 }
 catch(err){

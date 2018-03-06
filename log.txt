@@ -1,9 +1,0 @@
-2018-02-07 15:40:44:843 - info: [Appium] Welcome to Appium v1.8.0-beta3
-2018-02-07 15:40:44:844 - info: [Appium] Non-default server args:
-2018-02-07 15:40:44:844 - info: [Appium]   port: 4500
-2018-02-07 15:40:44:844 - info: [Appium]   bootstrapPort: 5500
-2018-02-07 15:40:44:845 - info: [Appium]   sessionOverride: true
-2018-02-07 15:40:44:845 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log.txt
-2018-02-07 15:40:44:845 - info: [Appium]   logTimestamp: true
-2018-02-07 15:40:44:861 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4500
-2018-02-07 15:40:49:780 - info: [Appium] Received SIGINT - shutting down
