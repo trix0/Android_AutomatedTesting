@@ -3,7 +3,6 @@
 "testFileName":"CleanInstall",
 "groupTest":false,
 "desiredCapabilities": {
-        "automationName":"uiautomator2",
         "platformName": "Android",
         "deviceName": "Android",
         "appPackage":"com.gorro.nothing",

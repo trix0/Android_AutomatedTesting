@@ -13,9 +13,9 @@ const iExpressPort=3211;
 stfChecker=false;
 iTestId=fnLoadTestNumber();
 ON_DEATH = require('death')({uncaughtException: true}) 
-systemPort=8200;
-port=4000;
-bpPort=6000;
+global.systemPort=8200;
+global.port=4000;
+global.bpPort=6000;
 runningTests=[]; // array of running tests
 runningTestTemplate={
 	"testId":1,
@@ -108,6 +108,7 @@ try{
 				for(var s=0; s<serials.length; s++){
 					let UDID=serials[s];
 					testName=desCaps.testName;
+
 					fnRunBundle(testName,UDID,desCaps,runID)
 					runID++;
 				}
@@ -118,7 +119,7 @@ try{
 				let UDID=serials;
 				desCaps=JSON.parse(desCaps);
 				testName=desCaps.testName;
-				fnRunBundle(testName,UDID,desCaps)
+				fnRunBundle(testName,UDID,desCaps,0)
 
 
 			}
@@ -157,6 +158,9 @@ try{
 					testName=desCaps.testName;
 					console.log(desCaps)
 					console.log("desCaps_______________")
+					systemPort++;
+					bpPort++;
+					port++;
 					fnRunBundle(testName,UDID,desCaps,runID)
 					runID++;					
 				}	
@@ -291,6 +295,7 @@ function fnDoesGroupTestExists(testName,fileType){
 
 // all configuration for running a test
 async function fnRunBundle(testName,UDID,desCaps,runID=0){
+
 	return new Promise(async (resolve,reject)=>{
 		try{
 			console.log("runID:"+runID)
@@ -334,9 +339,14 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 		    		testName=desCaps.tests[iIndex].testFolder;
 		    		let groupTestCaps=desCaps;
 		    		var desCaps= await fnReadFile(__dirname+"/Tests/"+testName+"/"+testName+".json");
-					systemPort++;
+		    		console.log("before port:"+port)
+					let iSystemPort=systemPort+1;
+					let iPort=port+1;
+					let iBpPort=bpPort+1;
+		    		systemPort++;
 					port++;
 					bpPort++
+		    		console.log("after port:"+port)
 					iIndex++	
 		    		jStatusFormat.id=testIndex;
 					testIndex++
@@ -359,7 +369,7 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 					desCaps.parameters=desCaps.parameters[runID];
 					}
 					
-					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,port,systemPort,bpPort);
+					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,iSystemPort,iPort,iBpPort,jGroupTestFormat.id,jStatusFormat.id);
 					previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
 					if(previousTestSkipValue===false&&runStatus.indexOf("ERROR[MyERr]")>-1){
 						console.log(previousTestSkipValue)
@@ -386,7 +396,10 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 			}
 			else if(!desCaps.groupTest){
 				console.log("Single Test")
-				systemPort++;
+				let iSystemPort=systemPort+1;
+				let iPort=port+1;
+				let iBpPort=bpPort+1;
+	    		systemPort++;
 				port++;
 				bpPort++
 				iTestId++;
@@ -411,7 +424,7 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 				console.log("desCaps________");
 				console.log(desCaps);
 				console.log("desCaps________");
-				jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort)
+				jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,iSystemPort,iPort,iBpPort,jStatusFormat.id)
 
 
 			}
@@ -427,6 +440,7 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 
 
 }
+
 
 // push to array in group test to have test under 1 json object
 function fnPushTestToGroupTest(groupID,testId){
@@ -460,15 +474,18 @@ function fnChangeTestProperty(groupID,testId,field,value){
 
 
 // function which spawns child process and executes test
-function fnRunOnce(testName,UDID,desCaps,port,systemPort,bpPort){
+function fnRunOnce(testName,UDID,desCaps,iSystemPort,iPort,iBpPort,testID,testChildren=null){
+
 	return new Promise((resolve,reject)=>{
 		let jCustomOpt=
 					{
+						"testID":testID,
+						"testChildren":testChildren,
 						"testName":testName,
 						"UDID":UDID,
-						"port":port,
-						"systemPort":systemPort,
-						"bpPort":bpPort,
+						"port":iPort,
+						"systemPort":iSystemPort,
+						"bpPort":iBpPort,
 						"desCaps":desCaps
 
 					}

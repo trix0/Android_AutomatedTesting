@@ -11,7 +11,12 @@ const winston = require('winston');
 const jArguments=JSON.parse(process.argv[2]);
 console.log(jArguments);
 console.log("passin data____________")
+const outputDir=__dirname+"/logs/"+jArguments.testID+"_"+jArguments.desCaps.testFileName+"_"+jArguments.UDID;
+jArguments.outputDir=outputDir;
+const folder=fnCreateFolder(outputDir);
 let testName=jArguments.desCaps.testName;
+
+
 const logger = new winston.Logger({
     level: 'info',
     transports: [
@@ -19,7 +24,7 @@ const logger = new winston.Logger({
         timestamp: true
       }),
       new winston.transports.File({
-        filename: __dirname+'/logs/app'+ jArguments.port+'.log',
+        filename:outputDir+'/CustomLog.log',
         timestamp: true,
         prettyPrint : true,
         json:false,
@@ -35,11 +40,36 @@ imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 logger.info('Test execution started');
 logger.info("Got following options to run"+ JSON.stringify(jArguments))
 
-
+let fn={};
+fn.timeout=timeout;
+fn.fnScrollAndFind=fnScrollAndFind;
+fn.fnScrollAndFindOnce=fnScrollAndFindOnce;
+fn.fnClickScalable=fnClickScalable;
+fn.fnScalingDetect=fnScalingDetect;
+fn.fnScalingDetectOnce=fnScalingDetectOnce;
+fn.fnIsOnScreenOnceScalable=fnIsOnScreenOnceScalable;
+fn.fnIsOnScreenScalable=fnIsOnScreenScalable;
+fn.fnWriteValue=fnWriteValue;
+fn.fnWriteValueOnce=fnWriteValueOnce;
+fn.fnPermissionId=fnPermissionId;
+fn.fnPermssionOnce=fnPermssionOnce;
+fn.fnClearKeyBoard=fnClearKeyBoard;
+fn.fnIsOnScreen=fnIsOnScreen;
+fn.fnIsOnScreenOnce=fnIsOnScreenOnce;
+fn.fnClick=fnClick;
+fn.fnSaveScreenShot=fnSaveScreenShot;
+fn.SaveImage=SaveImage;
+fn.fnTestFinish=fnTestFinish;
+fn.fnTestFinishOnce=fnTestFinishOnce;
+fn.testName=testName;
+fn.logger=logger;
+fn.fnPushToOutputArray=fnPushToOutputArray;
+fn.fnMarkOnImage=fnMarkOnImage;
+fn.fnSaveTestOutput=fnSaveTestOutput;
 
 let desCaps=jArguments.desCaps;
 let testFileName=desCaps.testFileName;
-let test = require('./Tests/'+testFileName+'/'+testFileName)(timeout,fnScrollAndFind,fnScrollAndFindOnce,fnClickScalable,fnScalingDetect,fnScalingDetectOnce,fnIsOnScreenOnceScalable,fnIsOnScreenScalable,fnWriteValue,fnWriteValueOnce,fnPermissionId,fnPermission,fnPermssionOnce,fnClearKeyBoard,fnIsOnScreen,fnIsOnScreenOnce,fnClick,fnSaveScreenShot,SaveImage,fnTestFinish,fnTestFinishOnce,testName,logger);
+let test = require('./Tests/'+testFileName+'/'+testFileName)(fn);
 
 
 //////////// capabilities options for appium//////////
@@ -47,7 +77,7 @@ let opts = {
       port: jArguments.port,
       desiredCapabilities:desCaps.desiredCapabilities
 };
-
+opts.desiredCapabilities.systemPort=jArguments.systemPort
 
 ///// swagger client to authoriize openSTF/////////////
 const clientSwag = new Swagger({
@@ -57,7 +87,8 @@ const clientSwag = new Swagger({
     accessTokenAuth: new Swagger.ApiKeyAuthorization('Authorization', 'Bearer ' + AUTH_TOKEN, 'header')
   }
 })
-
+const testOutput=jArguments;
+testOutput.steps=[];
 
 
 const serial = jArguments.UDID;          /////////// serial number of phone
@@ -76,7 +107,7 @@ async function fnInit(){
       fnDisconnect(UDID);  // disconnects from open stf
     });
 
-    await test.run(client,desCaps.parameters).catch(err=>{
+    await test.run(client,jArguments,testOutput).catch(err=>{
       logger.info("ERROR[MyERr]: TEST FINISHED WITH ERROR: "+err)
     }); // runs test
     await fnDisconnect(UDID);
@@ -92,6 +123,60 @@ async function fnInit(){
 
 
 //////////////////////// func def/////////////////////
+
+function fnSaveTestOutput(object,path){
+  console.log("saveing test output")
+fs.writeFile(path+"/testOutput.json",JSON.stringify(object), (err) => {
+  if (err) throw err;
+  console.log('The file has been saved!');
+});
+}
+
+
+
+function fnPushToOutputArray(object){
+  testOutput.steps.push(object)
+}
+
+function fnMarkOnImage(screenshot,smallImg,result,outputFolder){
+let random=Math.random().toString(36).substr(2, 5);
+let point2=result.maxLoc;
+let newPoint=cv.Point(point2.x+(smallImg.cols/2),point2.y+(smallImg.rows/2))
+screenshot.drawCircle(newPoint, 50, cv.Vec(244, 66, 66) ,15,8,0)
+screenshot.drawCircle(newPoint, 51, cv.Vec(0, 0, 0) ,5,8,0)
+console.log("saving img:"+outputFolder+"/img_"+random+"a.png")
+cv.imwrite (outputFolder+"/img_"+random+"a.png" ,screenshot)
+return outputFolder+"/img_"+random+"a.png";
+}
+
+
+////logging////
+async function fnCreateFolder(path){
+  try{
+    console.log(path);
+    fs.access(path, (err) => {
+      if (!err) {
+        throw new Error(path+' already exists');
+      } 
+      fs.mkdir(path, err=>{
+        if(err){
+          throw err; 
+        }
+        return path
+       
+      }); 
+    })
+  }
+  catch(err){
+    console.log(err);
+  }
+}
+
+
+
+
+
+
 
 
 
@@ -278,6 +363,7 @@ async function fnConnectStf(serial){
     const remoteConnectUDID= await (()=>{
       logger.info("executing command adb connect  " + remoteConnect.obj.remoteConnectUrl)
       exec('adb connect '+remoteConnect.obj.remoteConnectUrl+'','',(err, stdout, stderr)=>{
+        console.log(err);
       });
       return remoteConnect.obj.remoteConnectUrl
     })();
@@ -337,10 +423,10 @@ function fnDisconnect(UDID){
 /// creates appium server on port from opts 
 function fnCreateServer(port,bpPort){
   return new Promise((resolve,reject)=>{
-    logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp' + bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
+    logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log '+outputDir+'/Appium.log');
     logger.info("Trying to create appium Server on port: "+ port)
     let appiumPort=port
-    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log /home/trixo/Code/javaRewrite/log'+port+'.txt');
+    let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log '+outputDir+'/Appium.log');
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
         logger.info("Appium server created on port: "+port )
@@ -546,12 +632,14 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  result.screenshot=img1
   if (result.maxVal <= 0.65) {
       // Fail
       const msg = "Can't see object yet";
       throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
   }
         // All good
+
         logger.info("Found image on screen: "+desc);
         return result;
 }
@@ -683,6 +771,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
     logger.info("Running click event : "+desc+" with "+ repeats + "repets");
     let coordinates= await fnIsOnScreen(img,client,repeats,desc,wait);
+    console.log(coordinates);
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
     let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
     let performClick= await  client.touchPerform([{
@@ -693,7 +782,9 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
             count: 1 // number of touches
         }
       }])
+    fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
     logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
+    fnPushToOutputArray({"message":"clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation})
     console.log("Click Performed: "+desc);
     return(true);
   }

@@ -1,0 +1,12 @@
+2018-03-08T13:00:34.571Z - info: Test execution started
+2018-03-08T13:00:34.571Z - info: Got following options to run{"testID":1050,"testChildren":0,"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","testFileName":"CleanInstall","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"androidInstallTimeout":150000},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}},"outputDir":"/home/trixo/Code/javaRewrite/logs/1050_CleanInstall_cd21ccc5"}
+2018-03-08T13:00:34.589Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-03-08T13:00:34.642Z - info: executing command adb connect  localhost:7401
+2018-03-08T13:00:34.650Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp 6002  --log-timestamp --log /home/trixo/Code/javaRewrite/logs/1050_CleanInstall_cd21ccc5/Appium.log
+2018-03-08T13:00:34.650Z - info: Trying to create appium Server on port: 4002
+2018-03-08T13:00:36.885Z - info: Appium server created on port: 4002
+2018-03-08T13:00:37.011Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Device localhost:7401 was not in the list of connected devices
+2018-03-08T13:00:37.019Z - info: You are not owner of localhost:7401 => open STF 
+2018-03-08T13:03:11.647Z - info: Appium on close  null
+2018-03-08T13:03:11.650Z - info: You are not owner of localhost:7401 => open STF 
+2018-03-08T13:03:11.650Z - info: You are not owner of localhost:7401 => open STF 

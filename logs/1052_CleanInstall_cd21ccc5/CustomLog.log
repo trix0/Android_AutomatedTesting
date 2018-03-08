@@ -1,0 +1,23 @@
+2018-03-08T13:07:11.952Z - info: Test execution started
+2018-03-08T13:07:11.953Z - info: Got following options to run{"testID":1052,"testChildren":0,"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","testFileName":"CleanInstall","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"androidInstallTimeout":150000},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}},"outputDir":"/home/trixo/Code/javaRewrite/logs/1052_CleanInstall_cd21ccc5"}
+2018-03-08T13:07:11.970Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-03-08T13:07:12.021Z - info: executing command adb connect  localhost:7401
+2018-03-08T13:07:12.028Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp 6002  --log-timestamp --log /home/trixo/Code/javaRewrite/logs/1052_CleanInstall_cd21ccc5/Appium.log
+2018-03-08T13:07:12.028Z - info: Trying to create appium Server on port: 4002
+2018-03-08T13:07:14.382Z - info: Appium server created on port: 4002
+2018-03-08T13:07:30.017Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-03-08T13:07:31.829Z - info: App exists in device => trying to remove
+2018-03-08T13:07:37.861Z - info: App removed
+2018-03-08T13:07:37.861Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-03-08T13:08:29.912Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-03-08T13:08:33.627Z - info: Running fnPermission with value: true
+2018-03-08T13:08:37.049Z - info: Running click event : Close intro Video  with 20repets
+2018-03-08T13:08:37.049Z - info: Looking for image on screen:Close intro Video  with 20 repeats 
+2018-03-08T13:08:37.049Z - info: Running delay for : 30000
+2018-03-08T13:09:07.073Z - info: Running delay for : 0
+2018-03-08T13:09:09.616Z - info: Found image on screen: Close intro Video 
+2018-03-08T13:09:09.913Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: ReferenceError: path is not defined
+2018-03-08T13:09:09.932Z - info: Disconnected localhost:7401=> open STF 
+2018-03-08T13:10:33.442Z - info: You are not owner of localhost:7401 => open STF 
+2018-03-08T13:10:33.443Z - info: You are not owner of localhost:7401 => open STF 
+2018-03-08T13:14:34.288Z - info: Appium on close  null

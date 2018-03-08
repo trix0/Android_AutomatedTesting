@@ -2,10 +2,43 @@
 const cv = require('opencv4nodejs');
 const imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
 const imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
+const overlay = cv.imread(__dirname+'/autoTest/over.png',cv.IMREAD_UNCHANGED);
+const fs=require("fs");
+
+img1 = cv.imread(__dirname+'/x_OverIntroVideo.png');
+img = cv.imread(__dirname+'/asd.png');
+
+
+console.log(overlay)
+let overlayW=overlay.sizes[0];
+let overlayH=overlay.sizes[1];
+
+let result = img.matchTemplate(img1, 5).minMaxLoc(); 
+let here=fnMarkOnImage(img,img1,result);
 
 
 
 /// nice timeout function
+
+
+
+
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('What do you think of Node.js? ', (answer) => {
+  // TODO: Log the answer in a database
+  console.log(`Thank you for your valuable feedback: ${answer}`);
+
+  rl.close();
+});
+
+
 
 
 function timeout(delay){

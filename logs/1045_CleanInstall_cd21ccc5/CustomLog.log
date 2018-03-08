@@ -1,0 +1,34 @@
+2018-03-08T12:29:38.356Z - info: Test execution started
+2018-03-08T12:29:38.356Z - info: Got following options to run{"testID":1045,"testChildren":0,"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","testFileName":"CleanInstall","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"androidInstallTimeout":150000},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}},"outputDir":"/home/trixo/Code/javaRewrite/logs/1045_CleanInstall_cd21ccc5"}
+2018-03-08T12:29:38.374Z - info: Trying to connect to openSTF with serial number cd21ccc5
+2018-03-08T12:29:38.419Z - info: executing command adb connect  localhost:7429
+2018-03-08T12:29:38.425Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp 6002  --log-timestamp --log /home/trixo/Code/javaRewrite/logs/1045_CleanInstall_cd21ccc5/Appium.log
+2018-03-08T12:29:38.425Z - info: Trying to create appium Server on port: 4002
+2018-03-08T12:29:40.677Z - info: Appium server created on port: 4002
+2018-03-08T12:29:56.072Z - info: Running clean Install test with following paramters, appPackage: com.pointvoucher.playlondonpv activityName: com.unity3d.player.UnityPlayerActivity apkFile: /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-03-08T12:29:57.790Z - info: App exists in device => trying to remove
+2018-03-08T12:30:03.793Z - info: App removed
+2018-03-08T12:30:03.793Z - info: Installing app to device /home/trixo/Code/javaRewrite/Tests/CleanInstall/apk/pl.apk
+2018-03-08T12:30:58.111Z - info: starting package : com.pointvoucher.playlondonpv with activity name: com.unity3d.player.UnityPlayerActivity
+2018-03-08T12:31:02.316Z - info: Running fnPermission with value: true
+2018-03-08T12:31:05.663Z - info: Running click event : Close intro Video  with 20repets
+2018-03-08T12:31:05.664Z - info: Looking for image on screen:Close intro Video  with 20 repeats 
+2018-03-08T12:31:05.664Z - info: Running delay for : 30000
+2018-03-08T12:31:35.691Z - info: Running delay for : 0
+2018-03-08T12:31:38.486Z - info: Found image on screen: Close intro Video 
+2018-03-08T12:31:38.688Z - info: clicked on : Close intro Video  with following coordinates x=507 y=32
+2018-03-08T12:31:38.689Z - info: Looking for image on screen:Check if message is there If its there Test Completed with 20 repeats 
+2018-03-08T12:31:38.689Z - info: Running delay for : 6000
+2018-03-08T12:31:44.691Z - info: Running delay for : 2000
+2018-03-08T12:31:48.688Z - info: Running delay for : 2000
+2018-03-08T12:31:52.722Z - info: Running delay for : 2000
+2018-03-08T12:31:57.263Z - info: Running delay for : 2000
+2018-03-08T12:32:01.058Z - info: Running delay for : 2000
+2018-03-08T12:32:04.576Z - info: Running delay for : 2000
+2018-03-08T12:32:08.202Z - info: Found image on screen: Check if message is there If its there Test Completed
+2018-03-08T12:32:08.202Z - info: Test:Clean Install[FINISHED]
+2018-03-08T12:32:08.203Z - info: Running delay for : 10000
+2018-03-08T12:32:18.226Z - info: Disconnected localhost:7429=> open STF 
+2018-03-08T12:47:44.004Z - info: You are not owner of localhost:7429 => open STF 
+2018-03-08T12:47:44.005Z - info: You are not owner of localhost:7429 => open STF 
+2018-03-08T12:47:49.003Z - info: Appium on close  null

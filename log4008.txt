@@ -1,0 +1,255 @@
+2018-03-06 15:48:20:549 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-03-06 15:48:20:550 - info: [Appium] Non-default server args:
+2018-03-06 15:48:20:551 - info: [Appium]   port: 4008
+2018-03-06 15:48:20:551 - info: [Appium]   bootstrapPort: 6008
+2018-03-06 15:48:20:551 - info: [Appium]   log: /home/trixo/Code/javaRewrite/log4008.txt
+2018-03-06 15:48:20:551 - info: [Appium]   logTimestamp: true
+2018-03-06 15:48:20:567 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4008
+2018-03-06 15:48:20:597 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8208,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}}}
+2018-03-06 15:48:20:599 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8208,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}},null,null]
+2018-03-06 15:48:20:600 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1520351300600 (16:48:20 GMT+0100 (CET))
+2018-03-06 15:48:20:602 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-03-06 15:48:20:602 - info: [Appium] Capabilities:
+2018-03-06 15:48:20:602 - info: [Appium]   javascriptEnabled: true
+2018-03-06 15:48:20:602 - info: [Appium]   locationContextEnabled: true
+2018-03-06 15:48:20:602 - info: [Appium]   handlesAlerts: true
+2018-03-06 15:48:20:603 - info: [Appium]   rotatable: true
+2018-03-06 15:48:20:603 - info: [Appium]   platformName: Android
+2018-03-06 15:48:20:603 - info: [Appium]   deviceName: Android
+2018-03-06 15:48:20:603 - info: [Appium]   appPackage: com.pointvoucher.playlondonpv
+2018-03-06 15:48:20:603 - info: [Appium]   appActivity: com.unity3d.player.UnityPlayerActivity
+2018-03-06 15:48:20:603 - info: [Appium]   fullReset: false
+2018-03-06 15:48:20:603 - info: [Appium]   noReset: true
+2018-03-06 15:48:20:604 - info: [Appium]   newCommandTimeout: 120000
+2018-03-06 15:48:20:604 - info: [Appium]   skipUnlock: true
+2018-03-06 15:48:20:604 - info: [Appium]   systemPort: 8208
+2018-03-06 15:48:20:604 - info: [Appium]   udid: localhost:7401
+2018-03-06 15:48:20:604 - info: [Appium]   requestOrigins: {
+2018-03-06 15:48:20:604 - info: [Appium]     url: http://webdriver.io
+2018-03-06 15:48:20:605 - info: [Appium]     version: 4.10.2
+2018-03-06 15:48:20:605 - info: [Appium]     name: webdriverio
+2018-03-06 15:48:20:605 - info: [Appium]   }
+2018-03-06 15:48:20:609 - info: [debug] [BaseDriver] 
+2018-03-06 15:48:20:609 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-03-06 15:48:20:614 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, systemPort, requestOrigins.
+2018-03-06 15:48:20:615 - info: [BaseDriver] Session created with session id: 4fa6c884-0de4-4223-8c99-0efed111d07b
+2018-03-06 15:48:20:615 - info: [debug] [AndroidDriver] Getting Java version
+2018-03-06 15:48:20:666 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-03-06 15:48:20:668 - info: [ADB] Checking whether adb is present
+2018-03-06 15:48:20:674 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-03-06 15:48:20:675 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-03-06 15:48:20:675 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-03-06 15:48:20:675 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-03-06 15:48:20:676 - info: [AndroidDriver] Retrieving device list
+2018-03-06 15:48:20:676 - info: [debug] [ADB] Trying to find a connected android device
+2018-03-06 15:48:20:677 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:20:685 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:20:685 - info: [AndroidDriver] Using device: localhost:7401
+2018-03-06 15:48:20:686 - info: [ADB] Checking whether adb is present
+2018-03-06 15:48:20:687 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-03-06 15:48:20:687 - info: [debug] [ADB] Setting device id to localhost:7401
+2018-03-06 15:48:20:687 - info: [AndroidDriver] App file was not listed, instead we're going to run com.pointvoucher.playlondonpv directly on the device
+2018-03-06 15:48:20:688 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-03-06 15:48:20:688 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:20:696 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:20:697 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-03-06 15:48:22:775 - info: [AndroidDriver] Starting Android session
+2018-03-06 15:48:22:777 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","wait-for-device"]
+2018-03-06 15:48:22:788 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:22:797 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:22:797 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","echo","ping"]
+2018-03-06 15:48:22:833 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-03-06 15:48:22:834 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-03-06 15:48:22:834 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:22:841 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:22:842 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.settings"]
+2018-03-06 15:48:24:883 - info: [debug] [ADB] App is installed
+2018-03-06 15:48:24:884 - info: [debug] [ADB] Getting package info for io.appium.settings
+2018-03-06 15:48:24:884 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:24:891 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:24:892 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.settings"]
+2018-03-06 15:48:24:972 - info: [ADB] Checking whether aapt is present
+2018-03-06 15:48:24:973 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-03-06 15:48:24:984 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+2018-03-06 15:48:24:985 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:24:994 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:24:994 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-03-06 15:48:25:238 - info: [debug] [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2018-03-06 15:48:25:239 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:25:246 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:25:247 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.sdk"]
+2018-03-06 15:48:25:302 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
+2018-03-06 15:48:25:303 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:25:303 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:25:310 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:25:311 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","appops","set","io.appium.settings","android:mock_location","allow"]
+2018-03-06 15:48:27:472 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-03-06 15:48:27:473 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-03-06 15:48:27:474 - info: [debug] [Logcat] Starting logcat capture
+2018-03-06 15:48:27:535 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-03-06 15:48:27:535 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-03-06 15:48:27:536 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:27:544 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:27:544 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","pm","list","packages","io.appium.unlock"]
+2018-03-06 15:48:29:631 - info: [debug] [ADB] App is installed
+2018-03-06 15:48:29:631 - info: [debug] [ADB] Getting package info for io.appium.unlock
+2018-03-06 15:48:29:632 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:29:643 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:29:644 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","dumpsys","package","io.appium.unlock"]
+2018-03-06 15:48:29:726 - info: [ADB] Checking whether aapt is present
+2018-03-06 15:48:29:732 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-03-06 15:48:29:741 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+2018-03-06 15:48:29:748 - info: [ADB] Getting device platform version
+2018-03-06 15:48:29:748 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:29:757 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:29:758 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.build.version.release"]
+2018-03-06 15:48:29:823 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-06 15:48:29:823 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:29:831 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:29:831 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","wm","size"]
+2018-03-06 15:48:31:998 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:32:006 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:32:006 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.model"]
+2018-03-06 15:48:32:084 - info: [debug] [ADB] Current device property 'ro.product.model': SM-A300FU
+2018-03-06 15:48:32:085 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:32:093 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:32:094 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","getprop","ro.product.manufacturer"]
+2018-03-06 15:48:32:145 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': samsung
+2018-03-06 15:48:32:146 - warn: [AndroidDriver] No app sent in, not parsing package/activity
+2018-03-06 15:48:32:146 - info: [debug] [AndroidDriver] No app capability. Assuming it is already on the device
+2018-03-06 15:48:32:147 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2018-03-06 15:48:32:148 - info: [debug] [ADB] Forwarding system: 6008 to device: 4724
+2018-03-06 15:48:32:148 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","forward","tcp:6008","tcp:4724"]
+2018-03-06 15:48:32:155 - info: [debug] [UiAutomator] Starting UiAutomator
+2018-03-06 15:48:32:155 - info: [debug] [UiAutomator] Moving to state 'starting'
+2018-03-06 15:48:32:155 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2018-03-06 15:48:32:156 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2018-03-06 15:48:32:156 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","push","/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+2018-03-06 15:48:32:178 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2018-03-06 15:48:32:179 - info: [debug] [ADB] Getting all processes with uiautomator
+2018-03-06 15:48:32:179 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:32:187 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:32:187 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","ps"]
+2018-03-06 15:48:32:353 - info: [ADB] No uiautomator process found to kill, continuing...
+2018-03-06 15:48:32:353 - info: [debug] [UiAutomator] Starting UIAutomator
+2018-03-06 15:48:32:353 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","localhost:7401","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.pointvoucher.playlondonpv","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2018-03-06 15:48:35:402 - info: [debug] [UiAutomator] Moving to state 'online'
+2018-03-06 15:48:35:404 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2018-03-06 15:48:35:405 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:35:406 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:48:35:413 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Loading json...
+2018-03-06 15:48:35:414 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2018-03-06 15:48:35:414 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:48:35:415 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","start","-W","-n","com.pointvoucher.playlondonpv/com.unity3d.player.UnityPlayerActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-03-06 15:48:35:423 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2018-03-06 15:48:40:725 - info: [Appium] New AndroidDriver session created successfully, session 4fa6c884-0de4-4223-8c99-0efed111d07b added to master session list
+2018-03-06 15:48:40:728 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1520351320727 (16:48:40 GMT+0100 (CET))
+2018-03-06 15:48:40:731 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":true,"warnings":{},"desired":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8208,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}},"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"localhost:7401","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8208,"udid":"localhost:7401","requestOrigins":{"url":"http://webdriver.io","version...
+2018-03-06 15:48:40:737 - info: [HTTP] <-- POST /wd/hub/session 200 20138 ms - 1268 
+2018-03-06 15:48:40:743 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/window/current/size {}
+2018-03-06 15:48:40:744 - info: [debug] [MJSONWP] Calling AppiumDriver.getWindowSize() with args: ["current","4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:48:40:746 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"getDeviceSize","params":{}}
+2018-03-06 15:48:40:749 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"getDeviceSize","params":{}}
+2018-03-06 15:48:40:750 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-06 15:48:40:750 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getDeviceSize
+2018-03-06 15:48:40:770 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"height":960,"width":540}}
+2018-03-06 15:48:40:770 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-06 15:48:40:772 - info: [debug] [MJSONWP] Responding to client with driver.getWindowSize() result: {"height":960,"width":540}
+2018-03-06 15:48:40:773 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/window/current/size 200 29 ms - 98 
+2018-03-06 15:48:46:784 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:48:46:784 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:48:46:785 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:48:010 - info: [debug] [AndroidBootstrap] Emitting alert message...
+2018-03-06 15:48:48:011 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Emitting system alert message
+2018-03-06 15:48:48:020 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCWBdZYHw/f/znHO35GbflyZN23SFVhahgIAsiqAg4IL7sIiOyrigjssMM+PrijjMuL0ojOMCOioqKKigLA4o4LCUtrS0Tdvsy725S+7NXc+555xvbvjily+mbZJmuUme308ADjPxwz+iKIqiKMoK9/ZXMBMSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnEkVRFEVRlHkmURRFURRFmWcSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnEkVRFEVRlHkmURRFURRFmWcSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnOoqiKIqi/JUrmyt4VV05YcNkOiSCUpfGdzuHeTaaZKJTKoq5pq2GuGlh4zAdVW4Xvw+M8Iu+KMuBjqIoiqIof+WqVVVc0VzJTPWmDZ6NJpnowvoy3rO2lpmqdGv8oi/KcqCzxJS5NK5uq+Hi+jK+cTDA/QMjHA+XFLypuZJza0tZU+yh3K0TM3Nc+Id9zLcb2uu4sK6MvD+GRvnKvkGm49q2Gi5tLOeE8mLKXRqO4xA1LXaNJLmnL8qPesIoiqLMtV2v2crGEi/j9o1m2PrALpYrKZiVjGUzWcaymQ0pWDZ0logL68r4m7ZqXlNfTplLI+/nfVGOxwfX13Pj+noafW4mGkgbzLeTKor5Pyc049c18tKWzbGcVFHMHae2sbW8iMnK3TptxR5e31TJ+9vrePf/HGbfaAZFUZS50lrkZqIWn5vlzHaYFdvhr9gOs2I7LBs6BazZ5+a6NTVc2VzJplIfc6Wt2MN3Xr6GV9SUMJFhO4wYOXpSBvPt317Wgl/XmK52v5d7zmqn0edmXHfKoCeZRQCr/R6afW7yTqv088uzN3DBoy/SlzZQFEU5XjUeFz5NMlGRLqnxuBjOmijKsegUqB9uX8frGsvxaZKJkjmLYl1j...
+2018-03-06 15:48:48:022 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1238 ms - 198422 
+2018-03-06 15:48:50:098 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:48:50:100 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:48:50:101 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:51:436 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCWBdZYHw/f/znHO35GbflyZN23SFVhahgIAsiqAg4IL7sIiOyrigjssMM+PrijjMuL0ojOMCOioqKKigLA4o4LCUtrS0Tdvsy725S+7NXc+555xvbvjily+mbZJmuUme308ADjPxwz+iKIqiKMoK9/ZXMBMSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnEkVRFEVRlHkmURRFURRFmWcSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnEkVRFEVRlHkmURRFURRFmWcSRVEURVGUeSZRFEVRFEWZZxJFURRFUZR5JlEURVEURZlnOoqiKIqi/JUrmyt4VV05YcNkOiSCUpfGdzuHeTaaZKJTKoq5pq2GuGlh4zAdVW4Xvw+M8Iu+KMuBjqIoiqIof+WqVVVc0VzJTPWmDZ6NJpnowvoy3rO2lpmqdGv8oi/KcqCzxJS5NK5uq+Hi+jK+cTDA/QMjHA+XFLypuZJza0tZU+yh3K0TM3Nc+Id9zLcb2uu4sK6MvD+GRvnKvkGm49q2Gi5tLOeE8mLKXRqO4xA1LXaNJLmnL8qPesIoiqLMtV2v2crGEi/j9o1m2PrALpYrKZiVjGUzWcaymQ0pWDZ0logL68r4m7ZqXlNfTplLI+/nfVGOxwfX13Pj+noafW4mGkgbzLeTKor5Pyc049c18tKWzbGcVFHMHae2sbW8iMnK3TptxR5e31TJ+9vrePf/HGbfaAZFUZS50lrkZqIWn5vlzHaYFdvhr9gOs2I7LBs6BazZ5+a6NTVc2VzJplIfc6Wt2MN3Xr6GV9SUMJFhO4wYOXpSBvPt317Wgl/XmK52v5d7zmqn0edmXHfKoCeZRQCr/R6afW7yTqv088uzN3DBoy/SlzZQFEU5XjUeFz5NMlGRLqnxuBjOmijKsegUqB9uX8frGsvxaZKJkjmLYl1j...
+2018-03-06 15:48:51:440 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1342 ms - 199370 
+2018-03-06 15:48:53:514 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:48:53:515 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:48:53:518 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:55:009 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3ykdYH4/8/3+0zNTHrvm93NFsouS11AQIoiIEhTxEqxNxThhHsd53k2EI8726GgZwFUBEQFEVFAQQUFtrKwu9lsepnJlMxk6vPMM8/vJvzj5R+zu0k2ZZJ8328BWEzHfX9CURRFUZRl7p2vYzokiqIoiqIoc0yiKIqiKIoyxySKoiiKoihzTKIoiqIoijLHJIqiKIqiKHNMoiiKoiiKMsckiqIoiqIoc0yiKIqiKIoyxySKoiiKoihzTKIoiqIoijLHJIqiKIqiKHNMoiiKoiiKMsckiqIoiqIoc0yiKIqiKIoyxySKoiiKoihzTKIoiqIoijLHbCiKoiiK8g8ubSjlDdUlBHWDqZAIiuwa3+8Y4qVwnPGOK/VwdUslUcMki8VUlDvs/M43zM97wywFNhRFURRF+QdXNJZzSUMZ09WT1HkpHGe8c2qK+cCqKqarzKHx894wS4GNRabYrnFVSyXn1RTzzX0+Hu0f5nDYpeCtDWWcUVXESo+TEoeNiJHhnD/sZq59rLWac6qLyflTYISv7h5gKq5pqeTCuhKOKvFQYtewLIuwYbJjOM7DvWF+3B1EURRltu140wbWFboYs3skxYbHd7BUScGMpMwsE6XMLDMhBUuGjUXinOpi3ttSwZtqSii2a+Q81BvmcHxiTQ3Xr6mhzu1gvP6kzlzbVOrh349qwGvTyEmaWQ5lU6mHu49vYUNJAROVOGy0eJy8pb6Mj7RW876/7Wf3SApFUZTZ0lzgYLwmt4OlLGsxI1mLf5C1mJGsxZJhI481uB1cu7KSSxvKWF/kZra0eJx874SVvK6ykPH0rMWwnqE7oTPX/vOYJrw2jalq9bp4+NRW6twOxnQldLrjaQSwwuukwe0g58QyL788bS1nP/0qvUkdRVGUw1XptOPWJOMV2CSVTjtDaQNFORQbeeq+zat5c10Jbk0yXjxj4rFpzFSr18Uv...
+2018-03-06 15:48:55:011 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1498 ms - 202070 
+2018-03-06 15:48:57:086 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:48:57:087 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:48:57:088 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:48:57:986 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3xc5YHw6//7nqmaUe/dsi0Xio2pxgQIJXGooSWkLUtJ70tgA/tbNptNg5BlN+0jgc0XlpKEAIEEEkoCJJAEZyluGGzLsnqZ0RTNaOo5c+bcHXGVq6vItiRL1kh6n0cAFtPxwB9RFEVRFGWJ++DbmA6JoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxiaIoiqIoyhyTKIqiKIqizDGJoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxiaIoiqIoyhyTKIqiKIqizDGJoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxG4qiKIqi/I3LGkp5R3UJQd1gKiSCIrvGjzuGeDUcZ7wTSj1c01JJ1DDJYjEV5Q47v/UN84veMIuBDUVRFEVR/saVjeVc2lDGdPUkdV4Nxxnv3JpiPrqiiukqc2j8ojfMYmBjgSm2a1zdUsl5NcV8b5+PJ/qHORx2KXhPQxlnVhWx3OOkxGEjYmQ49/e7mWufbq3m3Opicv4YGOFbuweYimtbKrmoroRjSjyU2DUsyyJsmOwYjvNob5ifdAdRFEWZbTvetY41hS7G7B5Jse6pHSxWUjAjKTPLRCkzy0xIwaJhY4E4t7qYv2+p4F01JRTbNXIe6Q1zOD67qobrV9VQ53YwXn9SZ65tKPXwb8c04LVp5CTNLIeyodTD3Se2sK6kgIlKHDZaPE7eXV/GJ1ur+fD/7Gf3SApFUZTZ0lzgYLwmt4PFLGsxI1mLv5G1mJGsxaJhI481uB1ct7ySyxrKWFvkZra0eJz86KTlvK2ykPH0rMWwnqE7oTPX/uO4Jrw2jalq9bp49LRW6twOxnQldLrjaQSwzOukwe0g5+QyL788fTXnPP8mvUkdRVGUw1XptOPWJOMV2CSVTjtDaQNFORQbeeqBjSu5sK4EtyYZL54x8dg0ZqrV...
+2018-03-06 15:48:57:989 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 903 ms - 201446 
+2018-03-06 15:49:00:060 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:00:063 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:00:065 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:01:378 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3xc5YHw6//7nqmaUe/dsi0Xio2pxgQIJXGooSWkLUtJ70tgA/tbNptNg5BlN+0jgc0XlpKEAIEEEkoCJJAEZyluGGzLsnqZ0RTNaOo5c+bcHXGVq6vItiRL1kh6n0cAFtPxwB9RFEVRFGWJ++DbmA6JoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxiaIoiqIoyhyTKIqiKIqizDGJoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxiaIoiqIoyhyTKIqiKIqizDGJoiiKoijKHJMoiqIoiqLMMYmiKIqiKMockyiKoiiKoswxG4qiKIqi/I3LGkp5R3UJQd1gKiSCIrvGjzuGeDUcZ7wTSj1c01JJ1DDJYjEV5Q47v/UN84veMIuBDUVRFEVR/saVjeVc2lDGdPUkdV4Nxxnv3JpiPrqiiukqc2j8ojfMYmBjgSm2a1zdUsl5NcV8b5+PJ/qHORx2KXhPQxlnVhWx3OOkxGEjYmQ49/e7mWufbq3m3Opicv4YGOFbuweYimtbKrmoroRjSjyU2DUsyyJsmOwYjvNob5ifdAdRFEWZbTvetY41hS7G7B5Jse6pHSxWUjAjKTPLRCkzy0xIwaJhY4E4t7qYv2+p4F01JRTbNXIe6Q1zOD67qobrV9VQ53YwXn9SZ65tKPXwb8c04LVp5CTNLIeyodTD3Se2sK6kgIlKHDZaPE7eXV/GJ1ur+fD/7Gf3SApFUZTZ0lzgYLwmt4PFLGsxI1mLv5G1mJGsxaJhI481uB1ct7ySyxrKWFvkZra0eJz86KTlvK2ykPH0rMWwnqE7oTPX/uO4Jrw2jalq9bp49LRW6twOxnQldLrjaQSwzOukwe0g5+QyL788fTXnPP8mvUkdRVGUw1XptOPWJOMV2CSVTjtDaQNFORQbeeqBjSu5sK4EtyYZL54x8dg0ZqrV...
+2018-03-06 15:49:01:380 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1321 ms - 201446 
+2018-03-06 15:49:03:452 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:03:455 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:03:456 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:04:756 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCWCcdYHw/+/v9zxzJDOTO03SJA3pDS0FylVAUKBYQUAub5dF8b5F2cV9l3VdLxRXX68XhWVlEU9AVFBAuQSUulw9KKRN09zHTObOnM8zzzzvTvjHf96YtkmaNJPk9/kIwGY6fvw0iqIoiqIsce98DdMhURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5JlEURVEURZljEkVRFEVRlDkmURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5JlEURVEURZljEkVRFEVRlDkmURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5pqMoiqIoyt+4oqmSC+oqCBkmUyERlDk0ftg5zPORJOOdXOnh3a21xE2LPDZTUe108Ad/lF/2RVgMdBRFURRF+Rtvba7m8qYqpqs3bfB8JMl4W+vLef+qZUxXlVPjl30RFgOdBabcoXFNay0X1pfz3f1+HhiIciQcUvDmpipeu6yMlR4XFU6dmJlj6xNtzLWPrqlja105BU8HR/h62yCHU+XU+fDqOt7QUE5TiROfrhHLWfQkszw0FOM/O4cJZEwURVFm2643bGK9z82YtpEMmx7axWIlBTOSsfJMlLHyzIQULBo6C8TWunL+vrWGN9RXUO7QKLi3L8KR+Pjaeq5bW8/yEifjDaQN5tpJlR7+bWMTXl2jIG3lOZxt9RV89+RjaCl1Mp7PodFU4uTMGh8fWFXHDTt7+HlvCEVRlNnUUupkvBUlThazvM2M5G3+Rt5mRvI2i4ZOEWsqcXLtylquaKri2LISZkurx8Xtp67kNbU+xjPyNlEjR0/KYK5988QVeHWNqTq/rpy7tqyi3KFRkLNt9sTSxMwctS4H63wlSAGNJQ5uP20lTk3wo64giqIos6HW5aBEk4xXqktqXQ6GsyaKcjg6RerHW1Zz8fIKSjTJeMmchUfX...
+2018-03-06 15:49:04:758 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1306 ms - 200866 
+2018-03-06 15:49:06:828 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:06:829 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:06:830 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:08:250 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCWCcdYHw/+/v9zxzJDOTO03SJA3pDS0FylVAUKBYQUAub5dF8b5F2cV9l3VdLxRXX68XhWVlEU9AVFBAuQSUulw9KKRN09zHTObOnM8zzzzvTvjHf96YtkmaNJPk9/kIwGY6fvw0iqIoiqIsce98DdMhURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5JlEURVEURZljEkVRFEVRlDkmURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5JlEURVEURZljEkVRFEVRlDkmURRFURRFmWMSRVEURVGUOSZRFEVRFEWZYxJFURRFUZQ5pqMoiqIoyt+4oqmSC+oqCBkmUyERlDk0ftg5zPORJOOdXOnh3a21xE2LPDZTUe108Ad/lF/2RVgMdBRFURRF+Rtvba7m8qYqpqs3bfB8JMl4W+vLef+qZUxXlVPjl30RFgOdBabcoXFNay0X1pfz3f1+HhiIciQcUvDmpipeu6yMlR4XFU6dmJlj6xNtzLWPrqlja105BU8HR/h62yCHU+XU+fDqOt7QUE5TiROfrhHLWfQkszw0FOM/O4cJZEwURVFm2643bGK9z82YtpEMmx7axWIlBTOSsfJMlLHyzIQULBo6C8TWunL+vrWGN9RXUO7QKLi3L8KR+Pjaeq5bW8/yEifjDaQN5tpJlR7+bWMTXl2jIG3lOZxt9RV89+RjaCl1Mp7PodFU4uTMGh8fWFXHDTt7+HlvCEVRlNnUUupkvBUlThazvM2M5G3+Rt5mRvI2i4ZOEWsqcXLtylquaKri2LISZkurx8Xtp67kNbU+xjPyNlEjR0/KYK5988QVeHWNqTq/rpy7tqyi3KFRkLNt9sTSxMwctS4H63wlSAGNJQ5uP20lTk3wo64giqIos6HW5aBEk4xXqktqXQ6GsyaKcjg6RerHW1Zz8fIKSjTJeMmchUfX...
+2018-03-06 15:49:08:253 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1424 ms - 201190 
+2018-03-06 15:49:10:324 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:10:326 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:10:327 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:11:357 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AeTBB4DU9Z3//+fr853ZyrJLL7tLr1IEpHdFmoiCit3YouY0JppcTK+Xy+UuZ9pZchpNjA1FKYqCBelduiBK7x12l7Jsff/2O7OzzOzOwoIh8f7/x0PJLdob1REXSPwjiUrEl4j40hBfiPgixJeS+AcTNSH+iUQUcXYGxnkwfMZZGOfBqBHjnAzjvBhnYcRl1JgRzaiWUQ3jghhxGD7jAhlRjOoY58EoY5w34yyMaEYNmPH3Y4QY1TJqyqhgfEFGFUaIUXMBnDhD/D2JLwlxAcT/FeICiRoQ/78i4hLiS01UIr4oURPCRCUGRjWET0QzKhggqjCqI6oyKhhh4pyEqMqowsAoI85CVGUg4jOqED4jTMRlgMCIR1RlnJUBIg5hVGbUiAGinAGiOqKccU4mA0SNGWEiDiNMRBPnYICEz4hmnB8jxESIqJaIw6jEAGGUE+fPKGeAqEJgVMeIJyCJ6on/W0SNiItKXCTiPIn/W8T5EOXE/8eI6ogaEv8wohITiEoMnxGPqCCqMhDRjOoYPlFBlDNiGDUkYhggQ9Sc4TNAVGGEiWqIqgyMMBEiakoY0YwKBohqiQgjTMRjlDPCRBRRlRHDAHFOQlRlxGMGiGoYIM6LESZCjAgjTMRlxGGACBHnzwBRzvAZ4qyMc5MRJqojohhljDBRmQEB5Dg/4p9CfCHiYhDnJL5ExMUmakj8E4kLJmKIfwTxf4qIYoQJn4jDqMTwGeVEJSLEqEJUZoSJGAIjDqOMES3geVx6SUc6d2hH6+bNyGzcmNSUZFJTUjh56hQnT+Wz98ABtmzfwbqNn7Nmw6cUF5cQIQwQcYkYhs/AOAuBiM+Iw4gmookKopwRYUYc4mxEGQNEOaM6hk/EkBGXUQMihlHGkDgLEc3wGdUyQMQQEaIqo4LAqExgVGKckxEmogifiGZUISoYUYxyBogaMcJEGRGPYfiU0q6L8YWI...
+2018-03-06 15:49:11:359 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1035 ms - 385798 
+2018-03-06 15:49:13:431 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:13:438 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:13:439 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:14:382 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3zV9d3/7+frc04GSQhhrySEDTJFBJWNDBEEpYJ71FlXtXXcd+3Uu+3d25+tWrWttnUPRAVFERVkyRBE2aDsDSGMEBKy8/7new4nnJPNsPW+H//rUmxKW+N/OVGOOAXi/zxRC6Iq4v8g8S8mvs9EeaJ6hseoLaNGxhlgRDBqZFTFqJRxhhnhjDDGKTAwqmSUZ9TIOAOMWjOqZRgnzaiGcTqMcoxKGDUyyjFOlVHKCGN854xSRnl+JP63M04QlRCnQPxvITzipIn/g8RpEd874t9MhBFBBkYp4RG1JYxqGCDCGKdGBBhBopRRHVEZA0QEA6OUOHPMABFilCNOgoFRSiCqJMoTFRkhZoA4TQaIGhlBohqGEBGMKhnHiUoYQaICo9ZEiBEgKiE8RiWMIBHGAFEto1LGceI4A0StGKdOBojy/Ej8K4h/BVEr4jslvi/ESRH/ZuJ7R1Qg/jcSZ5ZAlGPUhqiEESQiGKIio1YMEMcZIE6eiGCADFF7RjWMIIlwwmPUhhHOwATiDDBAYARI1IpRGSNIBBjVE9UwgkQEA0SljGqYAaJK4iQYQaJSRoBRBRHGCBLVMkBUSoQzQAQYNRPVMIzqiAhGgF8S3w/iuySqIU6R+LcS3xMiRHwPiBqI7yXxv5yoklE9EcYIkVEJUZFRgQgjyhgBRlWMcH6fjx5dzqJrp460S2tFy+bNiI+LIz6uDjnHcsk5dow9+9LZtG0bq9d/w8q16ykqKiJEVENEMI4zSomKjPJEGBOIcowQ42QIDBC1YISIyogIopQRwaiR4REVGCCjKqIqBhLhjFLGKRIVGQEGiABREwOEx6iCESRqYASJAAPEaTFERUalDBABqtOmk/FvIqoj/m3EKRLfR+IMEbUkvldEDcSZIP5/p8/wmFFLRgTjNBkhzRo3ZtxFIxh8wXkkJsRTW1nZOcxZuJj3P57Jvoz9VMqoguGZ...
+2018-03-06 15:49:14:385 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 954 ms - 482354 
+2018-03-06 15:49:16:458 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:16:459 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:16:460 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:17:040 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB2BV92Ho4d//nHOndCUh6QoJCSEQCLER0+xpG4zBe9txEo9mtk5em5fx0vY9N21eXtpm1olXQ403dsDGYMzeiCW2hCSQ0EJoz7vP+b8cqBKhMCQksJOc7xPjbv+uxGKxWCwWi+UGUrBYLBaLxWK5wRQsFovFYrFYbjANi8VisVyRqipkZw4ga3Ay6akJ9E+Mxe2y43La8QdC+PwhauqbKaus59SZagpOV6HrBhaL5VIaFovFYvkjifEeFs4cxdTxmUS5nVyO2+XA7XKQGO9h5LA0Fs0dR7svwN6802zadYK6hlaux4s/fIoOEV2nvrGNvBNn+WjTYYKhMH0hPTWBssp6/tI47Bp/96UldPXz32ygucWH5cbRuIGEEERHOUjtH09sjAuXw05E12nzBTlf20xNfQu6bmCxWGDq+ExyD5/mT8W4kekcOVnGn5voKCfLFuYwe2o2iqLQQUpJ5flGqs430tDUTjgcwWbTiI+LYkD/fqT274cQgii3kwUzRjFv2gi25xaw+pNDtPuDXC9NVemfGMuiOWNJSojhVys20VvpqQlkpHkpq6znL40QgvQBiXRl01QsN5bGDZKUEMOyWycwOjsNu01DEQIhBFJKpJQYUlLX0MrH246x91AxUkr+EjjsNqZPGsb4kekk9IvGpmmY7DYVTVMxRSI6obCOKRyJUN/YxpGTZew6UEQwFMby5+mph+cyYlgqb6zaTSgc4bNK01TuWzyZ+TNG8lfffpW+ZLdpLJ43jiiXnQ835dHaFuBaPNFOli7Iod0fYt2WI4TCEa7XiKED+OJDc4j1uOlQXlXPttwCDh0vpa09wJVERzmZMDqDmZOzyEjzoigKc6eNJGd0Bq++vY384ip66tlvv0JsjJulC3OYPSWbnFGDcDnt+AMhrld6agIZaV4slptNo4/1T4xl/oyRzJychU3T6EoIgUkFUpL68YUHZnPr...
+2018-03-06 15:49:17:042 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 583 ms - 160530 
+2018-03-06 15:49:19:109 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:19:110 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:19:111 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:20:124 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB2AUhN3///fne5dNIGHPAGEoMhVFRLayXChuxVW11mpdVVutT4faYdVq1T52WLHiVtyCCILIEHGwnGwEZBNCCAkZ9/3n7rhwmYRh7fP79/VSYrPWzvdBHDLiUBD/dRDEPogDJf6rCvGdEJWJ2jlhTjWcfwOnnFOBc6g4+82phVMXThznADgHxNkPzkFzyjk1cQ4Z5wA4deHUhRPhHBinjpwD4dSRs4dTV0GJOOK/9pP4DyH+ncTBEgdM/Fdl4pBw9hLVEVFOlHCq4YA4tJw4TpQoJyoQlTk1cSpx4oj9JqrhRIm6EHs4IPaDg1NG1MSphagjB8Q+ObUTZZwwURNRmVMNZx8cxAEQ1XLKOXXhgIgQVTnVcCoQdST2yanAqY5TLbGHqKsgiJqJWon/qob4joj9JP5vEQdE/FuJ/wIRI6ohDgmnjBMl9nBA7B8HRDmnAlGJOGScMu6AOCBiPzi4QNTIqSsnwqmBqBOxDw6Ics4+OTWQUzuxX5waOBGinKgDF2FODUQcJ0ocEKcSpwpRzqmJKOfsg1ObIBL7R9RI/McS3wWxT+K/DpioKxFH/D9GHDTx3XOq4RwMOSD2cKJEdZzaiApE9ZwyTrxgMEjPbl3p3uVwOrZvR6sWLUhLSyUtNZX8XbvIz9/Ftxs2sGzlKhZ9/gULP/ucktJSIhyEg0RdOAfKiXCBqJWoK+EOiDjOoeNEiQgnSuyTqImowMFxDpioxIkS+80BgVMXDgicAyf2cKJEbcQ+OCAinOo4IKpwyimpVTvn/1eE+B6J/yDiuyT2g6gD8R9HlBP/tV+cGjmVOeWcOnJq4lTiVNGiWVNOP2kkQ/r3I71ePeoqL28n02bN5tWJb7Nh0ybqyinjRLz9wtPEFBeXsGnLZubM+5hnJrxCQWEhVTjVcGrTMbs9y1as5JBy4ji1ceI4eziHjIPjVJacnMz9d/2ayn75+3vY...
+2018-03-06 15:49:20:127 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 1018 ms - 419922 
+2018-03-06 15:49:22:200 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:22:201 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["4fa6c884-0de4-4223-8c99-0efed111d07b"]
+2018-03-06 15:49:22:202 - info: [debug] [ADB] Device API level: 23
+2018-03-06 15:49:23:066 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB2AUhN3///fne5dNIGHPAGEoMhVFRLayXChuxVW11mpdVVutT4faYdVq1T52WLHiVtyCCILIEHGwnGwEZBNCCAkZ9/3n7rhwmYRh7fP79/VSYrPWzvdBHDLiUBD/dRDEPogDJf6rCvGdEJWJ2jlhTjWcfwOnnFOBc6g4+82phVMXThznADgHxNkPzkFzyjk1cQ4Z5wA4deHUhRPhHBinjpwD4dSRs4dTV0GJOOK/9pP4DyH+ncTBEgdM/Fdl4pBw9hLVEVFOlHCq4YA4tJw4TpQoJyoQlTk1cSpx4oj9JqrhRIm6EHs4IPaDg1NG1MSphagjB8Q+ObUTZZwwURNRmVMNZx8cxAEQ1XLKOXXhgIgQVTnVcCoQdST2yanAqY5TLbGHqKsgiJqJWon/qob4joj9JP5vEQdE/FuJ/wIRI6ohDgmnjBMl9nBA7B8HRDmnAlGJOGScMu6AOCBiPzi4QNTIqSsnwqmBqBOxDw6Ics4+OTWQUzuxX5waOBGinKgDF2FODUQcJ0ocEKcSpwpRzqmJKOfsg1ObIBL7R9RI/McS3wWxT+K/DpioKxFH/D9GHDTx3XOq4RwMOSD2cKJEdZzaiApE9ZwyTrxgMEjPbl3p3uVwOrZvR6sWLUhLSyUtNZX8XbvIz9/Ftxs2sGzlKhZ9/gULP/ucktJSIhyEg0RdOAfKiXCBqJWoK+EOiDjOoeNEiQgnSuyTqImowMFxDpioxIkS+80BgVMXDgicAyf2cKJEbcQ+OCAinOo4IKpwyimpVTvn/1eE+B6J/yDiuyT2g6gD8R9HlBP/tV+cGjmVOeWcOnJq4lTiVNGiWVNOP2kkQ/r3I71ePeoqL28n02bN5tWJb7Nh0ybqyinjRLz9wtPEFBeXsGnLZubM+5hnJrxCQWEhVTjVcGrTMbs9y1as5JBy4ji1ceI4eziHjIPjVJacnMz9d/2ayn75+3vY...
+2018-03-06 15:49:23:069 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 200 869 ms - 405138 
+2018-03-06 15:49:23:071 - info: [Appium] Received SIGINT - shutting down
+2018-03-06 15:49:23:074 - error: [Logcat] Logcat terminated with code null, signal SIGINT
+2018-03-06 15:49:23:075 - error: [UiAutomator] UiAutomator exited unexpectedly with code null, signal SIGINT
+2018-03-06 15:49:23:075 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2018-03-06 15:49:23:087 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-03-06 15:49:23:089 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:49:23:109 - warn: [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
+2018-03-06 15:49:23:110 - info: [Appium] Removing session 4fa6c884-0de4-4223-8c99-0efed111d07b from our master session list
+2018-03-06 15:49:23:111 - info: [debug] [ADB] 3 device(s) connected
+2018-03-06 15:49:23:111 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","am","force-stop","com.pointvoucher.playlondonpv"]
+2018-03-06 15:49:23:155 - info: [debug] [ADB] Pressing the HOME button
+2018-03-06 15:49:23:156 - info: [debug] [ADB] Getting connected devices...
+2018-03-06 15:49:23:174 - info: [debug] [ADB] 2 device(s) connected
+2018-03-06 15:49:23:175 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","input","keyevent",3]
+2018-03-06 15:49:23:189 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7401","shell","input","keyevent",3]
+2018-03-06 15:49:23:199 - info: [HTTP] --> DELETE /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b {}
+2018-03-06 15:49:23:200 - info: [HTTP] <-- DELETE /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b 404 1 ms - 131 
+2018-03-06 15:49:25:186 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:25:187 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:27:193 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:27:194 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:29:199 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:29:199 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:31:204 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:31:205 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:33:210 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:33:211 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:35:216 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:35:217 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:37:222 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:37:222 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:39:226 - info: [HTTP] --> GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot {}
+2018-03-06 15:49:39:227 - info: [HTTP] <-- GET /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b/screenshot 404 1 ms - 131 
+2018-03-06 15:49:39:231 - info: [HTTP] --> DELETE /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b {}
+2018-03-06 15:49:39:232 - info: [HTTP] <-- DELETE /wd/hub/session/4fa6c884-0de4-4223-8c99-0efed111d07b 404 1 ms - 131 

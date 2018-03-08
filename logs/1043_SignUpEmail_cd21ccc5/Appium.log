@@ -1,0 +1,473 @@
+2018-03-08 12:23:57:348 - info: [Appium] Welcome to Appium v1.8.0-beta3
+2018-03-08 12:23:57:350 - info: [Appium] Non-default server args:
+2018-03-08 12:23:57:350 - info: [Appium]   port: 4003
+2018-03-08 12:23:57:350 - info: [Appium]   bootstrapPort: 6003
+2018-03-08 12:23:57:351 - info: [Appium]   log: /home/trixo/Code/javaRewrite/logs/1043_SignUpEmail_cd21ccc5/Appium.log
+2018-03-08 12:23:57:351 - info: [Appium]   logTimestamp: true
+2018-03-08 12:23:57:369 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4003
+2018-03-08 12:23:57:399 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8203,"udid":"localhost:7429","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}}}
+2018-03-08 12:23:57:401 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8203,"udid":"localhost:7429","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}},null,null]
+2018-03-08 12:23:57:402 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1520511837402 (13:23:57 GMT+0100 (CET))
+2018-03-08 12:23:57:404 - info: [Appium] Creating new AndroidDriver (v1.40.1) session
+2018-03-08 12:23:57:404 - info: [Appium] Capabilities:
+2018-03-08 12:23:57:404 - info: [Appium]   javascriptEnabled: true
+2018-03-08 12:23:57:404 - info: [Appium]   locationContextEnabled: true
+2018-03-08 12:23:57:404 - info: [Appium]   handlesAlerts: true
+2018-03-08 12:23:57:405 - info: [Appium]   rotatable: true
+2018-03-08 12:23:57:405 - info: [Appium]   platformName: Android
+2018-03-08 12:23:57:405 - info: [Appium]   deviceName: Android
+2018-03-08 12:23:57:405 - info: [Appium]   appPackage: com.pointvoucher.playlondonpv
+2018-03-08 12:23:57:405 - info: [Appium]   appActivity: com.unity3d.player.UnityPlayerActivity
+2018-03-08 12:23:57:405 - info: [Appium]   fullReset: false
+2018-03-08 12:23:57:405 - info: [Appium]   noReset: true
+2018-03-08 12:23:57:406 - info: [Appium]   newCommandTimeout: 120000
+2018-03-08 12:23:57:406 - info: [Appium]   skipUnlock: true
+2018-03-08 12:23:57:406 - info: [Appium]   systemPort: 8203
+2018-03-08 12:23:57:406 - info: [Appium]   udid: localhost:7429
+2018-03-08 12:23:57:406 - info: [Appium]   requestOrigins: {
+2018-03-08 12:23:57:406 - info: [Appium]     url: http://webdriver.io
+2018-03-08 12:23:57:406 - info: [Appium]     version: 4.10.2
+2018-03-08 12:23:57:407 - info: [Appium]     name: webdriverio
+2018-03-08 12:23:57:407 - info: [Appium]   }
+2018-03-08 12:23:57:411 - info: [debug] [BaseDriver] 
+2018-03-08 12:23:57:411 - info: [debug] [BaseDriver] Creating session with MJSONWP desired capabilities: {"javascriptEnabled":true,"...
+2018-03-08 12:23:57:416 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: javascriptEnabled, locationContextEnabled, handlesAlerts, rotatable, systemPort, requestOrigins.
+2018-03-08 12:23:57:418 - info: [BaseDriver] Session created with session id: 9b26b6b2-8579-4cbf-a7dc-a1355caec5a3
+2018-03-08 12:23:57:418 - info: [debug] [AndroidDriver] Getting Java version
+2018-03-08 12:23:57:461 - info: [AndroidDriver] Java version is: 1.8.0_151
+2018-03-08 12:23:57:464 - info: [ADB] Checking whether adb is present
+2018-03-08 12:23:57:470 - info: [ADB] Found 2 'build-tools' folders under '/home/trixo/Android/Sdk' (newest first):
+2018-03-08 12:23:57:470 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/27.0.3
+2018-03-08 12:23:57:470 - info: [ADB]     /home/trixo/Android/Sdk/build-tools/25.0.0
+2018-03-08 12:23:57:471 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-03-08 12:23:57:471 - info: [AndroidDriver] Retrieving device list
+2018-03-08 12:23:57:472 - info: [debug] [ADB] Trying to find a connected android device
+2018-03-08 12:23:57:472 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:23:57:485 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:23:57:485 - info: [AndroidDriver] Using device: localhost:7429
+2018-03-08 12:23:57:486 - info: [ADB] Checking whether adb is present
+2018-03-08 12:23:57:486 - info: [ADB] Using adb from /home/trixo/Android/Sdk/platform-tools/adb
+2018-03-08 12:23:57:487 - info: [debug] [ADB] Setting device id to localhost:7429
+2018-03-08 12:23:57:487 - info: [AndroidDriver] App file was not listed, instead we're going to run com.pointvoucher.playlondonpv directly on the device
+2018-03-08 12:23:57:487 - info: [debug] [AndroidDriver] Checking whether package is present on the device
+2018-03-08 12:23:57:488 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:23:57:495 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:23:57:496 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","pm","list","packages","com.pointvoucher.playlondonpv"]
+2018-03-08 12:23:59:719 - info: [AndroidDriver] Starting Android session
+2018-03-08 12:23:59:720 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","wait-for-device"]
+2018-03-08 12:23:59:729 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:23:59:737 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:23:59:737 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","echo","ping"]
+2018-03-08 12:23:59:785 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-03-08 12:23:59:787 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-03-08 12:23:59:787 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:23:59:794 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:23:59:795 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","pm","list","packages","io.appium.settings"]
+2018-03-08 12:24:01:756 - info: [debug] [ADB] App is installed
+2018-03-08 12:24:01:758 - info: [debug] [ADB] Getting package info for io.appium.settings
+2018-03-08 12:24:01:759 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:01:769 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:01:769 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","dumpsys","package","io.appium.settings"]
+2018-03-08 12:24:01:878 - info: [ADB] Checking whether aapt is present
+2018-03-08 12:24:01:881 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-03-08 12:24:01:893 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+2018-03-08 12:24:01:894 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:01:901 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:01:901 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","ps"]
+2018-03-08 12:24:02:149 - info: [debug] [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2018-03-08 12:24:02:151 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:02:161 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:02:161 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","getprop","ro.build.version.sdk"]
+2018-03-08 12:24:02:216 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
+2018-03-08 12:24:02:217 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:02:218 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:02:228 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:02:228 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","appops","set","io.appium.settings","android:mock_location","allow"]
+2018-03-08 12:24:04:418 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-03-08 12:24:04:418 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-03-08 12:24:04:420 - info: [debug] [Logcat] Starting logcat capture
+2018-03-08 12:24:04:521 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-03-08 12:24:04:522 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-03-08 12:24:04:522 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:04:533 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:04:533 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","pm","list","packages","io.appium.unlock"]
+2018-03-08 12:24:06:696 - info: [debug] [ADB] App is installed
+2018-03-08 12:24:06:696 - info: [debug] [ADB] Getting package info for io.appium.unlock
+2018-03-08 12:24:06:697 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:06:704 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:06:705 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","dumpsys","package","io.appium.unlock"]
+2018-03-08 12:24:06:778 - info: [ADB] Checking whether aapt is present
+2018-03-08 12:24:06:781 - info: [ADB] Using aapt from /home/trixo/Android/Sdk/build-tools/27.0.3/aapt
+2018-03-08 12:24:06:789 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+2018-03-08 12:24:06:789 - info: [ADB] Getting device platform version
+2018-03-08 12:24:06:789 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:06:796 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:06:796 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","getprop","ro.build.version.release"]
+2018-03-08 12:24:06:855 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-08 12:24:06:856 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:06:865 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:06:865 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","wm","size"]
+2018-03-08 12:24:09:021 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:09:029 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:09:029 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","getprop","ro.product.model"]
+2018-03-08 12:24:09:094 - info: [debug] [ADB] Current device property 'ro.product.model': SM-A300FU
+2018-03-08 12:24:09:095 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:09:105 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:09:105 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","getprop","ro.product.manufacturer"]
+2018-03-08 12:24:09:171 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': samsung
+2018-03-08 12:24:09:172 - warn: [AndroidDriver] No app sent in, not parsing package/activity
+2018-03-08 12:24:09:173 - info: [debug] [AndroidDriver] No app capability. Assuming it is already on the device
+2018-03-08 12:24:09:174 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2018-03-08 12:24:09:176 - info: [debug] [ADB] Forwarding system: 6003 to device: 4724
+2018-03-08 12:24:09:176 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","forward","tcp:6003","tcp:4724"]
+2018-03-08 12:24:09:185 - info: [debug] [UiAutomator] Starting UiAutomator
+2018-03-08 12:24:09:186 - info: [debug] [UiAutomator] Moving to state 'starting'
+2018-03-08 12:24:09:186 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2018-03-08 12:24:09:186 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2018-03-08 12:24:09:187 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","push","/home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+2018-03-08 12:24:09:215 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2018-03-08 12:24:09:216 - info: [debug] [ADB] Getting all processes with uiautomator
+2018-03-08 12:24:09:217 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:09:224 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:09:225 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","ps"]
+2018-03-08 12:24:09:389 - info: [ADB] No uiautomator process found to kill, continuing...
+2018-03-08 12:24:09:389 - info: [debug] [UiAutomator] Starting UIAutomator
+2018-03-08 12:24:09:390 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","localhost:7429","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.pointvoucher.playlondonpv","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2018-03-08 12:24:11:874 - info: [debug] [UiAutomator] Moving to state 'online'
+2018-03-08 12:24:11:879 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2018-03-08 12:24:11:882 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:11:884 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:24:11:892 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2018-03-08 12:24:11:892 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2018-03-08 12:24:11:892 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:24:11:893 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","am","start","-W","-n","com.pointvoucher.playlondonpv/com.unity3d.player.UnityPlayerActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-03-08 12:24:15:735 - info: [Appium] New AndroidDriver session created successfully, session 9b26b6b2-8579-4cbf-a7dc-a1355caec5a3 added to master session list
+2018-03-08 12:24:15:736 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1520511855736 (13:24:15 GMT+0100 (CET))
+2018-03-08 12:24:15:737 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":true,"warnings":{},"desired":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"Android","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8203,"udid":"localhost:7429","requestOrigins":{"url":"http://webdriver.io","version":"4.10.2","name":"webdriverio"}},"handlesAlerts":true,"rotatable":true,"platformName":"Android","deviceName":"localhost:7429","appPackage":"com.pointvoucher.playlondonpv","appActivity":"com.unity3d.player.UnityPlayerActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"systemPort":8203,"udid":"localhost:7429","requestOrigins":{"url":"http://webdriver.io","version...
+2018-03-08 12:24:15:742 - info: [HTTP] <-- POST /wd/hub/session 200 18341 ms - 1268 
+2018-03-08 12:24:15:747 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/window/current/size {}
+2018-03-08 12:24:15:748 - info: [debug] [MJSONWP] Calling AppiumDriver.getWindowSize() with args: ["current","9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:15:750 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"getDeviceSize","params":{}}
+2018-03-08 12:24:15:756 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"getDeviceSize","params":{}}
+2018-03-08 12:24:15:756 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:15:756 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getDeviceSize
+2018-03-08 12:24:15:770 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"height":960,"width":540}}
+2018-03-08 12:24:15:770 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:15:771 - info: [debug] [MJSONWP] Responding to client with driver.getWindowSize() result: {"height":960,"width":540}
+2018-03-08 12:24:15:772 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/window/current/size 200 25 ms - 98 
+2018-03-08 12:24:21:782 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:21:782 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:21:783 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:22:716 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAqRElEQVR4AezBCbil+V3Q+e//977nnLvU3ns6naXTdAhbCFGSKETCMiAqmyMQNAKKDw7KwKijDjIMCPrgjviACAITl0kk+DhkQCCExAQQmiR0FtLpJJ1Od3rvdHUtdzvnvO/7/49FWabTqbpL9f1X1b31/XzSGw9dU5AkSaookCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJ...
+2018-03-08 12:24:22:718 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 935 ms - 22766 
+2018-03-08 12:24:24:786 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:24:786 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:24:787 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:25:447 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAqRElEQVR4AezBCbil+V3Q+e//977nnLvU3ns6naXTdAhbCFGSKETCMiAqmyMQNAKKDw7KwKijDjIMCPrgjviACAITl0kk+DhkQCCExAQQmiR0FtLpJJ1Od3rvdHUtdzvnvO/7/49FWabTqbpL9f1X1b31/XzSGw9dU5AkSaookCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJ...
+2018-03-08 12:24:25:448 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 662 ms - 22766 
+2018-03-08 12:24:27:516 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:27:517 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:27:592 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:28:604 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAqRElEQVR4AezBCbil+V3Q+e//977nnLvU3ns6naXTdAhbCFGSKETCMiAqmyMQNAKKDw7KwKijDjIMCPrgjviACAITl0kk+DhkQCCExAQQmiR0FtLpJJ1Od3rvdHUtdzvnvO/7/49FWabTqbpL9f1X1b31/XzSGw9dU5AkSaookCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJ...
+2018-03-08 12:24:28:605 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 1089 ms - 22766 
+2018-03-08 12:24:30:675 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:30:679 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:30:680 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:31:340 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAqRElEQVR4AezBCbil+V3Q+e//977nnLvU3ns6naXTdAhbCFGSKETCMiAqmyMQNAKKDw7KwKijDjIMCPrgjviACAITl0kk+DhkQCCExAQQmiR0FtLpJJ1Od3rvdHUtdzvnvO/7/49FWabTqbpL9f1X1b31/XzSGw9dU5AkSaookCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJqiyQJEmqLJAkSaoskCRJ...
+2018-03-08 12:24:31:341 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 666 ms - 22766 
+2018-03-08 12:24:33:406 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:33:406 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:33:409 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:34:275 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAn/klEQVR4AezBeZDn+XnQ9/fzfL+/vqbn2Nl7pZVWx8ocscuyKRsTsIGAITgmhMNGKUwlhqo4lYJclco/qZSTVIqkgKQSqgjkqpiEAIUJwcEm2OawMRbCGGxLWLZ17Eq70l4zO0fPdPfv+H6eZHZqrbU0090z25/pGen9esUPnHm4kCRJ6iiRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeos...
+2018-03-08 12:24:34:276 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 870 ms - 20782 
+2018-03-08 12:24:36:340 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:36:341 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:36:343 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:36:991 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAAAn/klEQVR4AezBeZDn+XnQ9/fzfL+/vqbn2Nl7pZVWx8ocscuyKRsTsIGAITgmhMNGKUwlhqo4lYJclco/qZSTVIqkgKQSqgjkqpiEAIUJwcEm2OawMRbCGGxLWLZ17Eq70l4zO0fPdPfv+H6eZHZqrbU0090z25/pGen9esUPnHm4kCRJ6iiRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeoskSRJ6iyRJEnqLJEkSeos...
+2018-03-08 12:24:36:992 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 652 ms - 20782 
+2018-03-08 12:24:39:056 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:39:057 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:39:058 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:40:570 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCdSmaVnY+f91X/fzvNu31lfVCy3djTYRlYALjqjHPSBqZpzoUePEdTQoOiMm45gTRRTPiBhPkhONjhCRkYzM0TMR0HNEjURgokPQqOzQNA291v7Vt7zLs9zXdU2/VXmrv26ququbdWb695Njf+e1wREiwtWoOikFKykljkoiXCaCiLCS1UkpWFEtiHBZzpmVnIShKivuTkSwNBwOiWiAoMqFpZwzSyklqiohUshA5iO5G0vXXXcd65MRo/5+xuMxlxzn1Mk17rzzTpaadkgpFXV9yObmiCc/fcSinXHXXQd84AO3U+XEbbc9lc3NTUppadspK1UEKYKljfUNtnWEIFwSeCxYmfmMvdijqiqqqmItJaqAnbpmXNek1AHBRSIUVTp39s1QVbquY2VehKZ32raibY22Ffq+MC0ZIah8gZmxt7fH/LBjc7xDXdcsRR4RqWJlAAiXqAhbKbFoD7gwu4fRaMT6+jorZhUpVayF85/+7M9573t/Ffee7bXMX/7LpyFbJ/n5Xz3PK98EHhW3ftY38PRn/XcMBptEGETQ94kIODx3D2fOnOG6665jNNngUDaJCPq+pzPDUqIABfAIIgIzJUIoubDkpXD6rrvIJ06wvrHBw81OnaJrdlk/vkU9OAEoF4WzOPle6uEaaespgHAlIg4SLE79JYsz9xK3fgXbOztcFCCdsCLipGSs7J/+ICUZ3rSsHTtGPbyVq9KeeXdAc+4sk2PHGJSG9mCfwXW3IVoTrlyN2y7z/bsoVhiurTEY3IKkMVckTtQNK+35u1mc+RCD7c9ksnMLVZ6xmB9wcOYMk50d6sEtXE0wY37+bkQ3mBy7AUKJ4DIRYUUFJpWzkulZHFxgsViwubnFxqCmmc85c+YMx48fZzQ+xkoCah40HCiDgbJ03333ccdfv4y+uZdf/j7n27/10/nm51/gTz80ZTL5Qp75rO9E1m9g...
+2018-03-08 12:24:40:575 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 1518 ms - 546194 
+2018-03-08 12:24:42:652 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:42:652 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:42:653 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:44:069 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCbRl6VXY9//+9nfOudOb6lX1JHW3hFpgZENj0xZh8MIgy4bIwQYCYkhIiIYsZbEgdhxBGLwgYAZFxgPIyxALjCCwYNmRCA6DbUArBBBDANMtCUmtodVDza/ecIdzz/n23tGtyq163arqrm6NSfr3kxN/7c3BMSLCjag6KQVrKSWOSyJcJYKIsJbVSSlYUy2IcFXOmbWchIEqa+5ORLAyGAyIaIGgyoWVnDMrKSWqKiFSyEDmw7kbK7fccgsb4yHD/jFGoxFXnOTM6Qnve9/7WGmXA0qpqOsjtraG3PkXhiyWMx566JD3vOfdVDlxzz0vZGtri1KWLJdT1qoIUgQrmxub7OgQQbgi8FiwNvMZ+7FPVVVUVcUkJaqA3bpmVNek1AHBZSIUVTp3DsxQVbquY21ehLZ3lsuK5dJYLoW+L0xLRggqX2Bm7O/vMz/q2BrtUtc1K5GHRKpYawDhChVhOyUWy0MuzR5mOByysbHBmllFShWTcH7vt3+Hd77zn+HeszPJ/OE/+nPI9ml+4J9d5I1vBY+K5336y/gL930dTbNFhEEEfZ+IgKMLD3Pu3DluueUWhuNNjmSLiKDvezozLCUKUACPICIwUyKEkgsrXgpnH3qIfOoUG5ubPNHszBm6do+Nk9vUzSlAuSycxel3Ug8mpO3nA8L1iDhIsDjzhyzOPUI87wvZ2d3lsgDphDURJyVj7eDseynJ8HbJ5MQJ6sHzuCHtmXeHtBfOMz5xgqa0LA8PaG65B9GacOVG3PaYHzxEscJgMqFp7kbSiOsSJ+qWteXFD7I4936anU9jvHs3VZ6xmB9yeO4c491d6uZubiSYMb/4QUQ3GZ+4DUKJ4CoRYU0FxpWzlulZHF5isViwtbXNZlPTzuecO3eOkydPMhydYC0BNdcMGqVplJVHH32UB//4B+nbR/iRVzhf+9Wfwle++hK/+f4p4/Ff5t77...
+2018-03-08 12:24:44:073 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 1421 ms - 572078 
+2018-03-08 12:24:44:144 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":483,"y":27.5,"count":1}}]}
+2018-03-08 12:24:44:146 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":483,"y":27.5,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:44:149 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":483,"y":27.5}}
+2018-03-08 12:24:44:155 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":483,"y":27.5}}
+2018-03-08 12:24:44:156 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:44:156 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:24:44:164 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:24:44:287 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:24:44:288 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:44:289 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:24:44:291 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 146 ms - 76 
+2018-03-08 12:24:46:298 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:46:299 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:46:300 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:47:558 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBvY6meZ4m5Ov+PW9UdffMLELASkgLDgbCxMDGQMLhDOBoOAgcvPURFphgronWwkBaEANijQWtZnu6u6oynv/N+5FvfGVEZGRWZlb1zlxXtt/9u/VJ6iqJt0o8UfFA4ipI3GndSYI6Seok4izEUZzFM1on27aZGemtTFxs9tvx7t07J21UJMtMHL4b7XJ7u7z76R3h5ubGzKDaukod1cnMGOOx5apqtyREJKRsiSSoO3EUVasIWlerUdVGS0tbbVwsJ2tfVmsykrgY4k7cC0a0y95bScyMO0Viyg8//OCnn/4GNRP/3r99w+z+5d/s/tWfHMXNd7/z3fd/JRlXrbO139r33bZtMmMZJ22d1EXda13EWVv77a1sm8x4qre32mW2kWweWrc/SUa2Gy+rk3X7o+633PzWbJuzEg/VQ2t/p45aMyNz42W1unTfzbZJl64l2w0J4iXtrutWVTKSg2Q8r5q66n6r+zuZ78x2QLXL2nezjeTGS2rpfosx24Z4zcQD1bXrqpkxibb2fTfbZjIeintJJM5ub2+9+/Ffam/9O/+Av/rLG//8X+z+9K5mvvfd93/FHJy1oqi29n3XjG07uFodd1IsXUtbZsi4F99CldRV9+Vq28YkJCaRMFOTmCCldTWJhBEP1bLqKE4iNNqq9+qs4kNFJZHEdzdsU2/V1tUyKk5u3936/R9urVW/+0385je/sWW5endbf/un3e1+a9s2f/Hbg5tD3Iur4oefltU6iY+Js9ZTcVQPhHqk6iSOGldJ7ftPfvjhD/b9Ryf/8N+48Zd/UX/7h93/+69q1VH87jf/ljl8p62Tou619VDdK5p4qHURWl/Nwa9QHdWz2kq8qI5aQREhPrCvpa1JZa8k2mXf6zVtncw27pTVSjxrtVgmQTwWCSPqiUQSbV3FUaKts/osM2HRVoR4mxChpSVxlvg52iJOMpEVbcV7rU+V...
+2018-03-08 12:24:47:563 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 1264 ms - 401938 
+2018-03-08 12:24:47:629 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":152,"y":812,"count":1}}]}
+2018-03-08 12:24:47:630 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":152,"y":812,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:47:631 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":152,"y":812}}
+2018-03-08 12:24:47:637 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":152,"y":812}}
+2018-03-08 12:24:47:638 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:47:638 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:24:47:643 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:24:47:758 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:24:47:759 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:47:759 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:24:47:760 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 131 ms - 76 
+2018-03-08 12:24:49:770 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:49:770 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:49:771 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:50:635 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezB2XIjB4IlSj9Mai9JXT13rB/m/79uzMa6VVpSS/JcAEEgENgBAiCpSvfIY52llpK4XE3F+WoQS3FMLSTmYqpmaqFGMROD0pYQIQa1oRYSx9WmiNPUUgVFLNRMVQxqv9gnlqoGsVtb7ZOlxw9BPT3xVAvJgySITW2txEwcVYNYaGslsaV1XOxXg1IkJBZqQx0W+9VhsV8NihjEbiVGNVPEbrFfTcUhiTWlFDEq4ojESqt9Qn144OEh/vpUrZlIHkgstI6LqZqrXeI+SoxqJfEslmIm1tQoYpequZiLQa2p42IhSFyk1rSenigeQhKbnlotCUnEfjXTOk0M6rjYVqMY1dzT0xNq7sNDPDzw9FSfnqwkHySxVBtaByUmahBaN/Pgb6aooqi9aqGqaq5m6jQxKmq/oj47VbwD8T7U2eqK4iyltsUO8WqKIoj3oWq/Oqzm6kL12WcevZq4jyK2lVqpIk6VRFujmgpioogtMRdLReyW0HpW56mXi6i6kyJoLSTelpB6O2oqLlN31ypiqogNiUG9WIJSB9SmeENqJbFfEWeIqBoVQZ0gtrSI64uV1smq1PvWknjrHt1VjWKqpuJ66qpiIWK/qlE8a4iDYrfETCTVuq4iRexSRK0r4kaCGrSuLqH1UkHdSVC3VUcFdWWt2i32aF1NnayIN6ImEkcUcb6Yi1FQR9REQ8zUZYJSO9S/r8R78OgF2lqXxCGtNbUuieNqW1CjmKtRxKjW1VIcUqQ1FXNVx8VKEStFnCahjaTamKsa1Uot1FwNYlQrQZEaxVQsRdX11VwMaiJoSWyJhXqW0FpojWKnoM4UTWkstEYxikGdJEY1quMSWhepNbElFmqmdqiJmCk1E0uJNaVWYiahtVdCayKxFFWnqIWaSlATtRIziZUSg6rbKTGondqgktgWRYo4Q8S2ehbUhqodisTFaqGlniVqQ2lN1D5BnS8G...
+2018-03-08 12:24:50:637 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 867 ms - 187682 
+2018-03-08 12:24:50:692 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":271,"y":585,"count":1}}]}
+2018-03-08 12:24:50:693 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":271,"y":585,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:50:694 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":271,"y":585}}
+2018-03-08 12:24:50:700 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":271,"y":585}}
+2018-03-08 12:24:50:700 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:50:700 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:24:50:704 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:24:50:818 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:24:50:818 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:50:819 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:24:50:820 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 127 ms - 76 
+2018-03-08 12:24:52:827 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:24:52:828 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:52:828 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:24:53:500 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3yddeHv8c/v95yTk93spE33psVWWoao/0JlFAfj1SJFAWVcroKACMgqXAUFqtTFBfmLCgIK8lcBAZXKUNlgARGB0kVXmt2kadY5yfP8rom3vMLhJM16oCnf99u4f0NEREQkRBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkEef7pGI8D+f7GM/D+T7G83C+T1+M5+F8H+N5ON/HeB7O90nFeB7O9zGeh/N9jOfhfB/jeTjfx3gezvcZLON5ON8nLMbzcL7PQBjPw/k+YTGeh/N9BsJ4Hs736Q/jeTjfpz+M5+F8H+N5ON+nP4zn4Xwf43k436c/jOfhfJ/+MJ6H832M5+F8n/4wnofzfQbCeB7O9+kP43k438d4Hs736Q/jeTjfpz+M5+F8H+N5ON+nP4zn4Xwf43k43ycV43k438d4...
+2018-03-08 12:24:53:501 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 674 ms - 61694 
+2018-03-08 12:24:53:548 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":272,"y":456.5,"count":1}}]}
+2018-03-08 12:24:53:548 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":272,"y":456.5,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:53:549 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":272,"y":456.5}}
+2018-03-08 12:24:53:556 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":272,"y":456.5}}
+2018-03-08 12:24:53:556 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:53:556 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:24:53:560 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:24:53:742 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:24:53:743 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:53:744 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:24:53:745 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 197 ms - 76 
+2018-03-08 12:24:53:750 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys {"value":["m","s","a","_","v","0","e","y","7","@","p","o","i","n","t","v","o","u","c","h","e","r",".","c","o","m"]}
+2018-03-08 12:24:53:751 - info: [debug] [MJSONWP] Calling AppiumDriver.keys() with args: [["m","s","a","_","v","0","e","y","7","@","p","o","i","n","t","v","o","u","c","h","e","r",".","c","o","m"],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:53:753 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"setText","params":{"text":"msa_v0ey7@pointvoucher.com","replace":false}}
+2018-03-08 12:24:53:761 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"setText","params":{"text":"msa_v0ey7@pointvoucher.com","replace":false}}
+2018-03-08 12:24:53:762 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:53:762 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2018-03-08 12:24:54:150 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using currently-focused element: 1
+2018-03-08 12:24:55:184 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: msa_v0ey7@pointvoucher.com
+2018-03-08 12:24:59:690 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:24:59:691 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:59:692 - info: [debug] [MJSONWP] Responding to client with driver.keys() result: null
+2018-03-08 12:24:59:693 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys 200 5942 ms - 76 
+2018-03-08 12:24:59:700 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":0,"y":0,"count":1}}]}
+2018-03-08 12:24:59:701 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":0,"y":0,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:24:59:703 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:24:59:708 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:24:59:709 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:24:59:709 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:24:59:713 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:24:59:887 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":false}
+2018-03-08 12:24:59:888 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:24:59:889 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:24:59:890 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 190 ms - 76 
+2018-03-08 12:25:00:396 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:00:396 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:00:398 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:01:328 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB3yddeHv8c/v95yTk93spE33psVWWoao/0JlFAfj1SJFAWVcroKACMgqXAUFqtTFBfmLCgIK8lcBAZXKUNlgARGB0kVXmt2kadY5yfP8rom3vMLhJM16oCnf99u4f0NEREQkRBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkFhEREZGQWURERERCZhEREREJmUVEREQkZBYRERGRkFlEREREQmYRERERCZlFREREJGQWERERkZBZREREREJmEREREQmZRURERCRkEef7pGI8D+f7GM/D+T7G83C+T1+M5+F8H+N5ON/HeB7O90nFeB7O9zGeh/N9jOfhfB/jeTjfx3gezvcZLON5ON8nLMbzcL7PQBjPw/k+YTGeh/N9BsJ4Hs736Q/jeTjfpz+M5+F8H+N5ON+nP4zn4Xwf43k436c/jOfhfJ/+MJ6H832M5+F8n/4wnofzfQbCeB7O9+kP43k438d4Hs736Q/jeTjfpz+M5+F8H+N5ON+nP4zn4Xwf43k43ycV43k438d4...
+2018-03-08 12:25:01:329 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 933 ms - 74894 
+2018-03-08 12:25:01:385 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":401,"y":597.5,"count":1}}]}
+2018-03-08 12:25:01:385 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":401,"y":597.5,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:01:387 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":401,"y":597.5}}
+2018-03-08 12:25:01:394 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":401,"y":597.5}}
+2018-03-08 12:25:01:394 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:01:394 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:01:399 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:01:517 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:01:517 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:01:518 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:01:519 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 134 ms - 76 
+2018-03-08 12:25:03:527 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:03:528 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:03:529 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:04:277 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB2CeZaHH7d99P2/2TpOmTdOZhNANLS1FAVkyWhArS0WRD4qAcFBKEasIFQQKHkAUQaigh4OgIAiUjWWVVfYs3Xtnt2lmn+f+zpvvhC+8JGnWI03P/7qM+x+IiIiIhMgiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiELOJ8n7YYz8P5PsbzcL6P8Tyc79MR43k438d4Hs73MZ6H833aYjwP5/sYz8P5PsbzcL6P8Tyc72M8D+f7dJfxPJzvExbjeTjfpyuM5+F8n7AYz8P5Pl1hPA/n+3SG8Tyc79MZxvNwvo/xPJzv0xnG83C+j/E8nO/TGcbzcL5PZxjPw/k+xvNwvk9nGM/D+T5dYTwP5/t0hvE8nO9jPA/n+3SG8Tyc79MZxvNwvo/xPJzv0xnG83C+j/E8nO/TFuN5ON/HeB7O9zGe...
+2018-03-08 12:25:04:278 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 751 ms - 80682 
+2018-03-08 12:25:04:331 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":270,"y":529,"count":1}}]}
+2018-03-08 12:25:04:332 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":270,"y":529,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:04:334 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":270,"y":529}}
+2018-03-08 12:25:04:339 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":270,"y":529}}
+2018-03-08 12:25:04:340 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:04:340 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:04:344 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:04:498 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:04:499 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:04:500 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:04:500 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 169 ms - 76 
+2018-03-08 12:25:04:503 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys {"value":["1","2","3","1","2","3"]}
+2018-03-08 12:25:04:504 - info: [debug] [MJSONWP] Calling AppiumDriver.keys() with args: [["1","2","3","1","2","3"],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:04:505 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"setText","params":{"text":"123123","replace":false}}
+2018-03-08 12:25:04:511 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"setText","params":{"text":"123123","replace":false}}
+2018-03-08 12:25:04:511 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:04:511 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2018-03-08 12:25:04:608 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using currently-focused element: 2
+2018-03-08 12:25:05:610 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 123123
+2018-03-08 12:25:08:582 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:08:582 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:08:584 - info: [debug] [MJSONWP] Responding to client with driver.keys() result: null
+2018-03-08 12:25:08:585 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys 200 4081 ms - 76 
+2018-03-08 12:25:08:590 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":0,"y":0,"count":1}}]}
+2018-03-08 12:25:08:591 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":0,"y":0,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:08:594 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:25:08:598 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:25:08:599 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:08:600 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:08:601 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:08:722 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":false}
+2018-03-08 12:25:08:724 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:08:725 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:08:725 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 135 ms - 76 
+2018-03-08 12:25:08:828 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:08:829 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:08:829 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:09:528 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB2CeZaHH7d99P2/2TpOmTdOZhNANLS1FAVkyWhArS0WRD4qAcFBKEasIFQQKHkAUQaigh4OgIAiUjWWVVfYs3Xtnt2lmn+f+zpvvhC+8JGnWI03P/7qM+x+IiIiIhMgiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiEzCIiIiISMouIiIhIyCwiIiIiIbOIiIiIhMwiIiIiEjKLiIiISMgsIiIiIiGziIiIiITMIiIiIhIyi4iIiEjILCIiIiIhs4iIiIiELOJ8n7YYz8P5PsbzcL6P8Tyc79MR43k438d4Hs73MZ6H833aYjwP5/sYz8P5PsbzcL6P8Tyc72M8D+f7dJfxPJzvExbjeTjfpyuM5+F8n7AYz8P5Pl1hPA/n+3SG8Tyc79MZxvNwvo/xPJzv0xnG83C+j/E8nO/TGcbzcL5PZxjPw/k+xvNwvk9nGM/D+T5dYTwP5/t0hvE8nO9jPA/n+3SG8Tyc79MZxvNwvo/xPJzv0xnG83C+j/E8nO/TFuN5ON/HeB7O9zGe...
+2018-03-08 12:25:09:529 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 701 ms - 79858 
+2018-03-08 12:25:09:579 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":271,"y":715,"count":1}}]}
+2018-03-08 12:25:09:580 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":271,"y":715,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:09:582 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":271,"y":715}}
+2018-03-08 12:25:09:586 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":271,"y":715}}
+2018-03-08 12:25:09:586 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:09:586 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:09:594 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:09:711 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:09:711 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:09:712 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:09:713 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 134 ms - 76 
+2018-03-08 12:25:10:220 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:10:221 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:10:222 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:11:024 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCXjdZYHv8e/7/s9JcrLv6ZKm+0KpBYq2oLIjW2HKoggqiyCLLCM8ghuMo3N1ELyILCLjiI8KKIxccK4DLljZZZGdAoXuSdskTZqt2U5y3v97TZ9bnxDSNuc0/66/z8f4v0NEREQkQhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiMe8cwzFBgHcOEwR45zBBgHeObTFBgHcOEwR45zBBgHeO4ZggwDuHCQK8c5ggwDuHCQK8c5ggwDtHpkwQ4J0jKiYI8M6RDhMEeOeIigkCvHOkwwQB3jlGwgQB3jlGwgQB3jlMEOCdYyRMEOCdwwQB3jlGwgQB3jlGwgQB3jlMEOCdYyRMEOCdIx0mCPDOMRImCPDOYYIA7xwjYYIA7xwjYYIA7xwmCPDOMRImCPDOYYIA7xzDMUGAdw4TBHjnMEGA...
+2018-03-08 12:25:11:026 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 806 ms - 103462 
+2018-03-08 12:25:11:083 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":54.5,"y":463,"count":1}}]}
+2018-03-08 12:25:11:084 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":54.5,"y":463,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:11:085 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":54.5,"y":463}}
+2018-03-08 12:25:11:090 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":54.5,"y":463}}
+2018-03-08 12:25:11:090 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:11:090 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:11:096 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:11:214 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:11:216 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:11:217 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:11:217 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 134 ms - 76 
+2018-03-08 12:25:11:722 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:11:723 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:11:723 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:12:465 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBCXjdZYHv8e/7/s9JcrLv6ZKm+0KpBYq2oLIjW2HKoggqiyCLLCM8ghuMo3N1ELyILCLjiI8KKIxccK4DLljZZZGdAoXuSdskTZqt2U5y3v97TZ9bnxDSNuc0/66/z8f4v0NEREQkQhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiFhEREZGIWUREREQiZhERERGJmEVEREQkYhYRERGRiFlEREREImYRERERiZhFREREJGIWERERkYhZRERERCJmEREREYmYRURERCRiMe8cwzFBgHcOEwR45zBBgHeObTFBgHcOEwR45zBBgHeO4ZggwDuHCQK8c5ggwDuHCQK8c5ggwDtHpkwQ4J0jKiYI8M6RDhMEeOeIigkCvHOkwwQB3jlGwgQB3jlGwgQB3jlMEOCdYyRMEOCdwwQB3jlGwgQB3jlGwgQB3jlMEOCdYyRMEOCdIx0mCPDOMRImCPDOYYIA7xwjYYIA7xwjYYIA7xwmCPDOMRImCPDOYYIA7xzDMUGAdw4TBHjnMEGA...
+2018-03-08 12:25:12:466 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 743 ms - 103842 
+2018-03-08 12:25:12:519 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":399,"y":665.5,"count":1}}]}
+2018-03-08 12:25:12:520 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":399,"y":665.5,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:12:521 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":399,"y":665.5}}
+2018-03-08 12:25:12:526 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":399,"y":665.5}}
+2018-03-08 12:25:12:526 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:12:526 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:12:529 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:12:648 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:12:649 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:12:650 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:12:651 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 131 ms - 76 
+2018-03-08 12:25:13:156 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:13:156 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:13:157 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:13:976 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB4CcVdmw4fuc887M9mTTy5IGAUIICb1LEaQGEOkCQgLSEaWKgpGqImABvtAjQhCkhKr0EoogJQISkCJh08tms2V2Zt73nOd3yL/ft0DKJmQCkue6jPwHSimllFIlZFFKKaWUKjGLUkoppVSJWZRSSimlSsyilFJKKVViFqWUUkqpErMopZRSSpWYRSmllFKqxCxKKaWUUiVmUUoppZQqMYtSSimlVIlZlFJKKaVKzKKUUkopVWIWpZRSSqkSsyillFJKlZhFKaWUUqrELEoppZRSJWZRSimllCoxi1JKKaVUiVmUUkoppUrMopRSSilVYhallFJKqRKzKKWUUkqVmEUppZRSqsQsSimllFIlZlFKKaWUKjGLUkoppVSJWZRSSimlSsyilFJKKVViFqWUUkqpErMopZRSSpWYRSmllFKqxCxKKaWUUiVmUUoppZQqMYtSSimlVIlZlFJKKaVKzKKUUkopVWIWpZRSSqkSsyillFJKlZhFKaWUUqrELEoppZRSJWZRSimllCoxi1JKKaVUiVmUUkoppUrMopRSSilVYhallFJKqRKzKKWUUkqVmEUppZRSqsQsSimllFIlZlFKKaWUKjGLUkoppVSJWZRSSimlSsyilFJKKVViFqWUUkqpErMopZRSSpWYRSmllFKqxCxKKaWUUiVmUUoppZQqMYtSSimlVIlZlFJKKaVKzKKUUkopVWIWpZRSSqkSsyillFJKlZhFKaWUUqrELEoppZRSJWZRSimllCoxi1JKKaVUiVmUUkoppUrMopRSSilVYpF4z5IY5xDvMc4h3mOcQ7xnWYxziPcY5xDvMc4h3rMkxjnEe4xziPcY5xDvMc4h3mOcQ7xnZRnnEO8pFeMc4j0rwjiHeE+pGOcQ71kRxjnEezrDOId4T2cY5xDvMc4h3tMZxjnEe4xziPd0hnEO8Z7OMM4h3mOcQ7ynM4xz...
+2018-03-08 12:25:13:977 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 821 ms - 134198 
+2018-03-08 12:25:14:028 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":141.5,"y":694,"count":1}}]}
+2018-03-08 12:25:14:028 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":141.5,"y":694,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:14:030 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":141.5,"y":694}}
+2018-03-08 12:25:14:034 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":141.5,"y":694}}
+2018-03-08 12:25:14:034 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:14:034 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:14:037 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:14:150 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:14:151 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:14:152 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:14:153 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 124 ms - 76 
+2018-03-08 12:25:14:658 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:14:659 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:14:660 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:15:451 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB5yV5Z3o8d/zPOdML2c6bZihCIqKKGJBVDTGgi24yRrXVRM1l7h2Y9BoonGNJeVqSHT3RqMxJrpiiiVqil2UpmKhCFKHMjD9TJ855zzvcx3uHT8jgZn3zMyLgP/vV7lPIIQQQggRII0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIEbCQs5adUcbgrEUZg7MWZQzOWnqjjMFZizIGZy3KGJy17IwyBmctyhictShjcNaijMFZizIGZy39pYzBWUtQlDE4a0mGMgZnLUFRxuCsJRnKGJy1+KGMwVmLH8oYnLUoY3DW4ocyBmctyhictfihjMFZix/KGJy1KGNw1uKH...
+2018-03-08 12:25:15:453 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 794 ms - 110142 
+2018-03-08 12:25:15:503 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":272,"y":448,"count":1}}]}
+2018-03-08 12:25:15:504 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":272,"y":448,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:15:505 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":272,"y":448}}
+2018-03-08 12:25:15:512 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":272,"y":448}}
+2018-03-08 12:25:15:512 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:15:513 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:15:519 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:15:726 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:15:732 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:15:733 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:15:735 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 231 ms - 76 
+2018-03-08 12:25:15:740 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys {"value":["t","e","s","t","N","a","m","e"]}
+2018-03-08 12:25:15:740 - info: [debug] [MJSONWP] Calling AppiumDriver.keys() with args: [["t","e","s","t","N","a","m","e"],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:15:741 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"setText","params":{"text":"testName","replace":false}}
+2018-03-08 12:25:15:745 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"setText","params":{"text":"testName","replace":false}}
+2018-03-08 12:25:15:748 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:15:751 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2018-03-08 12:25:16:652 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using currently-focused element: 3
+2018-03-08 12:25:16:828 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: testName
+2018-03-08 12:25:20:450 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:20:450 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:20:451 - info: [debug] [MJSONWP] Responding to client with driver.keys() result: null
+2018-03-08 12:25:20:452 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys 200 4712 ms - 76 
+2018-03-08 12:25:20:454 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":0,"y":0,"count":1}}]}
+2018-03-08 12:25:20:454 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":0,"y":0,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:20:456 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:25:20:465 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":0,"y":0}}
+2018-03-08 12:25:20:465 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:20:465 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:20:475 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:20:630 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":false}
+2018-03-08 12:25:20:631 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:20:632 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:20:633 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 178 ms - 76 
+2018-03-08 12:25:21:138 - info: [HTTP] --> GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot {}
+2018-03-08 12:25:21:138 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:21:141 - info: [debug] [ADB] Device API level: 23
+2018-03-08 12:25:22:434 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAhwAAAPACAYAAAB+daCcAACAAElEQVR4AezBB5yV5Z3o8d/zPOdML2c6bZihCIqKKGJBVDTGgi24yRrXVRM1l7h2Y9BoonGNJeVqSHT3RqMxJrpiiiVqil2UpmKhCFKHMjD9TJ855zzvcx3uHT8jgZn3zMyLgP/vV7lPIIQQQggRII0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIETCNEEIIIUTANEIIIYQQAdMIIYQQQgRMI4QQQggRMI0QQgghRMA0QgghhBAB0wghhBBCBEwjhBBCCBEwjRBCCCFEwDRCCCGEEAHTCCGEEEIETCOEEEIIEbCQs5adUcbgrEUZg7MWZQzOWnqjjMFZizIGZy3KGJy17IwyBmctyhictShjcNaijMFZizIGZy39pYzBWUtQlDE4a0mGMgZnLUFRxuCsJRnKGJy1+KGMwVmLH8oYnLUoY3DW4ocyBmctyhictfihjMFZix/KGJy1KGNw1uKH...
+2018-03-08 12:25:22:436 - info: [HTTP] <-- GET /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/screenshot 200 1298 ms - 108198 
+2018-03-08 12:25:22:487 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform {"actions":[{"action":"tap","options":{"x":270.5,"y":585.5,"count":1}}]}
+2018-03-08 12:25:22:488 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":270.5,"y":585.5,"count":1}}],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:22:489 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"click","params":{"x":270.5,"y":585.5}}
+2018-03-08 12:25:22:496 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"click","params":{"x":270.5,"y":585.5}}
+2018-03-08 12:25:22:502 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:22:503 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-08 12:25:22:515 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][540,960]
+2018-03-08 12:25:22:648 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-08 12:25:22:649 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-08 12:25:22:650 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2018-03-08 12:25:22:650 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/touch/perform 200 163 ms - 76 
+2018-03-08 12:25:22:655 - info: [HTTP] --> POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys {"value":["1","1","1","1","1","1","1","1"]}
+2018-03-08 12:25:22:656 - info: [debug] [MJSONWP] Calling AppiumDriver.keys() with args: [["1","1","1","1","1","1","1","1"],"9b26b6b2-8579-4cbf-a7dc-a1355caec5a3"]
+2018-03-08 12:25:22:657 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"setText","params":{"text":"11111111","replace":false}}
+2018-03-08 12:25:22:661 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"setText","params":{"text":"11111111","replace":false}}
+2018-03-08 12:25:22:661 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-08 12:25:22:661 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2018-03-08 12:25:22:848 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using currently-focused element: 4
+2018-03-08 12:25:23:727 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 11111111
+2018-03-08 12:25:25:169 - info: [Appium] Received SIGINT - shutting down
+2018-03-08 12:25:25:172 - error: [Logcat] Logcat terminated with code null, signal SIGINT
+2018-03-08 12:25:25:172 - error: [UiAutomator] UiAutomator exited unexpectedly with code null, signal SIGINT
+2018-03-08 12:25:25:172 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2018-03-08 12:25:25:185 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-03-08 12:25:25:186 - info: [debug] [ADB] Getting connected devices...
+2018-03-08 12:25:25:198 - warn: [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
+2018-03-08 12:25:25:199 - info: [Appium] Removing session 9b26b6b2-8579-4cbf-a7dc-a1355caec5a3 from our master session list
+2018-03-08 12:25:25:200 - info: [debug] [ADB] 2 device(s) connected
+2018-03-08 12:25:25:200 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","am","force-stop","com.pointvoucher.playlondonpv"]
+2018-03-08 12:25:25:212 - info: [debug] [ADB] Running '/home/trixo/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","localhost:7429","shell","am","force-stop","com.pointvoucher.playlondonpv"]
+2018-03-08 12:26:52:744 - info: [HTTP] <-- POST /wd/hub/session/9b26b6b2-8579-4cbf-a7dc-a1355caec5a3/keys - - ms - - 
