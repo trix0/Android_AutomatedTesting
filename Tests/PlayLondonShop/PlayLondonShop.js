@@ -1,11 +1,9 @@
 var images = require('./Images.js');
 module.exports = function(fn) {
   return {
-  run:async function GoToProfile(client,testData){
+  run:async function PlayLondnoShop(client,testData,testOutput){
     try{
-      console.log(testData)
-        const testOutput=testData;
-        testOutput.steps=[];
+
         let testName=testData.desCaps.testName
         params=testData.desCaps.parameters;
         const init=await client.init();    // appium init (lunch app)
@@ -23,10 +21,12 @@ module.exports = function(fn) {
         await fn.fnClick(images["YesButton"+"_"+imageSize],client,5,"Click Yes age button",2000);
         await fn.fnClick(images["EnterEmailField"+"_"+imageSize],client,5,"Click on Enter Email field",2000);
         await client.keys("msa@pointvoucher.com");
+        fn.fnPushToOutputArray({"message":"sends keys:msa@pointvoucher.com"})
         await fn.fnClearKeyBoard(client);
         await fn.fnClick(images["EmailNextButton"+"_"+imageSize],client,5,"Next email",500);
         await fn.fnClick(images["EnterPasswordField"+"_"+imageSize],client,5,"Click on Enter Password field",2000);
         await client.keys("123123");
+        fn.fnPushToOutputArray({"message":"sends keys:123123"})
         await fn.fnClearKeyBoard(client);
         await fn.fnClick(images["PasswordNextButton"+"_"+imageSize],client,5,"Next password",100);
         //await fnClick(images["AcceptTermsCircle"+"_"+imageSize],client,5,"Accept terms circle",500);
@@ -51,11 +51,13 @@ module.exports = function(fn) {
         await fn.fnClick(images["BigOkLogout"+"_"+imageSize],client,5,"Big Ok Logout button ",500);
         await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,10," x Button  ",2000);
         await fn.fnTestFinish(images["Login"+"_"+imageSize],client,20,"Logout status correct",testName,6000,2000);
-
+        fn.fnSaveTestOutput(testOutput,testData.outputDir);
         client.end();
       }
 
       catch(err){
+        fn.fnPushToOutputArray({"message":err})
+        fn.fnSaveTestOutput(testOutput,testData.outputDir);
         client.end();
         throw err;
       }

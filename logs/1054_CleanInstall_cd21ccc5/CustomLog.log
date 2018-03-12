@@ -1,9 +1,0 @@
-2018-03-08T13:22:51.023Z - info: Test execution started
-2018-03-08T13:22:51.024Z - info: Got following options to run{"testID":1054,"testChildren":0,"testName":"Clean Install","UDID":"cd21ccc5","port":4002,"systemPort":8202,"bpPort":6002,"desCaps":{"testName":"Clean Install","testFileName":"CleanInstall","groupTest":false,"desiredCapabilities":{"platformName":"Android","deviceName":"Android","appPackage":"com.gorro.nothing","appActivity":"com.gorro.nothing.NothingActivity","fullReset":false,"noReset":true,"newCommandTimeout":120000,"skipUnlock":true,"androidInstallTimeout":150000},"parameters":{"appPackage":"com.pointvoucher.playlondonpv","activityName":"com.unity3d.player.UnityPlayerActivity","apkFileName":"pl"}},"outputDir":"/home/trixo/Code/javaRewrite/logs/1054_CleanInstall_cd21ccc5"}
-2018-03-08T13:22:51.043Z - info: Trying to connect to openSTF with serial number cd21ccc5
-2018-03-08T13:22:51.091Z - info: executing command adb connect  localhost:7401
-2018-03-08T13:22:51.098Z - info: /home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p 4002 -bp 6002  --log-timestamp --log /home/trixo/Code/javaRewrite/logs/1054_CleanInstall_cd21ccc5/Appium.log
-2018-03-08T13:22:51.098Z - info: Trying to create appium Server on port: 4002
-2018-03-08T13:22:53.409Z - info: Appium server created on port: 4002
-2018-03-08T13:23:05.042Z - info: ERROR[MyERr]: TEST FINISHED WITH ERROR: Error: An unknown server-side error occurred while processing the command. Original error: Error occured while starting AndroidBootstrap. Original error: Error: Error executing adbExec. Original error: 'Command '/home/trixo/Android/Sdk/platform-tools/adb -P 5037 -s localhost\:7401 push /home/trixo/Downloads/appium-1.8.0-beta3/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar /data/local/tmp/' exited with code 1'; Stderr: ''; Code: '1'
-2018-03-08T13:23:29.399Z - info: Appium on close  null

@@ -7,6 +7,9 @@ const { performance } = require('perf_hooks');
 const fs =require("fs");
 const cv = require('opencv4nodejs');
 const winston = require('winston');
+let htmlTemplate = fs.readFileSync(__dirname+"/templateResult.html","utf-8");
+
+
 
 const jArguments=JSON.parse(process.argv[2]);
 console.log(jArguments);
@@ -126,7 +129,9 @@ async function fnInit(){
 
 function fnSaveTestOutput(object,path){
   console.log("saveing test output")
-fs.writeFile(path+"/testOutput.json",JSON.stringify(object), (err) => {
+  object=JSON.stringify(object);
+  htmlTemplate=htmlTemplate.replace("{{testData}}",object)
+fs.writeFile(path+"/testOutput.html",htmlTemplate, (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
 });
@@ -150,7 +155,7 @@ return outputFolder+"/img_"+random+"a.png";
 }
 
 
-////logging////
+
 async function fnCreateFolder(path){
   try{
     console.log(path);
@@ -184,6 +189,18 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
   if(deviceHeight>scrollAmount){
     let iCounter=0;
     let func=()=> fnScrollAndFindOnce(img, desc,iCounter,client).then(async data=>{
+
+    let imagepath=fnMarkOnImage(data.screenshot,img,data,outputDir)
+    let description={};
+    description.action="scroll and find";
+    description.desc=desc;
+    description.repeats=repeats;
+    description.wait=wait;
+    description.img=imagepath;
+    description.message="found "+desc+" on scrollable area";
+
+    fnPushToOutputArray(description)
+
       if(movePosition>0){
         console.log(data.maxLoc);
         await client.touchAction(
@@ -227,6 +244,7 @@ async function fnScrollAndFindOnce(img, desc,iCounter,client){
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  result.screenshot=img1
   if (result.maxVal <= 0.65) {
       // Fail
       const msg = "Can't see object yet";
@@ -244,14 +262,33 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
-      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).catch(err => {
-              console.log(err.message);
+      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).then((data=>{
+        let imagepath=fnMarkOnImage(data.screenshot,img,data,outputDir)
+        let description={};
+        description.action="Is image on screen ?";
+        description.desc=desc;
+        description.repeats=repeats;
+        description.wait=wait;
+        description.img=imagepath;
+        description.message="is this correct element ? if is then it was found correctly";
+        fnPushToOutputArray(description)
+      return data;
+      })).catch(err => {
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
                   logger.info("Object not found : " + desc);
+
+                  let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
+                  let description={};
+                  description.action="Is image on screen ?";
+                  description.desc=desc;
+                  description.repeats=repeats;
+                  description.wait=wait;
+                  description.img=imagepath;
+                  description.message="Could not find following image";
+                  fnPushToOutputArray(description)
                   return Promise.reject("Object not found : " + desc);
-                  throw new Error("Object not found : " + desc);
               }
               // Retry after waiting
               return attempt();
@@ -263,6 +300,8 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
    
 }
 
+
+
 /////// function used in fnIsOnScreen() to repeat 
 async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
   await timeout(repeatDelay);
@@ -271,15 +310,31 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  result.screenshot=img1;
   if (result.maxVal <= 0.65) {
       // Fail
-      const msg = "Can't see object yet";
-      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+      logger.info("Can't see "+desc+" yet");
+      throw new MyError("Error!!!", result);
   }
         // All good
+        console.log("result:"+result)
         logger.info("Found image on screen: "+desc);
         return result;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -295,6 +350,10 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
 
 function fnWriteValue(client,value,expectedValue,repeats,selector){
 iCounter=0;
+if(selector===undefined){
+  selector="android=new UiSelector().className(\"android.widget.EditText\")";
+ 
+}
 let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=>{
   console.log(err);
   iCounter++;
@@ -302,6 +361,13 @@ let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=
     logger.info("Could not write correct Value" + value)
     return Promise.reject("Could not write correct Value")
   }
+  let description={};
+  description.action="write value and check if its correct: "+value;
+  description.repeats=repeats;
+  description.selector=selector;
+  description.message="value '"+value+"' was written corectly"
+
+  fnPushToOutputArray(description)
   return write();
 });
 return write();
@@ -310,10 +376,7 @@ return write();
 
 
 async function fnWriteValueOnce(client,value,expectedValue,selector){
-  if(selector===undefined){
-    selector="android=new UiSelector().className(\"android.widget.EditText\")";
-   
-  }
+
   await client.keys(value);
   return client.getText(selector).then(data=>{
 
@@ -592,6 +655,11 @@ function fnClearKeyBoard(client){
       }])
     .then(()=>{
       logger.info("Keyboard cleared");
+      let description={};
+      description.action="Clear keyboard";
+      description.desc="Clearing keyboard";
+
+      fnPushToOutputArray(description)
       resolve(true);
     }).catch((err)=>{
       reject(err);
@@ -601,56 +669,29 @@ function fnClearKeyBoard(client){
 
 
 //// main function to dettect if image is on screen
-function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
-    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
-    let iCounter = 0;
-    let init = ()=> timeout(wait).then((asd)=>{
-      const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).catch(err => {
-              console.log(err.message);
-              iCounter++;
-              if (iCounter === repeats) {
-                  // Failed, out of retries
-                  logger.info("Looking for image on screen #"+iCounter);
-                  return Promise.reject("Object not found : " + desc);
-                  throw new Error("Object not found : " + desc);
-              }
-              // Retry after waiting
-              return attempt();
-          });
-          return attempt();      
-    })
-    return init();
-    
-   
-}
 
-/////// function used in fnIsOnScreen() to repeat 
-async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
-  await timeout(repeatDelay);
-  let screenshot= await client.screenshot()
-        
-  let buf = new Buffer(screenshot.value, 'base64');
-  let img1 = cv.imdecode(buf)
-  let result = img1.matchTemplate(img, 5).minMaxLoc(); 
-  result.screenshot=img1
-  if (result.maxVal <= 0.65) {
-      // Fail
-      const msg = "Can't see object yet";
-      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
-  }
-        // All good
-
-        logger.info("Found image on screen: "+desc);
-        return result;
-}
 
 //  detecting elements that are not scaled same way the game interface is. // be care about scale counter and scaleAmount !!!!
 function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay) {
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
-      const attempt = () => fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay).catch(err => {
-              console.log(err.message);
+      const attempt = () => fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay).then((data)=>{
+          let imagepath=fnMarkOnImage(data.screenshot,img,data,outputDir)
+          let description={};
+          description.action="is On screen scalable";
+          description.desc=desc;
+          description.repeats=repeats;
+          description.wait=wait;
+          description.img=imagepath;
+          description.message=desc+" is on screen ";
+          description.scaleCounter=scaleCounter
+          description.scaleAmount=scaleAmount
+
+          fnPushToOutputArray(description)
+          return data        
+      }).catch(err => {
+              console.log(err.message+"I am here");
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
@@ -661,6 +702,7 @@ function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAm
               // Retry after waiting
               return attempt();
           });
+
           return attempt();      
     })
     return init();
@@ -689,7 +731,9 @@ async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCoun
 /// used in fnIsOnScreenOnceScalable -> scales the image down 
 function fnScalingDetect(img,img2,repeats,scaleAmount){
   let iCounter=0;
-  let func=()=> fnScalingDetectOnce(img,img2,scaleAmount).catch((err)=>{
+  let func=()=> fnScalingDetectOnce(img,img2,scaleAmount).then((data)=>{
+    return data;
+  }).catch((err)=>{
     iCounter++;
     
     if(iCounter>=repeats){
@@ -707,6 +751,7 @@ function fnScalingDetect(img,img2,repeats,scaleAmount){
 function fnScalingDetectOnce(img,img1,scaleAmount){
 return new Promise((resolve,reject)=>{
     let result = img1.matchTemplate(img, 5).minMaxLoc();
+    result.screenshot=img1
     console.log(result); 
     if (result.maxVal <= 0.65) {
       let rescaled=img.rescale(scaleAmount);
@@ -725,22 +770,42 @@ function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeat
     logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
-      const attempt = () => fnTestFinishOnce(img, desc, iCounter,client,testName,repeatDelay).catch(err => {
-              console.log(err.message);
+      const attempt = () => fnTestFinishOnce(img, desc, iCounter,client,testName,repeatDelay).then(async data=>{
+        let imagepath=await fnMarkOnImage(data.screenshot,img,data,outputDir)
+        let description={};
+        description.action="Test Finish";
+        description.desc=desc;
+        description.repeats=repeats;
+        description.wait=wait;
+        description.img=imagepath;
+        description.message="is this correct element ? if is then test passed";
+         fnPushToOutputArray(description)
+      }).catch(err => {
+
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  logger.info("Looking for image on screen #"+iCounter);
+                  logger.info("Object not found : " + desc);
+
+                  let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
+                  let description={};
+                  description.action="Test finish ?";
+                  description.desc=desc;
+                  description.repeats=repeats;
+                  description.wait=wait;
+                  description.img=imagepath;
+                  description.message="Could not find end of the test";
+                  fnPushToOutputArray(description)
                   return Promise.reject("Object not found : " + desc);
-                  throw new Error("Object not found : " + desc);
               }
               // Retry after waiting
               return attempt();
           });
-          return attempt();      
+      return attempt();   
     })
+
     return init();
-    
+
    
 }
 
@@ -751,10 +816,11 @@ async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let result = img1.matchTemplate(img, 5).minMaxLoc(); 
+  result.screenshot=img1
   if (result.maxVal <= 0.65) {
       // Fail
-      const msg = "Can't see object yet";
-      throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
+      logger.info("Can't see "+desc+" yet");
+      throw new MyError("cant see object", result);
   }
         // All good
         logger.info("Found image on screen: "+desc);
@@ -782,9 +848,17 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
             count: 1 // number of touches
         }
       }])
-    fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
+    let imagepath=fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
+    let description={};
+    description.action="click";
+    description.desc=desc;
+    description.repeats=repeats;
+    description.wait=wait;
+    description.img=imagepath;
+    description.message="clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation;
+
     logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
-    fnPushToOutputArray({"message":"clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation})
+    fnPushToOutputArray(description)
     console.log("Click Performed: "+desc);
     return(true);
   }
@@ -813,6 +887,18 @@ async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmoun
       }])
     logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
     console.log("Click Performed: "+desc);
+    let imagepath=fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
+    let description={};
+    description.action="Click scalable";
+    description.desc=desc;
+    description.repeats=repeats;
+    description.wait=wait;
+    description.img=imagepath;
+    description.message=desc+" clicked  ";
+    description.scaleCounter=scaleCounter;
+    description.scaleAmount=scaleAmount;
+
+    fnPushToOutputArray(description)
     return(true);
   }
   catch(err){
@@ -861,3 +947,20 @@ function SaveImage (imageData,imageName){
 
 }
 
+
+
+
+class MyError extends Error {
+
+    constructor(message, value) {
+        super(message);
+        this._value = value;
+    }
+
+    get value() {
+
+        return this._value;
+
+    }
+
+}

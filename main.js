@@ -41,7 +41,7 @@ ON_DEATH(
 
 app.get('/', (req, res) => {
 
-// mb some frontend ? 
+
 
 })
 

@@ -37,7 +37,12 @@ module.exports = function(fn) {
         }                             
         fn.logger.info("Installing app to device "+ __dirname+'/apk/'+apkFileName+'.apk');
         fn.fnPushToOutputArray({"message":"Installing app to device "+ __dirname+'/apk/'+apkFileName+'.apk'})
-        await client.installApp(__dirname+'/apk/'+apkFileName+'.apk')
+        let options=[
+          {"timeout": 1000},
+          {"grantPermissions":true}
+        ]
+        
+        await client.installApp(__dirname+'/apk/'+apkFileName+'.apk',options)
         let appExistsAfter= await client.isAppInstalled(appPackage);
         if(!appExistsAfter.value){                                        //if apk not installed error
           fn.logger.info("apk was not installed:"+ appExistsAfter.toString());
@@ -55,9 +60,9 @@ module.exports = function(fn) {
         await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,20,"Close intro Video ",30000);
         loading= await fn.fnTestFinish(images["matchTilesMessage"+"_"+imageSize],client,20,"Check if message is there If its there Test Completed",testName,6000,2000);
         fn.fnSaveTestOutput(testOutput,testData.outputDir);
-        await fn.timeout(10000);
         console.log(testOutput.steps)
         client.end();
+        await fn.timeout(10000);
       }
       catch(err){
         fn.fnPushToOutputArray({"message":err})

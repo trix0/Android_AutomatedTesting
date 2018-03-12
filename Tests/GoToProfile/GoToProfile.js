@@ -1,7 +1,7 @@
 var images = require('./Images.js');
 module.exports = function(fn) {
   return {
-  run:async function GoToProfile(client,testData){
+  run:async function GoToProfile(client,testData,testOutput){
     try{
       console.log(testData)
         const testOutput=testData;
@@ -44,6 +44,7 @@ module.exports = function(fn) {
         if(birthday=="Fri, Apr 14"){
             // click 21
             await fn.fnClick(images["DatePicker21"+"_"+imageSize],client,5,"Click 21 on date Picker",1000);
+
             expectedBirthday="1995-04-21";
             expectedCountry="Zimbabwe";
 
@@ -70,6 +71,7 @@ module.exports = function(fn) {
         expectedGender="Female";
 
         }
+        fn.fnPushToOutputArray({"message":"expectedBirthday:"+expectedBirthday+", expectedCountry:"+expectedCountry+"expectedGender:"+expectedGender})
         await fn.fnClick(images["ProfileGender"+"_"+imageSize],client,5,"Opening gender ",1000,10);
         await fn.fnClick(images[""+expectedGender+"Checkbox"+"_"+imageSize],client,5,"select gender",500);
         await fn.fnClick(images["ProfileCountry"+"_"+imageSize],client,5,"Opening country select ",1000,10);
@@ -91,18 +93,14 @@ module.exports = function(fn) {
         let newGender=await client.element("android=new UiSelector().text(\""+expectedGender+"\")");
         let newCountry=await client.element("android=new UiSelector().text(\""+expectedCountry+"\")");
         let testCountry=await client.element("android=new UiSelector().text(\"Zambia\")");
-        console.log(testCountry)
-        console.log("testCountry")
+        fn.fnPushToOutputArray({"message":"newBirthday:"+newBirthday+", newCountry:"+newCountry+"newGender:"+newGender})
         if(newBirthday!=expectedBirthday||newGender.state=="failure"||newCountry.state=="failure"){
-            console.log(newBirthday);
-            console.log(expectedBirthday);
-            console.log(newGender);
-            console.log(newCountry);
 
             throw new Error("Profile is not updated!")
         }
         else{
             fn.logger.info("Profile is updated")
+             fn.fnPushToOutputArray({"message":"Profile is updated"})
         }
         await fn.fnClick(images["CloseShopButton"+"_"+imageSize],client,5,"close voucher shop",500);
         await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,5," x Button  ",5000)
@@ -111,11 +109,13 @@ module.exports = function(fn) {
         await fn.fnClick(images["LogoutButton"+"_"+imageSize],client,5,"Logout Button ",500);
         await fn.fnClick(images["BigOkLogout"+"_"+imageSize],client,5,"Big Ok Logout button ",500);
         await fn.fnTestFinish(images["Login"+"_"+imageSize],client,20,"Logout status correct",testName,6000,2000);
-
+        fn.fnSaveTestOutput(testOutput,testData.outputDir);
         client.end();
       }
 
       catch(err){
+        fn.fnPushToOutputArray({"message":err})
+        fn.fnSaveTestOutput(testOutput,testData.outputDir);
         client.end();
         throw err;
       }
