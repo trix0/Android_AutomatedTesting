@@ -17,11 +17,11 @@ stf check function does not work correctly.
 
 ## Usage Instructions
 
-*Install all dependencies and download project.
-*Create tests.
-*Build tests.
-*Execute Tests.
-*Check if tests passed.
+1. Install all dependencies and download project.
+2. Create tests.
+3. Build tests.
+4. Execute Tests.
+5. Check if tests passed.
 
 
 
