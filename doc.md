@@ -342,87 +342,90 @@ All the functions are stored in connect.js
 //////////////////////// func def/////////////////////
 
 
-Saves Test output to a html file.
-Usually used on the end of the test or in error handling.
 
 ####fnSaveTestOutput(json object, string path) path usually => testData.outputDir
 
+Saves Test output to a html file.
+Usually used on the end of the test or in error handling.
 
-Pushes object into testOutput 
+
+
+
 ####fnPushToOutputArray(json object)
+Pushes object into testOutput 
 
 
-Marks on a screnshot based on coordinates in result
 #### fnMarkOnImage(mat screenshot,mat smallImg, opencv result result,string outputFolder)
+Marks on a screnshot based on coordinates in result
 
 
 
-Creates the folder for output dir
 #### fnCreateFolder(string path)
+Creates the folder for output dir
 
 
 
+
+####fnScrollAndFind(img,client,int deviceHeight,int scrollAmount, int movePosition,int repeats,string desc,int wait,int repeatDelay)
 Scrolls down and look for image on screenshot before it scrolls again
-
-fnScrollAndFind(img,client,int deviceHeight,int scrollAmount, int movePosition,int repeats,string desc,int wait,int repeatDelay)
-
 movePosition-> is a position where should be found element scrlled from top of the device 
 
 
 
-Looks for Image on screenshot 
+
 
 #### fnIsOnScreen(img,client, int repeats = 5, string desc,int wait = 2000,int repeatDelay)
+Looks for Image on screenshot 
 
 
 
-Needs to be implemented
 #### function fnScrollAndFindScalable()
+Needs to be implemented
 
 
+####fnWriteValue(client,string value,regex expectedValue,int repeats, string selector)
 Writes Value and verify if its correct
-fnWriteValue(client,string value,regex expectedValue,int repeats, string selector)
 
   
 
 
 
-Clicks on perrmission button 
 
-null -> nothinf
-true-> click yes
-false -> click no
 
 ####fnPermissionId(bValue,client)
+Clicks on perrmission button 
+null -> nothinf
+false -> click no
+true-> click yes
 
 
 
-clears keyboard 
 
 ####fnClearKeyBoard(client)
+clears keyboard 
 
 
-detecting elements that are not scaled same way the game interface is. // be care about scale counter and scaleAmount !!!!
 
 ####fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay)
+detecting elements that are not scaled same way the game interface is. // be care about scale counter and scaleAmount !!!!
 
 
 
- main function to dettect if test finished Use it on the end of the test (detect last element and so on.)
 ####fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeatDelay) 
+ main function to dettect if test finished Use it on the end of the test (detect last element and so on.)
 
 
 
 
 
 
+
+####fnClick(img,client,int repeats=5, string desc,int wait,int offsetX=0,int offsetY=0)
  functions used to click on elements -> find based on image -> template matching 
  be care with offsets its not calculated based on screen size !
 
-####fnClick(img,client,int repeats=5, string desc,int wait,int offsetX=0,int offsetY=0)
 
 
-
- scalable click function, be careful with scaleCounter and scaleAmount
 ####fnClickScalable(img,client,int repeats=5,string desc,int scaleCounter,int scaleAmount,int wait,int repeatDelay,int offsetX=0,intoffsetY=0)
+ scalable click function, be careful with scaleCounter and scaleAmount
 
