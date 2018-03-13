@@ -3,9 +3,7 @@ module.exports = function(fn) {
   return {
   run:async function GoToProfile(client,testData,testOutput){
     try{
-      console.log(testData)
-        const testOutput=testData;
-        testOutput.steps=[];
+
         let testName=testData.desCaps.testName
         params=testData.desCaps.parameters;
         const init=await client.init();    // appium init (lunch app)
