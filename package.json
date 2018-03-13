@@ -1,23 +1,25 @@
 {
-  "name": "javarewrite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "init.js",
+  "name": "automatedtesting",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "moment": "^2.21.0",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "swagger-client": "2.1.9",
     "appium": "^1.7.2",
     "death": "^1.1.0",
-    "debug": "^3.1.0",
-    "express": "^4.16.2",
     "express-generator": "^4.15.5",
-    "moment": "^2.20.1",
     "opencv4nodejs": "^2.37.1",
     "portfinder": "^1.0.13",
-    "swagger-client": "2.1.9",
     "webdriverio": "^4.10.2",
     "winston": "^2.4.0"
   }

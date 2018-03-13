@@ -9,7 +9,18 @@ const fs =require("fs");
 const moment = require('moment');
 const app = express();
 const portfinder = require('portfinder');
-const iExpressPort=3211;
+const iExpressPort=3210;
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
+
+
+
+
+
 stfChecker=false;
 iTestId=fnLoadTestNumber();
 ON_DEATH = require('death')({uncaughtException: true}) 
@@ -39,11 +50,37 @@ ON_DEATH(
 
 
 
-app.get('/', (req, res) => {
 
 
 
-})
+
+app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
+// view engine setup
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', function(req, res) {
+	res.sendFile(path.join(__dirname +"/public/index.html"));
+
+});
+
+app.get('/getTests', function(req, res) {
+	res.status = 200;
+	res.send(runningTests)
+});
+app.get('/getDevices', async function(req, res) {
+	res.status = 200;
+	let devices= await fnGetAllDevices()
+	res.send(devices)
+});
+
+
+
+
+
+
+
 
 
 
@@ -71,7 +108,7 @@ rl.on('line', function(line){
     fnExecuteCommand(line);
 })
 
-app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
+
 
 fnGetAllDevices2().catch(err=>{
 	console.log(err);
@@ -236,6 +273,30 @@ function fnGetAllDevices2(){ // needs fix
 			    const devices = await Promise.all(allDevices);
 			    console.log(devices)
 			    resolve(devices);
+			}			
+		}
+		catch(err){
+			console.log(err);
+		}
+
+	})
+
+
+}
+
+function fnGetAllDevices(){ 
+	return new Promise(async (resolve)=>{
+		try{
+			let stfUp=await fnIsStfUp();
+			if(stfUp){
+
+				const getDevices=await clientSwag.then((api)=>{
+			      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
+			    }).catch(err=>{
+			    	throw(err);
+			    })
+
+			    resolve(getDevices);
 			}			
 		}
 		catch(err){
