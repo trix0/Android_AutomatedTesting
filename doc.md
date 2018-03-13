@@ -213,6 +213,19 @@ Then you simply lunch app by "node main" and run following command:
 ```
 buildTest YourTestName
 ```
+This will generate images for all screen sizes  and as well images.js with exports so the images are accessable. 
+
+
+
+
+
+
+
+
+
+
+
+## Execute Tests.
 
 ### The server start window
 
