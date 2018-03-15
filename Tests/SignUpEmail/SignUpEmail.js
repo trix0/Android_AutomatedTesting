@@ -10,7 +10,7 @@ module.exports = function(fn) {
 
         fn.logger.info("Running Signup email");
 
-        let random=Math.random().toString(36).substr(2, 5);
+        let random=Math.random().toString(36).substr(2, 6);
         //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE
         let imageSize=await client.windowHandleSize();
         imageSize=imageSize.value.height;
@@ -38,6 +38,7 @@ module.exports = function(fn) {
         await client.keys("testName");
         fn.fnPushToOutputArray({"message":"send testname:testName"})
         await fn.fnClearKeyBoard(client);
+        //await fn.fnClearKeyBoard(client);
         await fn.fnClick(images["BirthdayField"+"_"+imageSize],client,5,"BirthdayField ",500);
         var regEx = new RegExp(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|2[0-9]))/);
         await fn.fnWriteValue(client,"11111111",regEx,10);               

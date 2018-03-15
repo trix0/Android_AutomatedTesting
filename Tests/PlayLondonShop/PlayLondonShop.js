@@ -18,7 +18,7 @@ module.exports = function(fn) {
         await fn.fnClick(images["Login"+"_"+imageSize],client,5,"Click Login button",2000);
 
         await fn.fnClick(images["EmailLoginButton"+"_"+imageSize],client,5,"Click Email Login button",2000);
-        await fn.fnClick(images["YesButton"+"_"+imageSize],client,5,"Click Yes age button",2000);
+        await fn.fnClick(images["YesButton"+"_"+imageSize],client,10,"Click Yes age button",2000);
         await fn.fnClick(images["EnterEmailField"+"_"+imageSize],client,5,"Click on Enter Email field",2000);
         await client.keys("msa@pointvoucher.com");
         fn.fnPushToOutputArray({"message":"sends keys:msa@pointvoucher.com"})

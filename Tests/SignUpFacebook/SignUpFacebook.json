@@ -12,6 +12,16 @@
         "newCommandTimeout":120000,
         "skipUnlock":true
       },
-"parameters":{}
+"parameters":[
+	{
+	"email":"matusko.satara@gmail.com",
+	"password":"atTesting123"
+	},
+	{
+	"email":"msa@pointvoucher.com",
+	"password":"atTesting123"
+	}
+]
 
 }
+

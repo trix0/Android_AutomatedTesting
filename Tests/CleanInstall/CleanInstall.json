@@ -3,6 +3,7 @@
 "testFileName":"CleanInstall",
 "groupTest":false,
 "desiredCapabilities": {
+        "automationName":"uiautomator2",
         "platformName": "Android",
         "deviceName": "Android",
         "appPackage":"com.gorro.nothing",
@@ -13,16 +14,12 @@
         "skipUnlock":true,
         "androidInstallTimeout":150000
       },
-"parameters":[{
-	"appPackage":"com.pointvoucher.playlondonpv",
-	"activityName":"com.unity3d.player.UnityPlayerActivity",
-	"apkFileName":"pl"
-},
+"parameters":
 {
     "appPackage":"com.pointvoucher.playlondonpv",
     "activityName":"com.unity3d.player.UnityPlayerActivity",
     "apkFileName":"pl"
 }
-]
+
 
 }

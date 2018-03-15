@@ -15,6 +15,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const baseDeviceHeight=2560;
 
 
 
@@ -138,25 +139,59 @@ try{
 			return new Error("Test Does not Exists!!!-> Make sure you entered correct test name")
 		}
 			// if there is more udids separated by comma
+			let devices=await fnGetAllDevices2();
+			console.log("___________")
+			console.log(devices)
+			console.log("___________")
 			if(serials.indexOf(",")> -1){
 				serials=serials.split(",");
-				let runID=0;
-				desCaps=JSON.parse(desCaps);
-				for(var s=0; s<serials.length; s++){
-					let UDID=serials[s];
-					testName=desCaps.testName;
+				let newSerial=[];
+				for(var x=0; x<devices.length; x++){
+					for(var y=0; y<serials.length; y++){
+						if(devices[x]!=undefined){
+							if(devices[x].serial===serials[y]){
+								newSerial.push(devices[x]);
+							}							
+						}
 
-					fnRunBundle(testName,UDID,desCaps,runID)
-					runID++;
+					}
+					
 				}
+				if(newSerial.length==serials.length){
+					let runID=0;
+					desCaps=JSON.parse(desCaps);
+					for(var s=0; s<serials.length; s++){
+						let udid={}
+						udid.UDID=newSerial[s].serial;
+						udid.sdk=newSerial[s].sdk;
+						
+						testName=desCaps.testName;
+
+						fnRunBundle(testName,udid,desCaps,runID)
+						runID++;
+					}
+				}
+				else{
+					console.log("Didnt find some of the devices")
+				}
+
+				
 			}
 			// just one udid
 			else{
+				let arrayExist=devices[0].serial.indexOf(serials);
+				if(arrayExist>-1){
+					let udid={}
+					udid.UDID=devices[0].serial;
+					udid.sdk=devices[0].sdk;
+					desCaps=JSON.parse(desCaps);
+					desCaps.sdk=devices.sdk
+					testName=desCaps.testName;
+					fnRunBundle(testName,udid,desCaps,0)					
+				}else{
+					console.log("Device Does not exists")
+				}
 
-				let UDID=serials;
-				desCaps=JSON.parse(desCaps);
-				testName=desCaps.testName;
-				fnRunBundle(testName,UDID,desCaps,0)
 
 
 			}
@@ -191,14 +226,16 @@ try{
 		desCaps=JSON.parse(desCaps);
 			for(var r=0; r<devices.length; r++){
 				if(devices[r]!=undefined){
-					let UDID=devices[r];
+					let udid={}
+					udid.UDID=devices[r].serial;
+					udid.sdk=devices[r].sdk;
 					testName=desCaps.testName;
 					console.log(desCaps)
 					console.log("desCaps_______________")
 					systemPort++;
 					bpPort++;
 					port++;
-					fnRunBundle(testName,UDID,desCaps,runID)
+					fnRunBundle(testName,udid,desCaps,runID)
 					runID++;					
 				}	
 					
@@ -260,17 +297,19 @@ function fnGetAllDevices2(){ // needs fix
 			if(stfUp){
 
 				const getDevices=await clientSwag.then((api)=>{
-			      return api.devices.getDevices({fields: 'serial,present,ready,using,owner'})
+			      return api.devices.getDevices({fields: 'serial,present,ready,using,owner,sdk'})
 			    }).catch(err=>{
 			    	throw(err);
 			    })
+			    console.log(getDevices);
 			    let allDevices=getDevices.obj.devices.map(async device=>{
 			    	if(device.present&&device.ready&&!device.using){
-			    		return device.serial;
+			    		return device
 			    	}
 			    	return;
 			    })
-			    const devices = await Promise.all(allDevices);
+			    let devices = await Promise.all(allDevices);
+			    devices=devices.filter(x => x != undefined);
 			    console.log(devices)
 			    resolve(devices);
 			}			
@@ -283,6 +322,7 @@ function fnGetAllDevices2(){ // needs fix
 
 
 }
+
 
 function fnGetAllDevices(){ 
 	return new Promise(async (resolve)=>{
@@ -355,11 +395,12 @@ function fnDoesGroupTestExists(testName,fileType){
 
 
 // all configuration for running a test
-async function fnRunBundle(testName,UDID,desCaps,runID=0){
+async function fnRunBundle(testName,udid,desCaps,runID=0){
 
 	return new Promise(async (resolve,reject)=>{
 		try{
 			console.log("runID:"+runID)
+			console.log("runid___________________________________________")
 			let previousTestSkipValue;
 			var iIndex=0;
 			let jStatusFormat={
@@ -411,17 +452,19 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 					iIndex++	
 		    		jStatusFormat.id=testIndex;
 					testIndex++
-					jStatusFormat.UDID=UDID;
+					jStatusFormat.UDID=udid.UDID;
 					jStatusFormat.testName=testName;
 					jStatusFormat.timeStamp=await moment().format();
 					jStatusFormat.port=port;
 					jStatusFormat.status="Test not completed";
 					desCaps=JSON.parse(desCaps);
-					let stfCheck=await fnStfCheck(UDID,20,2000);
+					desCaps.sdk=udid.sdk
+					desCaps.bh=baseDeviceHeight;
+					let stfCheck=await fnStfCheck(udid.UDID,20,2000);
 					if(stfCheck===false){
 						jStatusFormat.status="Could not reach device."
 						runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
-						throw new Error("Could not reach device: "+UDID)
+						throw new Error("Could not reach device: "+udid.UDID)
 					}
 					runningTests[fnPushTestToGroupTest(testId)].tests.push(jStatusFormat);
 
@@ -430,7 +473,7 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 					desCaps.parameters=desCaps.parameters[runID];
 					}
 					
-					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,UDID,desCaps,iSystemPort,iPort,iBpPort,jGroupTestFormat.id,jStatusFormat.id);
+					jStatusFormat.status, runStatus=await fnRunOnce(desCaps.testName,udid.UDID,desCaps,iSystemPort,iPort,iBpPort,jGroupTestFormat.id,jStatusFormat.id);
 					previousTestSkipValue=groupTestCaps.tests[iIndex-1].conitnueOnFail;
 					if(previousTestSkipValue===false&&runStatus.indexOf("ERROR[MyERr]")>-1){
 						console.log(previousTestSkipValue)
@@ -465,27 +508,29 @@ async function fnRunBundle(testName,UDID,desCaps,runID=0){
 				bpPort++
 				iTestId++;
 				jStatusFormat.id=iTestId;
-				jStatusFormat.UDID=UDID;
+				jStatusFormat.UDID=udid.UDID;
 				jStatusFormat.testName=testName;
 				jStatusFormat.timeStamp=moment().format();
 				jStatusFormat.port=port;
 				jStatusFormat.status="Test not completed"
-				let stfCheck=await fnStfCheck(UDID,20,2000);
+				let stfCheck=await fnStfCheck(udid.UDID,20,2000);
 
 				if(stfCheck===false){
 					jStatusFormat.status="Could not reach device."
 					runningTests.push(jStatusFormat);
-					throw new Error("Could not reach device: "+UDID)
+					throw new Error("Could not reach device: "+udid.UDID)
 				}
 				runningTests.push(jStatusFormat);
 				console.log(desCaps);
 				if(desCaps.parameters.length>1){
 					desCaps.parameters=desCaps.parameters[runID];
 				}
+				desCaps.sdk=udid.sdk
+				desCaps.bh=baseDeviceHeight;
 				console.log("desCaps________");
 				console.log(desCaps);
 				console.log("desCaps________");
-				jStatusFormat.status=await fnRunOnce(testName,UDID,desCaps,iSystemPort,iPort,iBpPort,jStatusFormat.id)
+				jStatusFormat.status=await fnRunOnce(testName,udid.UDID,desCaps,iSystemPort,iPort,iBpPort,jStatusFormat.id)
 
 
 			}

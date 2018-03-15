@@ -33,13 +33,14 @@ module.exports = function(fn) {
         await fn.fnClick(images["MyAccountButton"+"_"+imageSize],client,10,"My Account button ",2000);
         await fn.timeout(6000)
         await fn.fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
-        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,150,2,"scrolling",7000,1000)
+        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,320*(imageSize/testData.desCaps.bh),2,"scrolling",7000,1000)
         await fn.fnClick(images["ProfileDropDown"+"_"+imageSize],client,5,"My profile open dropdown ",500);
         await fn.fnClick(images["ProfileBirthday"+"_"+imageSize],client,5,"Opening birthday ",1000,10);
         let birthday=await client.getText("android=new UiSelector().resourceId(\"android:id/date_picker_header_date\")")
+
         let expectedBirthday;
         let expectedCountry;
-        if(birthday=="Fri, Apr 14"){
+        if(birthday=="Fri, Apr 14"||birthday=="Fri, 14 Apr"){
             // click 21
             await fn.fnClick(images["DatePicker21"+"_"+imageSize],client,5,"Click 21 on date Picker",1000);
 
@@ -47,7 +48,7 @@ module.exports = function(fn) {
             expectedCountry="Zimbabwe";
 
         }
-        else if(birthday=="Fri, Apr 21"){
+        else if(birthday=="Fri, Apr 21"||birthday=="Fri, 21 Apr"){
             // click 20
             await fn.fnClick(images["DatePicker14"+"_"+imageSize],client,5,"Click 14 on date Picker",1000);
             expectedBirthday="1995-04-14";
@@ -83,7 +84,7 @@ module.exports = function(fn) {
         await fn.timeout(6000)
 
         await fn.fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
-        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,150,2,"scrolling",7000,1000)
+        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,320*(imageSize/testData.desCaps.bh),2,"scrolling",7000,1000)
         await fn.fnClick(images["ProfileDropDown"+"_"+imageSize],client,5,"My profile open dropdown ",500);
         await fn.timeout(3000);
 
@@ -105,7 +106,7 @@ module.exports = function(fn) {
         await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,5," x Button  ",5000)
         await fn.fnClick(images["SettingsButton"+"_"+imageSize],client,5,"Settings Button ",500);
         await fn.fnClick(images["LogoutButton"+"_"+imageSize],client,5,"Logout Button ",500);
-        await fn.fnClick(images["BigOkLogout"+"_"+imageSize],client,5,"Big Ok Logout button ",500);
+        await fn.fnClick(images["BigOkLogout"+"_"+imageSize],client,10,"Big Ok Logout button ",500);
         await fn.fnTestFinish(images["Login"+"_"+imageSize],client,20,"Logout status correct",testName,6000,2000);
         fn.fnSaveTestOutput(testOutput,testData.outputDir);
         client.end();

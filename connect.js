@@ -16,32 +16,17 @@ console.log(jArguments);
 console.log("passin data____________")
 const outputDir=__dirname+"/logs/"+jArguments.testID+"_"+jArguments.desCaps.testFileName+"_"+jArguments.UDID;
 jArguments.outputDir=outputDir;
-const folder=fnCreateFolder(outputDir);
+
 let testName=jArguments.desCaps.testName;
 
 
-const logger = new winston.Logger({
-    level: 'info',
-    transports: [
-      new winston.transports.Console({
-        timestamp: true
-      }),
-      new winston.transports.File({
-        filename:outputDir+'/CustomLog.log',
-        timestamp: true,
-        prettyPrint : true,
-        json:false,
-      })
-    ]
-  });
 imgAllowButton = cv.imread(__dirname+'/autoTest/allowButton.png');
 imgDenyButton = cv.imread(__dirname+'/autoTest/denyButton.png');
 imgAllowButton_1 = cv.imread(__dirname+'/autoTest/allowButton_1.png');
 imgDenyButton_1 = cv.imread(__dirname+'/autoTest/denyButton_1.png');
 
 
-logger.info('Test execution started');
-logger.info("Got following options to run"+ JSON.stringify(jArguments))
+
 
 let fn={};
 fn.timeout=timeout;
@@ -65,7 +50,7 @@ fn.SaveImage=SaveImage;
 fn.fnTestFinish=fnTestFinish;
 fn.fnTestFinishOnce=fnTestFinishOnce;
 fn.testName=testName;
-fn.logger=logger;
+
 fn.fnPushToOutputArray=fnPushToOutputArray;
 fn.fnMarkOnImage=fnMarkOnImage;
 fn.fnSaveTestOutput=fnSaveTestOutput;
@@ -101,6 +86,24 @@ fnInit(); // entry point
 async function fnInit(){
   let UDID;
   try{
+    await fnCreateFolder(outputDir);
+    const logger = new winston.Logger({
+              level: 'info',
+              transports: [
+                new winston.transports.Console({
+                  timestamp: true
+                }),
+                new winston.transports.File({
+                  filename:outputDir+'/CustomLog.log',
+                  timestamp: true,
+                  prettyPrint : true,
+                  json:false,
+                })
+              ]
+            });
+    fn.logger=logger;
+    fn.logger.info('Test execution started');
+    fn.logger.info("Got following options to run"+ JSON.stringify(jArguments))
     UDID=await fnConnectStf(serial); /////////////connect to stf -> returns UDID 7
     opts.desiredCapabilities.udid=UDID                    //////////assign udid
 
@@ -111,7 +114,7 @@ async function fnInit(){
     });
 
     await test.run(client,jArguments,testOutput).catch(err=>{
-      logger.info("ERROR[MyERr]: TEST FINISHED WITH ERROR: "+err)
+      fn.logger.info("ERROR[MyERr]: TEST FINISHED WITH ERROR: "+err)
     }); // runs test
     await fnDisconnect(UDID);
 
@@ -159,18 +162,19 @@ return outputFolder+"/img_"+random+"a.png";
 async function fnCreateFolder(path){
   try{
     console.log(path);
-    fs.access(path, (err) => {
+    await fs.access(path,(err) => {
       if (!err) {
         throw new Error(path+' already exists');
       } 
-      fs.mkdir(path, err=>{
+    })
+    await fs.mkdir(path, err=>{
         if(err){
+          console.log(new Error(err));
+          fnCreateFolder(path)
           throw err; 
         }
-        return path
-       
       }); 
-    })
+    return path
   }
   catch(err){
     console.log(err);
@@ -233,7 +237,7 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
     })
     return func();   
   }
-  logger.info(new Error("scrollAmount is Too Big"))
+  fn.logger.info(new Error("scrollAmount is Too Big"))
   throw new  Error("scrollAmount is Too Big");
 
 
@@ -251,7 +255,7 @@ async function fnScrollAndFindOnce(img, desc,iCounter,client){
       throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
   }
         // All good
-        logger.info("Found image on screen: "+desc);
+        fn.logger.info("Found image on screen: "+desc);
         return result;
 }
 
@@ -259,7 +263,7 @@ async function fnScrollAndFindOnce(img, desc,iCounter,client){
 
 
 function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
-    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    fn.logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
       const attempt = () => fnIsOnScreenOnce(img, desc, iCounter,client,repeatDelay).then((data=>{
@@ -277,7 +281,7 @@ function fnIsOnScreen(img,client, repeats = 5, desc, wait = 2000,repeatDelay) {
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  logger.info("Object not found : " + desc);
+                  fn.logger.info("Object not found : " + desc);
 
                   let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
                   let description={};
@@ -313,12 +317,12 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
   result.screenshot=img1;
   if (result.maxVal <= 0.65) {
       // Fail
-      logger.info("Can't see "+desc+" yet");
+      fn.logger.info("Can't see "+desc+" yet");
       throw new MyError("Error!!!", result);
   }
         // All good
         console.log("result:"+result)
-        logger.info("Found image on screen: "+desc);
+        fn.logger.info("Found image on screen: "+desc);
         return result;
 }
 
@@ -358,7 +362,7 @@ let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=
   console.log(err);
   iCounter++;
   if(iCounter==repeats){
-    logger.info("Could not write correct Value" + value)
+    fn.logger.info("Could not write correct Value" + value)
     return Promise.reject("Could not write correct Value")
   }
   let description={};
@@ -381,7 +385,7 @@ async function fnWriteValueOnce(client,value,expectedValue,selector){
   return client.getText(selector).then(data=>{
 
     if(!expectedValue.test(data)){
-      logger.info("Value is not correct -> repeating")
+      fn.logger.info("Value is not correct -> repeating")
       throw new Error("Value is not correct")
     }
     return(true); 
@@ -392,7 +396,7 @@ async function fnWriteValueOnce(client,value,expectedValue,selector){
 }
 // conect to stf///
 async function fnConnectStf(serial){
-  logger.info("Trying to connect to openSTF with serial number "+serial)
+  fn.logger.info("Trying to connect to openSTF with serial number "+serial)
   try{
     const getDevices=await clientSwag.then((api)=>{
       return api.devices.getDeviceBySerial({
@@ -403,7 +407,7 @@ async function fnConnectStf(serial){
     let device = getDevices.obj.device;
     const avaiDevices= await clientSwag.then((api)=>{
       if (!device.present || !device.ready || device.using || device.owner) {
-        logger.info("Device is not available => open STF ")
+        fn.logger.info("Device is not available => open STF ")
         throw new Error('Device is not available')
       }
       return api.user.addUserDevice({
@@ -415,7 +419,7 @@ async function fnConnectStf(serial){
     });
     const remoteConnect= await clientSwag.then((api)=>{
       if (!avaiDevices.obj.success) {
-        logger.info("Could not connect to device => open STF ")
+        fn.logger.info("Could not connect to device => open STF ")
         throw new Error('Could not connect to device')
 
       }
@@ -424,7 +428,7 @@ async function fnConnectStf(serial){
       })
     })
     const remoteConnectUDID= await (()=>{
-      logger.info("executing command adb connect  " + remoteConnect.obj.remoteConnectUrl)
+      fn.logger.info("executing command adb connect  " + remoteConnect.obj.remoteConnectUrl)
       exec('adb connect '+remoteConnect.obj.remoteConnectUrl+'','',(err, stdout, stderr)=>{
         console.log(err);
       });
@@ -463,7 +467,7 @@ function fnDisconnect(UDID){
       })
 
       if (!hasDevice) {
-        logger.info("You are not owner of "+ UDID+" => open STF ")
+        fn.logger.info("You are not owner of "+ UDID+" => open STF ")
         throw new Error('You are not owner')
       }
 
@@ -472,11 +476,11 @@ function fnDisconnect(UDID){
       })
       .then(function(res) {
         if (!res.obj.success) {
-          logger.info("Could not disconnect "+UDID+" => open STF ")
+          fn.logger.info("Could not disconnect "+UDID+" => open STF ")
           throw new Error('Could not disconnect to device')
 
         }
-        logger.info("Disconnected "+UDID+"=> open STF ")
+        fn.logger.info("Disconnected "+UDID+"=> open STF ")
       })
     })
   })
@@ -486,24 +490,24 @@ function fnDisconnect(UDID){
 /// creates appium server on port from opts 
 function fnCreateServer(port,bpPort){
   return new Promise((resolve,reject)=>{
-    logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log '+outputDir+'/Appium.log');
-    logger.info("Trying to create appium Server on port: "+ port)
+    fn.logger.info('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log '+outputDir+'/Appium.log');
+    fn.logger.info("Trying to create appium Server on port: "+ port)
     let appiumPort=port
     let appiumServer=exec('/home/trixo/Downloads/appium-1.8.0-beta3/build/lib/main.js -p '+port+' -bp '+ bpPort+'  --log-timestamp --log '+outputDir+'/Appium.log');
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
-        logger.info("Appium server created on port: "+port )
+        fn.logger.info("Appium server created on port: "+port )
         console.log("Server Created");
         resolve(true);
         
       }
     });
     appiumServer.stderr.on('data', function(data) {
-      //logger.info("Appium err "+ data)
+      //fn.logger.info("Appium err "+ data)
       reject(data)
     });
     appiumServer.on('close', function(code) {
-            logger.info("Appium on close  "+ code)
+            fn.logger.info("Appium on close  "+ code)
       reject(code);
     });
 // ...
@@ -532,7 +536,7 @@ function fnCreateServer(port,bpPort){
 
 /// nice timeout function
 function timeout(delay){
-  logger.info("Running delay for : "+delay )
+  fn.logger.info("Running delay for : "+delay )
   return new Promise((resolve)=>{
     setTimeout(resolve,delay)
   })
@@ -543,7 +547,7 @@ function timeout(delay){
 
 
 async function fnPermissionId(bValue,client){
-  logger.info("Running fnPermission with value: "+bValue)
+  fn.logger.info("Running fnPermission with value: "+bValue)
   if(bValue===null){
     return true;
   }
@@ -560,7 +564,7 @@ async function fnPermissionId(bValue,client){
 
 
 function fnPermission(repeat,bValue,client){
-  logger.info("Running fnPermission with number of repeats: "+ repeat+" and value: "+bValue)
+  fn.logger.info("Running fnPermission with number of repeats: "+ repeat+" and value: "+bValue)
   let iCounter = 0;
   if(bValue===null){
     return true;
@@ -569,7 +573,7 @@ function fnPermission(repeat,bValue,client){
       iCounter++;
       if (iCounter === repeat) {
           // Failed, out of retries
-          logger.info("Couldnt find permission screen: "+bValue+" in "+ repeat +" repeats" )
+          fn.logger.info("Couldnt find permission screen: "+bValue+" in "+ repeat +" repeats" )
           return Promise.reject( new Error("Couldnt find permission screen"));
       }
       // Retry 
@@ -603,7 +607,7 @@ function fnPermssionOnce(iCounter,bValue,client){
           if (result.maxVal >= 0.65) {
             // All good
 
-            logger.info("Found permission button going to click #"+iCounter)
+            fn.logger.info("Found permission button going to click #"+iCounter)
             fnClick(img[x],client,repeats=5,"Click on permission button",0).then(()=>{
             return true;
             });
@@ -612,7 +616,7 @@ function fnPermssionOnce(iCounter,bValue,client){
               
           }
           else if(x==img.length-1){
-            logger.info("WAiting for permission pop up#"+iCounter)
+            fn.logger.info("WAiting for permission pop up#"+iCounter)
             const msg = "WAiting for permission pop up#"+iCounter;
             throw new Error(msg);            
           }
@@ -643,18 +647,11 @@ function fnPermssionOnce(iCounter,bValue,client){
 
 /// clears keyboard 
 function fnClearKeyBoard(client){
-  logger.info("Running clear keyboard (click on x0y0");
+  fn.logger.info("Running clear keyboard (click on ok");
   return new Promise((resolve,reject)=>{
-    client.touchPerform([{
-      action: 'tap',
-      options: {
-        x: 0,   // x offset
-        y: 0,   // y offset
-        count: 1 // number of touches
-      }
-      }])
+    client.click("android=new UiSelector().text(\"OK\")")
     .then(()=>{
-      logger.info("Keyboard cleared");
+      fn.logger.info("Keyboard cleared");
       let description={};
       description.action="Clear keyboard";
       description.desc="Clearing keyboard";
@@ -673,7 +670,7 @@ function fnClearKeyBoard(client){
 
 //  detecting elements that are not scaled same way the game interface is. // be care about scale counter and scaleAmount !!!!
 function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAmount, wait = 2000,repeatDelay) {
-    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    fn.logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
       const attempt = () => fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCounter,client,repeatDelay).then((data)=>{
@@ -695,7 +692,7 @@ function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAm
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  logger.info("Looking for image on screen #"+iCounter);
+                  fn.logger.info("Looking for image on screen #"+iCounter);
                   return Promise.reject("Object not found : " + desc);
                   throw new Error("Object not found : " + desc);
               }
@@ -724,7 +721,7 @@ async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCoun
   }
  
         // All good
-        logger.info("Found image on screen: "+desc);
+        fn.logger.info("Found image on screen: "+desc);
         return scalDetect;
 }
 
@@ -767,7 +764,7 @@ return new Promise((resolve,reject)=>{
 
 //// main function to dettect if test finished
 function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeatDelay) {
-    logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
+    fn.logger.info("Looking for image on screen:" +desc +" with " + repeats + " repeats ");
     let iCounter = 0;
     let init = ()=> timeout(wait).then((asd)=>{
       const attempt = () => fnTestFinishOnce(img, desc, iCounter,client,testName,repeatDelay).then(async data=>{
@@ -785,7 +782,7 @@ function fnTestFinish(img,client, repeats = 5, desc,testName, wait = 2000,repeat
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  logger.info("Object not found : " + desc);
+                  fn.logger.info("Object not found : " + desc);
 
                   let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
                   let description={};
@@ -819,12 +816,12 @@ async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0
   result.screenshot=img1
   if (result.maxVal <= 0.65) {
       // Fail
-      logger.info("Can't see "+desc+" yet");
+      fn.logger.info("Can't see "+desc+" yet");
       throw new MyError("cant see object", result);
   }
         // All good
-        logger.info("Found image on screen: "+desc);
-        logger.info("Test:"+testName+"[FINISHED]");
+        fn.logger.info("Found image on screen: "+desc);
+        fn.logger.info("Test:"+testName+"[FINISHED]");
         return result;
 }
 
@@ -835,7 +832,7 @@ async function fnTestFinishOnce(img, desc,iCounter,client,testName,repeatDelay=0
 /// be care with offsets its not calculated based on screen size !
 async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
-    logger.info("Running click event : "+desc+" with "+ repeats + "repets");
+    fn.logger.info("Running click event : "+desc+" with "+ repeats + "repets");
     let coordinates= await fnIsOnScreen(img,client,repeats,desc,wait);
     console.log(coordinates);
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
@@ -857,7 +854,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
     description.img=imagepath;
     description.message="clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation;
 
-    logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
+    fn.logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
     fnPushToOutputArray(description)
     console.log("Click Performed: "+desc);
     return(true);
@@ -873,7 +870,7 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
 // scalable click function, be careful with scaleCounter and scaleAmount
 async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmount,wait,repeatDelay,offsetX=0,offsetY=0){
   try{
-    logger.info("Running Scalaable click event : "+desc+" with "+ repeats + "repets");                     
+    fn.logger.info("Running Scalaable click event : "+desc+" with "+ repeats + "repets");                     
     let coordinates= await fnIsOnScreenScalable(img,client, repeats, desc,scaleCounter,scaleAmount, wait,repeatDelay) 
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
     let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
@@ -885,7 +882,7 @@ async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmoun
             count: 1 // number of touches
         }
       }])
-    logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
+    fn.logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
     console.log("Click Performed: "+desc);
     let imagepath=fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
     let description={};

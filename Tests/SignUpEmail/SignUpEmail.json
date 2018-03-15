@@ -8,7 +8,7 @@
         "appPackage":"com.pointvoucher.playlondonpv",
         "appActivity":"com.unity3d.player.UnityPlayerActivity",
         "fullReset":false,
-	"noReset":true,
+		"noReset":true,
         "newCommandTimeout":120000,
         "skipUnlock":true
       },

@@ -632,7 +632,7 @@ function fnUpdateTestList(testData){
   console.log(testData);
   if(testData.length>0){
     let html="<tr><th>ID</th><th>Test Name</th><th>Device</th><th>Status</th><th>Type</th></tr>";
-    let blueprintTest='<tr>\
+    let blueprintTest='<tr class="{{className}}">\
                           <td>{{testID}}</td>\
                           <td>{{testName}}</td>\
                           <td>{{testDevice}}</td>\
@@ -661,6 +661,7 @@ function fnUpdateTestList(testData){
         for(var y=0; y<testData[x].tests.length; y++){
 
           let cBlueprint=blueprintTest;
+          cBlueprint=cBlueprint.replace("{{className}}","none")
           cBlueprint=cBlueprint.replace("{{testID}}","#"+testData[x].tests[y].id)
           cBlueprint=cBlueprint.replace("{{testName}}",testData[x].tests[y].testName)
           cBlueprint=cBlueprint.replace("{{testDevice}}",testData[x].tests[y].UDID)
@@ -687,6 +688,7 @@ function fnUpdateTestList(testData){
       else{
         // normal test
         let cBlueprint=blueprintTest;
+        cBlueprint=cBlueprint.replace("{{className}}","groupHeader")
         cBlueprint=cBlueprint.replace("{{testID}}",testData[x].id)
         cBlueprint=cBlueprint.replace("{{testName}}",testData[x].testName)
         cBlueprint=cBlueprint.replace("{{testDevice}}",testData[x].UDID)
@@ -712,20 +714,8 @@ function fnUpdateTestList(testData){
 
 
 }
-UDID: "cd21ccc5"
-id: 180
-port: 4002
-status: "Test not completed"
-testName: "Clean Install"
-timeStamp: "2018-03-13T11:58:26+01:00"
+
 </script>
 </body>
 </html>
 
-                    <tr class="groupHeader">
-                      <td>1</td>
-                      <td>SM-A300FU</td>
-                      <td>Android</td>
-                      <td><span class="label label-success">Ready</span></td>
-                      <td>Group</td>
-                    </tr>

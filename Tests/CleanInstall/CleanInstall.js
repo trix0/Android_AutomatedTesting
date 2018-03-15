@@ -8,6 +8,7 @@ module.exports = function(fn) {
   run:async function fnCleanInstall(client,testData,testOutput){
     try{
       console.log(testData)
+      console.log("_________TEstdata________")
         let testName=testData.desCaps.testName
 
 
@@ -22,6 +23,8 @@ module.exports = function(fn) {
         // is apk installed ?
         let imageSize=await client.windowHandleSize();
         imageSize=imageSize.value.height;
+        let status=await client.status();
+        console.log(status);
         let appExists= await client.isAppInstalled(appPackage);
         if(appExists.value){                                        //if apk installed -> remove
           fn.logger.info("App exists in device => trying to remove");
@@ -49,15 +52,21 @@ module.exports = function(fn) {
           fn.fnPushToOutputArray({"message":"apk was not installed:"+ appExistsAfter.toString()})
           throw new Error(appExistsAfter+"Apk is not installed");
         } 
-         fn.logger.info("starting package : " + appPackage+" with activity name: "+activityName);
-         fn.fnPushToOutputArray({"message":"starting package : " + appPackage+" with activity name: "+activityName})
-        await client.startActivity(appPackage,activityName,"com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
+        fn.logger.info("starting package : " + appPackage+" with activity name: "+activityName);
+        fn.fnPushToOutputArray({"message":"starting package : " + appPackage+" with activity name: "+activityName})
+        if(parseInt(testData.desCaps.sdk)>23){
+          await client.startActivity(appPackage,activityName,"com.google.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
+        }else{
+          await client.startActivity(appPackage,activityName,"com.android.packageinstaller","com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
+
+        }
+        
         //client.findElement(By.id("com.android.packageinstaller:id/permission_message")).click(); 
         await fn.fnPermissionId(true,client);
 
         //await fnPermission(5,true,client);
 
-        await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,20,"Close intro Video ",30000);
+        await fn.fnClick(images["x_OverIntroVideo"+"_"+imageSize],client,20,"Close intro Video ",25000);
         loading= await fn.fnTestFinish(images["matchTilesMessage"+"_"+imageSize],client,20,"Check if message is there If its there Test Completed",testName,6000,2000);
         fn.fnSaveTestOutput(testOutput,testData.outputDir);
         console.log(testOutput.steps)
