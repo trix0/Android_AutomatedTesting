@@ -26,7 +26,7 @@ module.exports = function(fn) {
         fn.fnPushToOutputArray({"message":"send email keys:"+email})
         await fn.fnClearKeyBoard(client);
         await fn.fnClick(images["EmailNextButton"+"_"+imageSize],client,5,"Next email",500);
-        await fn.fnClick(images["EnterPasswordField"+"_"+imageSize],client,5,"Click on Enter Password field",2000);
+        await fn.fnClick(images["EnterPasswordField"+"_"+imageSize],client,5,"Click on Enter Password field",3000);
         await client.keys("123123");
         fn.fnPushToOutputArray({"message":"send password keys:123123"})
         await fn.fnClearKeyBoard(client);

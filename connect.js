@@ -189,6 +189,7 @@ async function fnCreateFolder(path){
 
 
 
+
 function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repeats,desc,wait,repeatDelay){
   if(deviceHeight>scrollAmount){
     let iCounter=0;
@@ -222,16 +223,26 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
       console.log(err);
       iCounter++;
       if(iCounter==repeats){
-        // we should scroll
-        iCounter=0;
-         await client.touchAction(
+
+      let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
+      let description={};
+      description.action="scroll and find";
+      description.desc=desc;
+      description.repeats=repeats;
+      description.wait=wait;
+      description.img=imagepath;
+      description.message="Couldnt find"+desc+"after "+repeats+ " scrolls";
+      fnPushToOutputArray(description)
+      return Promise.reject("Scrolling element not found");
+
+      }
+      await client.touchAction(
           [
               { action: 'press', x: 0, y:scrollAmount},
               { action: 'moveTo', x: 0, y: 1 },
               { action: 'wait', ms: 500},
               'release',
           ])
-      }
       return func();
 
     })
@@ -252,6 +263,8 @@ async function fnScrollAndFindOnce(img, desc,iCounter,client){
   if (result.maxVal <= 0.65) {
       // Fail
       const msg = "Can't see object yet";
+      fn.logger.info("Can't see "+desc+" yet");
+      throw new MyError("Error!!!", result);
       throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc);
   }
         // All good
@@ -688,13 +701,23 @@ function fnIsOnScreenScalable(img,client, repeats = 5, desc,scaleCounter,scaleAm
           fnPushToOutputArray(description)
           return data        
       }).catch(err => {
-              console.log(err.message+"I am here");
               iCounter++;
               if (iCounter === repeats) {
                   // Failed, out of retries
-                  fn.logger.info("Looking for image on screen #"+iCounter);
+                  let imagepath=fnMarkOnImage(err.value.screenshot,img,err.value,outputDir)
+                  let description={};
+                  description.action="is On screen scalable";
+                  description.desc=desc;
+                  description.repeats=repeats;
+                  description.wait=wait;
+                  description.img=imagepath;
+                  description.message="couldnt find"+desc+" on screen ";
+                  description.scaleCounter=scaleCounter
+                  description.scaleAmount=scaleAmount
+
+                  fnPushToOutputArray(description)
+                  fn.logger.info("couldnt find"+desc+" on screen");
                   return Promise.reject("Object not found : " + desc);
-                  throw new Error("Object not found : " + desc);
               }
               // Retry after waiting
               return attempt();
@@ -715,9 +738,12 @@ async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCoun
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let scalDetect= await fnScalingDetect(img,img1,scaleCounter,scaleAmount);
-  if(scalDetect==false){
+  console.log(scalDetect)
+  console.log("______-scaledetect_______")
+  if(scalDetect.status==false){
     const msg = "Can't see object yet";
-    throw new Error(iCounter === undefined ? msg : msg + " #" + iCounter+"->"+desc)
+    throw new MyError("Cant see object yet!!!", scalDetect);
+    
   }
  
         // All good
@@ -732,12 +758,11 @@ function fnScalingDetect(img,img2,repeats,scaleAmount){
     return data;
   }).catch((err)=>{
     iCounter++;
-    
     if(iCounter>=repeats){
-      console.log(err);
-      return Promise.reject(false)
+      err.status=false
+      return (err)
     }
-    img=err;
+    img=err.rescaled;
     return func()
   })
   return func();
@@ -749,10 +774,10 @@ function fnScalingDetectOnce(img,img1,scaleAmount){
 return new Promise((resolve,reject)=>{
     let result = img1.matchTemplate(img, 5).minMaxLoc();
     result.screenshot=img1
-    console.log(result); 
     if (result.maxVal <= 0.65) {
       let rescaled=img.rescale(scaleAmount);
-      reject(rescaled)
+      result.rescaled=rescaled;
+      reject(result)
     }
     resolve(result); 
 
