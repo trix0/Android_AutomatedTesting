@@ -71,7 +71,6 @@ module.exports = function(fn) {
         fn.fnSaveTestOutput(testOutput,testData.outputDir);
         console.log(testOutput.steps)
         client.end();
-        await fn.timeout(10000);
       }
       catch(err){
         fn.fnPushToOutputArray({"message":err})

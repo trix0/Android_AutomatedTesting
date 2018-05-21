@@ -12,8 +12,6 @@ let htmlTemplate = fs.readFileSync(__dirname+"/templateResult.html","utf-8");
 
 
 const jArguments=JSON.parse(process.argv[2]);
-console.log(jArguments);
-console.log("passin data____________")
 const outputDir=__dirname+"/logs/"+jArguments.testID+"_"+jArguments.desCaps.testFileName+"_"+jArguments.UDID;
 jArguments.outputDir=outputDir;
 
@@ -169,7 +167,7 @@ async function fnCreateFolder(path){
     })
     await fs.mkdir(path, err=>{
         if(err){
-          console.log(new Error(err));
+          //console.log(new Error(err));
           fnCreateFolder(path)
           throw err; 
         }
@@ -207,12 +205,11 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
     fnPushToOutputArray(description)
 
       if(movePosition>0){
-        console.log(data.maxLoc);
         await client.touchAction(
         [
             { action: 'press', x: 0, y:data.maxLoc.y},
             { action: 'moveTo', x: 0, y: movePosition },
-            { action: 'wait', ms: 500},
+            { action: 'wait', ms: 1000},
             'release',
         ])       
       }
@@ -220,7 +217,6 @@ function fnScrollAndFind(img,client,deviceHeight,scrollAmount,movePosition,repea
 
     })
     .catch(async err => {
-      console.log(err);
       iCounter++;
       if(iCounter==repeats){
 
@@ -334,7 +330,6 @@ async function fnIsOnScreenOnce(img, desc,iCounter,client,repeatDelay=0) {
       throw new MyError("Error!!!", result);
   }
         // All good
-        console.log("result:"+result)
         fn.logger.info("Found image on screen: "+desc);
         return result;
 }
@@ -372,7 +367,6 @@ if(selector===undefined){
  
 }
 let write= ()=> fnWriteValueOnce(client,value,expectedValue,selector).catch(err=>{
-  console.log(err);
   iCounter++;
   if(iCounter==repeats){
     fn.logger.info("Could not write correct Value" + value)
@@ -443,7 +437,7 @@ async function fnConnectStf(serial){
     const remoteConnectUDID= await (()=>{
       fn.logger.info("executing command adb connect  " + remoteConnect.obj.remoteConnectUrl)
       exec('adb connect '+remoteConnect.obj.remoteConnectUrl+'','',(err, stdout, stderr)=>{
-        console.log(err);
+        fn.logger.info(err)
       });
       return remoteConnect.obj.remoteConnectUrl
     })();
@@ -510,7 +504,6 @@ function fnCreateServer(port,bpPort){
     appiumServer.stdout.on('data', function(data) {
       if(data.indexOf("listener started ")!=-1){
         fn.logger.info("Appium server created on port: "+port )
-        console.log("Server Created");
         resolve(true);
         
       }
@@ -527,24 +520,6 @@ function fnCreateServer(port,bpPort){
 
   })
 }
-
-
-//rconnect to device 
-// function fnConnect(UDID){
-//   return new Promise((resolve,reject)=>{
-//     const client = wdio.remote(opts);
-//     client.init(opts, (error) =>{
-//       if (error) {
-//         reject(new Error('Session did not start properly. Please make sure you sauce credentials are correct'));
-//       }    
-    
-//     })
-//     .then(()=>{
-//       return(client);
-//     })   
-    
-//   })
-// }
 
 
 /// nice timeout function
@@ -616,7 +591,6 @@ function fnPermssionOnce(iCounter,bValue,client){
         let img1 = cv.imdecode(buf)
         for(var x=0; x<img.length; x++){
           let result = img1.matchTemplate(img[x], 5).minMaxLoc(); 
-          console.log(result);
           if (result.maxVal >= 0.65) {
             // All good
 
@@ -629,8 +603,8 @@ function fnPermssionOnce(iCounter,bValue,client){
               
           }
           else if(x==img.length-1){
-            fn.logger.info("WAiting for permission pop up#"+iCounter)
             const msg = "WAiting for permission pop up#"+iCounter;
+            fn.logger.info(msg)
             throw new Error(msg);            
           }
           else{
@@ -667,7 +641,7 @@ function fnClearKeyBoard(client){
       fn.logger.info("Keyboard cleared");
       let description={};
       description.action="Clear keyboard";
-      description.desc="Clearing keyboard";
+      description.desc="Clearing keyboard(click on ok)";
 
       fnPushToOutputArray(description)
       resolve(true);
@@ -738,11 +712,9 @@ async function fnIsOnScreenOnceScalable(img, desc,scaleCounter,scaleAmount,iCoun
   let buf = new Buffer(screenshot.value, 'base64');
   let img1 = cv.imdecode(buf)
   let scalDetect= await fnScalingDetect(img,img1,scaleCounter,scaleAmount);
-  console.log(scalDetect)
-  console.log("______-scaledetect_______")
   if(scalDetect.status==false){
     const msg = "Can't see object yet";
-    throw new MyError("Cant see object yet!!!", scalDetect);
+    throw new MyError(msg, scalDetect);
     
   }
  
@@ -859,7 +831,6 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
   try{
     fn.logger.info("Running click event : "+desc+" with "+ repeats + "repets");
     let coordinates= await fnIsOnScreen(img,client,repeats,desc,wait);
-    console.log(coordinates);
     let xLocation=coordinates.maxLoc.x+(img.cols/2)+offsetX;
     let yLocation=coordinates.maxLoc.y+(img.rows/2)+offsetY;
     let performClick= await  client.touchPerform([{
@@ -881,11 +852,9 @@ async function fnClick(img,client,repeats=5,desc,wait,offsetX=0,offsetY=0){
 
     fn.logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
     fnPushToOutputArray(description)
-    console.log("Click Performed: "+desc);
     return(true);
   }
   catch(err){
-    console.log(err);
     throw (err)
   }
     
@@ -908,7 +877,6 @@ async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmoun
         }
       }])
     fn.logger.info("clicked on : "+desc +" with following coordinates x="+xLocation+" y="+yLocation);
-    console.log("Click Performed: "+desc);
     let imagepath=fnMarkOnImage(coordinates.screenshot,img,coordinates,outputDir)
     let description={};
     description.action="Click scalable";
@@ -924,7 +892,6 @@ async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmoun
     return(true);
   }
   catch(err){
-    console.log(err);
     throw (err)
   }
     
@@ -935,7 +902,7 @@ async function fnClickScalable(img,client,repeats=5,desc,scaleCounter,scaleAmoun
 
 function fnSaveScreenShot(client){
 
-  console.log("Saving screenshot of passed test");
+  fn.logger.info("Saving screenshot of passed test");
   return new Promise((resolve,reject)=>{
     client.screenshot().then((data)=>{
           SaveImage(data.value,__dirname+"/passedTest/Screenshot.png")
@@ -960,7 +927,7 @@ function SaveImage (imageData,imageName){
         reject(err);
       }
       else{
-        console.log('The file has been saved!');
+        fn.logger.info('The file has been saved!');
         resolve(true);
       }
 

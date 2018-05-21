@@ -3,7 +3,8 @@ module.exports = function(fn) {
   return {
   run:async function GoToProfile(client,testData,testOutput){
     try{
-      
+        
+
         let testName=testData.desCaps.testName
         params=testData.desCaps.parameters;
         const init=await client.init();    // appium init (lunch app)
@@ -14,6 +15,8 @@ module.exports = function(fn) {
         let imageSize=await client.windowHandleSize();
         imageSize=imageSize.value.height;
         //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE
+        let scrollingPosition=320*(imageSize/testData.desCaps.bh);
+        console.log(scrollingPosition)
         await fn.fnIsOnScreen(images["Login"+"_"+imageSize],client,20,"If on screen then app Loaded,Logout state true",4000,2000);
         await fn.fnClick(images["Login"+"_"+imageSize],client,5,"Click Login button",2000);
         await fn.fnClick(images["EmailLoginButton"+"_"+imageSize],client,5,"Click Email Login button",2000);
@@ -33,7 +36,7 @@ module.exports = function(fn) {
         await fn.fnClick(images["MyAccountButton"+"_"+imageSize],client,10,"My Account button ",2000);
         await fn.timeout(6000)
         await fn.fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
-        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,320*(imageSize/testData.desCaps.bh),10,"scrolling",7000,1000)
+        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,scrollingPosition,10,"scrolling",7000,1000)
         await fn.fnClick(images["ProfileDropDown"+"_"+imageSize],client,5,"My profile open dropdown ",500);
         await fn.fnClick(images["ProfileBirthday"+"_"+imageSize],client,5,"Opening birthday ",1000,10);
         let birthday=await client.getText("android=new UiSelector().resourceId(\"android:id/date_picker_header_date\")")
@@ -84,7 +87,7 @@ module.exports = function(fn) {
         await fn.timeout(6000)
 
         await fn.fnIsOnScreen(images["ProfileX"+"_"+imageSize],client,20,"profile webview openned",3000);
-        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,320*(imageSize/testData.desCaps.bh),10,"scrolling",7000,1000)
+        await fn.fnScrollAndFind(images["EmailLabel"+"_"+imageSize],client,imageSize,500,scrollingPosition,10,"scrolling",7000,1000)
         await fn.fnClick(images["ProfileDropDown"+"_"+imageSize],client,5,"My profile open dropdown ",500);
         await fn.timeout(3000);
 
