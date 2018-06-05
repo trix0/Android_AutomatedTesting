@@ -4,3 +4,105 @@
 .groupHeader{
 	background-color: #5af5f0;
 }
+.screenshotViewer{
+	display: flex;
+	justify-content: center;
+	width:70%;
+	/*background-color: red;*/
+	height:100%;
+}
+.layers{
+	width: 30%;
+	height: 100%;
+	background-color: yellow;
+}
+.testBuilderContainer{
+	width:100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+}
+.layerParameters{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	height: 40%;
+	padding: 10px;
+	background-color: green;
+}
+.layerButtons{
+	display: flex;
+	justify-content: center;
+	background-color: blue;
+	height: 10%;
+}
+.layerTimeline{
+	padding: 50px;
+	height: 50%;
+	overflow: scroll;
+}
+.layerTimeline td{
+  }
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+#columns {
+  list-style-type: none;
+}
+
+.column {
+  width: 250px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  cursor: move;
+}
+.column header {
+  width: 150px;
+  color: #b8c7ce;
+  background-color: #222d32;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border: 2px solid #666666;
+}
+.columnTop{
+	position: absolute;
+	height: 40px;
+	width:250px;
+}
+
+.column.dragElem {
+  opacity: 0.4;
+}
+.column.over {
+  //border: 2px dashed #000;
+  border-top: 2px solid blue;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.column .textbox{
+	height: 40px;
+	padding: 10px;
+  color: #b8c7ce;
+  background-color: #222d32;
+  border-bottom: 1px solid #ddd;
+  border: 2px solid #666666;
+}
+.basicParameters{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

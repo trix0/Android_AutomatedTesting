@@ -169,7 +169,67 @@
           </div>
         </div>        
       </div>
+ <!-- test builder-->
 
+        <div class="window" id="testBuilder">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Test Builder</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <div class="testBuilderContainer">
+                  <div class="screenshotViewer">
+                    <canvas width="360" height="640" id="canvas"></canvas>
+                  </div>
+                  <div class="layers">
+                    <div class="layerParameters">
+                      <div><h4>Parameters</h4></div>
+                      <div class="basicParameters">
+                        Label name<input type="text" class="labelName">
+                        Type <select>
+                            <option>Click</option>
+                            <option>ClickScalable</option>
+                            </select>
+                      </div>
+                    </div>
+                    <div class="layerButtons">
+                      <button class="newScreenshot">Screenshot</button>
+                      <button class="newFunction">New function</button>
+                    </div>
+                    <div class="layerTimeline">
+                      <ul id="columns" class="timeline">
+                        <li class="column" draggable="true">
+                          <div class="columnTop" data-id="10" data-position="1" ></div>
+                          <div class="textbox">
+                                <p class="alignleft">1#</p>
+                                <p class="alignright">Login button</p>
+                          </div>
+                        </li>
+                                                <li class="column" draggable="true">
+                          <div class="columnTop" data-id="5" data-position="2" ></div>
+                          <div class="textbox">
+                                <p class="alignleft">1#</p>
+                                <p class="alignright">Login button</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+        </div>  
+      </div>
+
+
+      <!-- testbuilder ends-->
       <div class="window" id="runTests">Run Tests</div>
       <div class="window" id="testEditor">
         <div class="row">
@@ -293,7 +353,7 @@
                       <tr>
                         <td>
                           <div class="box-header continue-button" data-view="testBuilder" >
-                            <h3 class="box-title"><button type="submit" class="btn btn-info pull-right">Continue</button></h3>
+                            <h3 class="box-title"><button type="submit" class=" continue-button btn btn-info pull-right">Continue</button></h3>
 
                             <div class="box-tools">
                             </div>
@@ -309,7 +369,8 @@
           </div>        
         </div>
 
-      <!-- Offwindow ends-->
+      <!-- Offwindow ends--> 
+     
     </section>
     <!-- /.content -->
   </div>
@@ -559,6 +620,8 @@
 <script src="dist/js/demo.js"></script>
 
 <script>
+var testObject = [];
+
   $(document).ready(function(){
 let port=3210;
     let currentLocation=document.location.hash;
@@ -604,7 +667,10 @@ let port=3210;
     
 
   });
+
+  
   $(".continue-button").click(()=>{
+    testObject={};
     console.log("button pressed continue")
     let testInfo={
       "testName":"notDefined",
@@ -625,7 +691,11 @@ let port=3210;
     }
     try{
         testInfo.desiredCapabilities=JSON.parse($("#cTestDescCaps").val());
+        testObject=testInfo;
+        testObject.timeline=[];
+        localStorage.setItem('testObject', JSON.stringify(testInfo));
         console.log(testInfo)
+        fnSetWindow("testBuilder")
     }
     catch (error){
           console.log(testInfo)
@@ -811,6 +881,178 @@ function fnUpdateTestList(testData){
 
 
 }
+
+async function fnShowScreenshot(input){
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var image = new Image();
+var screenshotviewerSize=$(".screenshotViewer").height();
+$("#canvas").attr("width",$(".screenshotViewer").width());
+$("#canvas").attr("height",$(".screenshotViewer").height());
+image.onload = function() {
+  var scaleIndex=screenshotviewerSize/image.height
+  $("#canvas").attr("width",image.width*scaleIndex);
+  ctx.drawImage(image, 0, 0, image.width*scaleIndex, image.height*scaleIndex);
+  console.log(image.width)
+
+};
+
+image.src = "data:image/png;base64,"+input;
+}
+
+var dragSrcEl = null;
+
+function handleDragStart(e) {
+  // Target (this) element is the source node.
+  console.log("start")
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.outerHTML);
+
+  this.classList.add('dragElem');
+}
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+  this.classList.add('over');
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+}
+
+function handleDragLeave(e) {
+  this.classList.remove('over');  // this / e.target is previous target element.
+}
+
+function handleDrop(e) {
+  // this/e.target is current target element.
+
+  if (e.stopPropagation) {
+    e.stopPropagation(); // Stops some browsers from redirecting.
+  }
+
+  // Don't do anything if dropping the same column we're dragging.
+  if (dragSrcEl != this) {
+    // Set the source column's HTML to the HTML of the column we dropped on.
+    //alert(this.outerHTML);
+    //dragSrcEl.innerHTML = this.innerHTML;
+    //this.innerHTML = e.dataTransfer.getData('text/html');
+    this.parentNode.removeChild(dragSrcEl);
+    var dropHTML = e.dataTransfer.getData('text/html');
+    this.insertAdjacentHTML('beforebegin',dropHTML);
+    var dropElem = this.previousSibling;
+    addDnDHandlers(dropElem);
+    
+  }
+  this.classList.remove('over');
+  return false;
+}
+
+function handleDragEnd(e) {
+  // this/e.target is the source node.
+  this.classList.remove('over');
+
+  /*[].forEach.call(cols, function (col) {
+    col.classList.remove('over');
+  });*/
+}
+function handleClick(e){
+  var item=e.originalTarget.attributes
+  console.log(item["data-id"].value)
+
+}
+function addDnDHandlers(elem) {
+  elem.addEventListener('dragstart', handleDragStart, false);
+  elem.addEventListener('dragenter', handleDragEnter, false)
+  elem.addEventListener('dragover', handleDragOver, false);
+  elem.addEventListener('dragleave', handleDragLeave, false);
+  elem.addEventListener('drop', handleDrop, false);
+  elem.addEventListener('dragend', handleDragEnd, false);
+  elem.addEventListener('click', handleClick, false);
+
+
+}
+
+
+
+
+$(".newFunction").click(function(){
+fnNewFunction();
+})
+function fnShowItemParameters(id){
+
+  objectArray=testObject.timeline;
+for(var x=0; x<objectArray.length; x++){
+  if(id==objectArray[x]._id){
+    console.log("here")
+    selectedObject=objectArray[x];
+    if(selectedObject.label==undefined){
+      $(".labelName").val("New function"+selectedObject._id)
+    }
+    if(selectedObject.type==undefined){
+
+    }
+    else{
+
+    }
+
+  }
+}
+}
+
+function fnNewFunction(){
+var newFunction=new functionItem();
+testObject.timeline.push(newFunction)
+fnShowItemParameters(newFunction._id)
+fnUpdateOrder();
+}
+
+function fnUpdateItem(){
+
+}
+
+function fnUpdateOrder(){
+var blueprint='<li class="column" draggable="true">\
+                  <div class="columnTop" data-id="{{data-id}}" data-position="{{data-position}}"></div>\
+                    <div class="textbox">\
+                      <p class="alignleft">{{position-id}}#</p>\
+                      <p class="alignright">{{label}}</p>\
+                    </div>\
+                  </li>';
+var htmlHolder="";
+console.log(testObject.timeline);
+  for(var x=0;x<testObject.timeline.length; x++){
+    var copy=blueprint;
+    copy=copy.replace("{{position-id}}",x);
+    copy=copy.replace("{{data-id}}", testObject.timeline[x]._id);
+    copy=copy.replace("{{label}}", testObject.timeline[x].label);
+    htmlHolder=htmlHolder+copy;
+  }
+$(".timeline").html(htmlHolder);
+var cols = document.querySelectorAll('#columns .column');
+[].forEach.call(cols, addDnDHandlers);
+}
+
+class functionItem {
+  constructor(name) {
+     this._id = functionItem.incrementId()
+
+  }
+  static incrementId() {
+    if (!this.latestId) this.latestId = 1
+    else this.latestId++
+    return this.latestId
+  }
+
+}
+
 
 </script>
 </body>

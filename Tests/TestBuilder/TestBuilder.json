@@ -1,0 +1,17 @@
+{
+"testName":"Test Builder",
+"testFileName":"TestBuilder",
+"groupTest":false,
+"desiredCapabilities": {
+        "platformName": "Android",
+        "deviceName": "Android",
+        "appPackage":"com.gorro.nothing",
+        "appActivity":"com.gorro.nothing.NothingActivity",
+        "fullReset":false,
+	"noReset":true,
+        "newCommandTimeout":60000,
+        "skipUnlock":true
+      },
+"parameters":{}
+
+}
