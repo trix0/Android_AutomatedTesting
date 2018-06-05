@@ -1,0 +1,37 @@
+2018-05-21T18:09:09.033895530 0.319536s notice: Recursively removing directory /home/trixo/Code/AutomatedTesting/rethinkdb_data/tmp
+2018-05-21T18:09:09.091522162 0.377162s notice: Initializing directory /home/trixo/Code/AutomatedTesting/rethinkdb_data
+2018-05-21T18:09:09.091591021 0.377231s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/trixo/Code/AutomatedTesting/rethinkdb_data' did not already exist or is empty.)
+2018-05-21T18:09:09.091625190 0.377265s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-05-21T18:09:09.129057928 0.414700s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-05-21T18:09:09.129107151 0.414747s notice: Loading data from directory /home/trixo/Code/AutomatedTesting/rethinkdb_data
+2018-05-21T18:09:09.853005086 1.138645s info: Automatically using cache size of 1756 MB
+2018-05-21T18:09:09.985717455 1.271357s notice: Listening for intracluster connections on port 29015
+2018-05-21T18:09:10.150458723 1.436098s notice: Listening for client driver connections on port 28015
+2018-05-21T18:09:10.150546705 1.436186s notice: Listening for administrative HTTP connections on port 8080
+2018-05-21T18:09:10.150547449 1.436187s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-05-21T18:09:10.150549814 1.436189s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-05-21T18:09:10.150550364 1.436190s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-05-21T18:09:10.150552298 1.436192s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-05-21T18:09:10.150552912 1.436192s notice: Server ready, "trixo_173" 807a3fe7-24bf-4406-bb1d-bd4e0c82c8e9
+2018-05-21T18:09:25.600076570 16.885716s info: Table 67f50e31-9691-4578-b4ae-ffad22e2234d: Starting a new Raft election for term 1.
+2018-05-21T18:09:25.600248613 16.885888s info: Table 67f50e31-9691-4578-b4ae-ffad22e2234d: Added replica on this server.
+2018-05-21T18:09:25.966295576 17.251935s info: Table 5294c4e1-6d7c-4120-bf31-5d9661bf9531: Starting a new Raft election for term 1.
+2018-05-21T18:09:25.966308216 17.251948s info: Table 67af14d4-4ce4-403a-80f4-b97c4f5a9508: Starting a new Raft election for term 1.
+2018-05-21T18:09:25.966312313 17.251952s info: Table d8b6b5a7-ee06-4ab7-ba9f-f308fb7c9f2b: Starting a new Raft election for term 1.
+2018-05-21T18:09:26.011187547 17.296827s info: Table 5294c4e1-6d7c-4120-bf31-5d9661bf9531: Added replica on this server.
+2018-05-21T18:09:26.011280261 17.296920s info: Table 67af14d4-4ce4-403a-80f4-b97c4f5a9508: Added replica on this server.
+2018-05-21T18:09:26.011336152 17.296976s info: Table d8b6b5a7-ee06-4ab7-ba9f-f308fb7c9f2b: Added replica on this server.
+2018-05-21T18:09:26.011474427 17.297114s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: Starting a new Raft election for term 1.
+2018-05-21T18:09:26.011806787 17.297446s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: Added replica on this server.
+2018-05-21T18:09:26.134007297 17.419647s info: Table 67f50e31-9691-4578-b4ae-ffad22e2234d: This server is Raft leader for term 1. Latest log index is 0.
+2018-05-21T18:09:26.134057933 17.419697s info: Table 5294c4e1-6d7c-4120-bf31-5d9661bf9531: This server is Raft leader for term 1. Latest log index is 0.
+2018-05-21T18:09:26.212377657 17.498018s info: Table 67af14d4-4ce4-403a-80f4-b97c4f5a9508: This server is Raft leader for term 1. Latest log index is 0.
+2018-05-21T18:09:26.212437670 17.498077s info: Table d8b6b5a7-ee06-4ab7-ba9f-f308fb7c9f2b: This server is Raft leader for term 1. Latest log index is 0.
+2018-05-21T18:09:26.212477162 17.498117s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: This server is Raft leader for term 1. Latest log index is 0.
+2018-05-21T18:09:28.251228622 19.536868s info: Table 67f50e31-9691-4578-b4ae-ffad22e2234d: Configuration is changing.
+2018-05-21T18:09:28.402292107 19.687932s info: Table 67af14d4-4ce4-403a-80f4-b97c4f5a9508: Configuration is changing.
+2018-05-21T18:09:28.402744160 19.688384s info: Table 67af14d4-4ce4-403a-80f4-b97c4f5a9508: Configuration is changing.
+2018-05-21T18:09:28.403340068 19.688980s info: Table d8b6b5a7-ee06-4ab7-ba9f-f308fb7c9f2b: Configuration is changing.
+2018-05-21T18:09:28.404018541 19.689658s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: Configuration is changing.
+2018-05-21T18:09:28.404182524 19.689822s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: Configuration is changing.
+2018-05-21T18:09:28.404442737 19.690082s info: Table 0589ceff-caf8-4a41-b046-8a662240a1ba: Configuration is changing.
