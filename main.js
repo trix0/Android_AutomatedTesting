@@ -60,6 +60,11 @@ app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPo
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.json());
+
+
+
 
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname +"/public/index.html"));
@@ -77,7 +82,11 @@ app.get('/getDevices', async function(req, res) {
 });
 
 
-
+app.post('/buildTest', function(request, response){
+  console.log(request.body)   // your JSON
+  fnTestParser(request.body);
+  response.send(request.body);    // echo the result back
+});
 
 
 
@@ -115,6 +124,28 @@ fnGetAllDevices2().catch(err=>{
 	console.log(err);
 });
 
+
+function fnTestParser(testObject){
+
+var dir = "Tests/"+testObject.testFileName;
+
+if (!fs.existsSync(dir)||dir!=undefined){
+    fs.mkdirSync(dir);
+    fs.mkdirSync("Images");
+}
+
+
+}
+
+function fnJsonCreator(){
+
+}
+function fnJSCreator(){
+
+}
+function fnImageCreator(){
+
+}
 
 async function fnExecuteCommand(data){
 

@@ -1,7 +1,7 @@
 var images = require('./Images.js');
 const express = require('express');
 const app = express();
-const iExpressPort=8764;
+const iExpressPort=8762;
 module.exports = function(fn) {
   return {
   run:async function GoToProfile(client,testData,testOutput){
@@ -40,6 +40,7 @@ return new Promise(resolve=>{
     app.listen(iExpressPort, () => console.log('Express started at port '+iExpressPort))
 
     app.get('/screenshot', async function(req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
        var screenshot= await client.screenshot();
         res.send(screenshot)
     });
