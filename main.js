@@ -16,6 +16,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const baseDeviceHeight=2560;
+const cv = require('opencv4nodejs');
 
 
 
@@ -133,8 +134,10 @@ if (!fs.existsSync(dir)||dir!=undefined){
     fs.mkdirSync(dir);
     fs.mkdirSync(dir+"/Images");
 fnJsonCreator(testObject.desiredCapabilities,dir,testObject.testFileName);
-
+fnJSCreator(testObject.timeline,testObject.scaleIndex,testObject.testFileName,dir,testObject.testName);
+//fnImageCreator(testObject.timeline[0].parameters.img,testObject.scaleIndex,testObject.testFileName,"test");
 }
+
 
 
 }
@@ -149,65 +152,110 @@ var filename=dir+"/"+filename+".json";
 
 	    console.log("The file was saved!");
 	}); 
-}
-function fnJSCreator(){
-
-var fileBeginning='var images = require("./Images.js");\
-				   module.exports = function(fn) {\
-  				   		return {\
-  						run:async function {{testFileName}}(client,testData,testOutput){\
-    						try{\
-						        let testName=testData.desCaps.testName\
-						        params=testData.desCaps.parameters;\
-						        const init=await client.init();    // appium init (lunch app)\
-						        fn.logger.info("Running {{Test Name}}");\
-						        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE\
-						        let imageSize=await client.windowHandleSize();\
-						        imageSize=imageSize.value.height;\
-						        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE';
-
-var fileEnd='fn.fnSaveTestOutput(testOutput,testData.outputDir);\
-        	 client.end();\
-      	  }\
-	      catch(err){\
-	        fn.fnPushToOutputArray({"message":err})\
-	        fn.fnSaveTestOutput(testOutput,testData.outputDir);\
-	        client.end();\
-	        throw err;\
-	      }\
-	    }\
-	  }\
-	}';
-var functionStack="";
 
 }
-function fnImageCreator(imageObject,scaleIndex,testName,imageName){
+
+function fnJSSave(input,dir,filename){
+var filename=dir+"/"+filename+".js";
+	fs.writeFile(filename, input, function(err) {
+	    if(err) {
+	        return console.log(err);
+	    }
+
+	    console.log("The file was saved!");
+	}); 
+
+}
+
+function fnJSCreator(timeline,scaleIndex,testFileName,dir,testName){
+
+
+	var myFunction={
+
+	}
+
+	myFunction.fnScrollAndFind="fnScrollAndFind({{img}},client,{{deviceHeight}},{{scrollAmount}},{{movePosition}},{{repeats}},{{desc}},{{wait}},{{repeatDelay}})"
+	myFunction.fnIsOnScreen="fnIsOnScreen({{img}},client, {{repeats}}, {{desc}}, {{wait}},{{repeatDelay}});"
+	myFunction.fnIsOnScreenScalable="fnIsOnScreenScalable({{img}},client, {{repeats}} , {{desc}},{{scaleCounter}},{{scaleAmount}}, {{wait}},{{repeatDelay}});"
+	myFunction.fnTestFinish="fnTestFinish({{img}},client, {{repeats}} , {{desc}},{{testName}}, {{wait}},{{repeatDelay}});"
+	myFunction.fnClick="fnClick({{img}},client,{{repeats}},{{desc}},{{wait}},{{offsetX}},{{offsetY}});"
+	myFunction.fnClickScalable="fnClickScalable({{img}},client,{{repeats}},{{desc}},{{scaleCounter}},{{scaleAmount}},{{wait}},{{repeatDelay}},{{offsetX}},{{offsetY}});"
+	myFunction.fnWriteValue="fnWriteValue(client,{{value}},{{expectedValue}},{{repeats}},{{selector}});"
+	myFunction.timeout="timeout({{delay}});"
+	myFunction.fnPermissionId="fnPermissionId({{bValue}},client);"
+	myFunction.fnClearKeyBoard="fnClearKeyBoard(client);";
+
+
+
+
+
+
+
+
+	var fileBeginning="var images = require('./Images.js');\n\
+					   module.exports = function(fn) {\n\
+	  				   		return {\n\
+	  						run:async function {{testFileName}}(client,testData,testOutput){\n\
+	    						try{\n\
+							        let testName=testData.desCaps.testName\n\
+							        params=testData.desCaps.parameters;\n\
+							        const init=await client.init();    // appium init (lunch app)\n\
+							        fn.logger.info('Running {{Test Name}}');\n\
+							        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE\n\
+							        let imageSize=await client.windowHandleSize();\n\
+							        imageSize=imageSize.value.height;\n\
+							        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE\n";
+
+	fileBeginning=fileBeginning.replace("{{Test Name}}",testName)						        
+	fileBeginning=fileBeginning.replace("{{testFileName}}",testFileName)						        
+	var fileEnd="fn.fnSaveTestOutput(testOutput,testData.outputDir);\n\
+	        	 client.end();\n\
+	      	  }\n\
+		      catch(err){\n\
+		        fn.fnPushToOutputArray({'message':err})\n\
+		        fn.fnSaveTestOutput(testOutput,testData.outputDir);\n\
+		        client.end();\n\
+		        throw err;\n\
+		      }\n\
+		    }\n\
+		  }\n\
+		}\n";
+	var functionStack="";
+
+	for(var x=0; x<timeline.length; x++){
+		var parsedJSString=myFunction[timeline[x].type];
+		
+
+        for (const parameter in timeline[x].parameters) {
+        	if(parameter=="img"){
+        		parsedJSString=parsedJSString.replace("{{"+parameter+"}}",fnImageCreator(timeline[x].parameters[parameter],scaleIndex,testFileName));
+        		
+        	}
+	        parsedJSString=parsedJSString.replace("{{"+parameter+"}}",timeline[x].parameters[parameter])
+        }
+        functionStack=functionStack+"\n"+parsedJSString;
+	}
+		functionStack=fileBeginning+"\n"+functionStack+"\n"+fileEnd;
+		fnJSSave(functionStack,dir,testFileName)
+
+}
+function fnImageCreator(imageObject,scaleIndex,testName){
+	var imageReturn='images["{{imageName}}"+"_"+imageSize]';
+	var imageName=Math.random().toString(36).substr(2, 5);
+	imageReturn=imageReturn.replace("{{imageName}}",imageName)
 	var newCoordinates={};
 	newCoordinates.startX=imageObject.startX/scaleIndex;
 	newCoordinates.startY=imageObject.startY/scaleIndex;
 	newCoordinates.finishX=imageObject.finishX/scaleIndex;
 	newCoordinates.finishY=imageObject.finishY/scaleIndex;
-	let img= cv.imdecode(imageObject.originalImage)
-	let croppedImg=img[newCoordinates.startY,newCoordinates.finishY,newCoordinates.startX,newCoordinates.finishX]
+	let buf = new Buffer(imageObject.originalImage, 'base64');
+	let img= cv.imdecode(buf)
+	const croppedImg = img.getRegion(new cv.Rect(newCoordinates.startX, newCoordinates.startY, newCoordinates.finishX-newCoordinates.startX, newCoordinates.finishY-newCoordinates.startY));
 	cv.imwrite(__dirname+"/Tests/"+testName+"/Images/"+imageName+".png", croppedImg );
+	return imageReturn;
 }
 
-function fnRescaleImage(testName,imageName,baseHeight,targetHeight){
-	return new Promise(resolve=>{
-		let imgTemplate=imageTemplate;
-		let sourceImg=cv.imread(__dirname+"/Tests/"+testName+"/Images/"+imageName);
-		let rescaleIndex=targetHeight/baseHeight;
-		let rescaled=sourceImg.rescale(rescaleIndex);
-		imageName=imageName.split(".");
-		imageNameFull=imageName[0]+"_"+targetHeight
-		imgTemplate=imgTemplate.replace("{{imaneName}}",imageNameFull);
-		imgTemplate=imgTemplate.replace("{{imageNameFull}}",imageNameFull+".png");
-		fileTemplate+="\n"+imgTemplate;
-		cv.imwrite(__dirname+"/Tests/"+testName+"/Images/"+imageNameFull+".png", rescaled );	
-	resolve(true);
-	})
 
-}
 
 
 

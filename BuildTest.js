@@ -5,69 +5,76 @@ const cv = require('opencv4nodejs');
 
 //// this is the screen size you build test on -> should be equal or bigger than the biggest device resolution -> cause we scale down 
 const buildScreenSize={
-"deviceWidth":1440,
-"deviceHeight":2560
+"deviceWidth":540,
+"deviceHeight":960
 }
 
-
-
-// list of all devices 
 const allDevicesList=[
 {
 "deviceName":"Samusng A3",
 "deviceUDID":"cd21ccc5",
 "deviceWidth":540,
 "deviceHeight":960
-},
-{
-"deviceName":"Nexus",
-"deviceUDID":"",
-"deviceWidth":768,
-"deviceHeight":1280
-},
-{
-"deviceName":"Samsung Galaxy Tab 4",
-"deviceUDID":"",
-"deviceWidth":800,
-"deviceHeight":1280
-},
-{
-"deviceName":"Samsung Galaxy J7",
-"deviceUDID":"",
-"deviceWidth":720,
-"deviceHeight":1280
-},
-{
-"deviceName":"Samsung Galaxy S4",
-"deviceUDID":"",
-"deviceWidth":1080,
-"deviceHeight":1920
-},
-{
-"deviceName":"Samsung Galaxy S5",
-"deviceUDID":"",
-"deviceWidth":1080,
-"deviceHeight":1920
-},
-{
-"deviceName":"Samsung Galaxy S6",
-"deviceUDID":"",
-"deviceWidth":1440,
-"deviceHeight":2560
-},
-{
-"deviceName":"Samsung Galaxy S7",
-"deviceUDID":"",
-"deviceWidth":1440,
-"deviceHeight":2560
-},
-{
-"deviceName":"Xperia Z3 (D6653)",
-"deviceUDID":"",
-"deviceWidth":1080,
-"deviceHeight":1920
-},
+}
 ]
+
+// // list of all devices 
+// const allDevicesList=[
+// {
+// "deviceName":"Samusng A3",
+// "deviceUDID":"cd21ccc5",
+// "deviceWidth":540,
+// "deviceHeight":960
+// },
+// {
+// "deviceName":"Nexus",
+// "deviceUDID":"",
+// "deviceWidth":768,
+// "deviceHeight":1280
+// },
+// {
+// "deviceName":"Samsung Galaxy Tab 4",
+// "deviceUDID":"",
+// "deviceWidth":800,
+// "deviceHeight":1280
+// },
+// {
+// "deviceName":"Samsung Galaxy J7",
+// "deviceUDID":"",
+// "deviceWidth":720,
+// "deviceHeight":1280
+// },
+// {
+// "deviceName":"Samsung Galaxy S4",
+// "deviceUDID":"",
+// "deviceWidth":1080,
+// "deviceHeight":1920
+// },
+// {
+// "deviceName":"Samsung Galaxy S5",
+// "deviceUDID":"",
+// "deviceWidth":1080,
+// "deviceHeight":1920
+// },
+// {
+// "deviceName":"Samsung Galaxy S6",
+// "deviceUDID":"",
+// "deviceWidth":1440,
+// "deviceHeight":2560
+// },
+// {
+// "deviceName":"Samsung Galaxy S7",
+// "deviceUDID":"",
+// "deviceWidth":1440,
+// "deviceHeight":2560
+// },
+// {
+// "deviceName":"Xperia Z3 (D6653)",
+// "deviceUDID":"",
+// "deviceWidth":1080,
+// "deviceHeight":1920
+// },
+// ]
 
 // filter based on height 
 let allDevices = allDevicesList.filter((device, index, self) =>

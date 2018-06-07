@@ -1111,6 +1111,11 @@ function fnChangeSpecialParameters(){
 
 
 function fnGetScreenShot(){
+return new Promise(resolve=>{
+  $.get("http://localhost:"+8762+"/screenshot",(data)=>{ 
+          resolve(data.value);
+  }) 
+})
 
 }
  var img="<div><label>Select image</label><div class='img imgIconSize' width='250px' height='100px'><img width='50px' height='50px'src='images/select.png'></div></div>";
@@ -1245,12 +1250,11 @@ function getMousePos(canvas, evt) {
 }
 
 
-function initDraw(canvas) {
+async function initDraw(canvas) {
 var positions={};
+var originalimage=await fnGetScreenShot();
 fnShowScreenshot(originalimage)
-      // $.get("http://localhost:"+8762+"/screenshot",(data)=>{ 
-      //    fnShowScreenshot(data.value)
-      // })
+
     function setMousePosition(e) {
         var ev = e || window.event; //Moz || IE
         if (ev.pageX) { //Moz
