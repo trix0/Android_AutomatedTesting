@@ -131,21 +131,86 @@ var dir = "Tests/"+testObject.testFileName;
 
 if (!fs.existsSync(dir)||dir!=undefined){
     fs.mkdirSync(dir);
-    fs.mkdirSync("Images");
+    fs.mkdirSync(dir+"/Images");
+fnJsonCreator(testObject.desiredCapabilities,dir,testObject.testFileName);
+
 }
 
 
 }
 
-function fnJsonCreator(){
+function fnJsonCreator(input,dir,filename){
+var json = JSON.stringify(input)
+var filename=dir+"/"+filename+".json";
+	fs.writeFile(filename, json, function(err) {
+	    if(err) {
+	        return console.log(err);
+	    }
 
+	    console.log("The file was saved!");
+	}); 
 }
 function fnJSCreator(){
 
-}
-function fnImageCreator(){
+var fileBeginning='var images = require("./Images.js");\
+				   module.exports = function(fn) {\
+  				   		return {\
+  						run:async function {{testFileName}}(client,testData,testOutput){\
+    						try{\
+						        let testName=testData.desCaps.testName\
+						        params=testData.desCaps.parameters;\
+						        const init=await client.init();    // appium init (lunch app)\
+						        fn.logger.info("Running {{Test Name}}");\
+						        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE\
+						        let imageSize=await client.windowHandleSize();\
+						        imageSize=imageSize.value.height;\
+						        //////////////////////////////////// THIS CODE IS MANDATORY -> LEAVE IT HERE';
+
+var fileEnd='fn.fnSaveTestOutput(testOutput,testData.outputDir);\
+        	 client.end();\
+      	  }\
+	      catch(err){\
+	        fn.fnPushToOutputArray({"message":err})\
+	        fn.fnSaveTestOutput(testOutput,testData.outputDir);\
+	        client.end();\
+	        throw err;\
+	      }\
+	    }\
+	  }\
+	}';
+var functionStack="";
 
 }
+function fnImageCreator(imageObject,scaleIndex,testName,imageName){
+	var newCoordinates={};
+	newCoordinates.startX=imageObject.startX/scaleIndex;
+	newCoordinates.startY=imageObject.startY/scaleIndex;
+	newCoordinates.finishX=imageObject.finishX/scaleIndex;
+	newCoordinates.finishY=imageObject.finishY/scaleIndex;
+	let img= cv.imdecode(imageObject.originalImage)
+	let croppedImg=img[newCoordinates.startY,newCoordinates.finishY,newCoordinates.startX,newCoordinates.finishX]
+	cv.imwrite(__dirname+"/Tests/"+testName+"/Images/"+imageName+".png", croppedImg );
+}
+
+function fnRescaleImage(testName,imageName,baseHeight,targetHeight){
+	return new Promise(resolve=>{
+		let imgTemplate=imageTemplate;
+		let sourceImg=cv.imread(__dirname+"/Tests/"+testName+"/Images/"+imageName);
+		let rescaleIndex=targetHeight/baseHeight;
+		let rescaled=sourceImg.rescale(rescaleIndex);
+		imageName=imageName.split(".");
+		imageNameFull=imageName[0]+"_"+targetHeight
+		imgTemplate=imgTemplate.replace("{{imaneName}}",imageNameFull);
+		imgTemplate=imgTemplate.replace("{{imageNameFull}}",imageNameFull+".png");
+		fileTemplate+="\n"+imgTemplate;
+		cv.imwrite(__dirname+"/Tests/"+testName+"/Images/"+imageNameFull+".png", rescaled );	
+	resolve(true);
+	})
+
+}
+
+
+
 
 async function fnExecuteCommand(data){
 
