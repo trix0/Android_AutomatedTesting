@@ -3,8 +3,8 @@
 Is used for automated testing for Unity games on Android using appium.
 It provides eazy way to build,execute and monitor  tests.
 Project uses template matching to find elements on screen.
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
-https://www.youtube.com/watch?v=ucUbYSGEFx4&feature=youtu.be
+[![Watch the video](https://ctrlv.cz/shots/2018/09/09/Kd0j.png)](https://www.youtube.com/watch?v=ucUbYSGEFx4&feature=youtu.be)
+
 
 
 
