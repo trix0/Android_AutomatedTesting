@@ -1,9 +1,10 @@
 
-
+## Automated Testing for android games build in Unity
 Is used for automated testing for Unity games on Android using appium.
 It provides eazy way to build,execute and monitor  tests.
 Project uses template matching to find elements on screen.
-
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
+https://www.youtube.com/watch?v=ucUbYSGEFx4&feature=youtu.be
 
 
 
